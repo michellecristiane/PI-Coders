@@ -3,21 +3,21 @@
 
 body{
     font-family:Arial, sans-serif ;
-    margin: 0;
-    padding: 50px;
+    margin: 0%;
+    padding: 0;
 }
 
 header, nav, main, footer {
 
-    padding: 10px;
+    padding: 20px;
 
 }
 
 /* Estilo de cabeçalho*/
 
 header{
-    background-color: rgb(169, 207, 250);
-    color: #fff;
+    background-color: rgb(18, 18, 19);
+    color: #f8f8f8;
     text-align: center;
 }
 
@@ -26,7 +26,7 @@ header{
 nav ul{
     padding: 20px;
     background-color: rgb(255, 228, 196);
-    margin: 0;
+    margin: 1%;
 }
 
 nav ul li{
@@ -35,8 +35,8 @@ nav ul li{
 }
 
 nav a{
-    color: rgb(240, 248, 255);
-    text-decoration: none;
+    color: rgb(19, 20, 20);
+    text-decoration: aquamarine;
 }
 
 nav a:hover{
@@ -47,10 +47,10 @@ nav a:hover{
 footer {
     background-color: #333;
     color: #fff;
-    text-align: center;
+    text-align: center; /* Alinhamento do texto*/
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: 0;  /* Espaçamento do roda Pè*/
+    width: 100%; /* quanto sera ocupada a largura da tela*/
 }
 
 /*Estilos de seções*/
@@ -63,5 +63,88 @@ section{
 }
 
 h1{
-    color: #333;
+    color: #b31c1c;
+}
+h2{
+    color: #141313;
+    background-color: rgb(152, 183, 236);
+    border-radius: 5px;
+    border-style:solid ;
+    padding: 10px;
+    margin: auto;
+}
+
+/* estilos de tabela*/
+
+table{
+    width:100%;
+
+}
+
+th, td{
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+caption {
+
+    font-weight: bold
+
+
+}
+
+/* Estilos de formulario*/
+
+form{
+
+    width: 50%;
+    margin: auto ;
+}
+
+label, input, button{
+
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+input[ type="txt"]
+input[ type="Email"]
+input[ type="phone"]
+button {
+
+    width: 100%;
+    padding: 8px;
+
+}
+
+button {
+
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+
+    background-color: #444;
+
+}
+
+.imagem {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+image {
+
+    padding: 20%;
+    max-width: 100; /*  Isso garante que a imagem não ultrapasse
+ alonha do contener*/
+
+     margin-right: 100%;  /*  Isso garante que a imagem não ultrapasse
+     alonha do contener*/
 }
