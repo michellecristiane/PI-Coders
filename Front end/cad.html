@@ -12,18 +12,22 @@
 <body>
 
     <form>
-        <h2>Cadastro</h2>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <h1><strog>Cadastro</strog></h1>
+        <label for="nome"><strong>Nome</strong>:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite Seu nome" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email"><strong>E-mail:</strong></label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
+        <label for="senha"><strong>Senha:</strong></label>
+        <input type="password" id="senha" name="senha"placeholder="Digite sua senha" required>
 
-        <label for="senha">Confirmar Senha:</label>
-        <input type="password" id="senha" name="senha" required>
+        <label for="senha"><strong>Confirmar Senha:</strong></label>
+        <input type="password" id="senha" name="senha" placeholder="Confirmação de senha" required>
+        <P> <strong>sexo:</strong>
+        <input type="radio" id="sexo_masculino" name="sexo" value="sexo_masculino">m
+        <input type="radio" id="sexo_feminino" name="sexo" value="sexo_feminino">f
+        </P>
 
         <button type="submit">Cadastrar</button>
     </form>
