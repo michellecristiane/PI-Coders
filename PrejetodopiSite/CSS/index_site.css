@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+
+    font-family: Arial, sans-serif;
+
+   
+}
+
+ul, li{
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items:flex-start ;
+    height: 100vh;
+    padding: 20px;
+
+}
+
+header{
+    background-color: black;
+}
+
+header,h1,div{
+    
+    color: rgba(252, 252, 252, 0.993);
+    text-align: le;
+    padding: 1em;
+    float: center ;
+    
+}
+
+nav, div, form{
+    color: rgba(168, 164, 164, 0.993);
+    padding: 1em;
+    float: center ;
+    
+    
+}
