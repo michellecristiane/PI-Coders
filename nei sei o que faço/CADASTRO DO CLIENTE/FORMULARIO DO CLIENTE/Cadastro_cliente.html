@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="cadastro_cliente.css">
+</head>
+<body>
+    <div class="content-section" id="section-form">
+        <form class="form" id="form-send">
+            <fieldset>
+                <legend>Cadastre-se</legend><br>
+                
+                <div>
+                    <label for="nome">*Nome</label>
+                    <input type="text" name="nome" id="nome" maxlength="150" placeholder="Digite seu Nome" required>
+                    <label for="sobrenome">*Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome" maxlength="150" placeholder="Digite seu Sobrenome" required>
+                </div><br>
+
+                <div class="user">
+                    <label for="user">*E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="Digite seu E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20"  maxlength="80" required>
+                    <label for="confirmar_email" >*Confirmar E-mail</label>
+                    <input type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Confirme seu Email" size="20" maxlength="80" required>
+                </div><br>
+
+                <label for="CPF">*CPF</label>
+                <input type="text" name="cpf" autocomplete="off" id="cpf" maxlength="14" placeholder="Digite seu CPF" required><br>
+
+                <label for="data_nascimento">*Data de Nascimento</label>
+                <input type="date" name="data_nascimento" id="data_nascimento" placeholder="DD/MM/AAAA" required><br>
+
+                <label for="select">*Gênero</label>
+                <select class="genero" name="Genero" id="Genero" required>
+                    <option >Selecione seu Gênero</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outro">Outro</option>
+                </select><br>
+
+                <label for="tel">*(DDD)</label>
+                <input type="tel" class="ddd" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
+                <label for="telefone">*Telefone</label>
+                <input type="tel" name="telefone" id="telefone" maxlength="10" placeholder="Telefone" size="20" required><br>
+
+                <p><b>*Interesse Profissional:</b></p>
+                <div>
+                    <label for="photographya">Fotografia</label>
+                    <input type="radio" name="fotografia" id="fotografia">
+                    <label for="videographya">Filmagem</label>
+                    <input type="radio" name="filmagem" id="filmagem" >
+                </div>
+
+                <div id="eye-password" class="eye-svg">
+                    <label for="signUp-inputpasswoed">*Senha</label>
+                    <img id="eye-password" class="eye-svg"  src="./olho.png"  width="0" height="0">
+                    <input type="password" name="senha" maxlength="20" required>
+                </div>
+                <div class="inf_password">
+                    <h6>*Senha com no minimo 8 caracteres</h6>
+                    <h6>* Incluindo números e ao menos uma letra.</h6>  
+                </div>
+                <button type="submit">Enviar Cadastro</button><br>
+                
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
