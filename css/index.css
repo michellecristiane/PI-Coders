@@ -1,0 +1,429 @@
+
+
+:root {
+    --primary-color: rgb(122, 82, 123); /*Define variáveis globais CSS que podem ser usadas em todo o documento.*/
+
+}
+
+html {
+    /* font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; */
+    font: 400 62.5% 'Inter', sans-serif; /*técnica de ajuste de tamanho de fonte para facilitar o uso de unidades de medidas relativas*/
+
+}
+
+body {
+    background-color: rgb(152, 112, 192);
+}
+
+
+p,
+a {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font: 4rem;
+}
+
+h3 {
+    font: 3.2rem;
+}
+
+nav a{
+    color: inherit; /* Eles herdam a cor do texto do elemento pai.*/
+}
+
+.upper {
+    text-transform: uppercase
+    
+}
+
+.btn {
+    background-color: aqua;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 1.6rem 4.6rem;
+    display: inline-block;
+}
+
+.wrapperContainer {
+    padding: 1px0;
+}
+
+.wrapperContainer-dark {
+    background-color: #2a2a2a;
+    color: #fafafa;
+}
+
+.wrapperContainer-light {
+    background-color: #fafafa;
+}
+
+.wrapperContainer-dark2 {
+    /* 	; */
+    color: #090909;
+}
+
+.wrapperContainer-fixed {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wrapperContainer-padded {
+    padding-top: 12rem;
+}
+
+.container {
+    max-width: 127.6rem;
+    margin: auto;
+}
+
+.section_title {
+    padding: 7rem 0;
+    text-align: center;
+    margin: 0;
+}
+
+.section_btn {
+    margin: 7rem 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aqua;
+    padding: 3rem 0;
+}
+
+.header_nav a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.header_nav a:hover {
+    background-color: black;
+}
+
+.header_nav1 a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+}
+
+.header_nav1 ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.header_nav1 a:hover {
+    background-color: black;
+}
+
+.wrapperContainer-hero {
+    background-image: linear-gradient(transparent, rgb(85, 72, 110));
+}
+
+
+
+.heroBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20rem;
+}
+
+
+.hero_title {
+    margin-bottom: 4rem;
+}
+
+.cursos {
+    text-align: center;
+}
+
+.cursosContainer {
+    display: flex;
+    text-align: left;
+    gap: 2rem;
+}
+
+.curso_card {
+    flex: 1;
+}
+
+.curso_card img {
+    display: block;
+    width: 100%;
+}
+
+.curso_card h3 {
+    font-size: 2.4rem;
+}
+
+.curso_card p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.cursos_card_content {
+    padding: 1rem 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    border-top: transparent;
+}
+
+.escola {
+    display: flex;
+    gap: 7rem;
+    padding-top: 6rem;
+
+}
+
+.section_title {
+    font-size: 3.2rem;
+    margin-top: 2rem;
+}
+
+.escola p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.contatos_address {
+    text-align: right;
+    font: normal 400 1.8rem "Inter", sans-serif;
+    padding: 3rem 0;
+}
+
+.footer {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 4.5rem;
+    background-color: #141616;
+    border-color: #277c8b;
+    background-image: linear-gradient(transparent, rgb(85, 72, 110))
+}
+
+.footer a {
+    color: inherit;
+    color: white;
+}
+
+
+/*  */
+
+.header-container{
+
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+.header_nav1{
+    margin: 0;
+    margin-right: 10px;
+
+
+}
+
+.header_nav1 li {
+    margin-bottom: 10px;
+}
+
+.header_nav1 a {
+    text-decoration: none;
+    color:  #8fede5;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid fixed;
+    transition: all 0.3s ease;
+    
+}
+
+.header_nav1 a:hover {
+    background-color: #59bab2;
+    border-color: #4abed2;
+    background-image: linear-gradient(transparent, rgb(85, 72, 110));
+}
+
+
+.btn-expandir {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #ecf2f2;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.btn-expandir i {
+    font-size: 24px;
+}
+
+.btn-expandir:hover {
+    box-shadow: 0px 0px 10px rgba(31, 30, 30, 0.5);
+}
+
+.menu-lateral {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #1f2121;
+    padding: 20px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 0px 10px rgba(36, 35, 35, 0.5);
+    z-index: 998;
+}
+
+.menu-lateral.active {
+    display: block;
+}
+
+.menu-lateral li {
+    margin-bottom: 10px;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    background-image: linear-gradient(transparent, rgb(85, 72, 110));
+}
+
+.menu-lateral a:hover {
+    color: rgb(102, 175, 174);
+}
+
+.slide-container {
+    /* max-width: 1120px; */
+    width: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px;
+
+}
+
+.slide-content {
+    margin: 0 40px;
+
+}
+
+.card {
+    width: 320px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px; 
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #5c13bb;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4f0b9c
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: #fff;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #28ddce;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #28ddce;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #151b1b;
+    background-color: #4f0b9c;
+}

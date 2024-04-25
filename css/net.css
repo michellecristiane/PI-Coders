@@ -1,0 +1,139 @@
+
+/* Definições gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapperContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo do menu lateral */
+.header_nav {
+    
+    color: #292424;
+    padding: 10px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    float:right;
+    padding-top:0px;
+}
+
+.menu-lateral {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #1f2121;
+    padding: 20px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 0px 10px rgba(36, 35, 35, 0.5);
+    z-index: 998;
+}
+
+.item-menu {
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.item-menu:hover {
+    background-color: #494545;
+}
+
+/* Estilo do botão de expansão */
+.btn-expandir {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo dos ícones */
+.bi {
+    font-size: 24px;
+}
+
+/* Menu expandido */
+.wrapperContainer.expanded .header_nav {
+    width: 250px;
+}
+
+.wrapperContainer.expanded .btn-expandir {
+    transform: translateX(250px);
+}
+
+.wrapperContainer.expanded .item-menu {
+    overflow: hidden;
+    max-height: 50px;
+    transition: max-height 0.3s ease;
+}
+
+.wrapperContainer.expanded .item-menu span {
+    display: none;
+}
+
+
+.wrapperContainer.expanded .item-menu:hover span {
+    display: inline;
+}
+.wrapper-container{
+    background-color: rgb(56, 55, 55);
+    margin: top 0;;
+    text-align: left;
+    border: 100px;
+
+
+
+}
+.header_nav a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+    color: #3ed4da;
+ 
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.header_nav a:hover {
+    background-color: rgb(160, 74, 209);
+ 
+}
+
+.header_nav1 a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+    b
+}
+
+.header_nav1 ul {
+    display:flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    
+}
+
+
+
+
+
+

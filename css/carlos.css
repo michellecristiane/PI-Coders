@@ -1,0 +1,179 @@
+body{
+
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;  
+}
+
+.wrapper-container{
+    background-color: rgb(35, 37, 37);
+    margin: top 0;;
+    text-align: center;
+    border: 100px;
+
+
+
+}
+.header_nav a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+    color: #3ed4da;
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.header_nav a:hover {
+    background-color: rgb(128, 32, 184);
+}
+
+.header_nav1 a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+    b
+}
+
+.header_nav1 ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.header_nav1 a:hover {
+    background-color: rgb(139, 29, 190);
+}
+
+
+
+
+section{
+   
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.8rem;
+}
+
+.div-perfildoforografo-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #6b6cb1;
+
+}
+
+
+/*  Estilo para o menu responsivo 
+.menu-lateral {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-menu {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Estilo para o botão de clique 
+.btn-expandir {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para o perfil do fotógrafo *
+.perfildoforografo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfildoforografo img {
+    border-radius: 50%;
+    border: 5px solid #fff; /* Adicione um contorno branco ao redor da imagem 
+}
+
+.perfildoforografo h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#formulario {
+    margin-bottom: 20px;
+}
+
+#formulario p {
+    margin-bottom: 10px;
+}
+
+#formulario input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#formulario input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#perfil {
+    display: none;
+}
+
+#perfil h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+#perfil p {
+    margin-bottom: 5px;
+}
+
+/* Estilos adicionais 
+.wrapper-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #151617;
+    color: #fff;
+}
+
+.header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+ */
