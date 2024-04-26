@@ -46,7 +46,7 @@
                 <label for="telefone">*Telefone</label>
                 <input type="tel" name="telefone" id="telefone" maxlength="10" placeholder="Telefone" size="20" required><br>
 
-                <p><b>*Interesse Profissional:</b></p>
+                <label for="int_profissonal">*Interesse Profissional:</label>
                 <div>
                     <label for="photographya">Fotografia</label>
                     <input type="radio" name="fotografia" id="fotografia">
@@ -55,10 +55,15 @@
                 </div>
 
                 <div id="eye-password" class="eye-svg">
-                    <label for="signUp-inputpasswoed">*Senha</label>
-                    <img id="eye-password" class="eye-svg"  src="./olho.png"  width="0" height="0">
-                    <input type="password" name="senha" maxlength="20" required>
+                    <label for="signUp-inputpassword">*Senha</label> <!--signUp-inputpassword (trad:cadastrar senha de entreda)"-->
+                    <img id="eye-password" class="eye-svg"  src="./olho.png"  width="0" height="0"> <!--"eye" (trad: olho)-->
+                    <input type="password" name="signUp-inputpassword" maxlength="20" required>
+
+                    <label for="signUp-confirmpassword">*Confirmar Senha</label>
+                    <img id="eye-password" class="eye-svg"  src="./olho.png"  width="0" height="0"> 
+                    <input type="password" name="signUp-confirmpassword" maxlength="20" required>
                 </div>
+
                 <div class="inf_password">
                     <h6>*Senha com no minimo 8 caracteres</h6>
                     <h6>* Incluindo números e ao menos uma letra.</h6>  
