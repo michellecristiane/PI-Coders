@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(./desfok.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    height: 100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+/*caixa de formalrio de fundo transparente*/
+
+.form-send{
+    box-sizing: border-box;
+    padding: 5px;
+    color: rgb(255, 255, 255);/*cores das fontes*/
+    background-color: rgb(0, 0, 0, 0.8);/*fundo transparente do formulario*/
+    border-radius: 10px; /*ondulação da borda da caixa do formulario*/
+    font-size: 15px;
+}
+
+/*borda do formulario*/
+fieldset{
+    box-sizing: border-box;
+    border: 3px solid rgb(119, 0, 255, 0.973);/*linha da borda que esta na cor lilás*/ 
+    border-radius: 15PX;/*ondulação dos cantos da linha de borda" cadastre-se"*/
+    padding: 10px;
+    
+}
+/*caixa de legenda*/
+legend{
+    
+    border: 2px solid rgb(0, 247, 255);/*borda da caixa de legenda "Cadastre-se"*/
+    padding: 5px;/*altura da caixa de legenda*/
+    text-align: center;/*centralização do texto*/
+    background-color: rgba(0, 0, 0, 0.3);/*preenchimento da caixa de legenda*/
+    border-radius: 10px;/*ondulação da caixa de legenda*/
+    font-size: 25px;
+    
+}
+
+.area {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+     
+  
+}
+
+.area_gender {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.primary_name, .second_name, .email, .confirm_email, .cpf, .date_of_birth {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 25px; 
+    
+}
+
+
+.input_bigger {
+    box-sizing: border-box;   
+    width: 100%;
+   
+}
+
+.input_smaller {
+    box-sizing: border-box;
+    width: 48.5%;
+   
+}
