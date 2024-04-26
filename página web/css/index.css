@@ -1,7 +1,7 @@
 
 
 :root {
-    --primary-color: rgb(122, 82, 123); /*Define variáveis globais CSS que podem ser usadas em todo o documento.*/
+    --primary-color: rgb(88, 165, 175); /*Define variáveis globais CSS que podem ser usadas em todo o documento.*/
 
 }
 
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-color: rgb(152, 112, 192);
+    background-color: rgb(65, 112, 114);
 }
 
 
@@ -138,7 +138,7 @@ nav a{
 }
 
 .wrapperContainer-hero {
-    background-image: linear-gradient(transparent, rgb(85, 72, 110));
+    background-image: linear-gradient(transparent, rgb(65, 112, 114));
 }
 
 
@@ -157,6 +157,7 @@ nav a{
 
 .cursos {
     text-align: center;
+
 }
 
 .cursosContainer {
@@ -165,9 +166,14 @@ nav a{
     gap: 2rem;
 }
 
-.curso_card {
+article{
     flex: 1;
+   
+
 }
+/* .curso_card {
+    /* flex: 1; }*/
+
 
 .curso_card img {
     display: block;
@@ -219,7 +225,7 @@ nav a{
     padding: 4.5rem;
     background-color: #141616;
     border-color: #277c8b;
-    background-image: linear-gradient(transparent, rgb(85, 72, 110))
+    background-image: linear-gradient(transparent, rgb(65, 112, 114))
 }
 
 .footer a {
@@ -266,7 +272,7 @@ nav a{
 .header_nav1 a:hover {
     background-color: #59bab2;
     border-color: #4abed2;
-    background-image: linear-gradient(transparent, rgb(85, 72, 110));
+    background-image: linear-gradient(transparent, rgb(65, 112, 114))
 }
 
 
@@ -314,13 +320,13 @@ nav a{
 
 .menu-lateral a {
     text-decoration: none;
-    background-image: linear-gradient(transparent, rgb(85, 72, 110));
+    background-image: linear-gradient(transparent, rgb(65, 112, 114))
 }
 
 .menu-lateral a:hover {
     color: rgb(102, 175, 174);
 }
-
+ /* cards do a imagem e sobre */
 .slide-container {
     /* max-width: 1120px; */
     width: 100%;
@@ -342,6 +348,7 @@ nav a{
     width: 320px;
     border-radius: 25px;
     background-color: #fff;
+   
 }
 
 .image-content,
@@ -425,5 +432,5 @@ nav a{
 
 .button:hover {
     background: #151b1b;
-    background-color: #4f0b9c;
+    background-color: #f1f1f1;
 }
