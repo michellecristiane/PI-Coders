@@ -1,0 +1,80 @@
+body{
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(./lentes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.content-section{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;/*distancia da margem de cima*/
+    left: 50%;/*distancia da margem de baixo*/
+    transform: translate(-50%, -50%);/* centralização do formulario*/
+    border-radius: 10px; /*ondulação da borda do formulario de fundo preto transparente*/
+    padding: 3px;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: normal;
+}
+.section-form{
+    border-color:aqua;
+    margin: 10px;
+}
+.form{
+    left: auto;
+}
+fieldset{
+    display: flex;
+    justify-content: center;
+    border: 3px solid rgb(25, 0, 255);/*borda do fieldset*/
+    padding-top: 55px; /*altura do fieldset*/
+    border-radius: 10px;
+    display: block; /*o display block oculpa o espaço*/
+    position: relative;
+    top:-3px;
+}
+legend{
+    border: 2px solid rgb(0, 247, 255);/*borda da caixa de legenda "Cadastre-se"*/
+    padding: 3px;/*altura da caixa de legenda*/
+    text-align: center;/*centralização do texto*/
+    background-color: rgba(0, 0, 0, 0.3);/*preenchimento da caixa de legenda*/
+    border-radius: 10px;/*ondulação da caixa de legenda*/
+    font-size: 20px;
+    letter-spacing: normal;/*espaço entre as letras*/
+}
+.aviso h6{
+    margin: 4px;
+    float: 20px;
+}
+button{
+    background-color: #000000;
+    border-radius: 5px;
+    border-color: aqua;
+    font-size: 15px;
+    color: rgb(252, 252, 252);
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+label{
+    margin:1px;
+    left: 91px;
+}
+.inputUser{
+    margin:0px;
+    padding: 2px;
+    top: 20ps;
+    left: 40px;
+    text-align: center;
+}
+::-webkit-input-placeholder{
+    color: rgb(134, 134, 143);
+    text-align: center;
+}
