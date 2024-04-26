@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se</title>
-    <link rel="stylesheet" href="/cadastro_cliente.css">
+    <link rel="stylesheet" href="/css/cadastro_profissional_pf.css">
 </head>
 
 
@@ -50,6 +50,9 @@
                     </label>
                 </div><br>
 
+                <label for="nome_profissional">Como gostaria de ser chamado(a)?</label><br>
+                <input class="input_bigger" type="text" name="nome" id="nome" placeholder="Nome/Apelido Profissional" maxlength="20"><br>
+
                 
                 <div class="area area_email"><!--DIV DO EMAIL-->
                     <div class="email">
@@ -61,11 +64,6 @@
                         <input class="input_bigger" type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Confirme seu Email" size="20" maxlength="60" required>
                     </div>                   
                 </div><br>
-
-                
-                
-                <label for="nome">Como gostaria de ser chamado(a)</label>
-                <input type="text" name="nome" id="nome" placeholder="Nome, Apelido..." maxlength="20"><br>
 
                 <label for="tel">*(DDD)</label>
                 <input type="tel" class="reduc" width="40px" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
