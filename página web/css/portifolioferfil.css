@@ -100,7 +100,15 @@ body{
     margin-bottom: 20px;
     text-align: center;
 }
+.cards{
+    display: flex;
+    justify-content: ;
 
+}
+
+h2{
+    text-align: center;
+}
 /* .gallery{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
