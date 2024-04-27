@@ -1,9 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-   background-image: url("../Imagens/IMG_6809.png");
+   background-image: url("/imagens/Imagens/IMG_6809esse.png");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -17,6 +17,7 @@ form {
     border-radius: 8px;
     width: 400px;
     height: 300px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }   
 
 h2 {

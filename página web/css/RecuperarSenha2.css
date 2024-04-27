@@ -1,6 +1,6 @@
 /*Login*/
 body {
-    background-image: url("photoCamera02.jpg");
+    background-image: url("/imagens/photoCamera02.jpg");
     background-color: hsl(37, 4%, 42%);
     font-family: Arial, sans-serif;
     background-size: cover;
@@ -23,6 +23,7 @@ form{
     width: 100%;
     display: inline-block;
     text-align: center;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.5);
 }
 p{
     color: white;
