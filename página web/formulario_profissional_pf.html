@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se</title>
-    <link rel="stylesheet" href="/css/cadastro_profissional_pf.css">
+    <link rel="stylesheet" href="/css/formulario_profissional_pf.css">
 </head>
 
 
@@ -25,19 +25,16 @@
                         <input class="input_bigger" type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" size="20" maxlength="80" required>
                     </div>                       
                 </div><br>
+                    
+                        <label for="cpf">* CPF:</label><br>
+                        <input class="input_smaller" type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" size="20" required><br><br>
 
-                    <div class="cpf">
-                        <label for="cpf">* CPF:</label>
-                        <input class="input_smaller" type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" size="20" required>           
-                    </div><br>
-
-                    <div class="date_of_birth">
-                        <label for="date">* Data de Nascimento:</label>
-                        <input class="input_smaller" type="date" name="data_nascimento" id="data_nascimento" placeholder="Dia/Mês/Ano" required>
-                    </div><br>
-                    <!--DIV DA OPÇÃO DE  GENERO-->
+                        
+                        <label for="date">* Data de Nascimento:</label><br>
+                        <input class="input_smaller" type="date" name="data_nascimento" id="data_nascimento" placeholder="Dia/Mês/Ano" required><br><br>                 
                 
-                <div class="area_gender">
+                
+                <div class="area_gender"><!--DIV DA OPÇÃO DE  GENERO-->
                     <label>* Gênero:</label>
                     <label for="feminino">Feminino
                         <input type="radio" name="option" id="feminino" value="feminino" required>
@@ -50,8 +47,8 @@
                     </label>
                 </div><br>
 
-                <label for="nome_profissional">Como gostaria de ser chamado(a)?</label><br>
-                <input class="input_bigger" type="text" name="nome" id="nome" placeholder="Nome/Apelido Profissional" maxlength="20"><br>
+                        <label for="nome_profissional">Como gostaria de ser chamado(a)?</label><br>
+                        <input class="input_smaller" type="text" name="nome" id="nome" placeholder="Nome/Apelido Profissional" maxlength="20"><br><br>
 
                 
                 <div class="area area_email"><!--DIV DO EMAIL-->
@@ -60,22 +57,30 @@
                         <input class="input_bigger" type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Digite seu Email" size="20" maxlength="60" required>
                     </div>
                     <div class="confirm_email">
-                        <label for="confirmar_email" >* Confirmar E-mail</label>
+                        <label for="confirmar_email" >* Confirmar E-mail:</label>
                         <input class="input_bigger" type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Confirme seu Email" size="20" maxlength="60" required>
                     </div>                   
                 </div><br>
 
-                <label for="tel">*(DDD)</label>
-                <input type="tel" class="reduc" width="40px" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
-                <label for="telefone">*Telefone</label>
-                <input type="tel" name="telefone" id="telefone" maxlength="90" placeholder="Telefone" size="20" required><br>
-
-                <label for="cep">*CEP</label>
+                <div class="area area_contato">
+                    <div class="contato_ddd">
+                        <label for="tel">* (DDD):</label>
+                        <input type="tel" class="reduc" width="40px" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
+                    </div>
+                    
+                    <div class="contato_telefone">
+                        <label for="telefone">* Telefone:</label>
+                        <input type="tel" name="telefone" id="telefone" maxlength="90" placeholder="Telefone" size="20" required><br>
+                    </div>
+                
+                </div>
+                
+                <label for="cep">* CEP:</label>
                 <input type="check" name="cep" id="cep" maxlength="9" placeholder="CEP" size="20" required><br>
 
-                <label for="endereco">*Endereço</label>
+                <label for="endereco">* Endereço:</label>
                 <input type="text" name="endereco" id="endereco" maxlength="80" placeholder="Digite seu Endereço" size="20" required>
-                <label for="Complemento">*Complemento</label>
+                <label for="Complemento">* Complemento:</label>
                 <input type="text" name="complemento" id="complemento" maxlength="40" placeholder="Ap, Casa, Condominio..." size="20" required>
 
                 <label for="numero">*N°</label>

@@ -57,11 +57,11 @@ legend{
 }
 
 
-.primary_name, .second_name, .email, .confirm_email, .cpf, .date_of_birth {
+.primary_name, .second_name, .email, .confirm_email, .contato_ddd, .contato_telefone {
     display: flex;
     flex-direction: column;
     width: 100%;
-    line-height: 25px; 
+    /* line-height: 25px;  */
     
 }
 
@@ -76,4 +76,8 @@ legend{
     box-sizing: border-box;
     width: 48.5%;
    
+}
+
+input  {
+    margin-top: 5px;
 }
