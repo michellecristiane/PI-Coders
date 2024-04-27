@@ -33,7 +33,7 @@ fieldset{
     display: flex;
     justify-content: center;
     border: 3px solid rgb(25, 0, 255);/*borda do fieldset*/
-    padding-top: 55px; /*altura do fieldset*/
+    padding-top: 15px; /*altura do fieldset*/
     border-radius: 10px;
     display: block; /*o display block oculpa o espaço*/
     position: relative;
@@ -80,4 +80,8 @@ label{
 ::-webkit-input-placeholder{
     color: rgb(134, 134, 143);
     text-align: center;
+}
+.inf_password h6{
+    line-height: 1px;
+    font-size: 10px;
 }
