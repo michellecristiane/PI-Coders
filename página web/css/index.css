@@ -372,8 +372,10 @@ nav a{
     font-size: 1.6rem;
     text-align: center;
     padding: 4.5rem;
+    color: #efefef;
 }
 
 .footer a {
     color: inherit;
+    color: #ccc;
 }
