@@ -159,3 +159,17 @@
     }
   }
    
+  .footer {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 4.5rem;
+    color: #efefef;
+    background-image: linear-gradient(transparent, rgb(58, 161, 135));
+    background-color: black;
+
+}
+
+.footer a {
+    color: inherit;
+    color: #ccc;
+}
