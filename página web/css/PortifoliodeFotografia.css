@@ -7,12 +7,93 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.header_nav1 {
+  margin: 0;
+  margin-right: 10px;
+}
+.header_nav1 li {
+  margin-bottom: 10px;
+}
+.header_nav1 a {
+  text-decoration: none;
+  color: #f1f5f4;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid fixed;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+.header_nav1 a:hover {
+  background-color: #59bab2;
+  border-color: #4abed2;
+}
+section {
+  padding-bottom: 20px;
+}
+h1{
+  color:#fbfafa;
+}
+
+
+.cards  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card   {
+  width: 300px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #27837a;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10 px;
+}
+
+.card h3{
+  margin-bottom: 10px;
+}
+
+.card p{
+  color: #666;
+}
 .card:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
+    
  }
+
+
+ 
  .navbar-expand-lg-navbar-light-bg-light{
     background-image: linear-gradient(transparent, rgb(58, 161, 135));
+    /* Estilo para os cards */
+
+
+/* Estilo para o efeito hover na imagem */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+/* Para responsividade */
+@media (max-width: 768px) {
+  .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
    
 }
  
@@ -158,8 +239,37 @@
       opacity: 1;
     }
   }
-   
-  .footer {
+
+
+/* Estilos para o carrossel */
+.carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover; /* Garante que a imagem preencha completamente o espaço do contêiner */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 10%; /* Largura dos controles de navegação */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 40px; /* Tamanho dos ícones de navegação */
+  height: 40px;
+}
+
+/* Estilos para tornar o carrossel responsivo */
+@media (max-width: 768px) {
+  .carousel-item img {
+      max-height: 300px; /* Altura máxima do banner em telas menores */
+  }
+}
+
+
+
+
+
+
+.footer {
     font-size: 1.6rem;
     text-align: center;
     padding: 4.5rem;
