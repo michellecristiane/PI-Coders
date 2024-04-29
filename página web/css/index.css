@@ -235,7 +235,10 @@ nav a{
     padding: 1.6rem 4.6rem;
     display: inline-block;
 }
+.container{
+  display: inline-block;
 
+}
 .wrapperContainer {
     padding: 1px0;
 }
@@ -306,6 +309,18 @@ nav a{
     margin-bottom: 4rem;
 }
 
+.hero_title{
+  color: #efefef;
+  text-align: center;
+  
+}
+.escola_title{
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+}
+
+
 .cursos {
     text-align: center;
 }
@@ -356,6 +371,7 @@ nav a{
 .escola p {
     font-size: 1.8rem;
     line-height: 1.5;
+    color: #ccc;
 }
 
 .contatos_address {
@@ -368,13 +384,20 @@ nav a{
 
 
 .footer {
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 4.5rem;
-    color: #efefef;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #141616;
+  border-color: #277c8b;
+  background-image: linear-gradient(transparent, rgb(87, 189, 192));
+  color: #efefef;
+  
 }
 
 .footer a {
-    color: inherit;
-    color: #ccc;
+  color: inherit;
+  color:  rgb(87, 189, 192);
 }
+
+
+
