@@ -65,9 +65,11 @@ button:hover {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-image: linear-gradient(transparent, rgb(65, 112, 114));
+    /* background-image: linear-gradient(transparent, rgb(65, 112, 114)); */
+    background-color: rgb(65, 112, 114);
     color: #181818;
-    text-decoration: none;
+    /* text-decoration: none; */
     border-radius: 5px;
+    cursor: pointer;
   }
 
