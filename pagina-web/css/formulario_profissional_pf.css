@@ -169,6 +169,20 @@ input, select {
  
 }
 
+.button {
+    float: left;
+    margin-top: 20px;
+    background: linear-gradient(90deg, rgba(185, 133, 243, 0.973), rgb(119, 0, 255, 0.973));
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: bold;
+    border-color: rgb(255, 255, 255);
+    padding: 3px 15px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
+
 /* input:invalid:focus, select:invalid:focus {
     border-bottom: 2px solid red;
 
