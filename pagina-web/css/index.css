@@ -1,403 +1,335 @@
-:root {
-  --primary-color: rgb(88, 165, 175); /*Define variáveis globais CSS que podem ser usadas em todo o documento.*/
-
-}
-
-
-
-body {
-  min-height: 100hv;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #efefef;
-}
-
-
+/* Reset CSS básico */
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-
-  /* css do ligin e cadastro */
-
-  .header_nav1 ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.header_nav1 ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.header_nav1 ul li a {
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
-    transition: box-shadow 0.3s ease; /* Adiciona transição suave ao passar o mouse */
-}
-
-.header_nav1 ul li a:hover {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Aumenta a sombra no hover */
-    color: #ffffff;
+:root {
+    --primary-color: #62dac6;
+    --dark-color: #333;
+    --light-color: #fafafa; /* Define variaveis globais CSS que podem ser usadas em todo o documento */
 }
 
 
-
-
-/* cssdomenu responssivo */
+html{
   
-nav {
-  display: flex;
-  /*Jogar os itens para o canto da página*/
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: rgb(40, 113, 122);
-  font-family: 'Poppins', sans-serif;
-}
-.nav-links ul li a:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Aumenta a sombra no hover */
-  color: #ffffff;
-}
-.logo {
-  /*Mudando a cor da fonte do nome*/
-  color: white;
-  /*Deixando o texto formatado*/
-  text-transform: uppercase;
-  /*Mudando o espaçamento das letras*/
-  letter-spacing: 5px;
-  /*Tamaho da letra*/
-  font-size: 20px;
-
-}
-
-.nav-links {
-  /*Ajustando o tamanho e posição dos itens*/
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-
-}
-
-.nav-links li {
-  /*Sumindo com os pontos que ficavam nos itens*/
-  list-style: none;
-
-
-}
-
-.nav-links a {
-  /*Mudando a cor dos itens*/
-  color: white;
-  /*Mudando o espaçamento das letras dos itens*/
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.burger {
-  /*Não deixando o menu hambuguer visivel */
-  display: none;
-  /*aparecendo a maozinha quando clica no menu hambuguer*/
-  cursor: pointer;
-}
-
-.burger div {
-  /*Ajeitando o menu Hambuguer*/
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
-/*Ajustando a altura*/
-@media screen and (max-width:1024px) {
-  .nav-links {
-    width: 60%;
-  }
-}
-
-/*Ajustando a altura minima*/
-@media screen and (max-width:768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  /*ajustando os itens para se adequar a altura min.*/
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    /*Arrumando o menu*/
-    background-color: rgb(40, 113, 122);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    /*Ajeitando a transição parar abrir o menu*/
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-
-  .nav-links li {
-    opacity: 0;
-  }
-
-  .burger {
-    /*para aparecer o menu quando a tela tiver pequena*/
-    display: block;
-  }
-}
-
-/*Quando se clica no menu , consegue abrir os itens*/
-.nav-active {
-  transform: translateX(0%);
-}
-
-/*Animações quando se clica no menu*/
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-/*Transformando o menu em X*/
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-
-}
-
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-@media screen and (max-width: 768px) {
-  .nav-links.nav-active li {
-    opacity: 1;
-  }
-}
-
-
-  /* restante do codigo */
+    font: 400 62.5% 'Inter', sans-serif; /*técnica de ajuste de tamanho de fonte para facilitar o uso de unidades de medidas relativas.*/
   
-
+}
 p,
 a {
     font-size: 1.6rem;
 }
-
 h1 {
     font-size: 4.8rem;
 }
-
 h2 {
-    font: 4rem;
+    font-size: 4rem;
 }
-
 h3 {
-    font: 3.2rem;
+    font-size: 3.2rem;
 }
-
 nav a{
     color: inherit; /* Eles herdam a cor do texto do elemento pai.*/
 }
-
 .upper {
-    text-transform: uppercase
-    
-}
-
+    text-transform: uppercase;
+}    
 .btn {
-    background-color: var(--primary-color);
-    border-radius: 4px;
-    font-size: 1.8rem;
-    text-decoration: none;
-    padding: 1.6rem 4.6rem;
-    display: inline-block;
-}
-.container{
-  display: inline-block;
-
+        background-color: var(--primary-color);
+        border-radius: 4px;
+        font-size: 1.8rem;
+        text-decoration: none;
+        padding: 1.6rem 4.6rem;
+        display: inline-block;
 }
 .wrapperContainer {
-    padding: 1px0;
+    padding-top: 1px;
 }
-
 .wrapperContainer-dark {
-    background-color: #2a2a2a;
-    color: #0c0c0c;
+    background-color: rgb(59, 57, 57);
+    color: #fafafa;
+    
 }
-
 .wrapperContainer-light {
     background-color: #fafafa;
 }
-
 .wrapperContainer-dark2 {
-    background-color: #0b534e;
-    color: #1b1a1a;
+    background-color: #9098af;
+    color: #fafafa;
 }
-
 .wrapperContainer-fixed {
     position: sticky;
     width: 100%;
     top: 0;
     left: 0;
 }
-
-.wrapperContainer-padded {
-    padding-top: 12rem;
+.wrapperContainer-padded{
+    padding: 12rem;
 }
-
 .container {
     max-width: 127.6rem;
     margin: auto;
 }
-
-.section_title {
+.section_title  {
     padding: 7rem 0;
     text-align: center;
     margin: 0;
 }
-
-.section_btn {
+.menu-btn{
     margin: 7rem 0;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     color: var(--primary-color);
-    padding: 2rem 0;
+    padding: 0;
+        
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-
-
-.wrapperContainer-hero {
-    background-image: linear-gradient(transparent, rgb(58, 161, 135));
-}
-
-.heroBanner {
+/* Estilos do cabeçalho */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20rem;
+    padding: 0;
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.header_nav a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.menu-btn {
+    display: none; /* Ocultar o botão de menu em telas maiores */
+}
+
+.header_nav_mobile {
+    display: none; /* Ocultar o menu móvel por padrão */
+}
+
+/* Estilos do menu móvel ativo */
+.header_nav_mobile.active {
+    display: block;
+}
+
+/* Estilos para o logotipo */
+.header img {
+    width: 150px;
+}
+
+/* Estilos para os links */
+.header_nav a {
+    color: var(--primary-color);
+}
+
+/* Estilos para o botão de menu */
+.menu-btn {
+    display: block; /* Exibir o botão de menu apenas em telas menores */
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.menu-btn:focus {
+    outline: none; /* Remover o contorno ao focar */
+}
+
+/* Estilos para os links do menu móvel */
+.header_nav_mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.header_nav_mobile li {
+    margin-bottom: 0rem;
+}
+
+.header_nav_mobile a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header_nav_mobile a:hover {
+    text-decoration: underline;
+    background-color: #299b93;
 }
 
 
+/* Estilos do cabeçalho */
+
+.header_nav a {
+    padding: .5em 0.15em;
+    border: solid 1px;
+    text-decoration: none;
+
+}
+.header_nav ul {
+    display: flex;
+    gap: 16px;
+    list-style-type: none;
+}
+.header_nav a:hover {
+    background-color: rgb(47, 134, 160);
+
+}
+.wrapperContainer-hero {
+    /* background-image: linear-gradient(transparent,rgb(90, 20, 255)); */
+    background-color: #62beda;
+}
+.heroBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    gap: 20rem;
+}
 .hero_title {
     margin-bottom: 4rem;
 }
 
-.hero_title{
-  color: #efefef;
-  text-align: center;
-  
-}
-.escola_title{
-  color: #fff;
-  text-align: center;
-  font-size: 50px;
-}
-
-
-.cursos {
+.perfis {
     text-align: center;
 }
-
-.cursosContainer {
+.perfisContainer {
     display: flex;
     text-align: left;
     gap: 2rem;
 }
-
-.curso_card {
-    flex: 1;
+.perfis_card {
+    flex:1;
 }
-
-.curso_card img {
+.perfis_card img {
     display: block;
     width: 100%;
 }
-
-.curso_card h3 {
+.perfis_card h3 {
     font-size: 2.4rem;
 }
-
-.curso_card p {
+.perfis_card p {
     font-size: 1.8rem;
     line-height: 1.5;
-}
 
-.cursos_card_content {
+}
+.perfis_card_content {
     padding: 1rem 1.25rem;
     border: 1px solid #ccc;
     border-radius: 0 0 8px 8px;
     border-top: transparent;
 }
 
-.escola {
+/* Estilos para o carrossel */
+#carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Suaviza o scroll no iOS */
+    margin-top: 100px;
+}
+
+.carousel-container h1{
+    color: #3e858d;
+}
+
+.perfis_card {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Espaçamento entre os cartões */
+    scroll-snap-align: start;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+}
+
+
+.container_sobre {
     display: flex;
     gap: 7rem;
-    padding-top: 6rem;
-
+    /* padding-top:  6rem; */
+    margin-bottom: 20px;
+    justify-content: center;
 }
-
-.section_title {
+.sobre_title {
     font-size: 3.2rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
-.escola p {
-    font-size: 1.8rem;
-    line-height: 1.5;
-    color: #ccc;
-}
-
-.contatos_address {
-    text-align: right;
-    font: normal 400 1.8rem "Inter", sans-serif;
-    padding: 3rem 0;
-}
-
-/* css do carrossel */
 
 
 .footer {
-  font-size: 1.6rem;
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #141616;
-  border-color: #277c8b;
-  background-image: linear-gradient(transparent, rgb(87, 189, 192));
-  color: #efefef;
-  
+    font-size: 1.6rem;
+    text-align: center;padding: 4.5rem;
+}
+.footer a {
+    color: inherit;
 }
 
-.footer a {
-  color: inherit;
-  color:  rgb(87, 189, 192);
+
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
 }
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.profile {
+    flex: 0 0 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 
 
