@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); */
 
 *{
     margin: 0;
@@ -7,50 +7,152 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.header_nav1 {
+:root {
+  --primary-color:#62dac6; /* Define variaveis globais CSS que podem ser usadas em todo o documento */
+}
+
+html{
+
+  font: 400 62.5% 'Inter', sans-serif; /*técnica de ajuste de tamanho de fonte para facilitar o uso de unidades de medidas relativas.*/
+
+}
+p,
+a {
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+nav a{
+  color: inherit; /* Eles herdam a cor do texto do elemento pai.*/
+}
+.upper {
+  text-transform: uppercase;
+}    
+.btn {
+      background-color: var(--primary-color);
+      border-radius: 4px;
+      font-size: 1.8rem;
+      text-decoration: none;
+      padding: 1.6rem 4.6rem;
+      display: inline-block;
+}
+.wrapperContainer {
+  padding-top: 1px;
+}
+.wrapperContainer-dark {
+  background-color: rgb(54, 54, 54);
+  color: #fafafa;
+  
+}
+.wrapperContainer-light {
+  background-color: #fafafa;
+}
+.wrapperContainer-dark2 {
+  background-color: #9098af;
+  color: #fafafa;
+}
+.wrapperContainer-fixed {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.wrapperContainer-padded{
+  padding: 12rem;
+}
+.container {
+  max-width: 127.6rem;
+  margin: auto;
+}
+.section-title  {
+  padding: 7rem 0;
+  text-align: center;
   margin: 0;
-  margin-right: 10px;
 }
-.header_nav1 li {
-  margin-bottom: 10px;
+.section-btn  {
+  margin: 7rem 0;
 }
-.header_nav1 a {
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  color: var(--primary-color);
+  padding: 2rem 0;
+      
+}
+.header_nav a {
+  padding: .75em 1.15em;
+  border: solid 1px;
   text-decoration: none;
-  color: #f1f5f4;
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid fixed;
-  transition: all 0.3s ease;
-  align-items: center;
+
 }
-.header_nav1 a:hover {
-  background-color: #59bab2;
-  border-color: #4abed2;
+.header_nav ul {
+  display: flex;
+  gap: 16px;
+  list-style-type: none;
 }
+.header_nav a:hover {
+  background-color: rgb(47, 134, 160);
+
+
+}
+
 section {
   padding-bottom: 20px;
 }
-h1{
-  color:#fbfafa;
+
+.navbar_navbar-expand-l_navbar-light_bg-light{
+  font-size: 40'Inter', sans-serif; /* Tamanho grande */
+  text-align: center; /* Texto centralizado */
+  background-color: #449890;
+  color: #efefef;
+ 
+}
+
+.navbar-brand:hover {
+  color: #4a204a; /* Cor do texto ao passar do mouse */
+  background-image: linear-gradient(aqua);
 }
 
 
-.cards  {
+.carousel_slide {
+  width: 900px;
+  padding-top: 30px;
+  margin: 0 auto; /* Isso centralizará o carrossel na página, se necessário */
+}
+
+
+
+.card-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content:s;
   align-items: center;
+  margin-bottom: 300px;
+  margin-top: 100px;
+  gap: 20px; /* Espaço entre os cartões */
 }
 
-.card   {
-  width: 300px;
-  margin: 20px;
-  padding: 15px;
-  border: 1px solid #27837a;
-  border-radius: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-  text-align: center;
+.card {
+  flex: 1 1 300px; /* Crescimento flexível, encolhimento flexível, largura inicial */
+  background-color: #cee9e5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 300px; /* Altura fixa para os cartões */
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .card img {
   width: 100%;
@@ -66,207 +168,13 @@ h1{
   color: #666;
 }
 .card:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     transition: box-shadow 0.3s ease-in-out;
     
  }
 
 
  
- .navbar-expand-lg-navbar-light-bg-light{
-    background-image: linear-gradient(transparent, rgb(58, 161, 135));
-    /* Estilo para os cards */
-
-
-/* Estilo para o efeito hover na imagem */
-.card-img-top {
-  transition: transform 0.3s ease;
-}
-
-.card-img-top:hover {
-  transform: scale(1.1);
-}
-
-/* Para responsividade */
-@media (max-width: 768px) {
-  .col-md-4 {
-      flex: 0 0 100%;
-      max-width: 100%;
-  }
-}
-   
-}
- 
-
- nav {
-    display: flex;
-    /*Jogar os itens para o canto da página*/
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: rgb(42, 38, 38);
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .logo {
-    /*Mudando a cor da fonte do nome*/
-    color: white;
-    /*Deixando o texto formatado*/
-    text-transform: uppercase;
-    /*Mudando o espaçamento das letras*/
-    letter-spacing: 30px;
-    /*Tamaho da letra*/
-    font-size: 20px;
-
-  }
-
-  .nav-links {
-    /*Ajustando o tamanho e posição dos itens*/
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-
-  }
-
-  .nav-links li {
-    /*Sumindo com os pontos que ficavam nos itens*/
-    list-style: none;
-
-
-  }
-
-  .nav-links a {
-    /*Mudando a cor dos itens*/
-    color: white;
-    /*Mudando o espaçamento das letras dos itens*/
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  .burger {
-    /*Não deixando o menu hambuguer visivel */
-    display: none;
-    /*aparecendo a maozinha quando clica no menu hambuguer*/
-    cursor: pointer;
-  }
-
-  .burger div {
-    /*Ajeitando o menu Hambuguer*/
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-
-  /*Ajustando a altura*/
-  @media screen and (max-width:1024px) {
-    .nav-links {
-      width: 60%;
-    }
-  }
-
-  /*Ajustando a altura minima*/
-  @media screen and (max-width:768px) {
-    body {
-      overflow-x: hidden;
-    }
-
-    /*ajustando os itens para se adequar a altura min.*/
-    .nav-links {
-      position: absolute;
-      right: 0px;
-      height: 92vh;
-      top: 8vh;
-      /*Arrumando o menu*/
-      background-color: rgb(40, 113, 122);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-      /*Ajeitando a transição parar abrir o menu*/
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-    }
-
-    .nav-links li {
-      opacity: 0;
-    }
-
-    .burger {
-      /*para aparecer o menu quando a tela tiver pequena*/
-      display: block;
-    }
-  }
-
-  /*Quando se clica no menu , consegue abrir os itens*/
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  /*Animações quando se clica no menu*/
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-
-  /*Transformando o menu em X*/
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .nav-links.nav-active li {
-      opacity: 1;
-    }
-  }
-
-
-/* Estilos para o carrossel */
-.carousel-item img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover; /* Garante que a imagem preencha completamente o espaço do contêiner */
-}
-
-.carousel-control-prev, .carousel-control-next {
-  width: 10%; /* Largura dos controles de navegação */
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  width: 40px; /* Tamanho dos ícones de navegação */
-  height: 40px;
-}
-
-/* Estilos para tornar o carrossel responsivo */
-@media (max-width: 768px) {
-  .carousel-item img {
-      max-height: 300px; /* Altura máxima do banner em telas menores */
-  }
-}
-
-
-
-
 
 
 .footer {
@@ -274,7 +182,7 @@ h1{
     text-align: center;
     padding: 4.5rem;
     color: #efefef;
-    background-image: linear-gradient(transparent, rgb(58, 161, 135));
+    background-image: linear-gradient(transparent, rgb(44, 46, 45));
     background-color: black;
 
 }

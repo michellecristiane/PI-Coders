@@ -1,16 +1,6 @@
-/* Reset CSS básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
-    --primary-color: #62dac6;
-    --dark-color: #333;
-    --light-color: #fafafa; /* Define variaveis globais CSS que podem ser usadas em todo o documento */
+    --primary-color:#62dac6; /* Define variaveis globais CSS que podem ser usadas em todo o documento */
 }
-
 
 html{
   
@@ -72,12 +62,12 @@ nav a{
     max-width: 127.6rem;
     margin: auto;
 }
-.section_title  {
+.section-title  {
     padding: 7rem 0;
     text-align: center;
     margin: 0;
 }
-.menu-btn{
+.section-btn  {
     margin: 7rem 0;
 }
 
@@ -86,102 +76,11 @@ nav a{
     justify-content: space-between;
     align-items: center; 
     color: var(--primary-color);
-    padding: 0;
+    padding: 2rem 0;
         
 }
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Estilos do cabeçalho */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-}
-
-.header_nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style-type: none;
-}
-
 .header_nav a {
-    color: var(--dark-color);
-    text-decoration: none;
-}
-
-.menu-btn {
-    display: none; /* Ocultar o botão de menu em telas maiores */
-}
-
-.header_nav_mobile {
-    display: none; /* Ocultar o menu móvel por padrão */
-}
-
-/* Estilos do menu móvel ativo */
-.header_nav_mobile.active {
-    display: block;
-}
-
-/* Estilos para o logotipo */
-.header img {
-    width: 150px;
-}
-
-/* Estilos para os links */
-.header_nav a {
-    color: var(--primary-color);
-}
-
-/* Estilos para o botão de menu */
-.menu-btn {
-    display: block; /* Exibir o botão de menu apenas em telas menores */
-    background-color: transparent;
-    border: none;
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    cursor: pointer;
-}
-
-.menu-btn:focus {
-    outline: none; /* Remover o contorno ao focar */
-}
-
-/* Estilos para os links do menu móvel */
-.header_nav_mobile ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-}
-
-.header_nav_mobile li {
-    margin-bottom: 0rem;
-}
-
-.header_nav_mobile a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.header_nav_mobile a:hover {
-    text-decoration: underline;
-    background-color: #299b93;
-}
-
-
-/* Estilos do cabeçalho */
-
-.header_nav a {
-    padding: .5em 0.15em;
+    padding: .75em 1.15em;
     border: solid 1px;
     text-decoration: none;
 
@@ -248,9 +147,6 @@ nav a{
     margin-top: 100px;
 }
 
-.carousel-container h1{
-    color: #3e858d;
-}
 
 .perfis_card {
     flex: 0 0 auto;
@@ -288,7 +184,7 @@ img {
 
 
 
-.carousel-container {
+.carousel-container2 {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
