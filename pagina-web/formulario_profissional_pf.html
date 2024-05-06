@@ -34,17 +34,14 @@
                         <input class="input_smaller" type="date" name="data_nascimento" id="data_nascimento" placeholder="Dia/Mês/Ano" required><br><br>
                     <!--DIV DA OPÇÃO DE  GENERO-->
                 
-                    <div class="area_gender">
-                        <label> Genero:</label>
-                        <label for="feminino">Feminino
-                        <input type="radio" name="option" id="feminino" value="feminino" required> 
-                        </label>
-                        <label for="masculino">Masculino
-                        <input type="radio" name="option" id="masculino" value="masculino" required>
-                        </label>
-                        <label for="outro">Outro
+                    <label> Genero:</label>
+                    <div class="area_genero">
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" name="option" id="feminino" value="feminino" required>&#160;&#160;&#160;&#160;&#160;&#160;&#160;   
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="option" id="masculino" value="masculino" required>&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                        <label for="outro">Outro</label>
                         <input type="radio" name="option" id="outro" value="outro" required>
-                        </label>
                     </div><br>
 
                 <label for="nome_profissional">Como voce é conhecido (a)?</label><br>
@@ -78,17 +75,17 @@
                 <input class="input_smaller" type="check" name="cep" id="cep" maxlength="9" placeholder="CEP" size="20" required><br><br>
               
                 <div class="area area_endereco">
-                    <div class="logradouro_numero"> 
+                    <div class="div-pai_logradouro"> 
                         <div class="logradouro">
                             <label for="logradouro"> Logradouro:</label>
                             <input class="input_logradouro" type="text" name="logradouro" id="logradouro" maxlength="80" placeholder="Rua, Travessa, Passagem..." size="20" required>
-                        </div>
+                        </div>                       
+                    </div>
+                    <div class="numero_bairro">
                         <div class="numero"> 
                             <label for="numero"> N°:</label>
                             <input class="input_numero" type="text" name="numero" id="numero" maxlength="5" placeholder="Nº" size="20" required>
                         </div>
-                    </div>
-                    <div class="div_pai_bairro">
                         <div class="bairro">
                             <label for="bairro"> Bairro:</label>
                             <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40" size="20" required>
