@@ -55,6 +55,10 @@ body{
     margin-bottom: 20px;
     
 }
+.perfildoforografo img{
+    border-radius: 50px;
+}
+
 
 .perfil-card {
     width: 300px;
