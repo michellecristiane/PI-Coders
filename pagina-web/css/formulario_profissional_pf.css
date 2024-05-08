@@ -1,7 +1,8 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
     background-image: url(../imagens/cadastro_profissional/background_cadastro_profissional.jpg);
     background-size:cover;
     background-repeat:no-repeat;
@@ -11,11 +12,12 @@ body{
     display: flex; 
     align-items: center; 
     justify-content: center; 
+
 }
 /*caixa de formalrio de fundo transparente*/
 
 .form-send{
-    width: 40%;
+    min-width: 550px;
     box-sizing: border-box;
     padding: 15px 15px 40px;
     color: rgb(255, 255, 255);/*cores das fontes*/
@@ -25,11 +27,12 @@ body{
 }
 
 /*borda do formulario*/
+
 fieldset{
     box-sizing: border-box;
-    border: 3px solid rgb(119, 0, 255, 0.973);/*linha da borda que esta na cor lilás*/ 
-    border-radius: 15PX;/*ondulação dos cantos da linha de borda" cadastre-se"*/
-    padding: 20px;
+    border: 3px solid rgb(119, 0, 255, 0.973); /* linha da borda que esta na cor lilás */ 
+    border-radius: 10px; /* ondulação dos cantos da linha de borda "cadastre-se" */
+    padding: 20px; 
     
 }
 /*caixa de legenda*/
@@ -47,6 +50,7 @@ legend{
 .area_nome, .area_email, .area_password {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     
      
@@ -55,12 +59,14 @@ legend{
 .area_endereco, .area_estado_cidade {
     /* background-color: yellow; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
 
 .area_phone {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 45%;
   box-sizing: border-box;
@@ -68,13 +74,14 @@ legend{
 
 .area_genero {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     gap: 2px;
 }
 
 
-.primary_name, .second_name, .email, .confirm_email, .senha, .confirmar_senha {
+.primary_name, .second_name, .enter_email, .confirm_email, .senha, .confirmar_senha {
     display: flex;
     flex-direction: column;
     width: 45%;
@@ -131,14 +138,6 @@ legend{
 }
 
 
-.input_bigger {
-
-    margin-top: 5px;
-    box-sizing: border-box;   
-    width: 100%;
-   
-}
-
 .input_smaller {
     margin-top: 5px;
     box-sizing: border-box;
@@ -146,7 +145,7 @@ legend{
    
 }
 
-.input_ddd, .input_phone, .input_numero, .input_bairro, .input_logradouro  {
+.input_ddd, .input_phone, .input_numero, .input_bairro, .input_logradouro, .input_bigger  {
   box-sizing: border-box;
   width: 100%;
   margin-top: 5px;
@@ -156,10 +155,6 @@ legend{
     box-sizing: border-box;
     width: 55%;
     margin-top: 5px;
-}
-
-label {
-    font-weight: bold;
 }
 
 input, select {
@@ -186,12 +181,12 @@ input, select {
 }
 
 input:invalid:focus, select:invalid:focus {
-    border: 1px solid red;
+    border: 2px solid red;
 
 }
 
 input:valid:focus, select:valid:focus {
-    border: 1px solid green;
+    border: 2px solid green;
 }
 
 /* 
