@@ -8,7 +8,7 @@
 }
 
 :root {
-  --primary-color:#62dac6; /* Define variaveis globais CSS que podem ser usadas em todo o documento */
+  --primary-color: rgb(133, 178, 208); /* Define variaveis globais CSS que podem ser usadas em todo o documento */
 }
 
 html{
@@ -100,7 +100,7 @@ nav a{
   list-style-type: none;
 }
 .header_nav a:hover {
-  background-color: rgb(47, 134, 160);
+  background-color:  rgb(133, 178, 208)
 
 
 }
@@ -112,15 +112,11 @@ section {
 .navbar_navbar-expand-l_navbar-light_bg-light{
   font-size: 40'Inter', sans-serif; /* Tamanho grande */
   text-align: center; /* Texto centralizado */
-  background-color: #449890;
-  color: #efefef;
+  background-color:  rgb(133, 178, 208);
+  color: #000000;
  
 }
 
-.navbar-brand:hover {
-  color: #4a204a; /* Cor do texto ao passar do mouse */
-  background-image: linear-gradient(aqua);
-}
 
 
 .carousel_slide {
@@ -143,7 +139,7 @@ section {
 
 .card {
   flex: 1 1 300px; /* Crescimento flexível, encolhimento flexível, largura inicial */
-  background-color: #cee9e5;
+  background-color: rgb(133, 178, 208);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
