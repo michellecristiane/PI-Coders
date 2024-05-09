@@ -7,11 +7,12 @@
     <title>Cadastre-se</title>
     <link rel="stylesheet" href="css/formulario_cliente.css">
 </head>
+
 <body>
     <form class="form" id="form-send">        
         <fieldset>
+            <legend>Cadastre-se</legend><br>   
 
-            <legend>Cadastre-se</legend><br>            
             <div class="area area_name">
                 <div class="primary_name">
                     <label for="nome">* Nome</label>
@@ -26,7 +27,7 @@
 
             <div class="cpf">
                 <label for="CPF">* CPF</label>
-                <input class="input_cpf" type="text" name="cpf" autocomplete="off" id="cpf" maxlength="14" placeholder="Digite seu CPF" required>
+                <input class="input_cpf" type="text" name="cpf" autocomplete="off" id="cpf" maxlength="14" required>
 
             </div><br>
            
@@ -35,31 +36,29 @@
                 <input class="input_date_birth" type="date" name="data_nascimento" id="data_nascimento" placeholder="DD/MM/AAAA" required><br>
             </div>
 
-
-
-            <div class="area area_email">
-                <div class="enter_email">
-                    <label for="user">* E-mail</label>
-                    <input class="input_enter_email" type="text" name="email" id="email" placeholder="Digite seu E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20"  maxlength="80" required>         
-                 
-                </div>
-
-                <div class="confirm_email">
-                    <label for="confirmar_email" >* Confirmar E-mail</label>
-                    <input class="input_confirm_password" type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Confirme seu Email" size="20" maxlength="80" required>
-
-                </div>
-                
-            </div><br>            
-            
-            <label for="select">* Gênero</label>
+            <label for="select">* Gênero</label><br>
             <select class="genero" name="Genero" id="Genero" required>
                 <option >Selecione seu Gênero</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Outro">Outro</option>
-            </select><br>
+            </select><br><br>
 
+            <div class="area area_email">
+                <div class="enter_email">
+                    <label for="user">* E-mail</label>
+                    <input class="input_enter_email" type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20"  maxlength="80" required>         
+                 
+                </div>
+
+                <div class="confirm_email">
+                    <label for="confirmar_email" >* Confirmar E-mail</label>
+                    <input class="input_confirm_password" type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="80" required>
+
+                </div>
+                
+            </div><br>            
+                      
             <label for="tel">*(DDD)</label>
             <input type="tel" class="ddd" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
             <label for="telefone">*Telefone</label>
@@ -96,7 +95,8 @@
                 <h6>*Senha deve conter no minimo 8 caracteres, incluindo números, letras, e 1 caractere especial.</h6>
                 <h6>*Para que a sua senha seja segura, não utilize sequencias como 1234 ou ABCD.</h6>
                 <h6>*Seu nome de usuário e sua senha devem ser diferentes.</h6>
-               </div>
+            </div>
+
             <button type="submit">Enviar Cadastro</button><br>
             
         </fieldset>

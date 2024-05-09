@@ -1,7 +1,7 @@
 body{
-
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.5px;
     background-image: url(../imagens/cadastro_cliente/lentes.jpg);
@@ -17,10 +17,8 @@ body{
 }
 
 
-
-
 .form{
-    min-width: 550px;
+    width: 35%;
     box-sizing: border-box;
     padding: 15px 15px 40px;
     color: rgb(255, 255, 255);/*cores das fontes*/
@@ -32,7 +30,7 @@ body{
 fieldset{
     box-sizing: border-box;
     border: 3px solid rgb(25, 0, 255);/*borda do fieldset*/
-    padding-top: 15px; /*altura do fieldset*/
+    padding-top: 10px; /*altura do fieldset*/
     border-radius: 10px;
     
 }
@@ -65,6 +63,12 @@ legend{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+}
+
+.input_primary_name, .input_second_name, .input_enter_email, .input_confirm_password, .input_enter_password, .input_confirm_password {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .input_date_birth, .input_cpf {
@@ -106,9 +110,11 @@ label{
     margin:1px;
     left: 91px;
 }
-/* .date{
+
+.date{
     float: right;
 } */
+
 
 .inputUser{
     margin:0px;
