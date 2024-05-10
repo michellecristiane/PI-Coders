@@ -83,12 +83,10 @@ input, select {
     outline: none;
     height: 25px;
     margin-top: 5px;
-
 }
 
 
-
-/* 
+ 
 .aviso h6{
     margin: 4px;
     float: 20px;
@@ -106,6 +104,8 @@ button{
     cursor: pointer;
 }
 
+/*
+
 label{
     margin:1px;
     left: 91px;
@@ -116,7 +116,7 @@ label{
 } */
 
 
-.inputUser{
+/* .inputUser{
     margin:0px;
     padding: 2px;
     top: 20ps;
@@ -129,7 +129,7 @@ label{
     font-size: 10px;
 } */
 
-::-webkit-input-placeholder{
+/* ::-webkit-input-placeholder{
     color: rgb(134, 134, 143);
     text-align: center;
-}
+} */
