@@ -71,7 +71,7 @@ legend{
     margin-top: 5px;
 }
 
-.input_date_birth, .input_cpf {
+.input_date_birth, .input_cpf, .select_genero {
     box-sizing: border-box;
     width: 25%;
 }

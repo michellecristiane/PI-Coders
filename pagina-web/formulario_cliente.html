@@ -37,8 +37,8 @@
             </div>
 
             <label for="select">* Gênero</label><br>
-            <select class="genero" name="Genero" id="Genero" required>
-                <option >Selecione seu Gênero</option>
+            <select class="select_genero" name="Genero" id="Genero" required>
+                <option >Selecione</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Outro">Outro</option>
@@ -55,15 +55,21 @@
                     <label for="confirmar_email" >* Confirmar E-mail</label>
                     <input class="input_confirm_password" type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="80" required>
 
-                </div>
-                
-            </div><br>            
-                      
-            <label for="tel">*(DDD)</label>
-            <input type="tel" class="ddd" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
-            <label for="telefone">*Telefone</label>
-            <input type="tel" name="telefone" id="telefone" maxlength="10" placeholder="Telefone" size="20" required><br>
+                </div>                
+            </div><br>  
 
+            <div class="area area_phone">
+                <div class="ddd">
+                    <label for="tel">*(DDD)</label>
+                    <input class="input_ddd" type="tel" class="ddd" name="ddd" id="ddd" maxlength="3" placeholder="(DDD)" size="20" required>
+                </div>
+
+                <div class="phone_number">
+                    <label for="telefone">*Telefone</label>
+                    <input class="input_number_phone" type="tel" name="telefone" id="telefone" maxlength="10" placeholder="Telefone" size="20" required><br>
+                </div>            
+            </div>      
+        
             <label for="int_profissonal">*Interesse Profissional:</label>
             <div>
                 <label for="photographya">Fotografia</label>
