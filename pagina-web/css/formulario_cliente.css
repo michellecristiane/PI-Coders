@@ -52,6 +52,13 @@ legend{
     justify-content: space-between;
 }
 
+.area_phone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 45%;
+}
+
 .primary_name, .second_name, .enter_email, .confirm_email, .enter_password, .confirm_password {
     display: flex;
     flex-direction: column;
@@ -63,6 +70,21 @@ legend{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+}
+
+.ddd {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 22%;
+}
+
+.phone_number {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 55%;
+
 }
 
 .input_primary_name, .input_second_name, .input_enter_email, .input_confirm_password, .input_enter_password, .input_confirm_password {
