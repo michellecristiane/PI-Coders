@@ -1,7 +1,10 @@
-body{
+body {
     min-height: 100hv;
     background-color: #f8f1f1;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -19,10 +22,9 @@ body{
     border-bottom:  solid #067579;
     border: #a14be7;
    
-    
 }
 
-.item-menu,a:hover {
+.item-menu, a:hover {
     color: rgb(76, 66, 74); /* Cor amarela ao passar o mouse */
    
 }
@@ -47,24 +49,26 @@ body{
     font-size: 24px;
 }
 
-/* Estilo para o perfil do fotógrafo */
-.perfildo-forografo {
-    text-align: center;
+.imagem_fotografo img {
+    border-radius: 100px;
+     
+}
+
+.imagem_fotografo {
     margin-bottom: 20px;
-    
-}
-.perfildoforografo img{
-    border-radius: 50px;
 }
 
 
-.perfil-card {
-    width: 300px;
+.card_fotografo {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    width: 350px;
     margin: 20px;
     padding: 15px;
     border-radius: 60px;
-    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(transparent, rgb(133, 178, 208))
 }
 
@@ -94,23 +98,35 @@ body{
     background-color: #242323;
     color: #111010;
     margin: 0;
+    width: 100%;
 }
 
-.header {
+.titulo {
     background-image: linear-gradient(transparent, rgb(150, 185, 209));
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    width: 100%;
 }
 
-.cards{
+.informacoes_fotografo{
     display: flex;
-    justify-content: ;
+    flex-direction: column;
+    line-height: 30px;
 
 }
+
+/* .informacoes_fotografo span {
+    line-height: 30px;
+} */
 
 h2{
     text-align: center;
+}
+
+span {
+    font-size: large;
+    font-weight:bolder;
 }
 
  .cardstopcard-gallery-img {
@@ -131,20 +147,20 @@ h2{
 .card   {
     width: 300px;
     margin: 20px;
-    padding: 15px;
+    padding: 5px;
     border: 1px solid rgb(133, 178, 208);
-    border-radius: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     text-align: center;
     position: relative;
     overflow: hidden;
+
 }
 
 .card img {
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10 px;
-    transform: scale(1);
+    border-radius: 10px;
+    transform: scale(2);
     transition: transform .5s ease-in-out;
 }
 
@@ -196,6 +212,7 @@ h1{
     font-size: 1.6rem;
     text-align: center;
     padding: 1.5rem;
+    width: 100%;
     background-color: #141616;
     border-color: #277c8b;
     background-image: linear-gradient(transparent, rgb(61, 60, 60))
