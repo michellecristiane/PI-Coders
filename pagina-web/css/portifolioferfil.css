@@ -134,10 +134,12 @@ span {
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
-} */
+} 
 
 /* Estilo para as destaques */   /* galeria */
 .cards  {
+    width: 100%;
+    background-color: rgb(4, 50, 88);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -148,9 +150,9 @@ span {
     width: 300px;
     margin: 20px;
     padding: 5px;
-    border: 1px solid rgb(133, 178, 208);
+    border: 2px solid #A56CFF;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 34px #a46cffb2;
     text-align: center;
     position: relative;
     overflow: hidden;
