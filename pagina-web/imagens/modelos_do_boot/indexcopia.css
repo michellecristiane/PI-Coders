@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: rgb(133, 178, 208);
 }
@@ -118,6 +117,7 @@ nav a {
 
 .wrapperContainer {
     padding-top: 1px;
+    margin-bottom: 10px;
 }
 
 .wrapperContainer-dark {
@@ -252,6 +252,21 @@ img {
     color: inherit;
 }
 
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.carousel-indicators li {
+    background-color: #000;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+}
+  
+
 .carousel-container2 {
     max-width: 800px;
     margin: 0 auto;
@@ -261,7 +276,9 @@ img {
 
 .carousel {
     overflow: hidden;
-    width: 500px;
+    width: 900px;
+    text-align: center;
+    justify-content: center;
 }
 
 .wrap {
@@ -273,7 +290,7 @@ img {
 }
 
 .wrap img {
-    width: 200px;
+    width: 600px;
     height: 200px;
     border-radius: 15px;
     object-fit: cover;
