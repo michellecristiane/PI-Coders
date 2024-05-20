@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flexbox-cards{
+    min-height: 100hv;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    
+}
+
+/* .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+.card-perfil{
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid #43beae;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    background-color: rgba(162, 210, 212, 0.9);
+}
+
+.card-perfil img {
+    width: 100%;
+    border-radius: 60px;
+    margin-bottom: 10 px;
+    border:rgb(40, 113, 118) ;
+}
+.img{
+
+    border-radius: 10 50px;
+    margin-bottom: 50px;
+    border:rgb(40, 113, 118) ;
+}
+
+.card-perfil h3{
+    margin-bottom: 10px;
+}
+
+.card-perfil p{
+    color: #522f43;
+}
+
+.flexbox-cards h2{
+    text-align: center;
+    font-style: italic;
+    text-decoration-line: overline;
+}

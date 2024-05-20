@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="css/formulario_cliente.css">
+</head>
+
+<body>
+    <form class="form" id="form-send">        
+        <fieldset>
+            <legend>Cadastre-se</legend><br>   
+
+            <div class="area area_name">
+                <div class="primary_name">
+                    <label for="nome">* Nome</label>
+                    <input class="input_primary_name" type="text" name="nome" id="nome" maxlength="150" required>
+                </div>
+
+                <div class="second_name">
+                    <label for="sobrenome">* Sobrenome</label>
+                    <input class="input_second_name" type="text" name="sobrenome" id="sobrenome" maxlength="150" required>
+                </div>                              
+            </div><br>
+
+            <div class="cpf">
+                <label for="CPF">* CPF</label>
+                <input class="input_cpf" type="text" name="cpf" autocomplete="off" id="cpf" maxlength="14" required>
+
+            </div><br>
+           
+            <div class="date_birth">
+                <label for="data_nascimento">* Data de Nascimento</label>
+                <input class="input_date_birth" type="date" name="data_nascimento" id="data_nascimento" placeholder="DD/MM/AAAA" required><br>
+            </div>
+
+            <label for="select">* Gênero</label><br>
+            <select class="select_genero" name="Genero" id="Genero" required>
+                <option >Selecione</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Outro">Outro</option>
+            </select><br><br>
+
+            <div class="area area_email">
+                <div class="enter_email">
+                    <label for="user">* E-mail</label>
+                    <input class="input_enter_email" type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20"  maxlength="80" required>         
+                 
+                </div>
+
+                <div class="confirm_email">
+                    <label for="confirmar_email" >* Confirmar E-mail</label>
+                    <input class="input_confirm_password" type="text" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="80" required>
+
+                </div>                
+            </div><br>  
+
+            <div class="area area_phone">
+                <div class="ddd">
+                    <label for="tel">* (DDD)</label>
+                    <input class="input_ddd" type="tel" class="ddd" name="ddd" id="ddd" maxlength="3" size="20" required>
+                </div>
+
+                <div class="phone_number">
+                    <label for="telefone">* Telefone</label>
+                    <input class="input_number_phone" type="tel" name="telefone" id="telefone" maxlength="10" size="20" required><br>
+                </div>            
+            </div>      
+        
+            <label for="interesse_profissional">* Interesse Profissional:</label>
+            <div class="area area_interesse_profissional">
+                <label for="fotografia">Fotografia</label>
+                <input type="radio" name="option" id="fotografia">
+                <label for="filmagem">Filmagem</label>
+                <input type="radio" name="option" id="filmagem" >
+            </div>
+            <div class="user_usuario">
+                <label for="user">*Usuário</label>
+                <input type="text" name="user" id="user" maxlength="30" placeholder="Digite seu Nome de Usuário" size="20" required>
+            </div>
+
+            <div class="area area_password">
+                <div class="enter_password">
+                    <label for="signUp-inputpassword">* Senha</label> <!--signUp-inputpassword (trad:cadastrar senha de entreda)"-->
+                    <img id="eye-password" class="eye-svg"  src="./olho.png"  width="0" height="0"> <!--"eye" (trad: olho)-->
+                    <input class="input_enter_password" type="password" name="signUp-inputpassword" maxlength="20" required>
+                </div>
+
+                <div class="confirm_password">
+                    <label for="signUp-confirmpassword">* Confirmar Senha</label>
+                    <img id="eye-password" class="eye-svg"  src="./olho.png"  width="0" height="0">
+                    <input class="input_confirm_password" type="password" name="signUp-confirmpassword" maxlength="20" placeholder="Confirme sua Senha" required>          
+
+                </div>               
+            </div>
+
+            <div class="aviso">
+                <h6>*Senha deve conter no minimo 8 caracteres, incluindo números, letras, e 1 caractere especial.</h6>
+                <h6>*Para que a sua senha seja segura, não utilize sequencias como 1234 ou ABCD.</h6>
+                <h6>*Seu nome de usuário e sua senha devem ser diferentes.</h6>
+            </div>
+
+            <button type="submit">Enviar Cadastro</button><br>
+            
+        </fieldset>
+    </form>
+        
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="indexestudo.css">
+    <title>PixelSingular</title>
+   
+</head>
+
+<body>
+    <div class="wrapperContainer wrapperContainer-dark wrapperContainer-fixed">
+        <header class="header container">
+            <img src="imagens/Logo_PixelSingular-removebg-preview.png" alt="Imagem não encontrada" width="150px">
+
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="portifolios-des-fotos.html">PORTIFOLIO</a></li>
+                    <li><a href="#Fotografos">PERFIS</a></li>
+                </ul>
+            </nav>
+
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="cadastro_pi.html">Cadastrar</a></li>
+                    <li><a href="LoginSite.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="menu-icon-bar"></div>
+                <div class="menu-icon-bar"></div>
+                <div class="menu-icon-bar"></div>
+            </div>
+        </header>
+    </div>
+
+    <div class="wrapperContainer wrapperContainer-hero">
+        <section class="container heroBanner">
+            <div class="header_content">
+                <h1 class="hero_title">A Imagem transforma o nosso <span class="upper">ser</span> </h1>
+            </div>
+            <img src="imagens/belem-conheca-e-se-encante-por-essa-beleza-do-para.jpg" alt="Baner Não encontrado">
+        </section>
+    </div>
+
+    <div class="wrapperContainer wrapperContainer-light wrapperContainer-padded" id="cursos">
+        <section class="perfis container">
+            <h2 class="section_title">Principais Destaques</h2>
+            <div class="perfisContainer" id="carousel">
+                <article class="perfis_card">
+                    <img src="imagens/BL0A7308.jpg" alt="Imagem não encontrada">
+                    <div class="perfis_card_content">
+                    </div>
+                </article>
+
+                <article class="perfis_card">
+                    <img src="imagens/BL0A72.jpg" alt="Imagem não encontrada">
+                    <div class="perfis_card_content">
+                    </div>
+                </article>
+
+                <article class="perfis_card">
+                    <img src="imagens/_6826.jpg" alt="Imagem não encontrada">
+                    <div class="perfis_card_content">
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <div class="wrapperContainer wrapperContainer-dark2 wrapperContainer-padded" id="escola">
+        <section class="container_sobre">
+            <img src="imagens/_6807.jpg" alt="Imagem nao encontrado">
+            <div class="Sobre_content">
+                <h2 class="sobre_title">SOBRE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci voluptatibus blanditiis odit quibusdam error rem asperiores ratione id ea, autem hic cum, similique perferendis unde veniam neque perspiciatis sunt quidem..</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="wrapperContainer wrapperContainer-light wrapperContainer-padded" id="Fotografos">
+        <div class="carousel-container" id="perfis2">
+            <h1 class="perfis2">PERFIS</h1>
+            <div class="carousel">
+                <div class="wrap">
+                    <img src="imagens/transferir (2).jpeg" alt="Photographer ">
+                    <h3><a href="portifolioperfil.html">Nome: Marcelo</a></h3>
+                    <div class="social-links">
+                        <a href="" target="_blank">Instagram</a>
+                        <a href="" target="_blank">Facebook</a>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <img src="imagens/transferir (3).jpeg" alt="Photographer">
+                    <h3>Nome do Fotógrafo </h3>
+                    <div class="social-links">
+                        <a href="" target="_blank">Instagram</a>
+                        <a href="" target="_blank">Facebook</a>
+                    </div>
+                </div>
+
+                <div class="wrap">
+                    <img src="imagens/transferir.jpeg" alt="Photographer">
+                    <h3>Nome do Fotógrafo </h3>
+                    <div class="social-links">
+                        <a href="" target="_blank">Instagram</a>
+                        <a href="" target="_blank">Facebook</a>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <img src="imagens/transferir.jpeg" alt="Photographer">
+                    <h3>Nome do Fotógrafo </h3>
+                    <div class="social-links">
+                        <a href="" target="_blank">Instagram</a>
+                        <a href="" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapperContainer wrapperContainer-dark">
+        <footer class="footer">Desenvolvido por <a href="https://UnitedColders.com">UnitedColders</a> </footer>
+    </div>
+
+    <script>
+       
+
+        function toggleMenu() {
+            const navLists = document.querySelectorAll('.header_nav ul');
+            navLists.forEach(navList => navList.classList.toggle('show'));
+        }
+    </script>
+</body>
+
+</html>

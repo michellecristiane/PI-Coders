@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PI_Coders/CSS/CriarNovaSenha.css">
+    <title>Criar Nova Senha</title>
+</head>
+<body>
+    <form action="salvar dados.php" method="post">
+        <h2>Criar uma nova senha?</h2>
+        <label for="Nova Senha">Senha:</label> <br />
+        <input class="campo_senha" type="password" id="senha" name="Senha" placeholder="Digite uma nova senha"><br />
+    
+        <label for="Confirmar Senha">Confirmar Senha:</label> <br/>
+        <input class="campo_senha" type="password" id="Confirmar Senha" name="Confirmar Senha" placeholder="Confirme a nova senha"><br />
+
+        <p><input type="checkbox" id="Mensagem" Mensagem="checkbox" >
+        <label for="checkbox">É necessário que todos os dispositivos acessem sua conta com a nova senha?</p> 
+
+    <button type submit="Redefinir Senha">Redefinir Senha</button>
+</body>
+</html>

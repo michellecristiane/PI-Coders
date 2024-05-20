@@ -1,0 +1,70 @@
+/*Login*/
+body {
+    background-image: url("/imagens/photoCamera02.jpg");
+    background-color: hsl(37, 4%, 42%);
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 5px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form{
+    background-color: rgb(140, 149, 153, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    border-color: aqua;
+    max-width: 400px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.5);
+}
+p{
+    color: white;
+}
+   
+h2 {
+    color: #fff;
+    text-align: center;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color:rgba(255, 255, 255);
+        
+
+}
+
+input{
+    width: 10%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: center;
+          
+}
+button {
+    background-color: aqua;
+    color: #080808;
+    padding: 10px 50px;
+    border-color: aqua;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
+}
+button:hover {
+    background-color: rgb(0, 0, 0, 0.4);
+    color: white;
+}
+
