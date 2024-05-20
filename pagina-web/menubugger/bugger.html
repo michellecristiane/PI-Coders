@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <link rel="stylesheet" href="bugger.css">
+</head>
+<body>
+    <div class="wrapperContainer wrapperContainer-dark wrapperContainer-fixed">
+        <header class="header container">
+            <img src="imagens/Logo_PixelSingular-removebg-preview.png" alt="Imagem não encontrada" width="150px">
+
+            <nav class="header_nav">
+                <ul class="nav_list">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="portifolios-des-fotos.html">PORTIFOLIO</a></li>
+                    <li><a href="#Fotografos">PERFIS</a></li>
+                </ul>
+            </nav>
+
+            <nav class="header_nav">
+                <ul class="nav_list">
+                    <li><a href="cadastro_pi.html">Cadastrar</a></li>
+                    <li><a href="LoginSite.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="menu-icon-bar"></div>
+                <div class="menu-icon-bar"></div>
+                <div class="menu-icon-bar"></div>
+            </div>
+        </header>
+    </div>
+
+    <script>
+    function toggleMenu() {
+        const navLists = document.querySelectorAll('.nav_list');
+        navLists.forEach(navList => navList.classList.toggle('show'));
+    }
+    </script>
+</body>
+</html>
