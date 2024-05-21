@@ -45,10 +45,10 @@ input {
 
 button {
 
-    background-color: aqua;
+    background-color: #2168ecdc;
     color: #080808;
     padding: 10px 50px;
-    border-color: aqua;
+    border-color: #2168ecdc;
     border-radius: 5px;
     cursor: pointer;
     float: right;

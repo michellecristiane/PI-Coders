@@ -123,6 +123,8 @@ nav a {
 .wrapperContainer-dark {
     background-color: rgb(59, 57, 57);
     color: #fafafa;
+    padding: 0;
+    margin: 0;
 }
 
 .wrapperContainer-light {
@@ -183,6 +185,7 @@ nav a {
     display: flex;
     text-align: left;
     gap: 2rem;
+    animation: slide 15s linear infinite;
 }
 
 .perfis_card {
@@ -211,13 +214,7 @@ nav a {
 }
 
 /* Estilos para o carrossel */
-#carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 100px;
-}
+/*  */
 
 .perfis_card {
     flex: 0 0 auto;
@@ -252,39 +249,49 @@ img {
     color: inherit;
 }
 
-.carousel-container2 {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-}
+/* carrosel_perfil */
 
-.carousel {
-    overflow: hidden;
-    width: 500px;
-}
 
-.wrap {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 250px;
-    justify-items: stretch;
+.container1{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding: 20px 0;
     animation: slide 15s linear infinite;
-}
+  }
 
-.wrap img {
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    object-fit: cover;
-}
+  /* Estilo para cada cartão */
+  .card2 {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
+  /* Estilo para as imagens dentro dos cartões */
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+  }
+  
 @keyframes slide {
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
+  /* Estilo para a legenda abaixo das imagens */
+  .caption {
+    padding: 10px;
+    text-align: center;
+  }
 .social-links a {
     display: inline-block;
     margin-right: 10px;

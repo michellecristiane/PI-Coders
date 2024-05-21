@@ -7,7 +7,6 @@ body {
     align-items: center;
 }
 
-
 /* Estilo para o menu responsivo */
 .menu-lateral{
     list-style-type: none;
@@ -19,20 +18,24 @@ body {
 
 .item-menu{
     padding: 10px;
-    border-bottom:  solid #067579;
-    border: #a14be7;
+    /* border-bottom:  solid #067579; */
+    /* border: #a14be7; */
+    border:#2168ecdc;
+    /* border: #2168ecdc; */
    
 }
 
 .item-menu, a:hover {
-    color: rgb(76, 66, 74); /* Cor amarela ao passar o mouse */
-   
+    /* color: rgb(76, 66, 74); Cor amarela ao passar o mouse */
+    /* color:#2b8de8; */
+    color: #f6f6f6dc;
 }
 
 
 .item-menu,a {
     text-decoration: none;
-    color: #5ee6eb;
+    /* color: #5ee6eb; */
+    color:#2168ecdc ;
     display: block;
 }
 
@@ -99,11 +102,13 @@ body {
     color: #111010;
     margin: 0;
     width: 100%;
+    position: fixed;
+    opacity: 0.8;
 }
 
 .titulo {
     background-image: linear-gradient(transparent, rgb(150, 185, 209));
-    padding: 20px;
+    padding: 100px;
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
@@ -128,18 +133,18 @@ span {
     font-size: large;
     font-weight:bolder;
 }
-
+/* 
  .cardstopcard-gallery-img {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
-} 
+}  */
 
 /* Estilo para as destaques */   /* galeria */
 .cards  {
     width: 100%;
-    background-color: rgb(4, 50, 88);
+    background-color: rgb(5, 69, 121);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -148,11 +153,14 @@ span {
 
 .card   {
     width: 300px;
-    margin: 20px;
+    /* margin: 20px; */
+    gap: 5px;
     padding: 5px;
-    border: 2px solid #A56CFF;
+    border: 2px solid white;
+    /* border: 2px solid #A56CFF; Muita poluição visual */
     border-radius: 10px;
-    box-shadow: 0px 0px 34px #a46cffb2;
+    box-shadow: 0px 0px 34px white;
+    /* box-shadow: 0px 0px 34px #a46cffb2; Muita poluição visual*/
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -161,6 +169,7 @@ span {
 
 .card img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
     transform: scale(2);
     transition: transform .5s ease-in-out;
@@ -168,11 +177,7 @@ span {
 
 
 .card:hover img{
-
-    
     transform: scale(1.2);
-
-
 
 }
 
@@ -190,6 +195,7 @@ span {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .card .h2{
@@ -205,25 +211,21 @@ h1{
    
 }
 
-
-
-
-
 /* footer */
 .footer {
     font-size: 1.6rem;
     text-align: center;
     padding: 1.5rem;
     width: 100%;
-    background-color: #141616;
-    border-color: #277c8b;
+    background-color: #474b4b;
+    border-color: #27368b;
     background-image: linear-gradient(transparent, rgb(61, 60, 60))
+   
 }
 
 .footer a {
     color: inherit;
-    color:  rgb(87, 189, 192);
+    /* color:  rgb(133, 178, 208); */
+    color: #2168ecdc;
+    
 }
-
-
-
