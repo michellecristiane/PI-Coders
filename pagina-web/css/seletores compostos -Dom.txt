@@ -1,0 +1,17 @@
+seletores compostos -Dom
+
+filho direto se coloca o sinal de >
+irmao adjacente se coloca o sinal de +
+
+irmao proximo 
+todo irmao proximo de uma teg sofre modificação dita ~ pos ele esta sendo chamado como irmao proximo(todos as tegs que estarão primimos da determinada teg)
+
+o outiline faz bordas" px solid cor"
+
+dehed(pontilhado)
+
+classe destaque-->
+
+
+estudar sobre pseudo classes 
+

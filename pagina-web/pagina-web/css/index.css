@@ -13,6 +13,7 @@ body {
     box-sizing: border-box;
 }
 
+
 p,
 a {
     font-size: 1.6rem;
@@ -117,7 +118,8 @@ nav a {
 }
 
 .wrapperContainer {
-    padding-top: 1px;
+    padding: 100px;
+    
 }
 
 .wrapperContainer-dark {
@@ -125,15 +127,18 @@ nav a {
     color: #fafafa;
     padding: 0;
     margin: 0;
+    
 }
 
 .wrapperContainer-light {
     background-color: #fafafa;
+    
 }
 
 .wrapperContainer-dark2 {
     background-color: #9098af;
     color: #fafafa;
+    
 }
 
 .wrapperContainer-fixed {
@@ -141,6 +146,7 @@ nav a {
     width: 100%;
     top: 0;
     left: 0;
+   
 }
 
 .wrapperContainer-padded {
@@ -158,12 +164,16 @@ nav a {
     margin: 0;
 }
 
-.section-btn {
-    margin: 7rem 0;
-}
 
 .wrapperContainer-hero {
-    background-color: #62beda;
+    background-color: #57849a;
+    margin: 0;
+    padding: 0;
+}
+.wrapperContainer-wrapperContainer-hero{
+    margin: 0px;
+    
+    
 }
 
 .heroBanner {
@@ -171,21 +181,41 @@ nav a {
     justify-content: space-between;
     align-items: center;
     gap: 20rem;
+    margin: 0;
+    
 }
 
 .hero_title {
     margin-bottom: 4rem;
+    color: #ffffff;
+ font-weight: bold;
+ font-weight: bolder;
+ font-weight: 900;
+ font-size:50px;
 }
 
 .perfis {
     text-align: center;
 }
 
+.perfisContainer, .section_title {
+ padding-top: 50px;
+ color: #57849a;
+ font-weight: bold;
+ font-weight: bolder;
+ font-weight: 900;
+       
+}
+
+
 .perfisContainer {
+    
     display: flex;
     text-align: left;
     gap: 2rem;
     animation: slide 15s linear infinite;
+    padding-bottom: 80px;
+    
 }
 
 .perfis_card {
@@ -239,17 +269,6 @@ img {
     margin-top: 5rem;
 }
 
-.footer {
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 4.5rem;
-}
-
-.footer a {
-    color: inherit;
-}
-
-/* carrosel_perfil */
 
 
 .container1{
@@ -352,4 +371,24 @@ button {
         padding: 1rem 3rem;
         font-size: 1.6rem;
     }
+}
+
+/* modificado por IA */
+
+.wrapperContainer,
+.wrapperContainer-hero,
+.footer {
+    width: 100%;
+    margin: 0; /* Removendo margens para garantir expansão total */
+}
+
+.wrapperContainer,
+.wrapperContainer-hero {
+    padding: 0; /* Removendo preenchimento para expansão total */
+    margin: 0px;
+}
+
+.footer {
+    padding: 0; /* Mantendo o preenchimento vertical */
+    margin-right: 100%;
 }
