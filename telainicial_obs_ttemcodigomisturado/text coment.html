@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção de Comentários</title>
+    <style>
+        /* Estilo global */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .comments-section {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .comments-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .comment-form {
+            margin-bottom: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+            resize: vertical;
+        }
+
+        .comment-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .comment-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .comments-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .comment-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .comment-item .comment-author {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .comment-item .comment-text {
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="comments-section">
+        <h2>Comentários</h2>
+        <div class="comment-form">
+            <textarea placeholder="Deixe seu comentário aqui..."></textarea>
+            <button type="submit">Enviar</button>
+        </div>
+        <ul class="comments-list">
+            <li class="comment-item">
+                <div class="comment-author">João Silva</div>
+                <div class="comment-text">
+                    Adorei o conteúdo do site! Muito informativo e bem apresentado.
+                </div>
+            </li>
+            <li class="comment-item">
+                <div class="comment-author">Maria Oliveira</div>
+                <div class="comment-text">
+                    Excelente trabalho! Continue assim.
+                </div>
+            </li>
+            <!-- Adicione mais comentários conforme necessário -->
+        </ul>
+    </div>
+</body>
+</html>

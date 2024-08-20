@@ -1,0 +1,352 @@
+/* style do perfil */
+
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #020202;
+}
+
+header {
+    background: #ffffff;
+    color: #66f;
+    padding: 10px 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #66f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    border-bottom: 2px solid #66f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+/* Estilo do contêiner principal */
+.card-perfil {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 10px; /* Espaçamento interno do contêiner */
+}
+
+/* Estilo da imagem */
+.imagem1 {
+    flex-shrink: 0; /* Evita que a imagem encolha */
+}
+
+.imagem1 img {
+    border: transparent thin solid; /* Borda transparente */
+    padding: 5px; /* Espaçamento interno da imagem */
+    margin: 0 20px 20px 0; /* Margem à direita e embaixo */
+    max-width: 150px; /* Ajusta o tamanho máximo da imagem, você pode modificar conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo do contêiner de texto */
+.container_sobre {
+    flex: 1; /* Faz o contêiner de texto ocupar o restante do espaço disponível */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o texto verticalmente */
+}
+
+/* Ajuste do tamanho da imagem dentro do contêiner */
+.card-perfil img {
+    width: auto; /* Mantém o tamanho da imagem proporcional */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.card-perfil img {
+    width: 100%;
+    height: auto;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    color: #555;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .social-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-social {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .social-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-social {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+  
+   /* Estilos para o botão de envio */
+   .links button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .links button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Estilos para o footer */
+footer {
+  
+    background-color: #f8f9fa;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    align-self: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.social-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.social-social {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.social-social h3, .contact-info p {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em; /* Tamanho do ícone */
+    color: contact-info; /* Cor do ícone */
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+
+/* Estilos para o copyright */
+.container p {
+    text-align:center;
+    margin: 20px 0 0;
+}
+.p1{
+    color:  #007bff;
+}
+
+/* formulario */
+ .form-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+.inputBx input,
+.inputBx textarea {
+  width: 100%;
+  padding: 1px;
+  border: 1px solid #080808;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+.inputBx label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 16px;
+  }
+  .inputBx label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 16px;
+  }
+
+.ring {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ring i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+  }
+  .ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+  }
+  .ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+  }
+  .ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+  }
+  .ring:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+  }

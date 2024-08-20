@@ -1,0 +1,21 @@
+<body>
+    <div class="gallery">
+        <div class="card">
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <div class="card-content">
+                <h3>Título 1</h3>
+                <p>Descrição breve da imagem 1.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <div class="card-content">
+                <h3>Título 2</h3>
+                <p>Descrição breve da imagem 2.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagem3.jpg" alt="Imagem 3">
+            
+        </div>
+    </div>
