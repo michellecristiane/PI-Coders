@@ -1,5 +1,0 @@
-1- peca ao Usuario para inserir sua idade e com base nessa idade, determine se ele e elegivel para acessar determinado conteudo.
-
-2 - Solicite ao usuario que insira o seu peso e Altura e em segida, calcule e informe seu iml e a faixa de peso em que ele se encontra
-
-3- solicite ao usuario que insira um nome de usuario uma senha e verifique se correspondem aos valores predefinidos.

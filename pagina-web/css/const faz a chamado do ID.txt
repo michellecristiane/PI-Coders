@@ -1,5 +1,0 @@
-const faz a chamado do ID
-ex= <label>altura
-      <inpu typr="Number" ID="altura">
-
- Chamando no JS--> Const Altura = document.getElementBiid("altura")
