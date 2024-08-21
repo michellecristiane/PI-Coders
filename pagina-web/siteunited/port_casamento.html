@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/port_casamneto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Portfólio de Casamento</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Portfólio de Fotos de Casamento</h1>
+        <p>Capturando momentos inesquecíveis com elegância e estilo</p>
+    </div>
+    <div class="container">
+        <div class="carousel">
+            <div class="slides">
+                <!-- Adicione aqui suas imagens -->
+                <img src="imagens/BL0A72.jpg" alt="Casamento 1">
+                <img src="imagens/BL0A72.jpg" alt="Casamento 2">
+                <img src="imagens/BL0A72.jpg" alt="Casamento 3">
+                <!-- Mais imagens podem ser adicionadas aqui -->
+            </div>
+            <button class="button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="description">
+            <h2>Por que escolher nosso serviço?</h2>
+            <p>Oferecemos um olhar único e criativo para capturar a essência do seu grande dia. Deixe-nos criar memórias inesquecíveis para você!</p>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+        <a href="#" class="card">
+            <div class="card-background" style="background-image: url(https://images.unsplash.com/photo-1593971657261-184f7a3a72de?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)"></div>
+            <div class="card-content">
+                <p>Travel</p>
+                <h3>USA</h3>
+            </div>
+        </a>
+        
+        <a href="#" class="card">
+            <div class="card-background" style="background-image: url(https://images.unsplash.com/photo-1532465614-6cc8d45f647f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)"></div>
+            <div class="card-content">
+                <p>Travel</p>
+                <h3>France</h3>
+            </div>
+        </a>
+        
+        <a href="#" class="card">
+            <div class="card-background" style="background-image: url(https://images.unsplash.com/photo-1502003148287-a82ef80a6abc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)"></div>
+            <div class="card-content">
+                <p>Travel</p>
+                <h3>Canada</h3>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Criado por UnitedColders</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/UnitedColders" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com/UnitedColders" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/UnitedColders" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            if (slideIndex >= totalSlides) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = totalSlides - 1;
+            slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+
+        function moveSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        showSlides(); // Initialize the carousel
+    </script>
+</body>
+</html>
