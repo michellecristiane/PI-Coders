@@ -1,0 +1,141 @@
+/* Reset de estilos básicos */
+body, h1, p, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do menu */
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilo do letreiro */
+#header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Estilo do banner */
+#banner {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.banner-item {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-item p {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+}
+
+ /* Carousel */
+
+ main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    background-color: #f0f0f0;
+}
+
+.carroussel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+img {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+
+/* Estilo dos cards */
+#cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 100px;
+}
+
+.card {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+   color: #fff;
+  text-align: center;          
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}

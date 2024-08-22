@@ -20,56 +20,36 @@ body {
     text-align: center;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 60px;
+  /* Carousel */
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
-.carousel {
+.carroussel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
     position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    aspect-ratio: 4 / 1; /* Define a proporção 4:1 */
 }
 
-.carousel .slides {
+.container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;
 }
 
-.carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ajusta a imagem para cobrir o container */
-    background-size: auto;
+img {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
 }
 
-
-.carousel .button {
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 10px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-    transform: translateY(-50%);
-}
-
-.carousel .prev {
-    left: 10px;
-}
-
-.carousel .next {
-    right: 10px;
-}
-
+  /* descrição */
 .description {
     text-align: center;
     margin-top: 20px;

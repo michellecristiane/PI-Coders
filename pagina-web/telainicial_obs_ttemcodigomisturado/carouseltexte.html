@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carroussel.css">
+    <title>Carroussel</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .carroussel {
+            box-shadow: 2px 2px 4px black;
+            overflow: hidden;
+            height: 500px;
+            width: 500px;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        img {
+            object-fit: cover;
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="carroussel">
+            <div class="container" id="img-container">
+                <img src="" alt="Image 1">
+                <img src="background2.jpg" alt="Image 2">
+                <img src="background3.jpg" alt="Image 3">
+            </div>
+        </div>
+    </main>
+    <script>
+        const container = document.getElementById('img-container');
+        const images = container.querySelectorAll('img');
+        const totalImages = images.length;
+        let currentIndex = 0;
+
+        function moveCarrousel() {
+            currentIndex++;
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+            container.style.transform = translateX(${-currentIndex * 500}px);
+        }
+
+        setInterval(moveCarrousel, 3000);
+    </script>
+</body>
+</html>

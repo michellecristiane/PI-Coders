@@ -299,6 +299,10 @@ a {
     }
 }
 
+/* css do carousel */
+.carousel-slide{
+  aspect-ratio: 4 / 3; /* Define a proporção 4:1 */
+}
 
 /* css das categgorias */
 
