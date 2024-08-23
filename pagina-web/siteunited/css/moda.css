@@ -1,41 +1,54 @@
-/* Reset de estilos básicos */
-body, h1, p, img {
+/* style do perfil */
+
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: #020202;
 }
 
-/* Estilo do menu */
 header {
-    background-color: #f8f8f8;
-    padding: 10px;
-    text-align: center;
+    background: #ffffff;
+    color: #66f;
+    padding: 10px 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
+    text-align: right ;
 }
 
-nav img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Estilo do letreiro */
-#header {
-    text-align: center;
-    margin: 20px 0;
-}
-
-#header h1 {
-    font-size: 6em;
-    color: #333;
+nav ul li a {
+    color: #66f;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Estilo do banner */
@@ -120,8 +133,9 @@ img {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    margin-bottom: end;
   }
   
   .footer-container {

@@ -12,67 +12,47 @@
 <body>
     <!-- Menu -->
     <header>
-        <nav>
-            <ul>
-                <i class="bi bi-menu-button"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button" viewBox="0 0 16 16">
-  <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h8A1.5 1.5 0 0 1 11 1.5v2A1.5 1.5 0 0 1 9.5 5h-8A1.5 1.5 0 0 1 0 3.5zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5z"/>
-  <path d="m7.823 2.823-.396-.396A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0M0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
-</svg>
-            </ul>
-        </nav>
+        <div class="container">
+            
+            <nav>
+                <ul>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#serviços">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <h1 style="font-size: 40px; text-align:left;">Moda</h1>
+
+        </div>
     </header>
+   
 
     <!-- Letreiro -->
     <section id="header">
-        <h1>Moda</h1>
+       
     </section>
 
     <!-- Banner -->
-    <section id="banner">
-        <div class="banner-item">
-            <img src="imagens/fotografa.jpeg" alt="Moda 1">
-            <p>um clide de estilo em cada detalhe.</p>
-        </div>
-        <div class="banner-item">
-             <!-- area do carousel -->
-       <main>
-        <div class="carroussel">
-            <div class="container" id="img-container">
-                <img src="imagens/BL0A7308.jpg" alt="Image 1">
-                <img src="imagens/BL0A7308.jpg" alt="Image 2">
-                <img src="imagens/BL0A7308.jpg" alt="Image 3">
-            </div>
-        </div>
-    </main>
-    <script>
-        const container = document.getElementById('img-container');
-        const images = container.querySelectorAll('img');
-        const totalImages = images.length;
-        let currentIndex = 0;
+    
 
-        function moveCarrousel() {
-            currentIndex++;
-            if (currentIndex >= totalImages) {
-                currentIndex = 0;
-            }
-            container.style.transform = `translateX(${-currentIndex * 500}px)`;
-        }
         
-
-        setInterval(moveCarrousel, 3000);
-    </script>
-
-            <p>imagens que encantam para todos os dias.</p>
-        </div>
-        <div class="banner-item">
-            <img src="imagens/transferir (3).jpeg" alt="Moda 3">
-            <p>Inspire-se e transforme seu visual.</p>
-        </div>
     </section>
 
     <!-- Cards -->
     <section id="cards">
+        <div class="card">
+            <img src="imagens/BL0A72.jpg" alt="Card 1">
+            <p>Fotografia por João Silva</p>
+        </div>
+        <div class="card">
+            <img src="imagens/BL0A7308.jpg" alt="Card 2">
+            <p>Fotografia por Maria Oliveira</p>
+        </div>
+        <div class="card">
+            <img src="imagens/duna do lago da cocacola.jpg" alt="Card 3">
+            <p>Fotografia por Carlos Pereira</p>
+        </div>
         <div class="card">
             <img src="imagens/BL0A72.jpg" alt="Card 1">
             <p>Fotografia por João Silva</p>
