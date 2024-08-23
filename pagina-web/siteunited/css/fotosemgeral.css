@@ -1,20 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-  }
-  
-  body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #020202;
-  }
+}
 
-  header {
-    background: #ffffff;
+header {
+    background: #f4efef;
     color: #66f;
     padding: 10px 0;
 }
@@ -29,7 +28,6 @@ header .container {
 
 header h1 {
     margin: 0;
-    font-size: 50;
 }
 
 nav ul {
@@ -48,6 +46,22 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+
+section {
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.header {
+    background: #f4efef;
+    color: #66f;
+    padding: 20px;
+    text-align: center;
+}
+
   
   .cards {
     display: grid;
@@ -114,3 +128,76 @@ nav ul li a {
     filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
   }
   
+
+
+  .cards:hover > .card:not(:hover) > .card-background {
+    filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+  /* Footer */
+
+/* FOOTER css */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-info, .footer-creators, .footer-social {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+
+.footer-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.footer-info p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.footer-creators h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.footer-social h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5em; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+  text-decoration: none;
+}
+
+.footer-social .social-icon:hover {
+  color: #007bff; /* Cor ao passar o mouse (ajuste conforme necessário) */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-info, .footer-creators, .footer-social {
+      margin-bottom: 20px;
+  }
+}
+

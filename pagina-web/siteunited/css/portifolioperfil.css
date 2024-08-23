@@ -63,6 +63,7 @@ h2 {
     border-bottom: 2px solid #66f;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    font-size: 40px;
 }
 /* Estilo do contêiner principal */
 .card-perfil {
@@ -92,6 +93,10 @@ h2 {
     display: flex;
     flex-direction: column; /* Alinha o conteúdo verticalmente */
     justify-content: center; /* Centraliza o texto verticalmente */
+}
+
+.container_sobre h2{
+    font-size: 40px;
 }
 
 /* Ajuste do tamanho da imagem dentro do contêiner */
@@ -126,7 +131,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+.container h2{
 
+    font-size: 40px;
+}
 
 .gallery {
     display: flex;
@@ -235,9 +243,9 @@ h2 {
   /* Estilos para o footer */
 footer {
   
-    background-color: #f8f9fa;
+    background-color: #2c2d2e;
     padding: 20px;
-    color: #333;
+    color: #ffffff;
 }
 
 .container {
@@ -301,7 +309,7 @@ footer {
 .inputBx textarea {
   width: 100%;
   padding: 1px;
-  border: 1px solid #080808;
+  border: 1px solid #424040;
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
@@ -310,13 +318,13 @@ footer {
 .inputBx label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: #ffffff;
     font-size: 16px;
   }
   .inputBx label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: #f3f3f3;
     font-size: 16px;
   }
 

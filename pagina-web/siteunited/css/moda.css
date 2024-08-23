@@ -116,26 +116,69 @@ img {
 }
 
 /* Estilo do footer */
+/* FOOTER css */
 footer {
     background-color: #333;
-    padding: 20px;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-   color: #fff;
-  text-align: center;          
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    margin: 0 5px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-}
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-info, .footer-creators, .footer-social {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .footer-info p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  .footer-creators h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .footer-social h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .footer-social .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone */
+    text-decoration: none;
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse (ajuste conforme necessário) */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .footer-info, .footer-creators, .footer-social {
+        margin-bottom: 20px;
+    }
+  }
+  
