@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration:dashed;
 }
 
 .container {
@@ -46,16 +46,7 @@ a {
   background-color: #fff;
   padding: 1rem 1.15rem;
   border-bottom: 1px solid #eceef3;
-  /*
-  |-----------------------------------
-  | Start navbar logo or brand etc..
-  |-----------------------------------
-  */
-  /*
-  |-----------------------------------
-  | Start navbar menu
-  |-----------------------------------
-  */
+  
 }
 @media (min-width: 576px) {
   .navbar .container {
