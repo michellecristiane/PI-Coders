@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/batizado.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batizado</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+      
+          <div class="navbar-header">
+            <button class="navbar-toggler" data-toggle="open-navbar1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <a href="#">
+              <h4>Your<span>Logo</span></h4>
+            </a>
+          </div>
+      
+          <div class="navbar-menu" id="open-navbar1">
+            <ul class="navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="navbar-dropdown">
+                <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                  Categorias <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown" id="my-dropdown-id">
+                  <li><a href="#">Category 1</a></li>
+                  <li class="separator"></li>
+                  <li><a href="#">Category 2</a></li>
+                  <li class="separator"></li>
+                  <li><a href="#">Category 3</a></li>
+                </ul>
+              </li>
+           
+              <li><a href="#">Portfólio</a></li>
+              <li><a href="#">Perfil</a></li>
+              <li><a href="#">Entrar</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+        </div>
+      </nav>
+
+
+      <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>PixelSingular</h2>
+                <p>Bem-vindo ao PixelSingular, o seu espaço para discussões e feedbacks sobre fotografia.</p>
+            </div>
+            <div class="footer-creators">
+                <h3>Criadores:</h3>
+                <p>UnitedCoders</p>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos:</h3>
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i> <!-- Ícone do Twitter -->
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i> <!-- Ícone do LinkedIn -->
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+      <script>
+        let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler')
+let dropdownIsOpen = false
+
+// Handle dropdown menues
+if (dropdowns.length) {
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener('click', (event) => {
+      let target = document.querySelector(`#${event.target.dataset.dropdown}`)
+
+      if (target) {
+        if (target.classList.contains('show')) {
+          target.classList.remove('show')
+          dropdownIsOpen = false
+        } else {
+          target.classList.add('show')
+          dropdownIsOpen = true
+        }
+      }
+    })
+  })
+}
+
+// Handle closing dropdowns if a user clicked the body
+window.addEventListener('mouseup', (event) => {
+  if (dropdownIsOpen) {
+    dropdowns.forEach((dropdownButton) => {
+      let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+      let targetIsDropdown = dropdown == event.target
+
+      if (dropdownButton == event.target) {
+        return
+      }
+
+      if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+        dropdown.classList.remove('show')
+      }
+    })
+  }
+})
+function handleSmallScreens() {
+  document.querySelector('.navbar-toggler')
+    .addEventListener('click', () => {
+      let navbarMenu = document.querySelector('.navbar-menu')
+
+      if (!navbarMenu.classList.contains('active')) {
+        navbarMenu.classList.add('active')
+      } else {
+        navbarMenu.classList.remove('active')
+      }
+    })
+}
+
+handleSmallScreens()
+      </script>
+</body>
+</html>
