@@ -1,7 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-/* CSS DA NAVBAR */
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            height: 100vh;
+            min-height: 888px;
+        }
 
-/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos. */
+        .carousel-item img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+  /* Estilo geral para a seção */
+.photo-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo para cada card de foto */
+.photo-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a foto principal */
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para o mini card do fotógrafo */
+.photographer-card {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para a foto do fotógrafo */
+.photographer-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-right: 10px;
+}
+
+/* Estilo para o nome do fotógrafo */
+.photographer-name {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hover effect para o mini card do fotógrafo */
+.photographer-card:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .photo-card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+        /* Importa a fonte "Roboto" do Google Fonts com diferentes pesos. */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 /* Define que todos os elementos devem usar a caixa de borda, e remove padding e margin por padrão. */
@@ -319,364 +408,94 @@ a {
 .btn-outline-success span {
   display: none;
 }
+    </style>
+</head>
 
+<body>
 
-/* CSS DA APRTE DO SOBRE A PAGINA */
-
-
-/* CSS DA SEÇÃO "SOBRE" */
-.wrapperContainer-dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 50px 0;
-}
-
-.container_sobre {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  background-color: #000000;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
-
-.container_sobre img {
-  width: 50%; /* Ajuste para exibir metade da largura */
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-right: 5px solid #444; /* Borda direita para separar imagem e texto */
-}
-
-.Sobre_content {
-  width: 50%; /* Ajuste para exibir metade da largura */
-  padding: 20px;
-  background-color: #fcf6f6;
-}
-
-.sobre_title {
-  font-size: 2.5em;
-  margin: 0 0 20px;
-  text-align: left;
-  color: #000000;
-}
-
-.row {
-  margin: 0;
-  padding: 0 20px;
-}
-
-.row p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #000000;
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
-  .container_sobre {
-    flex-direction: column;
-  }
-
-  .container_sobre img,
-  .Sobre_content {
-    width: 100%;
-  }
-
-  .container_sobre img {
-    border-right: none;
-    border-bottom: 5px solid #444;
-  }
-}
-
-/* CSS DO CARROSSEL */
-.carousel-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
-}
-
-.carousel {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-image {
-  min-width: 100%;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
-
-.carousel-button {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-  .carousel-button {
-    padding: 0.25rem;
-  }
-}
-
-
-/* css das categgorias */
-
-h1{
-  padding: 50px;
-
-    text-align: center;
-
-
-}
-.categories-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
+    <nav class="navbar">
+        <div class="container">
+    
+          <div class="navbar-header">
+              <button class="navbar-toggler" data-toggle="open-navbar1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+         
+              <h4>Your<span>Logo</span></h4>
+          
+          </div>
+    
+          <div class="navbar-menu" id="open-navbar1">
+            <ul class="navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="navbar-dropdown">
+                <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                  Categorias <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown" id="my-dropdown-id">
+                  <li><a href="#">casamento</a></li>
+                  <li class="separator"></li>
+                  <li><a href="#">Formatura</a></li>
+                  <li class="separator"></li>
+                  <li><a href="#">aniversario</a></li>
+                </ul>
+              </li>
+    
+              <li><a href="#">Portfólio</a></li>
+              <li><a href="#">Perfil</a></li>
+              <li><a href="#">Entrar</a></li>
+            </ul>
+            <section class="Buscar" role="pesquisar">
+              <input class="form-control me-2" type="search" placeholder="pesquisar" aria-label="pesquisar">
+              <button class="btn btn-outline-success" type="submit">pesquisar</button>
+            </section>
+          </div>
+        </div>
+      </nav>
+    
+    
+    
 
 
 
-.category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-}
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagem1.jpg" class="d-block w-100" alt="Imagem 1">
+            </div>
+            <div class="carousel-item">
+                <img src="imagem2.jpg" class="d-block w-100" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+                <img src="imagem3.jpg" class="d-block w-100" alt="Imagem 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
 
-.category:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+    <div class="photo-section">
+        <div class="photo-card">
+            <img src="path-to-photo.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="path-to-photographer-photo.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Nome do Fotógrafo</span>
+            </a>
+        </div>
+        <!-- Repita o bloco .photo-card para outros cards -->
+    </div>
+    
 
-.category-icon {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    margin-top: 20px;
-}
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-.category-icon img {
-    max-width: 60%;
-    max-height: 60%;
-}
-
-.category-title {
-    font-size: 1em;
-    margin: 10px 0;
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .category {
-        width: 120px;
-        height: 120px;
-    }
-
-    .category-icon {
-        width: 60px;
-        height: 60px;
-    }
-}
- 
-/*seção de coments*/
-.comments-container {
-  max-width: 2000px; /* Ajustado para permitir mais espaço em telas grandes */
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  display: flex; /* Usando Flexbox para alinhamento dos cards e do formulário */
-  flex-wrap: wrap; /* Permite que os cards envolvam para a próxima linha */
-  gap: 20px; /* Espaço entre os cards */
-}
-
-.comment-card,
-form { /* Aplicando as mesmas regras para os cards e o formulário */
-  flex: 1 1 calc(33.333% - 20px); /* Ajusta o tamanho dos cards e do formulário para três por linha */
-  background-color: #fcf6f6;
-  border: 1px solid #f5d9d9;
-  border-radius: 8px;
-  padding: 15px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%; /* Garante que o card e o formulário não excedam a largura do contêiner */
-}
-
-.comment-header {
-  display: flex;
-  align-items: center;
-}
-
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.username {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.comment-text {
-  margin: 10px 0;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.comment-footer {
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .comment-card,
-  form { /* Ajusta os cards e o formulário para dois por linha em telas médias */
-      flex: 1 1 calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .comment-card,
-  form { /* Ajusta os cards e o formulário para um por linha em telas pequenas */
-      flex: 1 1 100%;
-  }
-}
-
-form label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-form input, form textarea {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-form button {
-  background-color: #66f;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-
-
-/* FOOTER css */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer-info, .footer-creators, .footer-social {
-  flex: 1 1 100%;
-  margin-bottom: 20px;
-}
-
-.footer-info h2 {
-  margin: 0;
-  font-size: 1.5em;
-}
-
-.footer-info p {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.footer-creators h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-}
-
-.footer-social h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-}
-
-.footer-social .social-icon {
-  display: inline-block;
-  margin: 0 30px;
-  font-size: 1.5em; /* Tamanho do ícone */
-  color: #fff; /* Cor do ícone */
-  text-decoration: none;
-}
-
-.footer-social .social-icon:hover {
-  color: #007bff; /* Cor ao passar o mouse (ajuste conforme necessário) */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .footer-container {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .footer-info, .footer-creators, .footer-social {
-      margin-bottom: 20px;
-  }
-}
+</html>

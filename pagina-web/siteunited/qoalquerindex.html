@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <title>Inicial</title>
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .navbar-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-header h4 {
+      margin-left: 10px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .form-control.me-2 {
+      width: 150px;
+      margin-right: 10px;
+    }
+
+    .dropdown-toggler {
+      cursor: pointer;
+    }
+
+    .dropdown.show {
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ddd;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    .categories-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .category {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .comment-card {
+      margin: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 300px;
+    }
+
+    .comment-card img.avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .comment-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .comments-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    form#commentForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    form#commentForm input,
+    form#commentForm textarea {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+    form#commentForm button {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a href="#">
+          <h4>Your<span>Logo</span></h4>
+        </a>
+        <button class="navbar-toggler" data-toggle="open-navbar1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="navbar-menu" id="open-navbar1">
+        <ul class="navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="navbar-dropdown">
+            <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+              Categorias <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown" id="my-dropdown-id">
+              <li><a href="#">Casamento</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Formatura</a></li>
+              <li class="separator"></li>
+              <li><a href="#">Aniversário</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Portfólio</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Entrar</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div style="height: 100%; min-height: 100vh;">
+    <div class="row">
+      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="First slide"></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img src="imagens/belem.jpg" class="w-100 d-block" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/_6807.jpg" class="w-100 d-block" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/Ver-o-peso-Mangas-Belém-Pará.jpg" class="w-100 d-block" alt="Third slide">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <h1>Principais Categorias</h1>
+  <div class="categories-container">
+    <div class="category">
+      <div class="category-icon">
+        <img src="categorias/batizado.png" alt="Categoria 1">
+      </div>
+      <p class="category-title">Batizado</p>
+    </div>
+    <div class="category">
+      <div class="category-icon">
+        <img src="categorias/casorio.png" alt="Categoria 2">
+      </div>
+      <p class="category-title">Casamento</p>
+    </div>
+    <div class="category">
+      <div class="category-icon">
+        <img src="categorias/an.jpg" alt="Categoria 3">
+      </div>
+      <p class="category-title">Aniversário</p>
+    </div>
+    <div class="category">
+      <div class="category-icon">
+        <img src="categorias/moda.png" alt="Categoria 4">
+      </div>
+      <p class="category-title">Moda</p>
+    </div>
+    <div class="category">
+      <div class="category-icon">
+        <img src="categorias/forma.png" alt="Categoria 5">
+      </div>
+      <p class="category-title">Formatura</p>
+    </div>
+  </div>
+
+  <div class="wrapperContainer-dark" id="Sobre">
+    <section class="container_sobre">
+      <img src="imagens/BL0A72.jpg" alt="Imagem não encontrada">
+      <div class="Sobre_content">
+        <h2 class="sobre_title">SOBRE</h2>
+        <div class="row justify-content-center" style="text-align: center; margin: 50px;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit tristique libero,
+            vel imperdiet mi convallis ac. Nunc eget nulla dui. Nulla vel lectus a turpis bibendum placerat.
+            Duis ac lacus varius, blandit neque ac, tincidunt turpis. Nullam pharetra laoreet efficitur.
+            Quisque rutrum interdum scelerisque. Donec in sodales eros. Vivamus consequat orci dolor, at
+            lobortis leo vestibulum in.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="comments-container">
+    <div class="comment-card">
+      <div class="comment-header">
+        <img src="imagens/avatar.jpg" alt="Avatar" class="avatar">
+        <h3>Pedro Silva</h3>
+      </div>
+      <p>Ótima experiência, recomendo muito!</p>
+    </div>
+    <div class="comment-card">
+      <div class="comment-header">
+        <img src="imagens/avatar.jpg" alt="Avatar" class="avatar">
+        <h3>Ana Souza</h3>
+      </div>
+      <p>As fotos ficaram incríveis, adorei o serviço!</p>
+    </div>
+  </div>
+
+  <form id="commentForm">
+    <input type="text" placeholder="Nome">
+    <textarea placeholder="Comentário"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz4fnFO9gybBogGzC7ewp+10SU6L3q1H61S38rSWvC86+GRT7bc5gWfl5a" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-2QX01JINrITium3FS6gXGZNfu5oeGryYTL1psnOJtWraIqVg61e9lIbwAS0J6wGb" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $('.dropdown-toggler').click(function () {
+        var dropdownId = $(this).data('dropdown');
+        $('#' + dropdownId).toggleClass('show');
+      });
+    });
+  </script>
+</body>
+
+</html>
