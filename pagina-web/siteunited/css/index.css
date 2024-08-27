@@ -305,7 +305,7 @@ a {
 .Buscar .btn::before {
   content: '🔍';                 /* Adiciona o ícone de lupa usando o conteúdo pseudo-elemento */
   font-size: 1.25rem;           /* Tamanho da fonte para o ícone */
-  background: none;             /* Remove o fundo do botão */
+  background: blue;             /* Remove o fundo do botão */
   border: none;                 /* Remove a borda do botão */
 }
 
