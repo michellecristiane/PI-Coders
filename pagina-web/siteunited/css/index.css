@@ -1,682 +1,890 @@
-
-/* CSS DA NAVBAR */
-
-/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos. */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
-/* Define que todos os elementos devem usar a caixa de borda, e remove padding e margin por padrão. */
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"); /* Importa a fonte "Roboto" do Google Fonts com diferentes pesos de fonte (300, 400, 500) */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  margin: 0; /* Remove a margem padrão de todos os elementos */
 }
 
-/* Define a fonte padrão do corpo como "Roboto" e o tamanho da fonte como 0.925rem. */
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.925rem;
+  font-family: "Roboto", sans-serif; /* Define a fonte padrão para "Roboto" */
+  font-size: 0.925rem; /* Define o tamanho da fonte do corpo do texto */
 }
 
-/* Define que os links terão uma decoração de texto em forma de linha pontilhada. */
 a {
-  text-decoration: dashed;
+  text-decoration: none; /* Remove o sublinhado dos links */
 }
 
-/* Define a largura da classe "container", centraliza horizontalmente e adiciona padding. */
 .container {
-  width: 1170px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
+  width: 1170px; /* Define a largura máxima do container */
+  position: relative; /* Define a posição como relativa para posicionamento de elementos filhos */
+  margin-left: auto; /* Centraliza o container horizontalmente */
+  margin-right: auto; /* Centraliza o container horizontalmente */
+  padding-left: 15px; /* Adiciona padding à esquerda do container */
+  padding-right: 15px; /* Adiciona padding à direita do container */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  margin: 0; /* Remove a margem padrão de todos os elementos */
 }
 
-/* Define a navbar e o container dentro da navbar para serem flexíveis, alinhados ao centro e justificados entre si. */
+
 .navbar,
 .navbar > .container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  /* align-items: center; */
-  justify-content: space-between;
+  width: 100%; /* Define a largura da navbar e seu container para 100% */
+  display: flex; /* Define um layout flexível */
+  flex-wrap: wrap; /* Permite que os elementos se encaixem em múltiplas linhas, se necessário */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Espaça igualmente os itens dentro da navbar */
 }
-
 
 @media (max-width: 768px) {
   .navbar,
   .navbar > .container {
-    display: block;
+    display: block; /* Exibe como bloco em telas menores que 768px */
   }
-  /* Para telas menores que 768px, a navbar e seu container são exibidos em bloco (não flexíveis). */
 }
 
-.navbar { /* Define a aparência da navbar com sombra, fundo branco, padding e uma borda inferior. */
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fff;
-  padding: 1rem 1.15rem;
-  border-bottom: 1px solid #eceef3;
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Adiciona uma sombra suave na parte inferior da navbar */
+  background-color: #fff; /* Define a cor de fundo da navbar como branca */
+  padding: 1rem 1.15rem; /* Adiciona padding ao redor da navbar */
+  border-bottom: 1px solid #eceef3; /* Adiciona uma borda inferior à navbar */
+  /*
+  |-----------------------------------
+  | Start navbar logo or brand etc..
+  |-----------------------------------
+  */
+  /*
+  |-----------------------------------
+  | Start navbar menu
+  |-----------------------------------
+  */
 }
 
-
-@media (min-width: 576px) { /* Define a largura máxima do container para telas a partir de 576px. */
+@media (min-width: 576px) {
   .navbar .container {
-    max-width: 540px;
+    max-width: 540px; /* Define a largura máxima do container para 540px em telas maiores que 576px */
   }
 }
-
-
-@media (min-width: 768px) { /* Define a largura máxima do container para telas a partir de 768px. */
+@media (min-width: 768px) {
   .navbar .container {
-    max-width: 720px;
+    max-width: 720px; /* Define a largura máxima do container para 720px em telas maiores que 768px */
   }
 }
-
-
-@media (min-width: 992px) { /* Define a largura máxima do container para telas a partir de 992px. */
+@media (min-width: 992px) {
   .navbar .container {
-    max-width: 960px;
+    max-width: 960px; /* Define a largura máxima do container para 960px em telas maiores que 992px */
   }
 }
-
-
-@media (min-width: 1200px) { /* Define a largura máxima do container para telas a partir de 1200px. */
+@media (min-width: 1200px) {
   .navbar .container {
-    max-width: 1140px;
+    max-width: 1140px; /* Define a largura máxima do container para 1140px em telas maiores que 1200px */
   }
 }
 
-
-.navbar .navbar-header { /* Define a área do cabeçalho da navbar para usar flexbox e alinhar itens ao centro. */
-  display: flex;
-  align-items: center;
+.navbar .navbar-header {
+  display: flex; /* Define um layout flexível */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
-
-@media (max-width: 768px) {  /* Para telas menores que 768px, o cabeçalho da navbar exibe seus itens em uma linha reversa e ocupa 100% da largura. */
+@media (max-width: 768px) {
   .navbar .navbar-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    width: 100%; /* Define a largura do cabeçalho da navbar como 100% em telas menores que 768px */
+    display: flex; /* Define um layout flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    flex-direction: row-reverse; /* Inverte a direção dos itens em linha */
   }
- 
 }
 
 .navbar .navbar-header .navbar-toggler {
-  cursor: pointer;
-  border: none;
-  display: none;
-  outline: none;
+  cursor: pointer; /* Define o cursor como pointer (mãozinha) para indicar que é clicável */
+  border: none; /* Remove a borda do botão */
+  display: none; /* Esconde o botão por padrão */
+  outline: none; /* Remove o contorno padrão ao clicar */
 }
-/* Define o botão de alternância para não ser exibido por padrão e remove a borda e outline. */
 
 @media (max-width: 768px) {
   .navbar .navbar-header .navbar-toggler {
-    display: block;
+    display: block; /* Exibe o botão em telas menores que 768px */
   }
-  /* Exibe o botão de alternância para telas menores que 768px. */
 }
 
-.navbar .navbar-header .navbar-toggler span {/* Define o estilo das barras do botão de alternância com altura e largura específicas. */
-  height: 2px;
-  width: 22px;
-  background-color: #929aad;
-  display: block;
+.navbar .navbar-header .navbar-toggler span {
+  height: 2px; /* Define a altura da linha do botão */
+  width: 22px; /* Define a largura da linha do botão */
+  background-color: #929aad; /* Define a cor de fundo da linha do botão */
+  display: block; /* Exibe como um bloco */
 }
 
-
-.navbar .navbar-header .navbar-toggler span:not(:last-child) { /* Adiciona um espaço entre as barras do botão de alternância, exceto a última. */
-  margin-bottom: 0.2rem; 
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  margin-bottom: 0.2rem; /* Adiciona uma margem inferior entre as linhas do botão */
 }
-
 
 .navbar .navbar-header > a {
-  font-weight: 500;
-  color: #3c4250;
+  font-weight: 500; /* Define o peso da fonte para 500 (semi-bold) */
+  color: #3c4250; /* Define a cor do texto */
 }
-/* Define o estilo do link dentro do cabeçalho da navbar com peso de fonte e cor específicos. */
 
 .navbar .navbar-menu {
-  display: flex;
-  align-items: center;
-  flex-basis: auto;
-  flex-grow: 1;
+  display: flex; /* Define um layout flexível */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  flex-basis: auto; /* Define a base flexível automaticamente */
+  flex-grow: 1; /* Permite que o menu cresça para preencher o espaço */
 }
-/* Define a área do menu da navbar para usar flexbox e crescer para ocupar o espaço disponível. */
 
 @media (max-width: 768px) {
   .navbar .navbar-menu {
-    display: none;
-    text-align: center;
+    display: none; /* Esconde o menu em telas menores que 768px */
+    text-align: center; /* Alinha o texto ao centro */
   }
-  /* Oculta o menu da navbar para telas menores que 768px e alinha o texto ao centro. */
 }
 
 .navbar .navbar-menu.active {
-  display: flex !important;
+  display: flex !important; /* Exibe o menu como flexível quando ativo */
 }
-/* Exibe o menu da navbar como flexível quando a classe "active" é adicionada. */
 
 .navbar .navbar-menu .navbar-nav {
-  margin-left: auto;
-  flex-direction: row;
-  display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+  margin-left: auto; /* Move a navegação para o lado direito */
+  flex-direction: row; /* Define a direção dos itens em linha */
+  display: flex; /* Define um layout flexível */
+  padding-left: 0; /* Remove o padding à esquerda */
+  margin-bottom: 0; /* Remove a margem inferior */
+  list-style: none; /* Remove o estilo de lista padrão */
 }
-/* Define a lista de navegação dentro do menu da navbar para ser flexível, com margem automática à esquerda e sem estilo de lista. */
 
 @media (max-width: 768px) {
   .navbar .navbar-menu .navbar-nav {
-    width: 100%;
-    display: block;
-    border-top: 1px solid #EEE;
-    margin-top: 1rem;
+    width: 100%; /* Define a largura como 100% */
+    display: block; /* Exibe como bloco em telas menores */
+    border-top: 1px solid #EEE; /* Adiciona uma borda superior */
+    margin-top: 1rem; /* Adiciona uma margem superior */
   }
-  /* Para telas menores que 768px, a lista de navegação é exibida em bloco, com largura total e uma borda superior. */
 }
 
 .navbar .navbar-menu .navbar-nav > li > a {
-  color: #3c4250;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  color: #3c4250; /* Define a cor do texto */
+  text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+  display: inline-block; /* Exibe como bloco em linha */
+  padding: 0.5rem 1rem; /* Adiciona padding ao redor dos links */
 }
-/* Define o estilo dos links dentro dos itens da lista de navegação com cor, sem decoração de texto e padding. */
 
 .navbar .navbar-menu .navbar-nav > li > a:hover {
-  color: #66f;
+  color: #66f; /* Altera a cor ao passar o mouse sobre os links */
 }
-/* Altera a cor do link quando é passado o mouse sobre ele. */
 
 @media (max-width: 768px) {
   .navbar .navbar-menu .navbar-nav > li > a {
-    border-bottom: 1px solid #eceef3;
+    border-bottom: 1px solid #eceef3; /* Adiciona uma borda inferior nos links */
   }
-  /* Para telas menores que 768px, adiciona uma borda inferior aos links da lista de navegação. */
 }
 
 .navbar .navbar-menu .navbar-nav > li.active a {
-  color: #66f;
+  color: #66f; /* Define a cor dos links ativos */
 }
-/* Define a cor dos links ativos na lista de navegação. */
 
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 150%;
-  left: 0;
-  background-color: #fff;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  min-width: 160px;
-  width: auto;
-  white-space: nowrap;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  z-index: 99999;
-  border-radius: 0.75rem;
-  display: none;
+  list-style: none; /* Remove o estilo de lista */
+  position: absolute; /* Posiciona o dropdown de forma absoluta */
+  top: 150%; /* Define a posição superior do dropdown */
+  left: 0; /* Alinha o dropdown à esquerda */
+  background-color: #fff; /* Define a cor de fundo do dropdown como branca */
+  padding-top: 0.5rem; /* Adiciona padding superior */
+  padding-bottom: 0.5rem; /* Adiciona padding inferior */
+  min-width: 160px; /* Define a largura mínima do dropdown */
+  width: auto; /* Define a largura automática */
+  white-space: nowrap; /* Impede quebra de linha */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao dropdown */
+  z-index: 99999; /* Define um alto índice z para sobrepor outros elementos */
+  border-radius: 0.75rem; /* Define bordas arredondadas */
+  display: none; /* Esconde o dropdown por padrão */
 }
-/* Estiliza o menu suspenso do dropdown com fundo branco, padding, sombra e borda arredondada. É inicialmente oculto. */
 
 @media (max-width: 768px) {
   .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
-    position: relative;
-    box-shadow: none;
+    position: relative; /* Altera para posicionamento relativo em telas menores */
+    box-shadow: none; /* Remove a sombra em telas menores */
   }
-  /* Para telas menores que 768px, o dropdown é posicionado de forma relativa e não tem sombra. */
 }
 
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
-  color: #3c4250;
-  padding: 0.25rem 1rem;
-  display: block;
+  color: #3c4250; /* Define a cor do texto dos links dentro do dropdown */
+  padding: 0.25rem 1rem; /* Adiciona padding aos links do dropdown */
+  display: block; /* Exibe os links como blocos */
 }
-/* Define o estilo dos links dentro do menu suspenso do dropdown. */
 
 .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
-  display: block !important;
+  display: block !important; /* Exibe o dropdown quando a classe "show" está presente */
 }
-/* Exibe o menu suspenso do dropdown quando a classe "show" é adicionada. */
 
 .navbar .navbar-menu .navbar-nav .dropdown > .separator {
-  height: 1px;
-  width: 100%;
-  margin-top: 9px;
-  margin-bottom: 9px;
-  background-color: #eceef3;
+  height: 1px; /* Define a altura do separador */
+  width: 100%; /* Define a largura do separador */
+  margin-top: 9px; /* Adiciona margem superior */
+  margin-bottom: 9px; /* Adiciona margem inferior */
+  background-color: #eceef3; /* Define a cor de fundo do separador */
 }
-/* Adiciona uma linha separadora dentro do dropdown com altura e cor específicas. */
 
 .navbar .navbar-dropdown {
-  position: relative;
+  position: relative; /* Define o posicionamento como relativo */
 }
-/* Define a posição relativa para o dropdown da navbar. */
 
 .navbar .navbar-header > a span {
-  color: #66f;
+  color: #66f; /* Define a cor de um span dentro de um link no cabeçalho da navbar */
 }
-/* Define a cor do texto dentro do span no cabeçalho da navbar. */
 
 .navbar .navbar-header h4 {
-  font-weight: 500;
-  font-size: 1.25rem;
+  font-weight: 500; /* Define o peso da fonte */
+  font-size: 1.25rem; /* Define o tamanho da fonte */
 }
-/* Define o peso e o tamanho da fonte para o título dentro do cabeçalho da navbar. */
 
 @media (max-width: 768px) {
   .navbar .navbar-header h4 {
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* Define o tamanho da fonte em telas menores que 768px */
   }
-  /* Para telas menores que 768px, reduz o tamanho da fonte do título na navbar. */
 }
 
 /* sessão de pesquisar css */
-/* Contêiner principal da busca */
-/* Estiliza a seção para que os itens fiquem alinhados e à direita */
-.Buscar {
-  display: flex;                /* Usa Flexbox para alinhamento dos itens */
-  justify-content: flex-end;    /* Alinha os itens à direita */
-  align-items: center;          /* Alinha verticalmente os itens no centro */
-  gap: 0.5rem;                   /* Espaço entre o campo de busca e o botão */
-  padding: 1rem;                /* Espaçamento interno da seção */
-  background-color: #f8f9fa;    /* Cor de fundo clara (opcional) */
+
+
+
+.bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+	transition: all 0.25s ease-out; /* Aplica uma transição suave de 0.25s a todas as propriedades alteradas */
 }
 
-/* Estiliza o campo de busca */
-.Buscar .form-control {
-  border-radius: 0.25rem;       /* Arredonda os cantos do campo de busca */
-  border: 1px solid #ced4da;    /* Adiciona uma borda leve */
-  padding: 0.5rem;              /* Espaçamento interno do campo de busca */
+.bar input,
+.search-btn {
+	width: 3em; /* Define a largura dos elementos de input e do botão de busca como 3em */
+	height: 3em; /* Define a altura dos elementos de input e do botão de busca como 3em */
 }
 
-/* Estiliza o botão de busca */
-.Buscar .btn {
-  border-radius: 0.25rem;       /* Arredonda os cantos do botão */
-  padding: 0.1rem 1rem;         /* Espaçamento interno do botão */
-  font-size: 1rem;              /* Tamanho da fonte do botão */
+.bar input:invalid:not(:focus),
+.search-btn {
+	cursor: pointer; /* Muda o cursor para uma mãozinha (indicando que o elemento é clicável) quando o input é inválido e não está focado, ou para o botão de busca */
 }
 
-/* Estiliza o botão para parecer com uma lupa */
-.Buscar .btn::before {
-  content: '🔍';                 /* Adiciona o ícone de lupa usando o conteúdo pseudo-elemento */
-  font-size: 1.25rem;           /* Tamanho da fonte para o ícone */
-  background: blue;             /* Remove o fundo do botão */
-  border: none;                 /* Remove a borda do botão */
+.bar,
+.bar input:focus,
+.bar input:valid {
+	width: 100%; /* Define a largura dos elementos como 100% */
+  justify-content: left;
 }
 
-/* Oculta o texto "pesquisar" no botão e mantém o ícone de lupa visível */
-.Buscar .btn span {
-  display: none;                /* Oculta o texto */
+.bar input:focus,
+.bar input:not(:focus) + .search-btn:focus {
+	outline: transparent; /* Remove o contorno padrão quando o input ou o botão de busca estão focados */
 }
 
-
-/* Remove o texto do botão */
-.btn-outline-success span {
-  display: none;
+.bar {
+	margin: 0; /* Centraliza o elemento 'bar' horizontal e verticalmente */
+	padding: 1.5em; /* Adiciona padding ao redor do elemento 'bar' */
+	justify-content: center; /* Centraliza o conteúdo dentro do 'bar' horizontalmente */
+	max-width: 30em; /* Define a largura máxima do 'bar' como 30em */
 }
 
+.bar input {
+	background: transparent; /* Define o fundo do input como transparente */
+	border-radius: 1.5em; /* Arredonda os cantos do input */
+	box-shadow: 0 0 0 0.4em #171717 inset; /* Adiciona uma sombra interna para criar um efeito de borda */
+	padding: 0.75em; /* Adiciona padding dentro do input */
+	transform: translate(0.5em, 0.5em) scale(0.5); /* Transforma a posição e o tamanho do input */
+	transform-origin: 100% 0; /* Define o ponto de origem da transformação */
+	-webkit-appearance: none; /* Remove o estilo padrão do Webkit para o input */
+	-moz-appearance: none; /* Remove o estilo padrão do Mozilla para o input */
+	appearance: none; /* Remove o estilo padrão para o input */
+}
+
+.bar input::-webkit-search-decoration {
+	-webkit-appearance: none; /* Remove o estilo padrão do Webkit para o botão de limpar busca */
+}
+
+.bar input:focus,
+.bar input:valid {
+	background: #fff; /* Altera o fundo do input para branco quando focado ou válido */
+	border-radius: 0.375em 0 0 0.375em; /* Define um novo raio de borda para o input */
+	box-shadow: 0 0 0 0.1em #d9d9d9 inset; /* Ajusta a sombra interna */
+	transform: scale(1); /* Restaura o tamanho original do input */
+}
+
+.search-btn {
+	background: #171717; /* Define a cor de fundo do botão de busca como preto */
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0; /* Define cantos arredondados específicos para o botão */
+	padding: 0.75em; /* Adiciona padding dentro do botão de busca */
+	position: relative; /* Define o posicionamento como relativo para posicionar elementos internos */
+	transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125); /* Transforma a posição, rotação e escala do botão de busca */
+	transform-origin: 0 50%; /* Define o ponto de origem da transformação */
+}
+
+.search-btn:before, 
+.search-btn:after {
+	content: ""; /* Adiciona conteúdo vazio para os pseudo-elementos */
+	display: block; /* Exibe os pseudo-elementos como blocos */
+	opacity: 0; /* Torna os pseudo-elementos invisíveis por padrão */
+	position: absolute; /* Define o posicionamento como absoluto para os pseudo-elementos */
+}
+
+.search-btn:before {
+	border-radius: 50%; /* Define o pseudo-elemento como um círculo */
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset; /* Adiciona uma sombra interna ao círculo */
+	top: 0.75em; /* Posiciona o círculo 0.75em a partir do topo */
+	left: 0.75em; /* Posiciona o círculo 0.75em a partir da esquerda */
+	width: 1.2em; /* Define a largura do círculo */
+	height: 1.2em; /* Define a altura do círculo */
+}
+
+.search-btn:after {
+	background: #f1f1f1; /* Define a cor de fundo do pseudo-elemento como cinza claro */
+	border-radius: 0 0.25em 0.25em 0; /* Define cantos arredondados específicos para o pseudo-elemento */
+	top: 51%; /* Posiciona o pseudo-elemento um pouco abaixo do centro */
+	left: 51%; /* Posiciona o pseudo-elemento um pouco à direita do centro */
+	width: 0.75em; /* Define a largura do pseudo-elemento */
+	height: 0.25em; /* Define a altura do pseudo-elemento */
+	transform: translate(0.2em, 0) rotate(45deg); /* Transforma a posição e a rotação do pseudo-elemento */
+	transform-origin: 0 50%; /* Define o ponto de origem da transformação */
+}
+
+.search-btn span {
+	display: inline-block; /* Exibe o span como bloco em linha */
+	overflow: hidden; /* Esconde o conteúdo que excede os limites do span */
+	width: 1px; /* Define a largura mínima para o span */
+	height: 1px; /* Define a altura mínima para o span */
+}
+
+.bar input:focus + .search-btn,
+.bar input:valid + .search-btn {
+	background: #7e7e7e; /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido */
+	border-radius: 0 0.375em 0.375em 0; /* Ajusta o raio da borda do botão de busca */
+	transform: scale(1); /* Restaura o tamanho original do botão de busca */
+}
+
+.bar input:focus + .search-btn:before, 
+.bar input:focus + .search-btn:after,
+.bar input:valid + .search-btn:before, 
+.bar input:valid + .search-btn:after {
+	opacity: 1; /* Torna os pseudo-elementos visíveis quando o input é focado ou válido */
+}
+
+.bar input:focus + .search-btn:hover,
+.bar input:valid + .search-btn:hover,
+.bar input:valid:not(:focus) + .search-btn:focus {
+	background: #7e7e7e; /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido e o botão é sobreposto pelo mouse */
+}
+
+.bar input:focus + .search-btn:active,
+.bar input:valid + .search-btn:active {
+	transform: translateY(1px); /* Move o botão de busca ligeiramente para baixo quando clicado */
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	body, input {
+		color: #f1f1f1; /* Altera a cor do texto para cinza claro no modo escuro */
+	}
+	body {
+		background: #171717; /* Altera a cor de fundo do corpo para preto no modo escuro */
+	}
+	.bar input {
+		box-shadow: 0 0 0 0.4em #f1f1f1 inset; /* Altera a sombra interna do input para cinza claro no modo escuro */
+	}
+	.bar input:focus,
+	.bar input:valid {
+		background: #3d3d3d; /* Altera o fundo do input para cinza escuro quando focado ou válido no modo escuro */
+		box-shadow: 0 0 0 0.1em #3d3d3d inset; /* Ajusta a sombra interna no modo escuro */
+	}
+	.search-btn {
+		background: #f1f1f1; /* Altera a cor de fundo do botão de busca para cinza claro no modo escuro */
+	}
+}
+
+/*//////////////////////////////////////////////////////////////////////////*/
 
 /* CSS DA APRTE DO SOBRE A PAGINA */
 
-
 /* CSS DA SEÇÃO "SOBRE" */
+
+/* Container principal para a seção escura */
 .wrapperContainer-dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 50px 0;
-}
-
-.container_sobre {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: flex; /* Define o layout flexível para centralização */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Centraliza o conteúdo verticalmente */
-  background-color: #000000;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #fff;
+  background-color: #ffffff; /* Define a cor de fundo como branco */
+  padding: 50px 0; /* Adiciona espaçamento superior e inferior */
 }
 
+/* Container específico para o conteúdo da seção "Sobre" */
+.container_sobre {
+  max-width: 1400px; /* Define a largura máxima do container */
+  width: 100%; /* Define a largura do container como 100% */
+  display: flex; /* Define o layout flexível */
+  flex-direction: row; /* Define a direção dos itens como linha (horizontal) */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  background-color: #000000; /* Define a cor de fundo como preto */
+  border-radius: 10px; /* Arredonda os cantos do container */
+  overflow: hidden; /* Oculta conteúdo que ultrapassa os limites do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do container */
+  color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estilo para imagens dentro do container "Sobre" */
 .container_sobre img {
-  width: 50%; /* Ajuste para exibir metade da largura */
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-right: 5px solid #444; /* Borda direita para separar imagem e texto */
+  width: 50%; /* Define a largura da imagem como metade do container */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Define o display da imagem como bloco */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível */
+  border-right: 5px solid #444; /* Adiciona uma borda direita para separar a imagem e o texto */
 }
 
+/* Estilo para o conteúdo textual dentro do container "Sobre" */
 .Sobre_content {
-  width: 50%; /* Ajuste para exibir metade da largura */
-  padding: 20px;
-  background-color: #fcf6f6;
+  width: 50%; /* Define a largura do conteúdo como metade do container */
+  padding: 20px; /* Adiciona espaçamento interno */
+  background-color: #fcf6f6; /* Define a cor de fundo do conteúdo textual */
 }
 
+/* Estilo para o título da seção "Sobre" */
 .sobre_title {
-  font-size: 2.5em;
-  margin: 0 0 20px;
-  text-align: left;
-  color: #000000;
+  font-size: 2.5em; /* Define o tamanho da fonte */
+  margin: 0 0 20px; /* Remove margem superior e inferior */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #000000; /* Define a cor do texto como preto */
 }
 
+/* Estilo para a classe "row" usada dentro do container "Sobre" */
 .row {
-  margin: 0;
-  padding: 0 20px;
+  margin: 0; /* Remove a margem */
+  padding: 0 20px; /* Adiciona espaçamento interno horizontal */
 }
 
+/* Estilo para parágrafos dentro da classe "row" */
 .row p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #000000;
-  text-align: justify;
+  font-size: 1em; /* Define o tamanho da fonte */
+  line-height: 1.6; /* Define o espaçamento entre linhas */
+  color: #000000; /* Define a cor do texto como preto */
+  text-align: justify; /* Justifica o texto */
 }
 
+/* CSS DO resto da navibarIcons */
+
+/* Estilos para o menu de navegação */
+.navbar-menu {
+  display: flex; /* Define o contêiner como flexível para organização em coluna */
+  flex-direction: column; /* Organiza os itens do menu verticalmente */
+}
+
+.navbar-nav {
+  list-style-type: none; /* Remove as bolinhas padrão da lista */
+  padding: 0; /* Remove o preenchimento padrão */
+  margin: 0; /* Remove a margem padrão */
+}
+
+.navbar-nav li {
+  margin: 5px 0; /* Adiciona margem entre os itens da lista */
+}
+
+.navbar-dropdown .dropdown {
+  display: none; /* Esconde o dropdown por padrão */
+  position: absolute; /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
+  background-color: #ffffff; /* Define a cor de fundo do dropdown */
+  padding: 10px; /* Adiciona preenchimento ao redor do dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao dropdown para um efeito de elevação */
+}
+
+.navbar-dropdown:hover .dropdown {
+  display: block; /* Mostra o dropdown quando o mouse passa sobre o item do menu */
+}
+
+.dropdown li {
+  margin-bottom: 10px; /* Adiciona margem inferior aos itens do dropdown */
+}
+
+.dropdown li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Define a cor do texto dos links */
+  display: flex; /* Usa Flexbox para organizar o ícone e o texto em linha */
+  align-items: center; /* Alinha o ícone e o texto verticalmente ao centro */
+}
+
+.dropdown li a i {
+  margin-right: 8px; /* Adiciona espaço entre o ícone e o texto */
+  font-size: 1.2em; /* Ajusta o tamanho do ícone */
+}
+
+.separator {
+  font-weight: bold; /* Faz o texto da separação em negrito */
+  margin-top: 10px; /* Adiciona margem superior para espaçamento */
+  padding-top: 10px; /* Adiciona preenchimento superior para espaçamento */
+  border-top: 1px solid #ccc; /* Adiciona uma linha de separação superior */
+}
+
+/* Efeito hover para os links do dropdown */
+.dropdown li a:hover {
+  color: #007bff; /* Altera a cor do texto ao passar o mouse */
+  background-color: #f1f1f1; /* Adiciona uma cor de fundo ao passar o mouse */
+}
+
+/*////////////////////////////////////////////////////////////*/
+
+
+/* Elemento do carrossel */
+.carousel {
+  display: flex; /* Define o layout flexível para o carrossel */
+  overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do carrossel */
+  position: relative; /* Define a posição relativa para posicionar elementos dentro do carrossel */
+}
+
+/* Container para as imagens do carrossel */
+.carousel-images {
+  display: flex; /* Define o layout flexível para as imagens */
+  transition: transform 0.5s ease-in-out; /* Define a animação de transição ao mover as imagens */
+}
+
+/* Estilo para cada imagem no carrossel */
+.carousel-image {
+  min-width: 100%; /* Define a largura mínima de cada imagem como 100% */
+  transition: opacity 0.5s ease-in-out; /* Define a animação de transição para a opacidade */
+}
+
+/* Controles de navegação do carrossel */
+.carousel-controls {
+  position: absolute; /* Posiciona os controles de forma absoluta dentro do container do carrossel */
+  top: 50%; /* Posiciona os controles no meio verticalmente */
+  width: 100%; /* Define a largura dos controles como 100% */
+  display: flex; /* Define o layout flexível para os controles */
+  justify-content: space-between; /* Espaça os controles igualmente */
+  transform: translateY(-50%); /* Move os controles para cima pela metade de sua altura */
+}
+
+/* Botões de navegação do carrossel */
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5); /* Define a cor de fundo dos botões com opacidade */
+  border: none; /* Remove a borda dos botões */
+  color: white; /* Define a cor do texto dos botões como branco */
+  padding: 0.5rem; /* Define o espaçamento interno dos botões */
+  cursor: pointer; /* Muda o cursor para um ponteiro quando sobre o botão */
+  border-radius: 50%; /* Define os botões como circulares */
+}
+
+
+
+
+
+/*//////////////////////////////////////////////////////////*/
+
+
+/* CSS DAS CATEGORIAS */
+
+/* Estilo para o título das categorias */
+h1 {
+  padding: 50px; /* Adiciona espaçamento ao redor do título */
+  text-align: center; /* Centraliza o texto do título */
+}
+
+/* Container para as categorias */
+.categories-container {
+  display: flex; /* Define o layout flexível para as categorias */
+  flex-wrap: wrap; /* Permite que as categorias quebrem para a próxima linha */
+  justify-content: center; /* Centraliza as categorias */
+  gap: 20px; /* Define o espaçamento entre as categorias */
+  padding: 20px; /* Adiciona espaçamento interno ao container */
+}
+
+/* Estilo para cada categoria */
+.category {
+  display: flex; /* Define o layout flexível para cada categoria */
+  flex-direction: column; /* Alinha o conteúdo em uma coluna */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  background-color: #fff; /* Define a cor de fundo como branco */
+  border-radius: 50%; /* Define as bordas das categorias como circulares */
+  width: 150px; /* Define a largura das categorias */
+  height: 150px; /* Define a altura das categorias */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor das categorias */
+  transition: transform 0.3s, box-shadow 0.3s; /* Define animações de transição para transformação e sombra */
+  overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites das categorias */
+  text-align: center; /* Centraliza o texto dentro das categorias */
+  cursor: pointer; /* Muda o cursor para um ponteiro quando sobre a categoria */
+  box-shadow: 1px 1px 1px #000000;
+
+}
+
+/* Efeito hover para as categorias */
+.category:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho da categoria ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para o ícone da categoria */
+.category-icon {
+  width: 80px; /* Define a largura do ícone */
+  height: 80px; /* Define a altura do ícone */
+  display: flex; /* Define o layout flexível para o ícone */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  background-color: #f0f0f0; /* Define a cor de fundo do ícone */
+  border-radius: 50%; /* Define o ícone como circular */
+  margin-top: 20px; /* Adiciona margem superior ao ícone */
+}
+
+/* Estilo para a imagem dentro do ícone da categoria */
+.category-icon img {
+  max-width: 60%; /* Define a largura máxima da imagem como 60% do ícone */
+  max-height: 60%; /* Define a altura máxima da imagem como 60% do ícone */
+}
+
+/* Estilo para o título da categoria */
+.category-title {
+  font-size: 1em; /* Define o tamanho da fonte */
+  margin: 10px 0; /* Adiciona margem superior e inferior ao título */
+  color: #333; /* Define a cor do texto do título */
+}
+
+/*//////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+
+/* CSS DA SEÇÃO DE COMENTÁRIOS */
+
+/* Container para os comentários */
+
+
+.comments-container {
+  max-width: 1400px; /* Define a largura máxima do container para telas grandes */
+  margin: 20px auto; /* Centraliza o container horizontalmente e adiciona margem superior e inferior */
+  padding: 20px; /* Adiciona espaçamento interno ao container */
+  background-color: #fff; /* Define a cor de fundo como branco */
+  border-radius: 8px; /* Arredonda as bordas do container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao redor do container */
+  display: flex; /* Define o layout flexível para os comentários */
+  flex-wrap: wrap; /* Permite que os comentários quebrem para a próxima linha */
+  gap: 20px; /* Define o espaçamento entre os comentários */
+}
+
+/* Estilo para os cards de comentários e o formulário */
+.comment-card,
+form { 
+  flex: 1 1 calc(33.333% - 20px); /* Ajusta o tamanho dos cards e do formulário para três por linha */
+  background-color: #fcf6f6; /* Define a cor de fundo dos cards */
+  border: 1px solid #f5d9d9; /* Define a borda dos cards */
+  border-radius: 8px; /* Arredonda as bordas dos cards */
+  padding: 15px; /* Adiciona espaçamento interno aos cards */
+  box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
+  display: flex; /* Define o layout flexível para o conteúdo dos cards */
+  flex-direction: column; /* Alinha o conteúdo em uma coluna */
+  max-width: 100%; /* Garante que o card e o formulário não excedam a largura do container */
+}
+
+/* Estilo para o cabeçalho do comentário */
+.comment-header {
+  display: flex; /* Define o layout flexível para o cabeçalho */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Estilo para o avatar do usuário */
+.avatar {
+  width: 50px; /* Define a largura do avatar */
+  height: 50px; /* Define a altura do avatar */
+  border-radius: 50%; /* Define o avatar como circular */
+  margin-right: 10px; /* Adiciona margem à direita do avatar */
+}
+
+/* Estilo para o nome de usuário */
+.username {
+  margin: 0; /* Remove a margem */
+  font-size: 1.2em; /* Define o tamanho da fonte */
+}
+
+/* Estilo para o texto do comentário */
+#commentForm{
+  max-width: 1400px; /* Define a largura máxima do container para telas grandes */
+  margin: 20px auto; /* Centraliza o container horizontalmente e adiciona margem superior e inferior */
+  padding: 20px; /* Adiciona espaçamento interno ao container */
+  background-color: #fff; /* Define a cor de fundo como branco */
+  border-radius: 8px; /* Arredonda as bordas do container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao redor do container */
+  display: flex; /* Define o layout flexível para os comentários */
+  flex-wrap: wrap; /* Permite que os comentários quebrem para a próxima linha */
+  gap: 20px; /* Define o espaçamento entre os comentários */
+}
+.comment-text {
+  margin: 10px 0; /* Adiciona margem superior e inferior ao texto */
+  font-size: 1em; /* Define o tamanho da fonte */
+  line-height: 1.4; /* Define o espaçamento entre linhas */
+}
+
+form label {
+  display: block; /* Define o display do label como bloco */
+  margin-bottom: 8px; /* Adiciona margem inferior */
+  
+}
+
+form input, form textarea {
+  width: 100%; /* Define a largura dos inputs e textareas como 100% */
+  margin-bottom: 12px; /* Adiciona margem inferior */
+  padding: 8px; /* Adiciona espaçamento interno */
+  border: 1px solid #ddd; /* Define a borda */
+  border-radius: 4px; /* Arredonda as bordas */
+}
+
+/* Estilo para o botão do formulário */
+form button {
+  background-color: #66f; /* Define a cor de fundo do botão */
+  color: #fff; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda */
+  padding: 10px 15px; /* Define o espaçamento interno */
+  border-radius: 4px; /* Arredonda as bordas */
+  cursor: pointer; /* Muda o cursor para um ponteiro quando sobre o botão */
+}
+
+form button:hover {
+  background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+
+}
+
+
+
+/*///////////////////////////////CSS DO RODAPÉ (FOOTER) ///////////////*/
+
+/* Estilo geral do rodapé */
+footer {
+  background-color: #333; /* Define a cor de fundo do rodapé como cinza escuro */
+  color: #fff; /* Define a cor do texto do rodapé como branco */
+  padding: 20px 0; /* Adiciona espaçamento superior e inferior */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Container para o conteúdo do rodapé */
+.footer-container {
+  max-width: 1000px; /* Define a largura máxima do container do rodapé */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 0 20px; /* Adiciona espaçamento interno horizontal */
+  display: flex; /* Define o layout flexível para o rodapé */
+  flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha */
+  justify-content: space-between; /* Espaça o conteúdo igualmente */
+}
+
+/* Estilo para as diferentes seções do rodapé */
+.footer-info, .footer-creators, .footer-social {
+  flex: 1 1 100%; /* Define a largura flexível para cada seção do rodapé */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+/* Estilo para o título da seção "info" do rodapé */
+.footer-info h2 {
+  margin: 0; /* Remove a margem */
+  font-size: 1.5em; /* Define o tamanho da fonte */
+}
+
+/* Estilo para o texto da seção "info" do rodapé */
+.footer-info p {
+  font-size: 1em; /* Define o tamanho da fonte */
+  line-height: 1.4; /* Define o espaçamento entre linhas */
+}
+
+/* Estilo para o título da seção "creators" do rodapé */
+.footer-creators h3 {
+  margin: 0 0 10px; /* Remove a margem superior e define a margem inferior */
+  font-size: 1.2em; /* Define o tamanho da fonte */
+}
+
+/* Estilo para o título da seção "social" do rodapé */
+.footer-social h3 {
+  margin: 0 0 10px; /* Remove a margem superior e define a margem inferior */
+  font-size: 1.2em; /* Define o tamanho da fonte */
+}
+
+/* Estilo para os ícones sociais do rodapé */
+.footer-social .social-icon {
+  display: inline-block; /* Define o display dos ícones como inline-block */
+  margin: 0 30px; /* Adiciona margem horizontal aos ícones */
+  font-size: 1.5em; /* Define o tamanho da fonte para os ícones */
+  color: #fff; /* Define a cor dos ícones como branco */
+  text-decoration: none; /* Remove a decoração do texto (sublinhado) */
+}
+
+/* Efeito hover para os ícones sociais do rodapé */
+.footer-social .social-icon:hover {
+  color: #007bff; /* Muda a cor dos ícones ao passar o mouse */
+}
+/* Estilo para o rodapé do comentário */
+.comment-footer {
+  font-size: 0.9em; /* Define o tamanho da fonte */
+  color: #888; /* Define a cor do texto como cinza */
+}
+
+/* Responsividade para o rodapé em telas menores */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Altera a direção do flex para coluna em telas menores */
+    text-align: center; /* Centraliza o texto em telas menores */
+  }
+
+  .footer-info, .footer-creators, .footer-social {
+    margin-bottom: 20px; /* Adiciona margem inferior às seções em telas menores */
+  }
+}
+
+
+
+/* Media query para dispositivos com largura máxima de 768px */
 @media (max-width: 768px) {
   .container_sobre {
-    flex-direction: column;
+    flex-direction: column; /* Altera a direção do flex para coluna (vertical) */
   }
 
   .container_sobre img,
   .Sobre_content {
-    width: 100%;
+    width: 100%; /* Define a largura da imagem e do conteúdo como 100% */
   }
 
   .container_sobre img {
-    border-right: none;
-    border-bottom: 5px solid #444;
+    border-right: none; /* Remove a borda direita da imagem */
+    border-bottom: 5px solid #444; /* Adiciona uma borda inferior à imagem */
   }
 }
 
-/* CSS DO CARROSSEL */
-.carousel-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
-}
 
-.carousel {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-}
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
 
-.carousel-image {
-  min-width: 100%;
-  transition: opacity 0.5s ease-in-out;
-}
 
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
-
-.carousel-button {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
+/* Responsividade para o carrossel em telas menores */
 @media (max-width: 768px) {
   .carousel-button {
-    padding: 0.25rem;
+    padding: 0.25rem; /* Reduz o espaçamento interno dos botões em telas menores */
   }
 }
 
 
-/* css das categgorias */
 
-h1{
-  padding: 50px;
-
-    text-align: center;
-
-
-}
-.categories-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-
-
-.category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-}
-
-.category:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.category-icon {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    margin-top: 20px;
-}
-
-.category-icon img {
-    max-width: 60%;
-    max-height: 60%;
-}
-
-.category-title {
-    font-size: 1em;
-    margin: 10px 0;
-    color: #333;
-}
-
+/* Responsividade para as categorias em telas menores */
 @media (max-width: 768px) {
-    .category {
-        width: 120px;
-        height: 120px;
-    }
+  .category {
+    width: 120px; /* Reduz a largura das categorias em telas menores */
+    height: 120px; /* Reduz a altura das categorias em telas menores */
+  }
 
-    .category-icon {
-        width: 60px;
-        height: 60px;
-    }
-}
- 
-/*seção de coments*/
-.comments-container {
-  max-width: 2000px; /* Ajustado para permitir mais espaço em telas grandes */
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  display: flex; /* Usando Flexbox para alinhamento dos cards e do formulário */
-  flex-wrap: wrap; /* Permite que os cards envolvam para a próxima linha */
-  gap: 20px; /* Espaço entre os cards */
+  .category-icon {
+    width: 60px; /* Reduz a largura do ícone em telas menores */
+    height: 60px; /* Reduz a altura do ícone em telas menores */
+  }
 }
 
-.comment-card,
-form { /* Aplicando as mesmas regras para os cards e o formulário */
-  flex: 1 1 calc(33.333% - 20px); /* Ajusta o tamanho dos cards e do formulário para três por linha */
-  background-color: #fcf6f6;
-  border: 1px solid #f5d9d9;
-  border-radius: 8px;
-  padding: 15px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%; /* Garante que o card e o formulário não excedam a largura do contêiner */
-}
 
-.comment-header {
-  display: flex;
-  align-items: center;
-}
-
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.username {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.comment-text {
-  margin: 10px 0;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.comment-footer {
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* Responsividade */
+/* Responsividade para os comentários em telas menores */
 @media (max-width: 768px) {
   .comment-card,
-  form { /* Ajusta os cards e o formulário para dois por linha em telas médias */
-      flex: 1 1 calc(50% - 20px);
+  form { 
+    flex: 1 1 calc(50% - 20px); /* Ajusta os cards e o formulário para dois por linha em telas médias */
   }
 }
 
 @media (max-width: 480px) {
   .comment-card,
-  form { /* Ajusta os cards e o formulário para um por linha em telas pequenas */
-      flex: 1 1 100%;
+  form { 
+    flex: 1 1 100%; /* Ajusta os cards e o formulário para um por linha em telas pequenas */
   }
 }
 
-form label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-form input, form textarea {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-form button {
-  background-color: #66f;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
 
 
-/* FOOTER css */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
 
-.footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-.footer-info, .footer-creators, .footer-social {
-  flex: 1 1 100%;
-  margin-bottom: 20px;
-}
 
-.footer-info h2 {
-  margin: 0;
-  font-size: 1.5em;
-}
 
-.footer-info p {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.footer-creators h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-}
-
-.footer-social h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-}
-
-.footer-social .social-icon {
-  display: inline-block;
-  margin: 0 30px;
-  font-size: 1.5em; /* Tamanho do ícone */
-  color: #fff; /* Cor do ícone */
-  text-decoration: none;
-}
-
-.footer-social .social-icon:hover {
-  color: #007bff; /* Cor ao passar o mouse (ajuste conforme necessário) */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .footer-container {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .footer-info, .footer-creators, .footer-social {
-      margin-bottom: 20px;
-  }
-}

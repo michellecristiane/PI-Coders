@@ -1,0 +1,159 @@
+/* Estilos básicos */
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo de fonte */
+  body, button, input {
+    font: 1em Hind, sans-serif;
+    line-height: 1.5em;
+  }
+  
+  /* Flex container para alinhar o menu e a barra de pesquisa */
+  .container {
+    display: flex; /* Define o container como flexível para alinhar itens em linha */
+    align-items: center; /* Centraliza verticalmente os itens dentro do container */
+    justify-content: space-between; /* Espaço entre o menu e a barra de pesquisa */
+    padding: 1em; /* Adiciona espaço ao redor do container */
+    background: #f1f1f1; /* Cor de fundo */
+    height: 100vh; /* Altura do container para ocupar toda a altura da tela */
+  }
+  
+  /* Estilo do menu */
+  .menu {
+    flex-grow: 1; /* Permite que o menu cresça e ocupe o espaço disponível */
+  }
+  
+  .menu ul {
+    display: flex; /* Exibe os itens do menu em linha */
+    list-style: none; /* Remove os marcadores de lista padrão */
+  }
+  
+  .menu li {
+    margin-right: 1em; /* Espaçamento entre os itens do menu */
+  }
+  
+  /* Estilo da barra de pesquisa */
+  .bar {
+    display: flex; /* Exibe os itens da barra de pesquisa em linha */
+    align-items: center; /* Centraliza verticalmente os itens dentro da barra */
+    max-width: 30em; /* Define a largura máxima da barra de pesquisa */
+  }
+  
+  /* Estilo do input e botão de busca */
+  .bar input,
+  .search-btn {
+    width: 3em; /* Define a largura inicial do input e do botão de busca */
+    height: 3em; /* Define a altura inicial do input e do botão de busca */
+    transition: all 0.25s ease-out; /* Transição suave para mudanças */
+  }
+  
+  .bar input:focus,
+  .bar input:valid {
+    width: 100%; /* Expande o input ao ser focado */
+  }
+  
+  .bar input {
+    background: transparent;
+    border-radius: 1.5em;
+    box-shadow: 0 0 0 0.4em #171717 inset;
+    padding: 0.75em;
+    transform: translate(0.5em, 0.5em) scale(0.5);
+    transform-origin: 100% 0;
+    appearance: none;
+  }
+  
+  .search-btn {
+    background: #171717;
+    border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+    padding: 0.75em;
+    position: relative;
+    transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+    transform-origin: 0 50%;
+  }
+  
+  .search-btn:before, 
+  .search-btn:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .search-btn:before {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+    top: 0.75em;
+    left: 0.75em;
+    width: 1.2em;
+    height: 1.2em;
+  }
+  
+  .search-btn:after {
+    background: #f1f1f1;
+    border-radius: 0 0.25em 0.25em 0;
+    top: 51%;
+    left: 51%;
+    width: 0.75em;
+    height: 0.25em;
+    transform: translate(0.2em, 0) rotate(45deg);
+    transform-origin: 0 50%;
+  }
+  
+  .search-btn span {
+    display: inline-block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  
+  /* Estilos ao focar no input */
+  .bar input:focus + .search-btn,
+  .bar input:valid + .search-btn {
+    background: #7e7e7e;
+    border-radius: 0 0.375em 0.375em 0;
+    transform: scale(1);
+  }
+  
+  .bar input:focus + .search-btn:before, 
+  .bar input:focus + .search-btn:after,
+  .bar input:valid + .search-btn:before, 
+  .bar input:valid + .search-btn:after {
+    opacity: 1;
+  }
+  
+  .bar input:focus + .search-btn:hover,
+  .bar input:valid + .search-btn:hover,
+  .bar input:valid:not(:focus) + .search-btn:focus {
+    background: #7e7e7e;
+  }
+  
+  .bar input:focus + .search-btn:active,
+  .bar input:valid + .search-btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* Modo escuro */
+  @media screen and (prefers-color-scheme: dark) {
+    body, input {
+      color: #f1f1f1;
+    }
+    body {
+      background: #171717;
+    }
+    .bar input {
+      box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+    }
+    .bar input:focus,
+    .bar input:valid {
+      background: #3d3d3d;
+      box-shadow: 0 0 0 0.1em #3d3d3d inset;
+    }
+    .search-btn {
+      background: #f1f1f1;
+    }
+  }
+  

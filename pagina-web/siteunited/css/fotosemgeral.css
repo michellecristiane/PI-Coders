@@ -1,0 +1,1261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos de fonte (300, 400, 500) */
+* {
+  box-sizing: border-box;
+  /* Inclui padding e border no cálculo do tamanho total dos elementos */
+  padding: 0;
+  /* Remove o padding padrão de todos os elementos */
+  margin: 0;
+  /* Remove a margem padrão de todos os elementos */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* Define a fonte padrão para "Roboto" */
+  font-size: 0.925rem;
+  /* Define o tamanho da fonte do corpo do texto */
+}
+
+a {
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+}
+
+.container {
+  width: 1170px;
+  /* Define a largura máxima do container */
+  position: relative;
+  /* Define a posição como relativa para posicionamento de elementos filhos */
+  margin-left: auto;
+  /* Centraliza o container horizontalmente */
+  margin-right: auto;
+  /* Centraliza o container horizontalmente */
+  padding-left: 15px;
+  /* Adiciona padding à esquerda do container */
+  padding-right: 15px;
+  /* Adiciona padding à direita do container */
+  padding: 0;
+  /* Remove o padding padrão de todos os elementos */
+  margin: 0;
+  /* Remove a margem padrão de todos os elementos */
+}
+
+
+.navbar,
+.navbar>.container {
+  width: 100%;
+  /* Define a largura da navbar e seu container para 100% */
+  display: flex;
+  /* Define um layout flexível */
+  flex-wrap: wrap;
+  /* Permite que os elementos se encaixem em múltiplas linhas, se necessário */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between;
+  /* Espaça igualmente os itens dentro da navbar */
+}
+
+@media (max-width: 768px) {
+
+  .navbar,
+  .navbar>.container {
+    display: block;
+    /* Exibe como bloco em telas menores que 768px */
+  }
+}
+
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Adiciona uma sombra suave na parte inferior da navbar */
+  background-color: #fff;
+  /* Define a cor de fundo da navbar como branca */
+  padding: 1rem 1.15rem;
+  /* Adiciona padding ao redor da navbar */
+  border-bottom: 1px solid #eceef3;
+  /* Adiciona uma borda inferior à navbar */
+  /*
+  |-----------------------------------
+  | Start navbar logo or brand etc..
+  |-----------------------------------
+  */
+  /*
+  |-----------------------------------
+  | Start navbar menu
+  |-----------------------------------
+  */
+}
+
+@media (min-width: 576px) {
+  .navbar .container {
+    max-width: 540px;
+    /* Define a largura máxima do container para 540px em telas maiores que 576px */
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .container {
+    max-width: 720px;
+    /* Define a largura máxima do container para 720px em telas maiores que 768px */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .container {
+    max-width: 960px;
+    /* Define a largura máxima do container para 960px em telas maiores que 992px */
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar .container {
+    max-width: 1140px;
+    /* Define a largura máxima do container para 1140px em telas maiores que 1200px */
+  }
+}
+
+.navbar .navbar-header {
+  display: flex;
+  /* Define um layout flexível */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-header {
+    width: 100%;
+    /* Define a largura do cabeçalho da navbar como 100% em telas menores que 768px */
+    display: flex;
+    /* Define um layout flexível */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between;
+    /* Espaça os itens igualmente */
+    flex-direction: row-reverse;
+    /* Inverte a direção dos itens em linha */
+  }
+}
+
+.navbar .navbar-header .navbar-toggler {
+  cursor: pointer;
+  /* Define o cursor como pointer (mãozinha) para indicar que é clicável */
+  border: none;
+  /* Remove a borda do botão */
+  display: none;
+  /* Esconde o botão por padrão */
+  outline: none;
+  /* Remove o contorno padrão ao clicar */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-header .navbar-toggler {
+    display: block;
+    /* Exibe o botão em telas menores que 768px */
+  }
+}
+
+.navbar .navbar-header .navbar-toggler span {
+  height: 2px;
+  /* Define a altura da linha do botão */
+  width: 22px;
+  /* Define a largura da linha do botão */
+  background-color: #929aad;
+  /* Define a cor de fundo da linha do botão */
+  display: block;
+  /* Exibe como um bloco */
+}
+
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  margin-bottom: 0.2rem;
+  /* Adiciona uma margem inferior entre as linhas do botão */
+}
+
+.navbar .navbar-header>a {
+  font-weight: 500;
+  /* Define o peso da fonte para 500 (semi-bold) */
+  color: #3c4250;
+  /* Define a cor do texto */
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  /* Define um layout flexível */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  flex-basis: auto;
+  /* Define a base flexível automaticamente */
+  flex-grow: 1;
+  /* Permite que o menu cresça para preencher o espaço */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    display: none;
+    /* Esconde o menu em telas menores que 768px */
+    text-align: center;
+    /* Alinha o texto ao centro */
+  }
+}
+
+.navbar .navbar-menu.active {
+  display: flex !important;
+  /* Exibe o menu como flexível quando ativo */
+}
+
+.navbar .navbar-menu .navbar-nav {
+  margin-left: auto;
+  /* Move a navegação para o lado direito */
+  flex-direction: row;
+  /* Define a direção dos itens em linha */
+  display: flex;
+  /* Define um layout flexível */
+  padding-left: 0;
+  /* Remove o padding à esquerda */
+  margin-bottom: 0;
+  /* Remove a margem inferior */
+  list-style: none;
+  /* Remove o estilo de lista padrão */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav {
+    width: 100%;
+    /* Define a largura como 100% */
+    display: block;
+    /* Exibe como bloco em telas menores */
+    border-top: 1px solid #EEE;
+    /* Adiciona uma borda superior */
+    margin-top: 1rem;
+    /* Adiciona uma margem superior */
+  }
+}
+
+.navbar .navbar-menu .navbar-nav>li>a {
+  color: #3c4250;
+  /* Define a cor do texto */
+  text-decoration: none;
+  /* Remove a decoração de texto (sublinhado) */
+  display: inline-block;
+  /* Exibe como bloco em linha */
+  padding: 0.5rem 1rem;
+  /* Adiciona padding ao redor dos links */
+}
+
+.navbar .navbar-menu .navbar-nav>li>a:hover {
+  color: #66f;
+  /* Altera a cor ao passar o mouse sobre os links */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav>li>a {
+    border-bottom: 1px solid #eceef3;
+    /* Adiciona uma borda inferior nos links */
+  }
+}
+
+.navbar .navbar-menu .navbar-nav>li.active a {
+  color: #66f;
+  /* Define a cor dos links ativos */
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+  list-style: none;
+  /* Remove o estilo de lista */
+  position: absolute;
+  /* Posiciona o dropdown de forma absoluta */
+  top: 150%;
+  /* Define a posição superior do dropdown */
+  left: 0;
+  /* Alinha o dropdown à esquerda */
+  background-color: #fff;
+  /* Define a cor de fundo do dropdown como branca */
+  padding-top: 0.5rem;
+  /* Adiciona padding superior */
+  padding-bottom: 0.5rem;
+  /* Adiciona padding inferior */
+  min-width: 160px;
+  /* Define a largura mínima do dropdown */
+  width: auto;
+  /* Define a largura automática */
+  white-space: nowrap;
+  /* Impede quebra de linha */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  /* Adiciona uma sombra ao dropdown */
+  z-index: 99999;
+  /* Define um alto índice z para sobrepor outros elementos */
+  border-radius: 0.75rem;
+  /* Define bordas arredondadas */
+  display: none;
+  /* Esconde o dropdown por padrão */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    position: relative;
+    /* Altera para posicionamento relativo em telas menores */
+    box-shadow: none;
+    /* Remove a sombra em telas menores */
+  }
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+  color: #3c4250;
+  /* Define a cor do texto dos links dentro do dropdown */
+  padding: 0.25rem 1rem;
+  /* Adiciona padding aos links do dropdown */
+  display: block;
+  /* Exibe os links como blocos */
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+  display: block !important;
+  /* Exibe o dropdown quando a classe "show" está presente */
+}
+
+.navbar .navbar-menu .navbar-nav .dropdown>.separator {
+  height: 1px;
+  /* Define a altura do separador */
+  width: 100%;
+  /* Define a largura do separador */
+  margin-top: 9px;
+  /* Adiciona margem superior */
+  margin-bottom: 9px;
+  /* Adiciona margem inferior */
+  background-color: #eceef3;
+  /* Define a cor de fundo do separador */
+}
+
+.navbar .navbar-dropdown {
+  position: relative;
+  /* Define o posicionamento como relativo */
+}
+
+.navbar .navbar-header>a span {
+  color: #66f;
+  /* Define a cor de um span dentro de um link no cabeçalho da navbar */
+}
+
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  /* Define o peso da fonte */
+  font-size: 1.25rem;
+  /* Define o tamanho da fonte */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-header h4 {
+    font-size: 1.05rem;
+    /* Define o tamanho da fonte em telas menores que 768px */
+  }
+}
+
+/* sessão de pesquisar css */
+
+
+
+.bar input,
+.search-btn,
+.search-btn:before,
+.search-btn:after {
+  transition: all 0.25s ease-out;
+  /* Aplica uma transição suave de 0.25s a todas as propriedades alteradas */
+}
+
+.bar input,
+.search-btn {
+  width: 3em;
+  /* Define a largura dos elementos de input e do botão de busca como 3em */
+  height: 3em;
+  /* Define a altura dos elementos de input e do botão de busca como 3em */
+}
+
+.bar input:invalid:not(:focus),
+.search-btn {
+  cursor: pointer;
+  /* Muda o cursor para uma mãozinha (indicando que o elemento é clicável) quando o input é inválido e não está focado, ou para o botão de busca */
+}
+
+.bar,
+.bar input:focus,
+.bar input:valid {
+  width: 100%;
+  /* Define a largura dos elementos como 100% */
+  justify-content: left;
+}
+
+.bar input:focus,
+.bar input:not(:focus)+.search-btn:focus {
+  outline: transparent;
+  /* Remove o contorno padrão quando o input ou o botão de busca estão focados */
+}
+
+.bar {
+  margin: 0;
+  /* Centraliza o elemento 'bar' horizontal e verticalmente */
+  padding: 1.5em;
+  /* Adiciona padding ao redor do elemento 'bar' */
+  justify-content: center;
+  /* Centraliza o conteúdo dentro do 'bar' horizontalmente */
+  max-width: 30em;
+  /* Define a largura máxima do 'bar' como 30em */
+}
+
+.bar input {
+  background: transparent;
+  /* Define o fundo do input como transparente */
+  border-radius: 1.5em;
+  /* Arredonda os cantos do input */
+  box-shadow: 0 0 0 0.4em #171717 inset;
+  /* Adiciona uma sombra interna para criar um efeito de borda */
+  padding: 0.75em;
+  /* Adiciona padding dentro do input */
+  transform: translate(0.5em, 0.5em) scale(0.5);
+  /* Transforma a posição e o tamanho do input */
+  transform-origin: 100% 0;
+  /* Define o ponto de origem da transformação */
+  -webkit-appearance: none;
+  /* Remove o estilo padrão do Webkit para o input */
+  -moz-appearance: none;
+  /* Remove o estilo padrão do Mozilla para o input */
+  appearance: none;
+  /* Remove o estilo padrão para o input */
+}
+
+.bar input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove o estilo padrão do Webkit para o botão de limpar busca */
+}
+
+.bar input:focus,
+.bar input:valid {
+  background: #fff;
+  /* Altera o fundo do input para branco quando focado ou válido */
+  border-radius: 0.375em 0 0 0.375em;
+  /* Define um novo raio de borda para o input */
+  box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+  /* Ajusta a sombra interna */
+  transform: scale(1);
+  /* Restaura o tamanho original do input */
+}
+
+.search-btn {
+  background: #171717;
+  /* Define a cor de fundo do botão de busca como preto */
+  border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+  /* Define cantos arredondados específicos para o botão */
+  padding: 0.75em;
+  /* Adiciona padding dentro do botão de busca */
+  position: relative;
+  /* Define o posicionamento como relativo para posicionar elementos internos */
+  transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+  /* Transforma a posição, rotação e escala do botão de busca */
+  transform-origin: 0 50%;
+  /* Define o ponto de origem da transformação */
+}
+
+.search-btn:before,
+.search-btn:after {
+  content: "";
+  /* Adiciona conteúdo vazio para os pseudo-elementos */
+  display: block;
+  /* Exibe os pseudo-elementos como blocos */
+  opacity: 0;
+  /* Torna os pseudo-elementos invisíveis por padrão */
+  position: absolute;
+  /* Define o posicionamento como absoluto para os pseudo-elementos */
+}
+
+.search-btn:before {
+  border-radius: 50%;
+  /* Define o pseudo-elemento como um círculo */
+  box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+  /* Adiciona uma sombra interna ao círculo */
+  top: 0.75em;
+  /* Posiciona o círculo 0.75em a partir do topo */
+  left: 0.75em;
+  /* Posiciona o círculo 0.75em a partir da esquerda */
+  width: 1.2em;
+  /* Define a largura do círculo */
+  height: 1.2em;
+  /* Define a altura do círculo */
+}
+
+.search-btn:after {
+  background: #f1f1f1;
+  /* Define a cor de fundo do pseudo-elemento como cinza claro */
+  border-radius: 0 0.25em 0.25em 0;
+  /* Define cantos arredondados específicos para o pseudo-elemento */
+  top: 51%;
+  /* Posiciona o pseudo-elemento um pouco abaixo do centro */
+  left: 51%;
+  /* Posiciona o pseudo-elemento um pouco à direita do centro */
+  width: 0.75em;
+  /* Define a largura do pseudo-elemento */
+  height: 0.25em;
+  /* Define a altura do pseudo-elemento */
+  transform: translate(0.2em, 0) rotate(45deg);
+  /* Transforma a posição e a rotação do pseudo-elemento */
+  transform-origin: 0 50%;
+  /* Define o ponto de origem da transformação */
+}
+
+.search-btn span {
+  display: inline-block;
+  /* Exibe o span como bloco em linha */
+  overflow: hidden;
+  /* Esconde o conteúdo que excede os limites do span */
+  width: 1px;
+  /* Define a largura mínima para o span */
+  height: 1px;
+  /* Define a altura mínima para o span */
+}
+
+.bar input:focus+.search-btn,
+.bar input:valid+.search-btn {
+  background: #7e7e7e;
+  /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido */
+  border-radius: 0 0.375em 0.375em 0;
+  /* Ajusta o raio da borda do botão de busca */
+  transform: scale(1);
+  /* Restaura o tamanho original do botão de busca */
+}
+
+.bar input:focus+.search-btn:before,
+.bar input:focus+.search-btn:after,
+.bar input:valid+.search-btn:before,
+.bar input:valid+.search-btn:after {
+  opacity: 1;
+  /* Torna os pseudo-elementos visíveis quando o input é focado ou válido */
+}
+
+.bar input:focus+.search-btn:hover,
+.bar input:valid+.search-btn:hover,
+.bar input:valid:not(:focus)+.search-btn:focus {
+  background: #7e7e7e;
+  /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido e o botão é sobreposto pelo mouse */
+}
+
+.bar input:focus+.search-btn:active,
+.bar input:valid+.search-btn:active {
+  transform: translateY(1px);
+  /* Move o botão de busca ligeiramente para baixo quando clicado */
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  body,
+  input {
+    color: #f1f1f1;
+    /* Altera a cor do texto para cinza claro no modo escuro */
+  }
+
+  body {
+    background: #171717;
+    /* Altera a cor de fundo do corpo para preto no modo escuro */
+  }
+
+  .bar input {
+    box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+    /* Altera a sombra interna do input para cinza claro no modo escuro */
+  }
+
+  .bar input:focus,
+  .bar input:valid {
+    background: #3d3d3d;
+    /* Altera o fundo do input para cinza escuro quando focado ou válido no modo escuro */
+    box-shadow: 0 0 0 0.1em #3d3d3d inset;
+    /* Ajusta a sombra interna no modo escuro */
+  }
+
+  .search-btn {
+    background: #f1f1f1;
+    /* Altera a cor de fundo do botão de busca para cinza claro no modo escuro */
+  }
+}
+
+/* Estilos para o menu de navegação */
+.navbar-menu {
+  display: flex;
+  /* Define o contêiner como flexível para organização em coluna */
+  flex-direction: column;
+  /* Organiza os itens do menu verticalmente */
+}
+
+.navbar-nav {
+  list-style-type: none;
+  /* Remove as bolinhas padrão da lista */
+  padding: 0;
+  /* Remove o preenchimento padrão */
+  margin: 0;
+  /* Remove a margem padrão */
+}
+
+.navbar-nav li {
+  margin: 5px 0;
+  /* Adiciona margem entre os itens da lista */
+}
+
+.navbar-dropdown .dropdown {
+  display: none;
+  /* Esconde o dropdown por padrão */
+  position: absolute;
+  /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
+  background-color: #ffffff;
+  /* Define a cor de fundo do dropdown */
+  padding: 10px;
+  /* Adiciona preenchimento ao redor do dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  /* Adiciona uma sombra ao dropdown para um efeito de elevação */
+}
+
+.navbar-dropdown:hover .dropdown {
+  display: block;
+  /* Mostra o dropdown quando o mouse passa sobre o item do menu */
+}
+
+.dropdown li {
+  margin-bottom: 10px;
+  /* Adiciona margem inferior aos itens do dropdown */
+}
+
+.dropdown li a {
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+  color: #333;
+  /* Define a cor do texto dos links */
+  display: flex;
+  /* Usa Flexbox para organizar o ícone e o texto em linha */
+  align-items: center;
+  /* Alinha o ícone e o texto verticalmente ao centro */
+}
+
+.dropdown li a i {
+  margin-right: 8px;
+  /* Adiciona espaço entre o ícone e o texto */
+  font-size: 1.2em;
+  /* Ajusta o tamanho do ícone */
+}
+
+.separator {
+  font-weight: bold;
+  /* Faz o texto da separação em negrito */
+  margin-top: 10px;
+  /* Adiciona margem superior para espaçamento */
+  padding-top: 10px;
+  /* Adiciona preenchimento superior para espaçamento */
+  border-top: 1px solid #ccc;
+  /* Adiciona uma linha de separação superior */
+}
+
+/* Efeito hover para os links do dropdown */
+.dropdown li a:hover {
+  color: #007bff;
+  /* Altera a cor do texto ao passar o mouse */
+  background-color: #f1f1f1;
+  /* Adiciona uma cor de fundo ao passar o mouse */
+}
+
+
+.carousel-item {
+  height: 100vh;
+  min-height: 888px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo geral para a seção */
+.photo-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilo para cada card de foto */
+.photo-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a foto principal */
+.main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo para o mini card do fotógrafo */
+.photographer-card {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para a foto do fotógrafo */
+.photographer-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-right: 10px;
+}
+
+/* Estilo para o nome do fotógrafo */
+.photographer-name {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Hover effect para o mini card do fotógrafo */
+.photographer-card:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .photo-card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* Define que todos os elementos devem usar a caixa de borda, e remove padding e margin por padrão. */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Define a fonte padrão do corpo como "Roboto" e o tamanho da fonte como 0.925rem. */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.925rem;
+}
+
+/* Define que os links terão uma decoração de texto em forma de linha pontilhada. */
+a {
+  text-decoration: dashed;
+}
+
+/* Define a largura da classe "container", centraliza horizontalmente e adiciona padding. */
+.container {
+  width: 1170px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Define a navbar e o container dentro da navbar para serem flexíveis, alinhados ao centro e justificados entre si. */
+.navbar,
+.navbar>.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar,
+  .navbar>.container {
+    display: block;
+  }
+
+  /* Para telas menores que 768px, a navbar e seu container são exibidos em bloco (não flexíveis). */
+}
+
+.navbar {
+  /* Define a aparência da navbar com sombra, fundo branco, padding e uma borda inferior. */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #eceef3;
+}
+
+
+@media (min-width: 576px) {
+
+  /* Define a largura máxima do container para telas a partir de 576px. */
+  .navbar .container {
+    max-width: 540px;
+  }
+}
+
+
+@media (min-width: 768px) {
+
+  /* Define a largura máxima do container para telas a partir de 768px. */
+  .navbar .container {
+    max-width: 720px;
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  /* Define a largura máxima do container para telas a partir de 992px. */
+  .navbar .container {
+    max-width: 960px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  /* Define a largura máxima do container para telas a partir de 1200px. */
+  .navbar .container {
+    max-width: 1140px;
+  }
+}
+
+
+.navbar .navbar-header {
+  /* Define a área do cabeçalho da navbar para usar flexbox e alinhar itens ao centro. */
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+
+  /* Para telas menores que 768px, o cabeçalho da navbar exibe seus itens em uma linha reversa e ocupa 100% da largura. */
+  .navbar .navbar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+}
+
+.navbar .navbar-header .navbar-toggler {
+  cursor: pointer;
+  border: none;
+  display: none;
+  outline: none;
+}
+
+/* Define o botão de alternância para não ser exibido por padrão e remove a borda e outline. */
+
+@media (max-width: 768px) {
+  .navbar .navbar-header .navbar-toggler {
+    display: block;
+  }
+
+  /* Exibe o botão de alternância para telas menores que 768px. */
+}
+
+.navbar .navbar-header .navbar-toggler span {
+  /* Define o estilo das barras do botão de alternância com altura e largura específicas. */
+  height: 2px;
+  width: 22px;
+  background-color: #929aad;
+  display: block;
+}
+
+
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  /* Adiciona um espaço entre as barras do botão de alternância, exceto a última. */
+  margin-bottom: 0.2rem;
+}
+
+
+.navbar .navbar-header>a {
+  font-weight: 500;
+  color: #3c4250;
+}
+
+/* Define o estilo do link dentro do cabeçalho da navbar com peso de fonte e cor específicos. */
+
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+/* Define a área do menu da navbar para usar flexbox e crescer para ocupar o espaço disponível. */
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    display: none;
+    text-align: center;
+  }
+
+  /* Oculta o menu da navbar para telas menores que 768px e alinha o texto ao centro. */
+}
+
+.navbar .navbar-menu.active {
+  display: flex !important;
+}
+
+/* Exibe o menu da navbar como flexível quando a classe "active" é adicionada. */
+
+.navbar .navbar-menu .navbar-nav {
+  margin-left: auto;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Define a lista de navegação dentro do menu da navbar para ser flexível, com margem automática à esquerda e sem estilo de lista. */
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #EEE;
+    margin-top: 1rem;
+  }
+
+  /* Para telas menores que 768px, a lista de navegação é exibida em bloco, com largura total e uma borda superior. */
+}
+
+.navbar .navbar-menu .navbar-nav>li>a {
+  color: #3c4250;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+/* Define o estilo dos links dentro dos itens da lista de navegação com cor, sem decoração de texto e padding. */
+
+.navbar .navbar-menu .navbar-nav>li>a:hover {
+  color: #66f;
+}
+
+/* Altera a cor do link quando é passado o mouse sobre ele. */
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav>li>a {
+    border-bottom: 1px solid #eceef3;
+  }
+
+  /* Para telas menores que 768px, adiciona uma borda inferior aos links da lista de navegação. */
+}
+
+.navbar .navbar-menu .navbar-nav>li.active a {
+  color: #66f;
+}
+
+/* Define a cor dos links ativos na lista de navegação. */
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  border-radius: 0.75rem;
+  display: none;
+}
+
+/* Estiliza o menu suspenso do dropdown com fundo branco, padding, sombra e borda arredondada. É inicialmente oculto. */
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    position: relative;
+    box-shadow: none;
+  }
+
+  /* Para telas menores que 768px, o dropdown é posicionado de forma relativa e não tem sombra. */
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+  color: #3c4250;
+  padding: 0.25rem 1rem;
+  display: block;
+}
+
+/* Define o estilo dos links dentro do menu suspenso do dropdown. */
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+  display: block !important;
+}
+
+/* Exibe o menu suspenso do dropdown quando a classe "show" é adicionada. */
+
+.navbar .navbar-menu .navbar-nav .dropdown>.separator {
+  height: 1px;
+  width: 100%;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  background-color: #eceef3;
+}
+
+/* Adiciona uma linha separadora dentro do dropdown com altura e cor específicas. */
+
+.navbar .navbar-dropdown {
+  position: relative;
+}
+
+/* Define a posição relativa para o dropdown da navbar. */
+
+.navbar .navbar-header>a span {
+  color: #66f;
+}
+
+/* Define a cor do texto dentro do span no cabeçalho da navbar. */
+
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+/* Define o peso e o tamanho da fonte para o título dentro do cabeçalho da navbar. */
+
+@media (max-width: 768px) {
+  .navbar .navbar-header h4 {
+    font-size: 1.05rem;
+  }
+
+  /* Para telas menores que 768px, reduz o tamanho da fonte do título na navbar. */
+}
+
+/* sessão de pesquisar css */
+/* Contêiner principal da busca */
+/* Estiliza a seção para que os itens fiquem alinhados e à direita */
+.Buscar {
+  display: flex;
+  /* Usa Flexbox para alinhamento dos itens */
+  justify-content: flex-end;
+  /* Alinha os itens à direita */
+  align-items: center;
+  /* Alinha verticalmente os itens no centro */
+  gap: 0.5rem;
+  /* Espaço entre o campo de busca e o botão */
+  padding: 1rem;
+  /* Espaçamento interno da seção */
+  background-color: #f8f9fa;
+  /* Cor de fundo clara (opcional) */
+}
+
+/* Estiliza o campo de busca */
+.Buscar .form-control {
+  border-radius: 0.25rem;
+  /* Arredonda os cantos do campo de busca */
+  border: 1px solid #ced4da;
+  /* Adiciona uma borda leve */
+  padding: 0.5rem;
+  /* Espaçamento interno do campo de busca */
+}
+
+/* Estiliza o botão de busca */
+.Buscar .btn {
+  border-radius: 0.25rem;
+  /* Arredonda os cantos do botão */
+  padding: 0.1rem 1rem;
+  /* Espaçamento interno do botão */
+  font-size: 1rem;
+  /* Tamanho da fonte do botão */
+}
+
+/* Estiliza o botão para parecer com uma lupa */
+.Buscar .btn::before {
+  content: '🔍';
+  /* Adiciona o ícone de lupa usando o conteúdo pseudo-elemento */
+  font-size: 1.25rem;
+  /* Tamanho da fonte para o ícone */
+  background: none;
+  /* Remove o fundo do botão */
+  border: none;
+  /* Remove a borda do botão */
+}
+
+/* Oculta o texto "pesquisar" no botão e mantém o ícone de lupa visível */
+.Buscar .btn span {
+  display: none;
+  /* Oculta o texto */
+}
+
+
+/* Remove o texto do botão */
+.btn-outline-success span {
+  display: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  grid-gap: 24px;
+  padding: 16px;
+}
+
+@media (min-width: 540px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  padding-bottom: 150%;
+}
+
+.card-background {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  filter: brightness(.75) saturate(1.2) contrast(.85);
+  transition: .3s;
+}
+
+.card-content {
+  position: absolute;
+  padding: 24px;
+  font-family: arial, sans-serif;
+  color: white;
+}
+
+.card-content p {
+  color: rgba(255, 255, 255, .6);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.card-content h3 {
+  font-size: 1.9rem;
+  color: rgba(255, 255, 255, .9);
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card:hover .card-background {
+  transform: scale(1.05);
+}
+
+.cards:hover>.card:not(:hover)>.card-background {
+  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+
+
+.cards:hover>.card:not(:hover)>.card-background {
+  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+/* Footer */
+
+/* FOOTER css */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-info,
+.footer-creators,
+.footer-social {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+
+.footer-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.footer-info p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.footer-creators h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.footer-social h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5em;
+  /* Tamanho do ícone */
+  color: #fff;
+  /* Cor do ícone */
+  text-decoration: none;
+}
+
+.footer-social .social-icon:hover {
+  color: #007bff;
+  /* Cor ao passar o mouse (ajuste conforme necessário) */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-creators,
+  .footer-social {
+    margin-bottom: 20px;
+  }
+}
