@@ -1185,7 +1185,99 @@ a {
   filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
 }
 
-/* Footer */
+/* GALERIA */
+
+.galeria{
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+  color: #66f;
+}
+
+/* Estilizando a seção da galeria para ser um container flexível */
+.photo-gallery {
+  display: flex; /* Define o layout como flexível */
+  flex-wrap: wrap; /* Permite que os cards "quebrem" para uma nova linha se não houver espaço */
+  gap: 16px; /* Adiciona espaço entre os elementos */
+  padding: 16px; /* Adiciona um preenchimento interno na galeria */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+}
+
+/* Estilizando cada card de foto */
+.photo-card {
+  flex: 1 1 calc(25% - 32px); /* Os cards ocupam 25% da largura disponível menos o espaço entre os cards */
+  max-width: 250px; /* Define uma largura máxima para os cards */
+  background-color: #f0f0f0; /* Adiciona um fundo leve ao card */
+  border-radius: 8px; /* Adiciona cantos arredondados */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa o card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para dar profundidade */
+  display: flex; /* Usa flexbox para alinhar o conteúdo verticalmente */
+  flex-direction: column; /* Mantém os elementos em uma coluna */
+  text-align: center; /* Centraliza o texto */
+  max-height: 900px; ;
+}
+
+/* Estilizando a imagem principal para ocupar toda a largura do card */
+.main-photo {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do card */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços extras ao redor da imagem */
+}
+
+/* Estilizando o link do fotógrafo e sua imagem */
+.photographer-card {
+  display: flex; /* Define o link como flexível */
+  align-items: center; /* Alinha verticalmente a imagem e o nome */
+  padding: 8px; /* Adiciona espaço ao redor do conteúdo */
+  text-decoration: none; /* Remove sublinhado do link */
+  color: #333; /* Define a cor do texto */
+  gap: 8px; /* Espaçamento entre a foto e o nome */
+}
+
+/* Estilizando a imagem do fotógrafo */
+.photographer-photo {
+  width: 40px; /* Largura fixa para a imagem do fotógrafo */
+  height: 40px; /* Altura fixa para a imagem do fotógrafo */
+  border-radius: 50%; /* Imagem circular */
+  object-fit: cover; /* Adapta a imagem ao contêiner sem distorcer */
+}
+
+/* Estilizando o nome do fotógrafo */
+.photographer-name {
+  font-size: 0.9em; /* Tamanho da fonte para o nome */
+  font-weight: bold; /* Negrito */
+}
+
+/* Media queries para responsividade */
+
+/* Para telas de 1024px ou mais (desktops) */
+@media (min-width: 1024px) {
+  .photo-card {
+    flex: 1 1 calc(25% - 32px); /* 4 cards por linha */
+  }
+}
+
+/* Para telas entre 768px e 1023px (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .photo-card {
+    flex: 1 1 calc(33.33% - 32px); /* 3 cards por linha */
+  }
+}
+
+/* Para telas entre 480px e 767px (smartphones grandes) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .photo-card {
+    flex: 1 1 calc(50% - 32px); /* 2 cards por linha */
+  }
+}
+
+/* Para telas menores que 480px (smartphones pequenos) */
+@media (max-width: 479px) {
+  .photo-card {
+    flex: 1 1 100%; /* 1 card por linha */
+  }
+}
+
 
 /* FOOTER css */
 footer {
