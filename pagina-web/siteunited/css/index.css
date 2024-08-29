@@ -714,13 +714,17 @@ form label {
   margin-bottom: 8px; /* Adiciona margem inferior */
   
 }
+#commentForm button{
 
+  margin: 10px;
+}
 form input, form textarea {
   width: 100%; /* Define a largura dos inputs e textareas como 100% */
   margin-bottom: 12px; /* Adiciona margem inferior */
   padding: 8px; /* Adiciona espaçamento interno */
   border: 1px solid #ddd; /* Define a borda */
   border-radius: 4px; /* Arredonda as bordas */
+
 }
 
 /* Estilo para o botão do formulário */
@@ -728,13 +732,15 @@ form button {
   background-color: #66f; /* Define a cor de fundo do botão */
   color: #fff; /* Define a cor do texto do botão */
   border: none; /* Remove a borda */
-  padding: 10px 15px; /* Define o espaçamento interno */
+  padding: 10px 10px; /* Define o espaçamento interno */
   border-radius: 4px; /* Arredonda as bordas */
   cursor: pointer; /* Muda o cursor para um ponteiro quando sobre o botão */
+ 
 }
 
 form button:hover {
   background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+ 
 
 }
 
