@@ -715,8 +715,11 @@ form label {
   
 }
 #commentForm button{
-
-  margin: 10px;
+ padding: 10px;
+  margin: 10px;   
+  width: 100px;
+  text-align: center;
+  justify-content: center;
 }
 form input, form textarea {
   width: 100%; /* Define a largura dos inputs e textareas como 100% */
