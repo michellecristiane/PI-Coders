@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/formulario_profissional_pf.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #ffffff;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .form {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .form-style {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            outline: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #999;
+        }
+
+        .btn {
+            background-color: #b985f3;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 25px;
+            width: 100%;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #6f00d3;
+        }
+
+        .link {
+            color: #b985f3;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h4>Cadastre-se</h4>
+        <form id="form-send">
+            <div class="form-group">
+                <input type="text" class="form-style" name="nome" id="nome" placeholder="Nome" required>
+                <i class="input-icon uil uil-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+                <i class="input-icon uil uil-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="cpf" id="cpf" placeholder="CPF" required>
+                <i class="input-icon fas fa-id-card"></i>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-style" name="data_nascimento" id="data_nascimento" placeholder="Data de Nascimento" required>
+                <i class="input-icon fas fa-calendar-alt"></i>
+            </div>
+            <div class="form-group">
+                <select class="form-style" name="option" required>
+                    <option value="" disabled selected>Gênero</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <i class="input-icon fas fa-venus-mars"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="nome" id="nome_profissional" placeholder="Nome/Apelido Profissional">
+                <i class="input-icon fas fa-user-tag"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-style" name="email" id="email" placeholder="Email" required>
+                <i class="input-icon uil uil-at"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-style" name="confirmar_email" id="confirmar_email" placeholder="Confirmar Email" required>
+                <i class="input-icon uil uil-at"></i>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-style" name="telefone" id="telefone" placeholder="Telefone" required>
+                <i class="input-icon fas fa-phone"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="cep" id="cep" placeholder="CEP" required>
+                <i class="input-icon fas fa-map-marker-alt"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="logradouro" id="logradouro" placeholder="Logradouro" required>
+                <i class="input-icon fas fa-road"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="bairro" id="bairro" placeholder="Bairro" required>
+                <i class="input-icon fas fa-home"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-style" name="numero" id="numero" placeholder="Número" required>
+                <i class="input-icon fas fa-building"></i>
+            </div>
+            <div class="form-group">
+                <select class="form-style" name="estado" required>
+                    <option value="" disabled selected>Estado</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="am">Amazonas</option>
+                    <!-- Adicione os demais estados aqui -->
+                </select>
+                <i class="input-icon fas fa-map"></i>
+            </div>
+            <div class="form-group">
+                <select class="form-style" name="cidade" required>
+                    <option value="" disabled selected>Cidade</option>
+                    <option value="city">Cidade</option>
+                    <!-- Adicione as cidades aqui -->
+                </select>
+                <i class="input-icon fas fa-city"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-style" name="senha" placeholder="Escolha uma senha" required>
+                <i class="input-icon uil uil-lock-alt"></i>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-style" name="confirmar_senha" placeholder="Confirmar Senha" required>
+                <i class="input-icon uil uil-lock-alt"></i>
+            </div>
+            <button class="btn" type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>

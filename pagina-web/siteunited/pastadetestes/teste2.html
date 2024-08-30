@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<style>   body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #ffffff;
+    background-image: linear-gradient(216deg, rgba(199, 83, 228, 0.4) 0%, rgba(77, 77, 77,0.05) 25%,rgba(42, 42, 42,0.05) 25%, rgba(42, 42, 42,0.05) 38%,rgba(223, 223, 223,0.05) 38%, rgba(223, 223, 223,0.05) 75%,rgba(36, 36, 36,0.05) 75%, rgba(36, 36, 36,0.05) 100%),linear-gradient(44deg, rgba(199, 83, 228, 0.4) 0%, rgba(128, 128, 128,0.05) 34%,rgba(212, 212, 212,0.05) 34%, rgba(212, 212, 212,0.05) 57%,rgba(25, 25, 25,0.05) 57%, rgba(25, 25, 25,0.05) 89%,rgba(135, 135, 135,0.05) 89%, rgba(135, 135, 135,0.05) 100%),linear-gradient(241deg, rgba(55, 55, 55,0.05) 0%, rgba(55, 55, 55,0.05) 14%,rgba(209, 209, 209,0.05) 14%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%),linear-gradient(249deg, rgba(248, 248, 248,0.05) 0%, rgba(248, 248, 248,0.05) 32%,rgba(148, 148, 148,0.05) 32%, rgba(148, 148, 148,0.05) 35%,rgba(202, 202, 202,0.05) 35%, rgba(202, 202, 202,0.05) 51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),linear-gradient(92deg, hsl(214,0%,11%),hsl(214,0%,11%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-style {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #999;
+}
+
+.btn {
+    background-color: #b985f3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #6f00d3;
+}
+
+.link {
+    color: #b985f3;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}</style>
+<body>
+    <div class="container">
+        <form class="form" id="form-send">        
+            <fieldset>
+                <legend>Cadastre-se</legend><br>   
+
+                <div class="area area_name">
+                    <div class="primary_name">
+                        <label for="nome">* Nome</label>
+                        <input class="input_primary_name" type="text" name="nome" id="nome" maxlength="150" required>
+                    </div>
+
+                    <div class="second_name">
+                        <label for="sobrenome">* Sobrenome</label>
+                        <input class="input_second_name" type="text" name="sobrenome" id="sobrenome" maxlength="150" required>
+                    </div>                              
+                </div><br>
+
+                <div class="cpf">
+                    <label for="CPF">* CPF</label>
+                    <input class="input_cpf" type="text" name="cpf" autocomplete="off" id="cpf" maxlength="14" required>
+                </div><br>
+               
+                <div class="date_birth">
+                    <label for="data_nascimento">* Data de Nascimento</label>
+                    <input class="input_date_birth" type="date" name="data_nascimento" id="data_nascimento" placeholder="DD/MM/AAAA" required><br>
+                </div>
+
+                <label for="select">* Gênero</label><br>
+                <select class="select_genero" name="Genero" id="Genero" required>
+                    <option>Selecione</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outro">Outro</option>
+                </select><br><br>
+
+                <div class="area area_email">
+                    <div class="enter_email">
+                        <label for="user">* E-mail</label>
+                        <input class="input_enter_email" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="80" required>         
+                    </div>
+
+                    <div class="confirm_email">
+                        <label for="confirmar_email">* Confirmar E-mail</label>
+                        <input class="input_confirm_email" type="email" name="confirmar_email" id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="80" required>
+                    </div>                
+                </div><br>  
+
+                <div class="area area_phone">
+                    <div class="ddd">
+                        <label for="tel">* (DDD)</label>
+                        <input class="input_ddd" type="tel" name="ddd" id="ddd" maxlength="3" size="20" required>
+                    </div>
+
+                    <div class="phone_number">
+                        <label for="telefone">* Telefone</label>
+                        <input class="input_number_phone" type="tel" name="telefone" id="telefone" maxlength="10" size="20" required><br>
+                    </div>            
+                </div>      
+            
+                <label for="interesse_profissional">* Interesse Profissional:</label>
+                <div class="area area_interesse_profissional">
+                    <label for="fotografia">Fotografia</label>
+                    <input type="radio" name="option" id="fotografia">
+                    <label for="filmagem">Filmagem</label>
+                    <input type="radio" name="option" id="filmagem">
+                </div>
+
+                <div class="user_usuario">
+                    <label for="user">* Usuário</label>
+                    <input type="text" name="user" id="user" maxlength="30" placeholder="Digite seu Nome de Usuário" size="20" required>
+                </div>
+
+                <div class="area area_password">
+                    <div class="enter_password">
+                        <label for="signUp-inputpassword">* Senha</label>
+                        <input class="input_enter_password" type="password" name="signUp-inputpassword" maxlength="20" required>
+                    </div>
+
+                    <div class="confirm_password">
+                        <label for="signUp-confirmpassword">* Confirmar Senha</label>
+                        <input class="input_confirm_password" type="password" name="signUp-confirmpassword" maxlength="20" placeholder="Confirme sua Senha" required>          
+                    </div>               
+                </div>
+
+                <div class="aviso">
+                    <h6>*Senha deve conter no mínimo 8 caracteres, incluindo números, letras, e 1 caractere especial.</h6>
+                    <h6>*Para que a sua senha seja segura, não utilize sequências como 1234 ou ABCD.</h6>
+                    <h6>*Seu nome de usuário e sua senha devem ser diferentes.</h6>
+                </div>
+
+                <button type="submit">Enviar Cadastro</button><br>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
