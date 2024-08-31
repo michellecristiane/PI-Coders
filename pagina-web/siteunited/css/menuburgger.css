@@ -133,7 +133,7 @@ display: none;
     padding: 0;
 }
 /* todo o corpo do formula */
-.form-style {
+/* .form-style {
   padding: 13px 20px;
   padding-left: 55px;
   height: 48px;
@@ -144,13 +144,13 @@ display: none;
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: #000000;
-  background-color: #ffffff;     /*fundo das senhas e login*/
+  color: #b91616;
+  background-color: #ffffff;     /*fundo das senhas e login*
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgba(50, 49, 49, 0.2);
-}
+} */
 .form-style:focus,
 .form-style:active {
   border: none;
