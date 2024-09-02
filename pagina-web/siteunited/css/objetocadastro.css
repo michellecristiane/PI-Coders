@@ -1,0 +1,247 @@
+/* Define estilos globais para o body e html */
+body, html {
+    margin: 0; /* Remove as margens padrão do navegador */
+    padding: 0; /* Remove os preenchimentos padrão do navegador */
+    height: 100%; /* Define a altura do body e html para 100% da janela de visualização */
+    display: flex; /* Utiliza o Flexbox para organizar o conteúdo centralmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    background-color: #66f; /* Define uma cor de fundo cinza claro */
+    background-image: linear-gradient(216deg, rgba(77, 77, 77,0.05) 0%, rgba(77, 77, 77,0.05) 25%,rgba(42, 42, 42,0.05) 25%, rgba(42, 42, 42,0.05) 38%,rgba(223, 223, 223,0.05) 38%, rgba(223, 223, 223,0.05) 75%,rgba(36, 36, 36,0.05) 75%, rgba(36, 36, 36,0.05) 100%),linear-gradient(44deg, rgba(128, 128, 128,0.05) 0%, rgba(128, 128, 128,0.05) 34%,rgba(212, 212, 212,0.05) 34%, rgba(212, 212, 212,0.05) 57%,rgba(25, 25, 25,0.05) 57%, rgba(25, 25, 25,0.05) 89%,rgba(135, 135, 135,0.05) 89%, rgba(135, 135, 135,0.05) 100%),linear-gradient(241deg, rgba(55, 55, 55,0.05) 0%, rgba(55, 55, 55,0.05) 14%,rgba(209, 209, 209,0.05) 14%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%),linear-gradient(249deg, rgba(248, 248, 248,0.05) 0%, rgba(248, 248, 248,0.05) 32%,rgba(148, 148, 148,0.05) 32%, rgba(148, 148, 148,0.05) 35%,rgba(202, 202, 202,0.05) 35%, rgba(202, 202, 202,0.05) 51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),linear-gradient(92deg, hsl(214,0%,11%),hsl(214,0%,11%));
+     background-size:cover; /*Fé usada no CSS para redimensionar a imagem de fundo de um elemento de modo que ela cubra completamente o espaço do elemento. */
+    font-family: Arial, sans-serif; /* Define a fonte padrão do texto */
+}
+
+
+
+/* Define o estilo do flip card */
+.flip-card {
+    width: 300px; /* Largura do cartão */
+    height: 1400px; /* Altura do cartão */
+    position: relative; /* Define o posicionamento relativo para posicionamento dos elementos filhos */
+    transform-style: preserve-3d; /* Preserva o estilo 3D para os elementos filhos */
+    transition: transform 0.6s; /* Define a duração da transição para o efeito de rotação do cartão */
+}
+
+/* Estilos para a frente e o verso do cartão */
+.card-front, .card-back {
+    width: 190%; /* Largura igual ao cartão */
+    height: 1400px; /* Altura igual ao cartão */
+    position: absolute; /* Define o posicionamento absoluto para permitir a sobreposição */
+    backface-visibility: hidden; /* Esconde o lado de trás quando o cartão é girado */
+    display: flex; /* Utiliza o Flexbox para centralizar o conteúdo dentro do cartão */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do cartão */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do cartão */
+    background-color:linear-gradient(216deg, rgba(77, 77, 77,0.05) 0%,); /* Define a cor de fundo branca para os lados do cartão */
+    padding: 20px; /* Espaçamento interno do conteúdo do cartão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para criar um efeito de profundidade */
+}
+
+
+
+fieldset {
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+    border: 3px solid rgb(25, 0, 255); /* Define uma borda azul para o fieldset */
+    padding-top: 10px; /* Adiciona preenchimento na parte superior do fieldset */
+    border-radius: 10px; /* Define bordas arredondadas para o fieldset */
+}
+
+/* Define o estilo para o verso do cartão */
+.card-back {
+    transform: rotateY(180deg); /* Gira o verso do cartão 180 graus para que comece oculto */
+}
+
+
+/* Define o estilo do cartão quando ele está girado */
+.flip-card.flipped {
+    transform: rotateY(180deg); /* Gira o cartão 180 graus para mostrar o verso */
+}
+
+/* Estilos para o formulário */
+form {
+    display: flex; /* Utiliza o Flexbox para organizar os campos */
+    flex-direction: row; /* Alinha os elementos do formulário horizontalmente */
+    flex-wrap: wrap; /* Permite que os elementos quebrem de linha se necessário */
+    width: 100%; /* O formulário ocupa toda a largura do container pai */
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+/* Estilos para os elementos do formulário */
+input, select, button {
+    flex: 1 1 45%; /* Permite que os elementos cresçam e encolham, ocupando 45% da largura */
+    margin-bottom: 10px; /* Adiciona um espaço inferior entre os elementos */
+    padding: 10px; /* Adiciona preenchimento interno aos elementos */
+    border: 1px solid #ddd; /* Define uma borda cinza clara */
+    border-radius: 5px; /* Define bordas arredondadas */
+    box-sizing: border-box; /* Inclui preenchimento e borda na largura total */
+}
+
+
+/* Estilos para o botão */
+button {
+    background-color: #007bff; /* Define a cor de fundo azul */
+    color: white; /* Define a cor do texto branco */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o botão */
+}
+
+/* Estilo do botão quando o cursor passa sobre ele */
+button:hover {
+    background-color: #0056b3; /* Escurece a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos para links */
+.link {
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o link */
+    color: #007bff; /* Define a cor azul para o texto do link */
+}
+
+/* Estilo do link quando o cursor passa sobre ele */
+.link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao texto do link ao passar o mouse */
+}
+
+/* 
+/* Estilos para tablets e dispositivos menores
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para celulares 
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    body {
+        font-size: 12px;
+    }
+} */
+
+
+
+legend {
+    border: 2px solid rgb(0, 247, 255); /* Define uma borda para a legenda do fieldset */
+    padding: 5px; /* Adiciona preenchimento interno à legenda */
+    text-align: center; /* Centraliza o texto da legenda */
+    background-color: rgba(0, 0, 0, 0.3); /* Define um fundo semi-transparente para a legenda */
+    border-radius: 10px; /* Define bordas arredondadas para a legenda */
+    font-size: 25px; /* Define o tamanho da fonte da legenda */
+}
+
+.area_name, .area_email, .area_password {
+    width: 100%; /* Largura total para as áreas do formulário */
+    display: flex; /* Utiliza Flexbox para layout */
+    flex-wrap: wrap; /* Permite que os elementos quebrem de linha se necessário */
+    justify-content: space-between; /* Distribui uniformemente o espaço entre os elementos */
+}
+
+.area_phone {
+    display: flex; /* Utiliza Flexbox para layout */
+    flex-wrap: wrap; /* Permite que os elementos quebrem de linha se necessário */
+    justify-content: space-between; /* Distribui uniformemente o espaço entre os elementos */
+    width: 45%; /* Define a largura como 45% */
+}
+
+.primary_name, .second_name, .enter_email, .confirm_email, .enter_password, .confirm_password {
+    display: flex; /* Utiliza Flexbox para layout */
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    width: 45%; /* Define a largura como 45% */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+}
+
+.date_birth, .cpf {
+    display: flex; /* Utiliza Flexbox para layout */
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+}
+
+.ddd {
+    display: flex; /* Utiliza Flexbox para layout */
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+    width: 22%; /* Define a largura como 22% */
+}
+
+.phone_number {
+    display: flex; /* Utiliza Flexbox para layout */
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+    width: 55%; /* Define a largura como 55% */
+}
+
+.input_primary_name, .input_second_name, .input_enter_email, .input_confirm_password, .input_enter_password, .input_confirm_password {
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+    width: 100%; /* Largura total dos inputs */
+    margin-top: 5px; /* Espaçamento superior para os inputs */
+}
+
+.input_date_birth, .input_cpf, .select_genero {
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+    width: 25%; /* Define a largura como 25% */
+}
+
+input, select {
+    border-radius: 5px; /* Define bordas arredondadas para inputs e selects */
+    padding-left: 5px; /* Adiciona preenchimento interno à esquerda */
+    border: none; /* Remove bordas padrão */
+    outline: none; /* Remove o contorno padrão */
+    height: 25px; /* Define a altura dos inputs e selects */
+    margin-top: 5px; /* Adiciona espaçamento superior */
+}
+
+.aviso h6 {
+    margin: 4px; /* Define margens para o elemento <h6> */
+    float: 20px; /* Este valor não é válido para float, deve ser left, right, etc. */
+}
+
+button {
+    background-color: #000000; /* Cor de fundo preta para o botão */
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    border-color: aqua; /* Cor da borda do botão */
+    font-size: 15px; /* Tamanho da fonte do botão */
+    color: rgb(252, 252, 252); /* Cor do texto do botão */
+    float: right; /* Alinha o botão à direita */
+    margin-bottom: 10px; /* Espaçamento inferior para o botão */
+    margin-right: 10px; /* Espaçamento à direita para o botão */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+}
+
+/* Os códigos comentados abaixo são trechos CSS que foram desativados */
+
+label {
+    margin: 1px; /* Define a margem */
+    left: 91px; /* Posição esquerda */
+}
+
+.date {
+    float: right; /* Alinha à direita */
+}
+
+.inputUser {
+    margin: 0px; /* Define a margem */
+    padding: 2px; /* Define o preenchimento interno */
+    top: 20px; /* Posição de cima */
+    left: 40px; /* Posição à esquerda */
+    text-align: center; /* Centraliza o texto */
+}
+
+.inf_password h6 {
+    line-height: 1px; /* Define a altura da linha */
+    font-size: 10px; /* Tamanho da fonte */
+}
+
+/* Estilo para placeholders em navegadores WebKit */
+::-webkit-input-placeholder {
+    color: rgb(134, 134, 143); /* Cor do placeholder */
+    text-align: center; /* Centraliza o texto do placeholder */
+}
+
+

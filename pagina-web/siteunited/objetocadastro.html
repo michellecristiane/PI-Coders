@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Cliente</title>
+    <link rel="stylesheet" href="objetocadastro.css">
+</head>
+
+<body>
+    <div class="flip-card-container">
+        <div class="flip-card">
+            <div class="card-front">
+                <form class="form" id="login-form">
+                    <fieldset>
+                        <legend>Login</legend><br>
+                        <div class="form-group">
+                            <label for="user_login">Usuário</label>
+                            <input class="form-style" type="text" name="user_login" id="user_login"
+                                placeholder="Digite seu Nome de Usuário" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password_login">Senha</label>
+                            <input class="form-style" type="password" name="password_login" id="password_login"
+                                placeholder="Digite sua Senha" required>
+                        </div>
+                        <button type="submit" class="btn">Entrar</button><br><br>
+                        <p>Não tem uma conta? <a href="#" class="link" id="flip-to-register">Cadastre-se</a></p>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="card-back">
+                <form class="form" id="register-form">
+                    <fieldset>
+                        <form class="form" id="form-send">
+                            <fieldset><!--referente a borda quadrada que esta na cor lilás-->
+                                <legend>Cadastre-se</legend>
+
+                                <div class="area area_nome"><!--dIV DO NOME E SOBRENOME-->
+                                    <div class="primary_name">
+                                        <label for="nome">* Nome</label>
+                                        <input class="input_bigger" type="text" name="nome" id="nome" size="20"
+                                            maxlength="80" required>
+                                    </div>
+                                    <div class="second_name">
+                                        <label for="sobrenome"> Sobrenome</label>
+                                        <input class="input_bigger" type="text" name="sobrenome" id="sobrenome"
+                                            size="20" maxlength="80" required>
+                                    </div>
+                                </div><br>
+
+                                <label for="cpf">* CPF</label><br>
+                                <input class="input_smaller" type="text" name="cpf" id="cpf" maxlength="14" size="20"
+                                    required><br><br>
+
+                                <label for="date"> Data de Nascimento</label><br>
+                                <input class="input_smaller" type="date" name="data_nascimento" id="data_nascimento"
+                                    placeholder="Dia/Mês/Ano" required><br><br>
+                                <!--DIV DA OPÇÃO DE  GENERO-->
+
+                                <label> Genero:</label>
+                                <div class="area area_genero">
+                                    <label for="feminino">Feminino</label>
+                                    <input type="radio" name="option" id="feminino" value="feminino"
+                                        required>&#160;&#160;&#160;&#160;
+                                    <label for="masculino">Masculino</label>
+                                    <input type="radio" name="option" id="masculino" value="masculino"
+                                        required>&#160;&#160;&#160;&#160;
+                                    <label for="outro">Outro</label>
+                                    <input type="radio" name="option" id="outro" value="outro" required>
+                                </div><br>
+
+                                <label for="nome_profissional">Como voce é conhecido (a)?</label><br>
+                                <input class="input_smaller" type="text" name="nome" id="nome_profissional"
+                                    placeholder="Nome/Apelido Profissional" maxlength="20"><br><br>
+
+
+                                <div class="area area_email"><!--DIV DO EMAIL-->
+                                    <div class="enter_email">
+                                        <label for="enter_email">* Email</label>
+                                        <input class="input_bigger" type="text" name="email" id="email"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="60"
+                                            required>
+                                    </div>
+                                    <div class="confirm_email">
+                                        <label for="confirmar_email">* Confirmar E-mail</label>
+                                        <input class="input_bigger" type="text" name="confirmar_email"
+                                            id="confirmar_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                            placeholder="Confirme seu Email" size="20" maxlength="60" required>
+                                    </div>
+                                </div><br>
+
+                                <div class="area area_phone">
+                                    <div class="phone">
+                                        <label for="telefone">* Telefone</label>
+                                        <input class="input_phone" type="tel" name="telefone" id="telefone"
+                                            maxlength="90" size="20" required>
+                                    </div>
+                                   
+
+                                </div><br>
+
+                                <label for="cep"> CEP</label><br>
+                                <input class="input_smaller" type="check" name="cep" id="cep" maxlength="9"
+                                    placeholder="CEP" size="20" required><br><br>
+
+                                <div class="area area_endereco">
+                                    <div class="div-pai_logradouro">
+                                        <div class="logradouro">
+                                            <label for="logradouro"> Logradouro</label>
+                                            <input class="input_logradouro" type="text" name="logradouro"
+                                                id="logradouro" maxlength="80" placeholder="Rua, Travessa, Passagem..."
+                                                size="20" required>
+                                        </div>
+                                    </div>
+                                    <div class="numero_bairro">
+                                        <div class="bairro">
+                                            <label for="bairro"> Bairro</label>
+                                            <input class="input_bairro" type="text" name="bairro" id="bairro"
+                                                maxlength="40" size="20" required>
+                                        </div>
+                                        <div class="numero">
+                                            <label for="numero"> N°</label>
+                                            <input class="input_numero" type="text" name="numero" id="numero"
+                                                maxlength="5" size="20" required>
+                                        </div>
+                                    </div>
+
+                                </div><br>
+
+                                <div class="area area_estado_cidade">
+
+                                    <div class="estado">
+                                        <label class="estado">* Estado</label>
+                                        <select class="input_estado" name="estado">
+                                            <option value="estado">Selecione seu Estado</option><br>
+                                            <option value="ac">Acre</option>
+                                            <option value="al">Alagoas</option>
+                                            <option value="am">Amazonas</option>
+                                            <option value="ap">Amapá</option>
+                                            <option value="ba">Bahia</option>
+                                            <option value="ce">Ceará</option>
+                                            <option value="df">Distrito</option>
+                                            <option value="es">Espirito Santo</option>
+                                            <option value="go">Goiás</option>
+                                            <option value="ma">Maranhão</option>
+                                            <option value="mt">Mato Grosso</option>
+                                            <option value="ms">Mato Grosso do Sul</option>
+                                            <option value="mg">Minas Gerais</option>
+                                            <option value="pa">Pará</option>
+                                            <option value="pb">paraíba</option>
+                                            <option value="pr">Paraná</option>
+                                            <option value="pe">Pernambuco</option>
+                                            <option value="pi">Piauí</option>
+                                            <option value="rj">Rio de Janeiro</option>
+                                            <option value="rn">Rio Grande do Norte</option>
+                                            <option value="ro">Rondônia</option>
+                                            <option value="rs">Rio Grande do Sul</option>
+                                            <option value="rr">Roraima</option>
+                                            <option value="sc">Santa Catarina</option>
+                                            <option value="se">Sergipe</option>
+                                            <option value="sp">São Paulo</option>
+                                            <option value="to">Tocantins</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="cidade">
+                                        <label>* Cidade</label>
+                                        <select class="input_cidade" name="cidade">
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                            <option value="city">Selecione sua Cidade</option>
+                                        </select>
+                                    </div>
+
+                                </div><br>
+
+                                <div class="area area_password">
+                                    <div class="senha" id="eye-password">
+                                        <label for="senha">* Senha</label>
+                                        <img id="eye-password" class="eye-svg" src="./olho.png" width="0" height="0">
+                                        <input class="input_bigger" type="password" name="senha"
+                                            placeholder="Escolha uma senha" maxlength="30" required>
+                                    </div>
+
+                                    <div class="confirmar_senha">
+                                        <label for="confirmar_senha">* Confirmar Senha</label>
+                                        <img id="eye-password" class="eye-svg" src="./olho.png" width="0" height="0">
+                                        <input class="input_bigger" type="password" name="confirmar_senha"
+                                            placeholder="Repita sua senha" maxlength="30" required>
+                                    </div>
+                                </div><br>
+
+                                <button class="button" type="submit">Enviar</button>
+
+                            </fieldset>
+                        </form>
+                        <p>Já tem uma conta? <a href="#" class="link" id="flip-to-login">Entrar</a></p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // clienteFlip.js
+
+        document.getElementById('flip-to-register').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelector('.flip-card').classList.add('flipped');
+        });
+
+        document.getElementById('flip-to-login').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelector('.flip-card').classList.remove('flipped');
+        });
+
+    </script>
+</body>
+
+</html>
