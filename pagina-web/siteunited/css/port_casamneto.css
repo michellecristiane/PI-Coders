@@ -397,7 +397,7 @@ a {
   /* Centraliza o elemento 'bar' horizontal e verticalmente */
   padding: 1.5em;
   /* Adiciona padding ao redor do elemento 'bar' */
-  justify-content: center;
+  justify-content: right;
   /* Centraliza o conteúdo dentro do 'bar' horizontalmente */
   max-width: 20em;
   /* Define a largura máxima do 'bar' como 30em */
