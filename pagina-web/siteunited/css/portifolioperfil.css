@@ -23,7 +23,7 @@ a {
 }
 
 .container {
-    width: 1170px;
+    width: 70%;
     /* Define a largura máxima do container */
     position: relative;
     /* Define a posição como relativa para posicionamento de elementos filhos */
@@ -604,7 +604,7 @@ h2 {
 
 /* Estilo para o contêiner do perfil */
 .card-perfil {
-    display: flex;
+    display: block;
     /* Usa flexbox para o layout */
     align-items: center;
     /* Alinha itens verticalmente no centro */
@@ -618,7 +618,9 @@ h2 {
 
 /* Estilo para a imagem dentro do perfil */
 .imagem1 {
-    flex-shrink: 0;
+   display: flex;
+   align-self: center;
+    margin: 0 auto;
     /* Evita que a imagem encolha */
 }
 
@@ -627,7 +629,7 @@ h2 {
     /* Borda transparente */
     padding: 5px;
     /* Padding interno da imagem */
-    margin: 0 20px 20px 0;
+    margin: 0 auto;
     /* Margem direita e inferior */
     max-width: 150px;
     /* Largura máxima da imagem */
@@ -645,6 +647,8 @@ h2 {
     /* Alinha o conteúdo verticalmente */
     justify-content: center;
     /* Centraliza o texto verticalmente */
+    width: 70%;
+    margin: 0 auto;
 }
 
 .container_sobre h2 {
