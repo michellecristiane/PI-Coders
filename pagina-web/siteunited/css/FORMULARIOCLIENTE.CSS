@@ -116,7 +116,7 @@ p, h1{
 .flip-card .card-back{
 
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 100vh;
     backface-visibility: hidden;
     border-radius: 10px;
@@ -191,4 +191,9 @@ p, h1{
     margin-top: 10px;
     font-weight: bold;
     
+}
+
+#interesse{
+ width: 100%;
+
 }
