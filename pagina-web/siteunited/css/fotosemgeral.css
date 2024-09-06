@@ -23,9 +23,9 @@ a {
 }
 
 .container {
-  width: 1170px;
-  /* Define a largura máxima do container */
-  position: relative;
+  width: 100%;
+  /* Define a largura máxima do container
+  position: relative; */
   /* Define a posição como relativa para posicionamento de elementos filhos */
   margin-left: auto;
   /* Centraliza o container horizontalmente */
@@ -39,6 +39,7 @@ a {
   /* Remove o padding padrão de todos os elementos */
   margin: 0;
   /* Remove a margem padrão de todos os elementos */
+  max-width: 1170px;
 }
 
 
@@ -54,6 +55,8 @@ a {
   /* Alinha os itens verticalmente ao centro */
   justify-content: space-between;
   /* Espaça igualmente os itens dentro da navbar */
+  margin: 0;
+  /* Remove a margem padrão de todos os elementos */
 }
 
 @media (max-width: 768px) {
@@ -157,7 +160,7 @@ a {
 .navbar .navbar-header .navbar-toggler span {
   height: 2px;
   /* Define a altura da linha do botão */
-  width: 22px;
+  width: 2px;
   /* Define a largura da linha do botão */
   background-color: #929aad;
   /* Define a cor de fundo da linha do botão */
@@ -394,9 +397,9 @@ a {
   /* Centraliza o elemento 'bar' horizontal e verticalmente */
   padding: 1.5em;
   /* Adiciona padding ao redor do elemento 'bar' */
-  justify-content: center;
+  justify-content: right;
   /* Centraliza o conteúdo dentro do 'bar' horizontalmente */
-  max-width: 30em;
+  max-width: 20em;
   /* Define a largura máxima do 'bar' como 30em */
 }
 
@@ -405,7 +408,7 @@ a {
   /* Define o fundo do input como transparente */
   border-radius: 1.5em;
   /* Arredonda os cantos do input */
-  box-shadow: 0 0 0 0.4em #171717 inset;
+  box-shadow: 0 0 0 0.4em #66f inset;
   /* Adiciona uma sombra interna para criar um efeito de borda */
   padding: 0.75em;
   /* Adiciona padding dentro do input */
@@ -439,7 +442,7 @@ a {
 }
 
 .search-btn {
-  background: #171717;
+  background: #66f;
   /* Define a cor de fundo do botão de busca como preto */
   border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
   /* Define cantos arredondados específicos para o botão */
@@ -474,9 +477,9 @@ a {
   /* Posiciona o círculo 0.75em a partir do topo */
   left: 0.75em;
   /* Posiciona o círculo 0.75em a partir da esquerda */
-  width: 1.2em;
+  width: 1em;
   /* Define a largura do círculo */
-  height: 1.2em;
+  height: 1em;
   /* Define a altura do círculo */
 }
 
@@ -489,9 +492,9 @@ a {
   /* Posiciona o pseudo-elemento um pouco abaixo do centro */
   left: 51%;
   /* Posiciona o pseudo-elemento um pouco à direita do centro */
-  width: 0.75em;
+  width: 0.5em;
   /* Define a largura do pseudo-elemento */
-  height: 0.25em;
+  height: 0.5em;
   /* Define a altura do pseudo-elemento */
   transform: translate(0.2em, 0) rotate(45deg);
   /* Transforma a posição e a rotação do pseudo-elemento */
@@ -512,7 +515,7 @@ a {
 
 .bar input:focus+.search-btn,
 .bar input:valid+.search-btn {
-  background: #7e7e7e;
+  background: #66f;
   /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido */
   border-radius: 0 0.375em 0.375em 0;
   /* Ajusta o raio da borda do botão de busca */
@@ -531,7 +534,7 @@ a {
 .bar input:focus+.search-btn:hover,
 .bar input:valid+.search-btn:hover,
 .bar input:valid:not(:focus)+.search-btn:focus {
-  background: #7e7e7e;
+  background: #66f;
   /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido e o botão é sobreposto pelo mouse */
 }
 
@@ -550,7 +553,7 @@ a {
   }
 
   body {
-    background: #171717;
+    background: #66f;
     /* Altera a cor de fundo do corpo para preto no modo escuro */
   }
 
@@ -561,9 +564,9 @@ a {
 
   .bar input:focus,
   .bar input:valid {
-    background: #3d3d3d;
+    background: #66f;
     /* Altera o fundo do input para cinza escuro quando focado ou válido no modo escuro */
-    box-shadow: 0 0 0 0.1em #3d3d3d inset;
+    box-shadow: 0 0 0 0.1em #66f inset;
     /* Ajusta a sombra interna no modo escuro */
   }
 
@@ -572,87 +575,130 @@ a {
     /* Altera a cor de fundo do botão de busca para cinza claro no modo escuro */
   }
 }
+/*//////////////////////////////////////////////////////////////////////////*/
+
+/* CSS DA APRTE DO SOBRE A PAGINA */
+
+/* CSS DA SEÇÃO "SOBRE" */
+
+/* Container principal para a seção escura */
+.wrapperContainer-dark {
+  display: flex; /* Define o layout flexível para centralização */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  background-color: #ffffff; /* Define a cor de fundo como branco */
+  padding: 50px 0; /* Adiciona espaçamento superior e inferior */
+}
+
+/* Container específico para o conteúdo da seção "Sobre" */
+.container_sobre {
+  max-width: 1400px; /* Define a largura máxima do container */
+  width: 100%; /* Define a largura do container como 100% */
+  display: flex; /* Define o layout flexível */
+  flex-direction: row; /* Define a direção dos itens como linha (horizontal) */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  background-color: #000000; /* Define a cor de fundo como preto */
+  border-radius: 10px; /* Arredonda os cantos do container */
+  overflow: hidden; /* Oculta conteúdo que ultrapassa os limites do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do container */
+  color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estilo para imagens dentro do container "Sobre" */
+.container_sobre img {
+  width: 50%; /* Define a largura da imagem como metade do container */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Define o display da imagem como bloco */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível */
+  border-right: 5px solid #444; /* Adiciona uma borda direita para separar a imagem e o texto */
+}
+
+/* Estilo para o conteúdo textual dentro do container "Sobre" */
+.Sobre_content {
+  width: 50%; /* Define a largura do conteúdo como metade do container */
+  padding: 20px; /* Adiciona espaçamento interno */
+  background-color: #fcf6f6; /* Define a cor de fundo do conteúdo textual */
+}
+
+/* Estilo para o título da seção "Sobre" */
+.sobre_title {
+  font-size: 2.5em; /* Define o tamanho da fonte */
+  margin: 0 0 20px; /* Remove margem superior e inferior */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #000000; /* Define a cor do texto como preto */
+}
+
+/* Estilo para a classe "row" usada dentro do container "Sobre" */
+.row {
+  margin: 0; /* Remove a margem */
+  padding: 0 20px; /* Adiciona espaçamento interno horizontal */
+}
+
+/* Estilo para parágrafos dentro da classe "row" */
+.row p {
+  font-size: 1em; /* Define o tamanho da fonte */
+  line-height: 1.6; /* Define o espaçamento entre linhas */
+  color: #000000; /* Define a cor do texto como preto */
+  text-align: justify; /* Justifica o texto */
+}
+
+/* CSS DO resto da navibarIcons */
 
 /* Estilos para o menu de navegação */
 .navbar-menu {
-  display: flex;
-  /* Define o contêiner como flexível para organização em coluna */
-  flex-direction: column;
-  /* Organiza os itens do menu verticalmente */
+  display: flex; /* Define o contêiner como flexível para organização em coluna */
+  flex-direction: column; /* Organiza os itens do menu verticalmente */
 }
 
 .navbar-nav {
-  list-style-type: none;
-  /* Remove as bolinhas padrão da lista */
-  padding: 0;
-  /* Remove o preenchimento padrão */
-  margin: 0;
-  /* Remove a margem padrão */
+  list-style-type: none; /* Remove as bolinhas padrão da lista */
+  padding: 0; /* Remove o preenchimento padrão */
+  margin: 0; /* Remove a margem padrão */
 }
 
 .navbar-nav li {
-  margin: 5px 0;
-  /* Adiciona margem entre os itens da lista */
+  margin: 5px 0; /* Adiciona margem entre os itens da lista */
 }
 
 .navbar-dropdown .dropdown {
-  display: none;
-  /* Esconde o dropdown por padrão */
-  position: absolute;
-  /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
-  background-color: #ffffff;
-  /* Define a cor de fundo do dropdown */
-  padding: 10px;
-  /* Adiciona preenchimento ao redor do dropdown */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  /* Adiciona uma sombra ao dropdown para um efeito de elevação */
+  display: none; /* Esconde o dropdown por padrão */
+  position: absolute; /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
+  background-color: #ffffff; /* Define a cor de fundo do dropdown */
+  padding: 10px; /* Adiciona preenchimento ao redor do dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao dropdown para um efeito de elevação */
 }
 
 .navbar-dropdown:hover .dropdown {
-  display: block;
-  /* Mostra o dropdown quando o mouse passa sobre o item do menu */
+  display: block; /* Mostra o dropdown quando o mouse passa sobre o item do menu */
 }
 
 .dropdown li {
-  margin-bottom: 10px;
-  /* Adiciona margem inferior aos itens do dropdown */
+  margin-bottom: 10px; /* Adiciona margem inferior aos itens do dropdown */
 }
 
 .dropdown li a {
-  text-decoration: none;
-  /* Remove o sublinhado dos links */
-  color: #333;
-  /* Define a cor do texto dos links */
-  display: flex;
-  /* Usa Flexbox para organizar o ícone e o texto em linha */
-  align-items: center;
-  /* Alinha o ícone e o texto verticalmente ao centro */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Define a cor do texto dos links */
+  display: flex; /* Usa Flexbox para organizar o ícone e o texto em linha */
+  align-items: center; /* Alinha o ícone e o texto verticalmente ao centro */
 }
 
 .dropdown li a i {
-  margin-right: 8px;
-  /* Adiciona espaço entre o ícone e o texto */
-  font-size: 1.2em;
-  /* Ajusta o tamanho do ícone */
+  margin-right: 8px; /* Adiciona espaço entre o ícone e o texto */
+  font-size: 1.2em; /* Ajusta o tamanho do ícone */
 }
 
 .separator {
-  font-weight: bold;
-  /* Faz o texto da separação em negrito */
-  margin-top: 10px;
-  /* Adiciona margem superior para espaçamento */
-  padding-top: 10px;
-  /* Adiciona preenchimento superior para espaçamento */
-  border-top: 1px solid #ccc;
-  /* Adiciona uma linha de separação superior */
+  font-weight: bold; /* Faz o texto da separação em negrito */
+  margin-top: 10px; /* Adiciona margem superior para espaçamento */
+  padding-top: 10px; /* Adiciona preenchimento superior para espaçamento */
+  border-top: 1px solid #ccc; /* Adiciona uma linha de separação superior */
 }
 
 /* Efeito hover para os links do dropdown */
 .dropdown li a:hover {
-  color: #007bff;
-  /* Altera a cor do texto ao passar o mouse */
-  background-color: #f1f1f1;
-  /* Adiciona uma cor de fundo ao passar o mouse */
+  color: #007bff; /* Altera a cor do texto ao passar o mouse */
+  background-color: #f1f1f1; /* Adiciona uma cor de fundo ao passar o mouse */
 }
 
 

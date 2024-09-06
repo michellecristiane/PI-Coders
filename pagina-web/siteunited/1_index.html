@@ -37,13 +37,13 @@
             Categorias <i class="fa fa-angle-down"></i>
           </a>
           <ul class="dropdown" id="my-dropdown-id">
-            <li><a href="#"><i class="bi bi-mortarboard"></i> Formatura</a></li>
+            <li><a href="7_port_formatura.html"><i class="bi bi-mortarboard"></i> Formatura</a></li>
             <li><a href="#"><i class="bi bi-gift"></i> Aniversário</a></li>
-            <li><a href="#"><i class="bi bi-sunglasses"></i> Moda</a></li>
+            <li><a href="8_port_moda.html"><i class="bi bi-sunglasses"></i> Moda</a></li>
             <li><a href="#"><i class="bi bi-heart"></i> Casamento</a></li>
             <li><a href="#"><i class="bi bi-bullhorn"></i> Publicidade</a></li>
             <li><a href="#"><i class="bi bi-water"></i> Batizado</a></li>
-            <li><a href="#"><i class="bi bi-person-lines-fill"></i> Estilo de Vida</a></li>
+            <li><a href="2_fotosemgeral.htm"><i class="bi bi-person-lines-fill"></i> Galeria</a></li>
 
           </ul>
         </li>
@@ -72,54 +72,50 @@
   <!-- Bootstrap CSS v5.2.1 -->
 
 
-  <style>
-    .carousel-item {
-      height: 100vh;
-      min-height: 888px;
-    }
 
-    .carousel-item img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-
-
-  <div style="height: 100%; min-height: 100vh;">
-    <div class="row">
-      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="First slide"></li>
-          <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-          <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <img src="imagens/belem.jpg" class="w-100 d-block" alt="First slide" width="900">
-          </div>
-          <div class="carousel-item">
-            <img src="imagens/_6807.jpg" class="w-100 d-block" alt="Second slide" width="900">
-          </div>
-          <div class="carousel-item">
-            <img src="imagens/Ver-o-peso-Mangas-Belém-Pará.jpg" class="w-100 d-block" alt="Third slide" width="900">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagens/casamento_R3.jpg" class="d-block w-100" alt="Imagem 1">
+      </div>
+      <div class="carousel-item">
+        <img src="imagens/formatura_.jpg" class="d-block w-100" alt="Imagem 2">
+      </div>
+      <div class="carousel-item">
+        <img src="imagens/B5.jpg" class="d-block w-100" alt="Imagem 3">
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const container = document.getElementById('img-container');
+    const images = container.querySelectorAll('img');
+    const totalImages = images.length;
+    let currentIndex = 0;
+
+    function moveCarrousel() {
+      currentIndex++;
+      if (currentIndex >= totalImages) {
+        currentIndex = 0;
+      }
+      container.style.transform = `translateX(${-currentIndex * 500}px)`;
+    }
 
 
-  </div>
-  </div>
+    setInterval(moveCarrousel, 3000);
+  </script>
+
+
   </div>
 
 
