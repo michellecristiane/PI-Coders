@@ -1045,6 +1045,71 @@ footer {
 
 
 
+/* Estilo geral do dropdown */
+
+/* Mostrar o dropdown quando o mouse passa sobre o botão */
+#login-dropdown-id:hover .dropdown {
+  display: block;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown li a {
+    text-align: left;
+    padding: 14px;
+  }
+}
+
+/* Estilos gerais para o dropdown */
+ul.dropdown2 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* Esconde a lista de opções inicialmente */
+ul.dropdown2 li {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  min-width: 160px;
+}
+
+/* Mostra a lista de opções quando o usuário passa o mouse */
+ul.dropdown2:hover li {
+  display: block;
+}
+
+/* Estilo para os links */
+ul.dropdown2 li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+/* Estilo ao passar o mouse sobre as opções */
+ul.dropdown2 li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Ícones */
+ul.dropdown2 li a i {
+  margin-right: 8px;
+}
+
+/* Ajustes de layout para dispositivos móveis */
+@media (max-width: 768px) {
+  ul.dropdown2 li {
+      width: 100%;
+  }
+}
 
 
 
