@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/port_casamneto.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <title>Portfólio de Formatura</title>
 </head>
 
 <body>
-
     <div class="container navbar">
 
         <div class="navbar-header">
@@ -22,33 +21,36 @@
                 <span></span>
                 <span></span>
             </button>
-            <a href="#">
+            <a href="1_index.html">
                 <h4>Pixel<span>Singular</span></h4>
             </a>
         </div>
 
         <div class="navbar-menu" id="open-navbar1">
             <ul class="navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="1_index.html">Home</a></li>
                 <li class="navbar-dropdown">
                     <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
                         Categorias <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown" id="my-dropdown-id">
-                        <li><a href="#"><i class="bi bi-mortarboard"></i> Formatura</a></li>
-                        <li><a href="#"><i class="bi bi-gift"></i> Aniversário</a></li>
-                        <li><a href="#"><i class="bi bi-sunglasses"></i> Moda</a></li>
-                        <li><a href="#"><i class="bi bi-heart"></i> Casamento</a></li>
+                        <li><a href="7_port_formatura.html"><i class="bi bi-mortarboard"></i> Formatura</a></li>
+                        <li><a href="4_port_aniversario.html"><i class="bi bi-gift"></i> Aniversário</a></li>
+                        <li><a href="8_port_moda.html"><i class="bi bi-sunglasses"></i> Moda</a></li>
+                        <li><a href="6_port_casamento.html"><i class="bi bi-heart"></i> Casamento</a></li>
                         <li><a href="#"><i class="bi bi-bullhorn"></i> Publicidade</a></li>
-                        <li><a href="#"><i class="bi bi-water"></i> Batizado</a></li>
-                        <li><a href="#"><i class="bi bi-person-lines-fill"></i> Estilo de Vida</a></li>
+                        <li><a href="5_port_batizado.html"><i class="bi bi-water"></i> Batizado</a></li>
+                        <li><a href="2_fotosemgeral.htm"><i class="bi bi-person-lines-fill"></i> Galeria</a></li>
 
                     </ul>
                 </li>
 
                 <li><a href="#Sobre">Sobre</a></li>
-                <li><a href="#Contato">Contato</a></li>
-                <li><a href="Loginecadastro.html">Login</a></li>
+                <li><a href="#footer-social">Contato</a></li>
+                <li>
+                    <a href="formulario_profissional_pf.html"><i class="bi bi-camera"></i> Fotógrafo</a>
+                    <a href="FORMULARIOCLIENTE.HTML"><i class="bi bi-person"></i> Cliente</a>
+                </li>
             </ul>
         </div>
         <div class="bar">
@@ -61,9 +63,10 @@
 
 
 
+
     <h1 style="font-size: 70px; text-align: center; padding: 30px; color: #66f;">Formatura</h1>
 
-      <!-- ////////////////// caroucel carousel////////////// -->
+    <!-- ////////////////// caroucel carousel////////////// -->
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -224,7 +227,7 @@
         </div>
     </footer>
     <script>
-                  ////////////////// Jva do caroucel carousel//////////////
+        ////////////////// Jva do caroucel carousel//////////////
         let slideIndex = 0;
 
         function showSlides() {
@@ -242,70 +245,10 @@
 
         showSlides(); // Initialize the carousel
 
-
-
-
-        ////////////////////////NavbarJS////////////////////////////////////////// 
-
-
-    ////////////////////////NavbarJS////////////////////////////////////////// 
-
-    let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler')
-    let dropdownIsOpen = false
-
-    // Handle dropdown menues
-    if (dropdowns.length) {
-      dropdowns.forEach((dropdown) => {
-        dropdown.addEventListener('click', (event) => {
-          let target = document.querySelector(`#${event.target.dataset.dropdown}`)
-
-          if (target) {
-            if (target.classList.contains('show')) {
-              target.classList.remove('show')
-              dropdownIsOpen = false
-            } else {
-              target.classList.add('show')
-              dropdownIsOpen = true
-            }
-          }
-        })
-      })
-    }
-
-    // Handle closing dropdowns if a user clicked the body
-    window.addEventListener('mouseup', (event) => {
-      if (dropdownIsOpen) {
-        dropdowns.forEach((dropdownButton) => {
-          let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
-          let targetIsDropdown = dropdown == event.target
-
-          if (dropdownButton == event.target) {
-            return
-          }
-
-          if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
-            dropdown.classList.remove('show')
-          }
-        })
-      }
-    })
-    function handleSmallScreens() {
-      document.querySelector('.navbar-toggler')
-        .addEventListener('click', () => {
-          let navbarMenu = document.querySelector('.navbar-menu')
-
-          if (!navbarMenu.classList.contains('active')) {
-            navbarMenu.classList.add('active')
-          } else {
-            navbarMenu.classList.remove('active')
-          }
-        })
-    }
-
-    handleSmallScreens()
-
-  </script>
     </script>
+
+    <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
+    <script src="pastadojava/index.js"></script>
 </body>
 
 </html>

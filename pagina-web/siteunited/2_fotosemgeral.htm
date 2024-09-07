@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>varie</title>
+  <title>Galeria</title>
   <link rel="stylesheet" href="css/fotosemgeral.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,33 +21,36 @@
         <span></span>
         <span></span>
       </button>
-      <a href="#">
+      <a href="1_index.html">
         <h4>Pixel<span>Singular</span></h4>
       </a>
     </div>
 
     <div class="navbar-menu" id="open-navbar1">
       <ul class="navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="1_index.html">Home</a></li>
         <li class="navbar-dropdown">
           <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
             Categorias <i class="fa fa-angle-down"></i>
           </a>
           <ul class="dropdown" id="my-dropdown-id">
             <li><a href="7_port_formatura.html"><i class="bi bi-mortarboard"></i> Formatura</a></li>
-            <li><a href="#"><i class="bi bi-gift"></i> Aniversário</a></li>
-            <li><a href="#"><i class="bi bi-sunglasses"></i> Moda</a></li>
-            <li><a href="#"><i class="bi bi-heart"></i> Casamento</a></li>
+            <li><a href="4_port_aniversario.html"><i class="bi bi-gift"></i> Aniversário</a></li>
+            <li><a href="8_port_moda.html"><i class="bi bi-sunglasses"></i> Moda</a></li>
+            <li><a href="6_port_casamento.html"><i class="bi bi-heart"></i> Casamento</a></li>
             <li><a href="#"><i class="bi bi-bullhorn"></i> Publicidade</a></li>
-            <li><a href="#"><i class="bi bi-water"></i> Batizado</a></li>
+            <li><a href="5_port_batizado.html"><i class="bi bi-water"></i> Batizado</a></li>
             <li><a href="2_fotosemgeral.htm"><i class="bi bi-person-lines-fill"></i> Galeria</a></li>
 
           </ul>
         </li>
 
         <li><a href="#Sobre">Sobre</a></li>
-        <li><a href="#Contato">Contato</a></li>
-        <li><a href="Loginecadastro.html">Login</a></li>
+        <li><a href="#footer-social">Contato</a></li>
+        <li>
+          <a href="formulario_profissional_pf.html"><i class="bi bi-camera"></i> Fotógrafo</a>
+          <a href="FORMULARIOCLIENTE.HTML"><i class="bi bi-person"></i> Cliente</a>
+        </li>
       </ul>
     </div>
     <div class="bar">
@@ -57,7 +60,6 @@
       </button>
     </div>
   </div>
-
 
 
 
@@ -171,7 +173,7 @@
     </div>
     <!-- Repita o bloco .photo-section para outras seções -->
   </section>
-  
+
 
 
 
@@ -212,64 +214,11 @@
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-
-
-  <script>
-
-
-    // Handle dropdown menues(Tela inicial)
-    if (dropdowns.length) {
-      dropdowns.forEach((dropdown) => {
-        dropdown.addEventListener('click', (event) => {
-          let target = document.querySelector(`#${event.target.dataset.dropdown}`)
-
-          if (target) {
-            if (target.classList.contains('show')) {
-              target.classList.remove('show')
-              dropdownIsOpen = false
-            } else {
-              target.classList.add('show')
-              dropdownIsOpen = true
-            }
-          }
-        })
-      })
-    }
-
-    // Handle closing dropdowns if a user clicked the body
-    window.addEventListener('mouseup', (event) => {
-      if (dropdownIsOpen) {
-        dropdowns.forEach((dropdownButton) => {
-          let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
-          let targetIsDropdown = dropdown == event.target
-
-          if (dropdownButton == event.target) {
-            return
-          }
-
-          if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
-            dropdown.classList.remove('show')
-          }
-        })
-      }
-    })
-    function handleSmallScreens() {
-      document.querySelector('.navbar-toggler')
-        .addEventListener('click', () => {
-          let navbarMenu = document.querySelector('.navbar-menu')
-
-          if (!navbarMenu.classList.contains('active')) {
-            navbarMenu.classList.add('active')
-          } else {
-            navbarMenu.classList.remove('active')
-          }
-        })
-    }
-
-    handleSmallScreens()
-
   </script>
+
+
+  <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
+  <script src="pastadojava/index.js"></script>
 </body>
 
 </html>
