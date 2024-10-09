@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/galeria_perfis.css">
+    <title>Gleria Perfis</title>
+</head>
+<body>
+
+    <div class="container-navbar">
+
+        <div class="navbar-header">
+          <button class="navbar-toggler" data-toggle="open-navbar1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <a href="1_index.html">
+            <h4>Pixel<span>Singular</span></h4>
+          </a>
+        </div>
+    
+        <div class="navbar-menu" id="open-navbar1">
+          <ul class="navbar-nav">
+            <li class="active"><a href="1_index.html">Home</a></li>
+            <li class="navbar-dropdown">
+              <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                Categorias <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown" id="my-dropdown-id">
+                <li><a href="7_port_formatura.html"><i class="bi bi-mortarboard"></i> Formatura</a></li>
+                <li><a href="4_port_aniversario.html"><i class="bi bi-gift"></i> Aniversário</a></li>
+                <li><a href="8_port_moda.html"><i class="bi bi-sunglasses"></i> Moda</a></li>
+                <li><a href="6_port_casamento.html"><i class="bi bi-heart"></i> Casamento</a></li>
+                <li><a href="#"><i class="bi bi-bullhorn"></i> Publicidade</a></li>
+                <li><a href="5_port_batizado.html"><i class="bi bi-water"></i> Batizado</a></li>
+                
+    
+              </ul>
+            </li>
+    
+            <li><a href="#Sobre">Sobre</a></li>
+            <li><a href="#footer-social">Contato</a></li>
+            <li>
+              <a href="formulario_profissional_pf.html"><i class="bi bi-camera"></i> Fotógrafo</a>
+              <a href="FORMULARIOCLIENTE.HTML"><i class="bi bi-person"></i> Cliente</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bar">
+          <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
+          <button class="search-btn" type="submit">
+            <span>Search</span>
+          </button>
+        </div>
+      </div>
+    
+
+             <h1>Gleria Perfis</h1>
+
+
+             <section class="photo-gallery">
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g2.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Claudia Moraes</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g3.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Kátia Rodrigues</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g4.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Afonso Cintra</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g6.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Dayse Vasconcelos</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g7.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Fernando Silveira</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g8.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Karlenne Oliveira</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g9.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Rodrigo Baltazar</span>
+                    </a>
+                  </div>
+                </div>
+            
+                <div class="photo-section">
+                  <div class="photo-card">
+                    <img src="imagens/g11.jpg" alt="Main Photo" class="main-photo">
+                    <a href="link-to-photographer-page.html" class="photographer-card">
+                      <span class="photographer-name">Danilo Costa</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </section>
+              
+
+        <script>
+
+            ////////////////////////NavbarJS////////////////////////////////////////// 
+
+            let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler')
+            let dropdownIsOpen = false
+
+            // Handle dropdown menues
+            if (dropdowns.length) {
+            dropdowns.forEach((dropdown) => {
+                dropdown.addEventListener('click', (event) => {
+                let target = document.querySelector(`#${event.target.dataset.dropdown}`)
+
+                if (target) {
+                    if (target.classList.contains('show')) {
+                    target.classList.remove('show')
+                    dropdownIsOpen = false
+                    } else {
+                    target.classList.add('show')
+                    dropdownIsOpen = true
+                    }
+                }
+                })
+            })
+            }
+
+            // Handle closing dropdowns if a user clicked the body
+            window.addEventListener('mouseup', (event) => {
+            if (dropdownIsOpen) {
+                dropdowns.forEach((dropdownButton) => {
+                let dropdown = document.querySelector(`#${dropdownButton.dataset.dropdown}`)
+                let targetIsDropdown = dropdown == event.target
+
+                if (dropdownButton == event.target) {
+                    return
+                }
+
+                if ((!targetIsDropdown) && (!dropdown.contains(event.target))) {
+                    dropdown.classList.remove('show')
+                }
+                })
+            }
+            })
+            function handleSmallScreens() {
+            document.querySelector('.navbar-toggler')
+                .addEventListener('click', () => {
+                let navbarMenu = document.querySelector('.navbar-menu')
+
+                if (!navbarMenu.classList.contains('active')) {
+                    navbarMenu.classList.add('active')
+                } else {
+                    navbarMenu.classList.remove('active')
+                }
+                })
+            }
+
+            handleSmallScreens()
+        </script>
+</body>
+</html>
