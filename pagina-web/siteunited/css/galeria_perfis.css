@@ -1,3 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos de fonte (300, 400, 500) */
+* {
+  box-sizing: border-box;
+  /* Inclui padding e border no cálculo do tamanho total dos elementos */
+  padding: 0;
+  /* Remove o padding padrão de todos os elementos */
+  margin: 0;
+  /* Remove a margem padrão de todos os elementos */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* Define a fonte padrão para "Roboto" */
+  font-size: 0.925rem;
+  /* Define o tamanho da fonte do corpo do texto */
+}
+
+a {
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+}
+
+.container {
+  width: 100%;
+  /* Define a largura máxima do container
+  position: relative; */
+  /* Define a posição como relativa para posicionamento de elementos filhos */
+  margin-left: auto;
+  /* Centraliza o container horizontalmente */
+  margin-right: auto;
+  /* Centraliza o container horizontalmente */
+  padding-left: 15px;
+  /* Adiciona padding à esquerda do container */
+  padding-right: 15px;
+  /* Adiciona padding à direita do container */
+  padding: 0;
+  /* Remove o padding padrão de todos os elementos */
+  margin: 0;
+  /* Remove a margem padrão de todos os elementos */
+  max-width: 1170px;
+}
+
+
+.navbar,
+.navbar>.container {
+  width: 100%;
+  /* Define a largura da navbar e seu container para 100% */
+  display: flex;
+  /* Define um layout flexível */
+  flex-wrap: wrap;
+  /* Permite que os elementos se encaixem em múltiplas linhas, se necessário */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between;
+  /* Espaça igualmente os itens dentro da navbar */
+  margin: 0;
+  /* Remove a margem padrão de todos os elementos */
+}
+
+@media (max-width: 768px) {
+
+  .navbar,
+  .navbar>.container {
+    display: block;
+    /* Exibe como bloco em telas menores que 768px */
+  }
+}
+
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Adiciona uma sombra suave na parte inferior da navbar */
+  background-color: #fff;
+  /* Define a cor de fundo da navbar como branca */
+  padding: 1rem 1.15rem;
+  /* Adiciona padding ao redor da navbar */
+  border-bottom: 1px solid #eceef3;
+  /* Adiciona uma borda inferior à navbar */
+  /*
+  |-----------------------------------
+  | Start navbar logo or brand etc..
+  |-----------------------------------
+  */
+  /*
+  |-----------------------------------
+  | Start navbar menu
+  |-----------------------------------
+  */
+}
+
+@media (min-width: 576px) {
+  .navbar .container {
+    max-width: 540px;
+    /* Define a largura máxima do container para 540px em telas maiores que 576px */
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .container {
+    max-width: 720px;
+    /* Define a largura máxima do container para 720px em telas maiores que 768px */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .container {
+    max-width: 960px;
+    /* Define a largura máxima do container para 960px em telas maiores que 992px */
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar .container {
+    max-width: 1140px;
+    /* Define a largura máxima do container para 1140px em telas maiores que 1200px */
+  }
+}
+
+.navbar .navbar-header {
+  display: flex;
+  /* Define um layout flexível */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-header {
+    width: 100%;
+    /* Define a largura do cabeçalho da navbar como 100% em telas menores que 768px */
+    display: flex;
+    /* Define um layout flexível */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between;
+    /* Espaça os itens igualmente */
+    flex-direction: row-reverse;
+    /* Inverte a direção dos itens em linha */
+  }
+}
+
+.navbar .navbar-header .navbar-toggler {
+  cursor: pointer;
+  /* Define o cursor como pointer (mãozinha) para indicar que é clicável */
+  border: none;
+  /* Remove a borda do botão */
+  display: none;
+  /* Esconde o botão por padrão */
+  outline: none;
+  /* Remove o contorno padrão ao clicar */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-header .navbar-toggler {
+    display: block;
+    /* Exibe o botão em telas menores que 768px */
+  }
+}
+
+.navbar .navbar-header .navbar-toggler span {
+  height: 2px;
+  /* Define a altura da linha do botão */
+  width: 2px;
+  /* Define a largura da linha do botão */
+  background-color: #929aad;
+  /* Define a cor de fundo da linha do botão */
+  display: block;
+  /* Exibe como um bloco */
+}
+
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  margin-bottom: 0.2rem;
+  /* Adiciona uma margem inferior entre as linhas do botão */
+}
+
+.navbar .navbar-header>a {
+  font-weight: 500;
+  /* Define o peso da fonte para 500 (semi-bold) */
+  color: #3c4250;
+  /* Define a cor do texto */
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  /* Define um layout flexível */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  flex-basis: auto;
+  /* Define a base flexível automaticamente */
+  flex-grow: 1;
+  /* Permite que o menu cresça para preencher o espaço */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    display: none;
+    /* Esconde o menu em telas menores que 768px */
+    text-align: center;
+    /* Alinha o texto ao centro */
+  }
+}
+
+.navbar .navbar-menu.active {
+  display: flex !important;
+  /* Exibe o menu como flexível quando ativo */
+}
+
+.navbar .navbar-menu .navbar-nav {
+  margin-left: auto;
+  /* Move a navegação para o lado direito */
+  flex-direction: row;
+  /* Define a direção dos itens em linha */
+  display: flex;
+  /* Define um layout flexível */
+  padding-left: 0;
+  /* Remove o padding à esquerda */
+  margin-bottom: 0;
+  /* Remove a margem inferior */
+  list-style: none;
+  /* Remove o estilo de lista padrão */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav {
+    width: 100%;
+    /* Define a largura como 100% */
+    display: block;
+    /* Exibe como bloco em telas menores */
+    border-top: 1px solid #EEE;
+    /* Adiciona uma borda superior */
+    margin-top: 1rem;
+    /* Adiciona uma margem superior */
+  }
+}
+
+.navbar .navbar-menu .navbar-nav>li>a {
+  color: #3c4250;
+  /* Define a cor do texto */
+  text-decoration: none;
+  /* Remove a decoração de texto (sublinhado) */
+  display: inline-block;
+  /* Exibe como bloco em linha */
+  padding: 0.5rem 1rem;
+  /* Adiciona padding ao redor dos links */
+}
+
+.navbar .navbar-menu .navbar-nav>li>a:hover {
+  color: #66f;
+  /* Altera a cor ao passar o mouse sobre os links */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav>li>a {
+    border-bottom: 1px solid #eceef3;
+    /* Adiciona uma borda inferior nos links */
+  }
+}
+
+.navbar .navbar-menu .navbar-nav>li.active a {
+  color: #66f;
+  /* Define a cor dos links ativos */
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+  list-style: none;
+  /* Remove o estilo de lista */
+  position: absolute;
+  /* Posiciona o dropdown de forma absoluta */
+  top: 150%;
+  /* Define a posição superior do dropdown */
+  left: 0;
+  /* Alinha o dropdown à esquerda */
+  background-color: #fff;
+  /* Define a cor de fundo do dropdown como branca */
+  padding-top: 0.5rem;
+  /* Adiciona padding superior */
+  padding-bottom: 0.5rem;
+  /* Adiciona padding inferior */
+  min-width: 160px;
+  /* Define a largura mínima do dropdown */
+  width: auto;
+  /* Define a largura automática */
+  white-space: nowrap;
+  /* Impede quebra de linha */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  /* Adiciona uma sombra ao dropdown */
+  z-index: 99999;
+  /* Define um alto índice z para sobrepor outros elementos */
+  border-radius: 0.75rem;
+  /* Define bordas arredondadas */
+  display: none;
+  /* Esconde o dropdown por padrão */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    position: relative;
+    /* Altera para posicionamento relativo em telas menores */
+    box-shadow: none;
+    /* Remove a sombra em telas menores */
+  }
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+  color: #3c4250;
+  /* Define a cor do texto dos links dentro do dropdown */
+  padding: 0.25rem 1rem;
+  /* Adiciona padding aos links do dropdown */
+  display: block;
+  /* Exibe os links como blocos */
+}
+
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+  display: block !important;
+  /* Exibe o dropdown quando a classe "show" está presente */
+}
+
+.navbar .navbar-menu .navbar-nav .dropdown>.separator {
+  height: 1px;
+  /* Define a altura do separador */
+  width: 100%;
+  /* Define a largura do separador */
+  margin-top: 9px;
+  /* Adiciona margem superior */
+  margin-bottom: 9px;
+  /* Adiciona margem inferior */
+  background-color: #eceef3;
+  /* Define a cor de fundo do separador */
+}
+
+.navbar .navbar-dropdown {
+  position: relative;
+  /* Define o posicionamento como relativo */
+}
+
+.navbar .navbar-header>a span {
+  color: #66f;
+  /* Define a cor de um span dentro de um link no cabeçalho da navbar */
+}
+
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  /* Define o peso da fonte */
+  font-size: 1.25rem;
+  /* Define o tamanho da fonte */
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-header h4 {
+    font-size: 1.05rem;
+    /* Define o tamanho da fonte em telas menores que 768px */
+  }
+}
+
 /* sessão de pesquisar css */
 
 
@@ -221,107 +575,194 @@
     /* Altera a cor de fundo do botão de busca para cinza claro no modo escuro */
   }
 }
+
 /*//////////////////////////////////////////////////////////////////////////*/
 
-.container-navba {
- 
-   
+.carousel-item {
+  height: 100vh;
+  min-height: 888px;
 }
 
-
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 60px;
-    color: #66f;
-    font-weight: 700;
-    /* Número correspondente ao negrito */
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-    /* Space between cards */
+/* descrição */
+.description {
+  text-align: center;
+  margin-top: 20px;
 }
 
+/* Estilo geral para a seção */
 .photo-section {
-    width: 250px;
-    /* Set a fixed width for each card */
-    overflow: hidden;
-    position: relative;
-    /* For positioning name overlay */
-    border-radius: 8px;
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Card shadow */
-    /* transition: transform 0.3s ease;
-    Smooth scaling transition */
-    
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content:right;
+  gap: 20px;
+  margin: 0 auto;
+
+
 }
 
+
+/* Estilo para cada card de foto */
 .photo-card {
-    position: relative;
-    /* Position for absolute elements inside */
-    overflow: hidden;
-    /* Hide overflow for scaling effect */
-    border-radius: 10px;
-    /* Match card corners */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+
 }
 
-.photo-card img {
+/* Estilo para a foto principal */
+.main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo para o mini card do fotógrafo */
+.photographer-card {
+
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para a foto do fotógrafo */
+.photographer-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-right: 10px;
+}
+
+/* Estilo para o nome do fotógrafo */
+.photographer-name {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Hover effect para o mini card do fotógrafo */
+.photographer-card:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .photo-card {
     width: 100%;
     height: auto;
-    /* Responsive image */
-    /* transition: transform 0.3s ; */
-    /* Smooth scaling */
+  }
 }
 
-.photo-card:hover img {
-    transform: scale(1);
-    /* Scale image on hover */
-}
 
-.photographer-card {
-    position: absolute;
-    /* Position name overlay */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    /* Semi-transparent background */
-    color: white;
-    /* Text color */
-    text-align: center;
-    /* Center text */
-    padding: 10px;
-    /* Space around text */
-    transition: opacity 0.3s ease;
-    /* Fade effect for overlay */
-    height: 50;
-}
 
-.photo-card:hover .photographer-card {
-    opacity: 1;
-    /* Show name on hover */
-}
-
-.photographer-card span {
-    font-size: 1.1em;
-    /* Slightly larger font for name */
-    font-weight: bold;
-    /* Bold text for emphasis */
-}
-
-.photo-section img{
-    height: 100%;
-}
-
-/* Responsive design */
 @media (max-width: 600px) {
-    .photo-section {
-        width: 100%;
-        /* Full width on smaller screens */
-    }
+  body {
+    background-color: rgb(236, 242, 244);
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 18px;
+  }
+}
+
+
+.cards:hover>.card:not(:hover)>.card-background {
+  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+/* FOOTER css */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-info,
+.footer-creators,
+.footer-social {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+
+.footer-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.footer-info p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.footer-creators h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.footer-social h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5em;
+  /* Tamanho do ícone */
+  color: #fff;
+  /* Cor do ícone */
+  text-decoration: none;
+}
+
+.footer-social .social-icon:hover {
+  color: #007bff;
+  /* Cor ao passar o mouse (ajuste conforme necessário) */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-creators,
+  .footer-social {
+    margin-bottom: 20px;
+  }
 }

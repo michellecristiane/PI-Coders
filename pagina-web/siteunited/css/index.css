@@ -614,8 +614,9 @@ a {
 .sobre_title {
   font-size: 2.5em; /* Define o tamanho da fonte */
   margin: 0 0 20px; /* Remove margem superior e inferior */
-  text-align: left; /* Alinha o texto à esquerda */
+  text-align: center; /* Alinha o texto à esquerda */
   color: #000000; /* Define a cor do texto como preto */
+ 
 }
 
 /* Estilo para a classe "row" usada dentro do container "Sobre" */
@@ -728,6 +729,7 @@ h1 {
   justify-content: center; /* Centraliza as categorias */
   gap: 20px; /* Define o espaçamento entre as categorias */
   padding: 20px; /* Adiciona espaçamento interno ao container */
+  filter: drop-shadow(1PX 1PX 5PX rgb(150, 92, 243));
 }
 
 /* Estilo para cada categoria */
@@ -739,7 +741,7 @@ h1 {
   border-radius: 50%; /* Define as bordas das categorias como circulares */
   width: 150px; /* Define a largura das categorias */
   height: 150px; /* Define a altura das categorias */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor das categorias */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao redor das categorias */
   transition: transform 0.3s, box-shadow 0.3s; /* Define animações de transição para transformação e sombra */
   overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites das categorias */
   text-align: center; /* Centraliza o texto dentro das categorias */

@@ -1,1034 +1,393 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
-/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos de fonte (300, 400, 500) */
 * {
-    box-sizing: border-box;
-    /* Inclui padding e border no cálculo do tamanho total dos elementos */
-    padding: 0;
-    /* Remove o padding padrão de todos os elementos */
-    margin: 0;
-    /* Remove a margem padrão de todos os elementos */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    /* Define a fonte padrão para "Roboto" */
-    font-size: 0.925rem;
-    /* Define o tamanho da fonte do corpo do texto */
+  font-family: "Roboto", sans-serif;
+  font-size: 0.925rem;
 }
 
 a {
-    text-decoration: none;
-    /* Remove o sublinhado dos links */
+  text-decoration: none;
 }
 
 .container {
-    width: 70%;
-    /* Define a largura máxima do container */
-    position: relative;
-    /* Define a posição como relativa para posicionamento de elementos filhos */
-    margin-left: auto;
-    /* Centraliza o container horizontalmente */
-    margin-right: auto;
-    /* Centraliza o container horizontalmente */
-    padding-left: 15px;
-    /* Adiciona padding à esquerda do container */
-    padding-right: 15px;
-    /* Adiciona padding à direita do container */
-    padding: 0;
-    /* Remove o padding padrão de todos os elementos */
-    margin: 0;
-    /* Remove a margem padrão de todos os elementos */
+  width: 1170px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
 
 .navbar,
-.navbar>.container {
-    width: 100%;
-    /* Define a largura da navbar e seu container para 100% */
-    display: flex;
-    /* Define um layout flexível */
-    flex-wrap: wrap;
-    /* Permite que os elementos se encaixem em múltiplas linhas, se necessário */
-    align-items: center;
-    /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between;
-    /* Espaça igualmente os itens dentro da navbar */
+.navbar > .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
-
 @media (max-width: 768px) {
-
-    .navbar,
-    .navbar>.container {
-        display: block;
-        /* Exibe como bloco em telas menores que 768px */
-    }
+  .navbar,
+.navbar > .container {
+    display: block;
+  }
 }
 
 .navbar {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    /* Adiciona uma sombra suave na parte inferior da navbar */
-    background-color: #fff;
-    /* Define a cor de fundo da navbar como branca */
-    padding: 1rem 1.15rem;
-    /* Adiciona padding ao redor da navbar */
-    border-bottom: 1px solid #eceef3;
-    /* Adiciona uma borda inferior à navbar */
-    /*
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #eceef3;
+  /*
   |-----------------------------------
   | Start navbar logo or brand etc..
   |-----------------------------------
   */
-    /*
+  /*
   |-----------------------------------
   | Start navbar menu
   |-----------------------------------
   */
 }
-
 @media (min-width: 576px) {
-    .navbar .container {
-        max-width: 540px;
-        /* Define a largura máxima do container para 540px em telas maiores que 576px */
-    }
+  .navbar .container {
+    max-width: 540px;
+  }
 }
-
 @media (min-width: 768px) {
-    .navbar .container {
-        max-width: 720px;
-        /* Define a largura máxima do container para 720px em telas maiores que 768px */
-    }
+  .navbar .container {
+    max-width: 720px;
+  }
 }
-
 @media (min-width: 992px) {
-    .navbar .container {
-        max-width: 960px;
-        /* Define a largura máxima do container para 960px em telas maiores que 992px */
-    }
+  .navbar .container {
+    max-width: 960px;
+  }
 }
-
 @media (min-width: 1200px) {
-    .navbar .container {
-        max-width: 1140px;
-        /* Define a largura máxima do container para 1140px em telas maiores que 1200px */
-    }
+  .navbar .container {
+    max-width: 1140px;
+  }
 }
-
 .navbar .navbar-header {
-    display: flex;
-    /* Define um layout flexível */
-    align-items: center;
-    /* Alinha os itens verticalmente ao centro */
+  display: flex;
+  align-items: center;
 }
-
 @media (max-width: 768px) {
-    .navbar .navbar-header {
-        width: 100%;
-        /* Define a largura do cabeçalho da navbar como 100% em telas menores que 768px */
-        display: flex;
-        /* Define um layout flexível */
-        align-items: center;
-        /* Alinha os itens verticalmente ao centro */
-        justify-content: space-between;
-        /* Espaça os itens igualmente */
-        flex-direction: row-reverse;
-        /* Inverte a direção dos itens em linha */
-    }
-}
-
-.navbar .navbar-header .navbar-toggler {
-    cursor: pointer;
-    /* Define o cursor como pointer (mãozinha) para indicar que é clicável */
-    border: none;
-    /* Remove a borda do botão */
-    display: none;
-    /* Esconde o botão por padrão */
-    outline: none;
-    /* Remove o contorno padrão ao clicar */
-}
-
-@media (max-width: 768px) {
-    .navbar .navbar-header .navbar-toggler {
-        display: block;
-        /* Exibe o botão em telas menores que 768px */
-    }
-}
-
-.navbar .navbar-header .navbar-toggler span {
-    height: 2px;
-    /* Define a altura da linha do botão */
-    width: 22px;
-    /* Define a largura da linha do botão */
-    background-color: #929aad;
-    /* Define a cor de fundo da linha do botão */
-    display: block;
-    /* Exibe como um bloco */
-}
-
-.navbar .navbar-header .navbar-toggler span:not(:last-child) {
-    margin-bottom: 0.2rem;
-    /* Adiciona uma margem inferior entre as linhas do botão */
-}
-
-.navbar .navbar-header>a {
-    font-weight: 500;
-    /* Define o peso da fonte para 500 (semi-bold) */
-    color: #3c4250;
-    /* Define a cor do texto */
-}
-
-.navbar .navbar-menu {
-    display: flex;
-    /* Define um layout flexível */
-    align-items: center;
-    /* Alinha os itens verticalmente ao centro */
-    flex-basis: auto;
-    /* Define a base flexível automaticamente */
-    flex-grow: 1;
-    /* Permite que o menu cresça para preencher o espaço */
-}
-
-@media (max-width: 768px) {
-    .navbar .navbar-menu {
-        display: none;
-        /* Esconde o menu em telas menores que 768px */
-        text-align: center;
-        /* Alinha o texto ao centro */
-    }
-}
-
-.navbar .navbar-menu.active {
-    display: flex !important;
-    /* Exibe o menu como flexível quando ativo */
-}
-
-.navbar .navbar-menu .navbar-nav {
-    margin-left: auto;
-    /* Move a navegação para o lado direito */
-    flex-direction: row;
-    /* Define a direção dos itens em linha */
-    display: flex;
-    /* Define um layout flexível */
-    padding-left: 0;
-    /* Remove o padding à esquerda */
-    margin-bottom: 0;
-    /* Remove a margem inferior */
-    list-style: none;
-    /* Remove o estilo de lista padrão */
-}
-
-@media (max-width: 768px) {
-    .navbar .navbar-menu .navbar-nav {
-        width: 100%;
-        /* Define a largura como 100% */
-        display: block;
-        /* Exibe como bloco em telas menores */
-        border-top: 1px solid #EEE;
-        /* Adiciona uma borda superior */
-        margin-top: 1rem;
-        /* Adiciona uma margem superior */
-    }
-}
-
-.navbar .navbar-menu .navbar-nav>li>a {
-    color: #3c4250;
-    /* Define a cor do texto */
-    text-decoration: none;
-    /* Remove a decoração de texto (sublinhado) */
-    display: inline-block;
-    /* Exibe como bloco em linha */
-    padding: 0.5rem 1rem;
-    /* Adiciona padding ao redor dos links */
-}
-
-.navbar .navbar-menu .navbar-nav>li>a:hover {
-    color: #66f;
-    /* Altera a cor ao passar o mouse sobre os links */
-}
-
-@media (max-width: 768px) {
-    .navbar .navbar-menu .navbar-nav>li>a {
-        border-bottom: 1px solid #eceef3;
-        /* Adiciona uma borda inferior nos links */
-    }
-}
-
-.navbar .navbar-menu .navbar-nav>li.active a {
-    color: #66f;
-    /* Define a cor dos links ativos */
-}
-
-.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
-    list-style: none;
-    /* Remove o estilo de lista */
-    position: absolute;
-    /* Posiciona o dropdown de forma absoluta */
-    top: 150%;
-    /* Define a posição superior do dropdown */
-    left: 0;
-    /* Alinha o dropdown à esquerda */
-    background-color: #fff;
-    /* Define a cor de fundo do dropdown como branca */
-    padding-top: 0.5rem;
-    /* Adiciona padding superior */
-    padding-bottom: 0.5rem;
-    /* Adiciona padding inferior */
-    min-width: 160px;
-    /* Define a largura mínima do dropdown */
-    width: auto;
-    /* Define a largura automática */
-    white-space: nowrap;
-    /* Impede quebra de linha */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    /* Adiciona uma sombra ao dropdown */
-    z-index: 99999;
-    /* Define um alto índice z para sobrepor outros elementos */
-    border-radius: 0.75rem;
-    /* Define bordas arredondadas */
-    display: none;
-    /* Esconde o dropdown por padrão */
-}
-
-@media (max-width: 768px) {
-    .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
-        position: relative;
-        /* Altera para posicionamento relativo em telas menores */
-        box-shadow: none;
-        /* Remove a sombra em telas menores */
-    }
-}
-
-.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
-    color: #3c4250;
-    /* Define a cor do texto dos links dentro do dropdown */
-    padding: 0.25rem 1rem;
-    /* Adiciona padding aos links do dropdown */
-    display: block;
-    /* Exibe os links como blocos */
-}
-
-.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
-    display: block !important;
-    /* Exibe o dropdown quando a classe "show" está presente */
-}
-
-.navbar .navbar-menu .navbar-nav .dropdown>.separator {
-    height: 1px;
-    /* Define a altura do separador */
+  .navbar .navbar-header {
     width: 100%;
-    /* Define a largura do separador */
-    margin-top: 9px;
-    /* Adiciona margem superior */
-    margin-bottom: 9px;
-    /* Adiciona margem inferior */
-    background-color: #eceef3;
-    /* Define a cor de fundo do separador */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }
-
-.navbar .navbar-dropdown {
+.navbar .navbar-header .navbar-toggler {
+  cursor: pointer;
+  border: none;
+  display: none;
+  outline: none;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-header .navbar-toggler {
+    display: block;
+  }
+}
+.navbar .navbar-header .navbar-toggler span {
+  height: 2px;
+  width: 22px;
+  background-color: #929aad;
+  display: block;
+}
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+.navbar .navbar-header > a {
+  font-weight: 500;
+  color: #3c4250;
+}
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    display: none;
+    text-align: center;
+  }
+}
+.navbar .navbar-menu.active {
+  display: flex !important;
+}
+.navbar .navbar-menu .navbar-nav {
+  margin-left: auto;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #EEE;
+    margin-top: 1rem;
+  }
+}
+.navbar .navbar-menu .navbar-nav > li > a {
+  color: #3c4250;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+  color: #66f;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav > li > a {
+    border-bottom: 1px solid #eceef3;
+  }
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+  color: #66f;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  border-radius: 0.75rem;
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
     position: relative;
-    /* Define o posicionamento como relativo */
+    box-shadow: none;
+  }
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+  color: #3c4250;
+  padding: 0.25rem 1rem;
+  display: block;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+  display: block !important;
+}
+.navbar .navbar-menu .navbar-nav .dropdown > .separator {
+  height: 1px;
+  width: 100%;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  background-color: #eceef3;
+}
+.navbar .navbar-dropdown {
+  position: relative;
 }
 
-.navbar .navbar-header>a span {
-    color: #66f;
-    /* Define a cor de um span dentro de um link no cabeçalho da navbar */
+.navbar .navbar-header > a span {
+  color: #66f;
 }
 
 .navbar .navbar-header h4 {
-    font-weight: 500;
-    /* Define o peso da fonte */
-    font-size: 1.25rem;
-    /* Define o tamanho da fonte */
+  font-weight: 500;
+  font-size: 1.25rem;
 }
-
 @media (max-width: 768px) {
-    .navbar .navbar-header h4 {
-        font-size: 1.05rem;
-        /* Define o tamanho da fonte em telas menores que 768px */
-    }
+  .navbar .navbar-header h4 {
+    font-size: 1.05rem;
+
+  }
 }
 
-/* sessão de pesquisar css */
 
-
-
-.bar input,
-.search-btn,
-.search-btn:before,
-.search-btn:after {
-    transition: all 0.25s ease-out;
-    /* Aplica uma transição suave de 0.25s a todas as propriedades alteradas */
+/* perfil */
+.profile{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
 }
 
-.bar input,
-.search-btn {
-    width: 3em;
-    /* Define a largura dos elementos de input e do botão de busca como 3em */
-    height: 3em;
-    /* Define a altura dos elementos de input e do botão de busca como 3em */
+/* carrossel */
+
+#carouselExample{
+  padding: 40px;
 }
 
-.bar input:invalid:not(:focus),
-.search-btn {
-    cursor: pointer;
-    /* Muda o cursor para uma mãozinha (indicando que o elemento é clicável) quando o input é inválido e não está focado, ou para o botão de busca */
+.carousel-inner {
+  height: 500px;  /* Altura do carrossel */
+  width: 300px;   /* Largura do carrossel */
+  overflow: hidden; /* Esconde qualquer parte da imagem que exceda o contêiner */
 }
 
-.bar,
-.bar input:focus,
-.bar input:valid {
-    width: 100%;
-    /* Define a largura dos elementos como 100% */
-    justify-content: left;
+.carousel-inner img {
+  height: 100%;    /* A imagem ocupa 100% da altura do contêiner */
+  width: 100%;     /* A imagem ocupa 100% da largura do contêiner */
+  object-fit: cover; /* A imagem será cortada para preencher o contêiner, mantendo a proporção */
 }
 
-.bar input:focus,
-.bar input:not(:focus)+.search-btn:focus {
-    outline: transparent;
-    /* Remove o contorno padrão quando o input ou o botão de busca estão focados */
-}
 
-.bar {
-    margin: 0;
-    /* Centraliza o elemento 'bar' horizontal e verticalmente */
-    padding: 1.5em;
-    /* Adiciona padding ao redor do elemento 'bar' */
-    justify-content: center;
-    /* Centraliza o conteúdo dentro do 'bar' horizontalmente */
-    max-width: 30em;
-    /* Define a largura máxima do 'bar' como 30em */
-}
 
-.bar input {
-    background: transparent;
-    /* Define o fundo do input como transparente */
-    border-radius: 1.5em;
-    /* Arredonda os cantos do input */
-    box-shadow: 0 0 0 0.4em #171717 inset;
-    /* Adiciona uma sombra interna para criar um efeito de borda */
-    padding: 0.75em;
-    /* Adiciona padding dentro do input */
-    transform: translate(0.5em, 0.5em) scale(0.5);
-    /* Transforma a posição e o tamanho do input */
-    transform-origin: 100% 0;
-    /* Define o ponto de origem da transformação */
-    -webkit-appearance: none;
-    /* Remove o estilo padrão do Webkit para o input */
-    -moz-appearance: none;
-    /* Remove o estilo padrão do Mozilla para o input */
-    appearance: none;
-    /* Remove o estilo padrão para o input */
-}
-
-.bar input::-webkit-search-decoration {
-    -webkit-appearance: none;
-    /* Remove o estilo padrão do Webkit para o botão de limpar busca */
-}
-
-.bar input:focus,
-.bar input:valid {
-    background: #fff;
-    /* Altera o fundo do input para branco quando focado ou válido */
-    border-radius: 0.375em 0 0 0.375em;
-    /* Define um novo raio de borda para o input */
-    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
-    /* Ajusta a sombra interna */
-    transform: scale(1);
-    /* Restaura o tamanho original do input */
-}
-
-.search-btn {
-    background: #171717;
-    /* Define a cor de fundo do botão de busca como preto */
-    border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
-    /* Define cantos arredondados específicos para o botão */
-    padding: 0.75em;
-    /* Adiciona padding dentro do botão de busca */
-    position: relative;
-    /* Define o posicionamento como relativo para posicionar elementos internos */
-    transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
-    /* Transforma a posição, rotação e escala do botão de busca */
-    transform-origin: 0 50%;
-    /* Define o ponto de origem da transformação */
-}
-
-.search-btn:before,
-.search-btn:after {
-    content: "";
-    /* Adiciona conteúdo vazio para os pseudo-elementos */
-    display: block;
-    /* Exibe os pseudo-elementos como blocos */
-    opacity: 0;
-    /* Torna os pseudo-elementos invisíveis por padrão */
-    position: absolute;
-    /* Define o posicionamento como absoluto para os pseudo-elementos */
-}
-
-.search-btn:before {
-    border-radius: 50%;
-    /* Define o pseudo-elemento como um círculo */
-    box-shadow: 0 0 0 0.2em #f1f1f1 inset;
-    /* Adiciona uma sombra interna ao círculo */
-    top: 0.75em;
-    /* Posiciona o círculo 0.75em a partir do topo */
-    left: 0.75em;
-    /* Posiciona o círculo 0.75em a partir da esquerda */
-    width: 1.2em;
-    /* Define a largura do círculo */
-    height: 1.2em;
-    /* Define a altura do círculo */
-}
-
-.search-btn:after {
-    background: #f1f1f1;
-    /* Define a cor de fundo do pseudo-elemento como cinza claro */
-    border-radius: 0 0.25em 0.25em 0;
-    /* Define cantos arredondados específicos para o pseudo-elemento */
-    top: 51%;
-    /* Posiciona o pseudo-elemento um pouco abaixo do centro */
-    left: 51%;
-    /* Posiciona o pseudo-elemento um pouco à direita do centro */
-    width: 0.75em;
-    /* Define a largura do pseudo-elemento */
-    height: 0.25em;
-    /* Define a altura do pseudo-elemento */
-    transform: translate(0.2em, 0) rotate(45deg);
-    /* Transforma a posição e a rotação do pseudo-elemento */
-    transform-origin: 0 50%;
-    /* Define o ponto de origem da transformação */
-}
-
-.search-btn span {
-    display: inline-block;
-    /* Exibe o span como bloco em linha */
-    overflow: hidden;
-    /* Esconde o conteúdo que excede os limites do span */
-    width: 1px;
-    /* Define a largura mínima para o span */
-    height: 1px;
-    /* Define a altura mínima para o span */
-}
-
-.bar input:focus+.search-btn,
-.bar input:valid+.search-btn {
-    background: #7e7e7e;
-    /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido */
-    border-radius: 0 0.375em 0.375em 0;
-    /* Ajusta o raio da borda do botão de busca */
-    transform: scale(1);
-    /* Restaura o tamanho original do botão de busca */
-}
-
-.bar input:focus+.search-btn:before,
-.bar input:focus+.search-btn:after,
-.bar input:valid+.search-btn:before,
-.bar input:valid+.search-btn:after {
-    opacity: 1;
-    /* Torna os pseudo-elementos visíveis quando o input é focado ou válido */
-}
-
-.bar input:focus+.search-btn:hover,
-.bar input:valid+.search-btn:hover,
-.bar input:valid:not(:focus)+.search-btn:focus {
-    background: #7e7e7e;
-    /* Altera a cor de fundo do botão de busca para cinza escuro quando o input é focado ou válido e o botão é sobreposto pelo mouse */
-}
-
-.bar input:focus+.search-btn:active,
-.bar input:valid+.search-btn:active {
-    transform: translateY(1px);
-    /* Move o botão de busca ligeiramente para baixo quando clicado */
-}
-
-@media screen and (prefers-color-scheme: dark) {
-
-    body,
-    input {
-        color: #f1f1f1;
-        /* Altera a cor do texto para cinza claro no modo escuro */
-    }
-
-    body {
-        background: #171717;
-        /* Altera a cor de fundo do corpo para preto no modo escuro */
-    }
-
-    .bar input {
-        box-shadow: 0 0 0 0.4em #f1f1f1 inset;
-        /* Altera a sombra interna do input para cinza claro no modo escuro */
-    }
-
-    .bar input:focus,
-    .bar input:valid {
-        background: #3d3d3d;
-        /* Altera o fundo do input para cinza escuro quando focado ou válido no modo escuro */
-        box-shadow: 0 0 0 0.1em #3d3d3d inset;
-        /* Ajusta a sombra interna no modo escuro */
-    }
-
-    .search-btn {
-        background: #f1f1f1;
-        /* Altera a cor de fundo do botão de busca para cinza claro no modo escuro */
-    }
-}
-
-/* Estilo para seções */
-section {
-    padding: 20px 0;
-    /* Padding vertical para as seções */
-}
-
-/* Estilo para o contêiner geral */
-.container {
-    width: 80%;
-    /* Largura do contêiner */
-    margin: 0 auto;
-    /* Centraliza horizontalmente */
-}
-
-/* Estilo para os subtítulos */
-h2 {
-    border-bottom: 2px solid #66f;
-    /* Borda inferior azul */
-    padding-bottom: 10px;
-    /* Padding inferior */
-    margin-bottom: 20px;
-    /* Margem inferior */
-    font-size: 40px;
-    /* Tamanho da fonte */
-    color: #66f;
-    line-height:normal;
-    
-}
-
-/* Estilo para o contêiner do perfil */
-.card-perfil {
-    display: block;
-    /* Usa flexbox para o layout */
-    align-items: center;
-    /* Alinha itens verticalmente no centro */
-    gap: 20px;
-    /* Espaço entre a imagem e o texto */
-    margin: 0 auto;
-    /* Centraliza horizontalmente */
-    padding: 10px;
-    /* Padding interno */
-}
-
-/* Estilo para a imagem dentro do perfil */
-.imagem1 {
-   display: flex;
-   align-self: center;
-    margin: 0 auto;
-    /* Evita que a imagem encolha */
-}
-
-.imagem1 img {
-    border: transparent thin solid;
-    /* Borda transparente */
-    padding: 5px;
-    /* Padding interno da imagem */
-    margin: 0 auto;
-    /* Margem direita e inferior */
-    max-width: 150px;
-    /* Largura máxima da imagem */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
-/* Estilo para o contêiner de texto dentro do perfil */
-.container_sobre {
-    flex: 1;
-    /* Ocupa o restante do espaço disponível */
-    display: flex;
-    /* Usa flexbox para o layout */
-    flex-direction: column;
-    /* Alinha o conteúdo verticalmente */
-    justify-content: center;
-    /* Centraliza o texto verticalmente */
-    width: 70%;
-    margin: 0 auto;
-}
-
-.container_sobre h2 {
-    font-size: 40px;
-    /* Tamanho da fonte do subtítulo */
-}
-
-/* Ajuste do tamanho da imagem dentro do perfil */
-.card-perfil img {
-    width: auto;
-    /* Mantém a proporção da imagem */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
-.card-perfil img {
-    width: 100%;
-    /* Imagem ocupa 100% da largura do contêiner */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
-/* Estilo para a galeria */
-.gallery {
-    display: flex;
-    /* Usa flexbox para o layout */
-    flex-wrap: wrap;
-    /* Permite que os itens se movam para a linha seguinte */
-}
-
-/* Estilo para cada item da galeria */
-.gallery-item {
-    flex: 1 1 30%;
-    /* Ocupa 30% da largura do contêiner, com flexibilidade */
-    margin: 10px;
-    /* Margem entre os itens */
-}
-
-/* Estilo para as imagens dentro da galeria */
-.gallery-item img {
-    width: 100%;
-    /* Imagem ocupa 100% da largura do item */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
-/* Estilo para serviços */
-.service {
-    margin-bottom: 20px;
-    /* Margem inferior */
-}
-
-/* Estilo para o cabeçalho dentro da galeria */
-.container h2 {
-    font-size: 40px;
-    /* Tamanho da fonte do cabeçalho */
-}
-
-/* Estilo para o contêiner da galeria */
-.gallery {
-    display: flex;
-    /* Usa flexbox para o layout */
-    flex-wrap: wrap;
-    /* Permite que os itens se movam para a linha seguinte */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-    padding: 20px;
-    /* Padding ao redor da galeria */
-}
-
-/* Estilo para os cartões */
-.card {
-    background-color: #fff;
-    /* Cor de fundo do cartão */
-
-    border-radius: 8px;
-    /* Bordas arredondadas */
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra do cartão */
-
-    margin: 10px;
-    /* Margem entre os cartões */
-
-    width: 300px;
-    /* Largura do cartão */
-
-    overflow: hidden;
-    /* Oculta o conteúdo que ultrapassa o cartão */
-
-    transition: transform 0.2s ease-in-out;
-    /* Transição suave para o efeito hover */
-}
-
-.card:hover {
-    transform: scale(1.05);
-    /* Aumenta o cartão ao passar o mouse */
-}
-
-/* Estilo para imagens dentro do cartão */
-.card img {
-    width: 100%;
-    /* Imagem ocupa 100% da largura do cartão */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
-/* Estilo para o conteúdo do cartão */
-.card-content {
-    padding: 15px;
-    /* Padding interno */
-}
-
-/* Estilo para o título dentro do conteúdo do cartão */
-.card-content h3 {
-    margin-top: 0;
-    /* Remove a margem superior */
-    font-size: 1.5em;
-    /* Tamanho da fonte do título */
-}
-
-/* Estilo para o texto dentro do conteúdo do cartão */
-.card-content p {
-    color: #555;
-    /* Cor do texto */
-}
-
-/* Responsividade para telas menores (máximo 768px) */
-@media (max-width: 768px) {
-    .social-container {
-        flex-direction: column;
-        /* Alinha os itens verticalmente */
-        text-align: center;
-        /* Centraliza o texto */
-    }
-
-    .social-social {
-        margin-bottom: 20px;
-        /* Margem inferior */
-    }
-}
-
-/* Estilo para o botão de envio */
-.links button {
-    background-color: #007bff;
-    /* Cor de fundo do botão */
-    color: #fff;
-    /* Cor do texto do botão */
-    border: none;
-    /* Remove a borda padrão */
-    padding: 10px 20px;
-    /* Padding interno */
-    border-radius: 4px;
-    /* Bordas arredondadas */
-    cursor: pointer;
-    /* Muda o cursor para indicar um botão clicável */
-    font-size: 16px;
-    /* Tamanho da fonte */
-    transition: background-color 0.3s, transform 0.3s;
-    /* Transições suaves */
-}
-
-.links button:hover {
-    background-color: #0056b3;
-    /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05);
-    /* Aumenta o botão ao passar o mouse */
-}
-
-/* Animações */
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-        /* Começa com a rotação 0 */
-    }
-
-    100% {
-        transform: rotate(360deg);
-        /* Termina com a rotação 360 */
-    }
-}
-
-@keyframes animate2 {
-    0% {
-        transform: rotate(360deg);
-        /* Começa com a rotação 360 */
-    }
-
-    100% {
-        transform: rotate(0deg);
-        /* Termina com a rotação 0 */
-    }
-}
-
-/* Estilo para o rodapé */
-/*///////////////////////////////CSS DO RODAPÉ (FOOTER) ///////////////*/
-
-/* Estilo geral do rodapé */
+/* FOOTER css */
 footer {
     background-color: #333;
-    /* Define a cor de fundo do rodapé como cinza escuro */
     color: #fff;
-    /* Define a cor do texto do rodapé como branco */
     padding: 20px 0;
-    /* Adiciona espaçamento superior e inferior */
     text-align: center;
-    /* Centraliza o texto */
-}
-
-/* Container para o conteúdo do rodapé */
-.footer-container {
+  }
+  
+  .footer-container {
     max-width: 1000px;
-    /* Define a largura máxima do container do rodapé */
     margin: 0 auto;
-    /* Centraliza o container horizontalmente */
     padding: 0 20px;
-    /* Adiciona espaçamento interno horizontal */
     display: flex;
-    /* Define o layout flexível para o rodapé */
     flex-wrap: wrap;
-    /* Permite que o conteúdo quebre para a próxima linha */
     justify-content: space-between;
-    /* Espaça o conteúdo igualmente */
-}
-
-/* Estilo para as diferentes seções do rodapé */
-.footer-info,
-.footer-creators,
-.footer-social {
+  }
+  
+  .footer-info, .footer-creators, .footer-social {
     flex: 1 1 100%;
-    /* Define a largura flexível para cada seção do rodapé */
     margin-bottom: 20px;
-    /* Adiciona margem inferior */
-}
-
-/* Estilo para o título da seção "info" do rodapé */
-.footer-info h2 {
+  }
+  
+  .footer-info h2 {
     margin: 0;
-    /* Remove a margem */
     font-size: 1.5em;
-    /* Define o tamanho da fonte */
-}
-
-/* Estilo para o texto da seção "info" do rodapé */
-.footer-info p {
+  }
+  
+  .footer-info p {
     font-size: 1em;
-    /* Define o tamanho da fonte */
     line-height: 1.4;
-    /* Define o espaçamento entre linhas */
-}
-
-/* Estilo para o título da seção "creators" do rodapé */
-.footer-creators h3 {
+  }
+  
+  .footer-creators h3 {
     margin: 0 0 10px;
-    /* Remove a margem superior e define a margem inferior */
     font-size: 1.2em;
-    /* Define o tamanho da fonte */
-}
-
-/* Estilo para o título da seção "social" do rodapé */
-.footer-social h3 {
+  }
+  
+  .footer-social h3 {
     margin: 0 0 10px;
-    /* Remove a margem superior e define a margem inferior */
     font-size: 1.2em;
-    /* Define o tamanho da fonte */
-}
-
-/* Estilo para os ícones sociais do rodapé */
-.footer-social .social-icon {
+  }
+  
+  .footer-social .social-icon {
     display: inline-block;
-    /* Define o display dos ícones como inline-block */
-    margin: 0 30px;
-    /* Adiciona margem horizontal aos ícones */
-    font-size: 1.5em;
-    /* Define o tamanho da fonte para os ícones */
-    color: #fff;
-    /* Define a cor dos ícones como branco */
+    margin: 0 10px;
+    font-size: 1.5em; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone */
     text-decoration: none;
-    /* Remove a decoração do texto (sublinhado) */
-}
-
-/* Efeito hover para os ícones sociais do rodapé */
-.footer-social .social-icon:hover {
-    color: #007bff;
-    /* Muda a cor dos ícones ao passar o mouse */
-}
-
-/* Estilo para o rodapé do comentário */
-.comment-footer {
-    font-size: 0.9em;
-    /* Define o tamanho da fonte */
-    color: #888;
-    /* Define a cor do texto como cinza */
-}
-
-/* Responsividade para o rodapé em telas menores */
-@media (max-width: 768px) {
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse (ajuste conforme necessário) */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        /* Altera a direção do flex para coluna em telas menores */
         text-align: center;
-        /* Centraliza o texto em telas menores */
     }
-
-    .footer-info,
-    .footer-creators,
-    .footer-social {
+  
+    .footer-info, .footer-creators, .footer-social {
         margin-bottom: 20px;
-        /* Adiciona margem inferior às seções em telas menores */
     }
-}
-
-/* Estilo para o formulário */
-#commentForm {
-    width: 400px; /* Define a largura do formulário */
-    height: 400px; /* Define a altura do formulário, tornando-o quadrado */
-    padding: 20px; /* Espaçamento interno ao redor do conteúdo */
-    box-sizing: border-box; /* Inclui padding e border na largura e altura total */
-    border: 2px solid #ccc; /* Borda ao redor do formulário */
-    border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
-    background-color: #f9f9f9; /* Cor de fundo do formulário */
-    display: flex; /* Usa flexbox para layout interno */
-    flex-direction: column; /* Alinha os itens verticalmente */
-    justify-content: space-between; /* Espaça os itens igualmente ao longo do eixo principal */
-    
-}
-
-/* Estilo para os labels */
-/* Estilo para o formulário */
-#commentForm {
-    width: 400px; /* Define a largura do formulário */
-    height: 400px; /* Define a altura do formulário, tornando-o quadrado */
-    padding: 20px; /* Espaçamento interno ao redor do conteúdo */
-    box-sizing: border-box; /* Inclui padding e border na largura e altura total */
-    border: 2px solid #ccc; /* Borda ao redor do formulário */
-    border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
-    background-color: #f9f9f9; /* Cor de fundo do formulário */
-    display: flex; /* Usa flexbox para layout interno */
-    flex-direction: column; /* Alinha os itens verticalmente */
-    justify-content: center; /* Centraliza verticalmente os itens */
-}
-
-/* Estilo para os labels */
-#commentForm label {
-    font-size: 16px; /* Tamanho da fonte do label */
-    margin-bottom: 8px; /* Margem inferior para separar do input ou textarea */
-    color: #333; /* Cor do texto dos labels */
-    display: block; /* Garante que o label ocupe a largura total disponível */
-    text-align: center; /* Centraliza o texto do label */
-}
-
-/* Estilo para os campos de input e textarea */
-#commentForm input[type="text"],
-#commentForm textarea {
-    width: 100%; /* Faz com que o campo ocupe toda a largura disponível */
-    padding: 10px; /* Padding interno para melhorar a legibilidade */
-    border: 1px solid #ccc; /* Borda ao redor dos campos */
-    border-radius: 4px; /* Bordas arredondadas para os campos */
-    box-sizing: border-box; /* Inclui padding e border na largura total do campo */
-    font-size: 16px; /* Tamanho da fonte dos campos */
-    margin-bottom: 15px; /* Margem inferior para separar os campos */
+  }
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .photo-section {
+    margin: 15px;
+    flex: 0 1 30%; /* Ajuste a largura das fotos para ocupar 30% do contêiner */
+    max-width: 300px; /* Largura máxima para manter a consistência */
+  }
+  
+  .photo-card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .photo-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  }
+  
+  .main-photo {
+    width: 100%; /* Faz a imagem ocupar toda a largura do cartão */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .photo-comment {
+    padding: 10px;
     text-align: center;
+    font-size: 20px;
+    color: #000000; /* Cor do texto dos comentários */
+    background-color: #f9f9f9; /* Fundo leve para os comentários */
+    border-top: 1px solid #ccc; /* Linha separadora acima do comentário */
+  }
+  
+
+
+
+  .container-coments {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 50%; /* Torna o contêiner circular */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para esconder o conteúdo que ultrapassa o círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estilo para o botão de envio */
-#commentForm button {
-    background-color: #66f; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão do botão */
-    padding: 10px; /* Padding interno do botão */
-    border-radius: 4px; /* Bordas arredondadas para o botão */
-    cursor: pointer; /* Muda o cursor para indicar um botão clicável */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    transition: background-color 0.3s, transform 0.3s; /* Transição suave para o efeito hover */
-    display: block; /* Garante que o botão ocupe a largura total disponível */
-    margin: 0 auto; /* Centraliza o botão horizontalmente */
+.comentarios {
+    text-align: center;
+    padding: 20px;
 }
 
-/* Estilo para o botão de envio ao passar o mouse */
-#commentForm button:hover {
-    background-color: #c7cbcf; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
 }
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+ 
