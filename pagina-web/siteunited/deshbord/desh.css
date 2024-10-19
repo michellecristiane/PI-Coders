@@ -1,49 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-*{
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: outfit sans-serif;
 }
-body{
+
+.grid-container {
+    display: flex;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.3fr;
+    grid-template-areas:
+        "sidebar header header header"
+        "sidebar main main main";
     height: 100vh;
 }
 
-nav.menu-lateral{
-    width: 300px;
+.header {
+    grid-area: header;
+    height: 70px;
+}
+
+.asidebar {
+    grid-area: sidebar;
     height: 100%;
-    background: linear-gradient(90deg, #1b265a, #f8cdda);
-    padding: 40px 0 40px 1%;
-    
-}
-
-.btn-expandir{
-    width: 100%;
-    padding-left: 10px;
-}
-
-.btn-expandir >i {
-
-    color: white;
-    font-size: 24px;
 
 }
 
-ul{
-    height: 100%;
-    list-style-type: none;
-}
 
-ul li.item-lateral a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px 4%;
-    display: flex;
-    margin-bottom: 20px;
+.main-container {
+    grid-area: main;
+    background-color: beige;
 
-}
-
-ul li.item-lateral a i .txt-link{
-    margin-right: 40px;
 }
