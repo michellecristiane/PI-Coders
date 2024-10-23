@@ -8,23 +8,30 @@ body {
   
 }
 
-  .dropdown {
+.dropdown {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
   }
 
   #cadastre-se {
     cursor: pointer;
     color: blue;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+  #cadastre-se:hover{
+    color: rgb(13, 69, 250);
   }
 
 
   .dropdown-options {
     display: none;
     position: absolute;
+    left: 180px;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -35,16 +42,18 @@ body {
   .dropdown-options li {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
   }
 
   .dropdown-options li a {
     text-decoration: none;
-    color: black;
+    color:blue;
+    font-weight: bolder;
   }
 
   .dropdown-options li:hover {
-    background-color: #f1f1f1;
+    background-color: #e3e3e4;
+    border-radius: 5px;
   }
 
 .container {
@@ -131,6 +140,7 @@ select {
     width: 100%;
     margin-top: 10px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .btn:hover{
     background-color: #66f;
