@@ -11,15 +11,12 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  /* Define a fonte padrão para "Roboto" */
-  font-size: 0.925rem;
-  /* Define o tamanho da fonte do corpo do texto */
+  font-family: "Roboto", sans-serif; /* Define a fonte padrão para "Roboto" */
+  font-size: 0.925rem; /* Define o tamanho da fonte do corpo do texto */
 }
 
 a {
-  text-decoration: none;
-  /* Remove o sublinhado dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 .container {
