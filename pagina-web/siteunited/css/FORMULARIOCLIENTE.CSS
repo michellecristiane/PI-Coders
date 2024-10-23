@@ -8,6 +8,45 @@ body {
   
 }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  #cadastre-se {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+
+  .dropdown-options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    z-index: 1;
+  }
+
+  .dropdown-options li {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-options li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown-options li:hover {
+    background-color: #f1f1f1;
+  }
+
 .container {
     display: flex;
     justify-content: center;

@@ -25,8 +25,13 @@
                             <input type="password" id="senha-login" required>
                         </div>
                         <button class="btn" id="btn-login">Entrar</button>
-                        <p>Não tem uma conta? <span class="link" id="flip-to-register">Cadastre-se</span></p>
-                        
+                        <div class="dropdown">
+                            <span id="cadastre-se">Cadastre-se</span>
+                            <ul id="options" class="dropdown-options">
+                              <li><a href="#">Pessoa Física</a></li>
+                              <li><a href="#">Pessoa Jurídica</a></li>
+                            </ul>
+                          </div>
                     </div>
                 </div>
                 <!-- Back (Cadastro) -->
@@ -218,13 +223,40 @@
             </div>
 
 
-            <script>document.getElementById('flip-to-register').addEventListener('click', function () {
-                    document.querySelector('.flip-card').style.transform = 'rotateY(180deg)';
-                });
 
-                document.getElementById('flip-to-login').addEventListener('click', function () {
-                    document.querySelector('.flip-card').style.transform = 'rotateY(0deg)';
-                });</script>
+
+
+            <script>
+            // document.getElementById('flip-to-register').addEventListener('click', function () {
+            //         document.querySelector('.flip-card').style.transform = 'rotateY(180deg)';
+            //     });
+
+            //     document.getElementById('flip-to-login').addEventListener('click', function () {
+            //         document.querySelector('.flip-card').style.transform = 'rotateY(0deg)';
+            //     });
+                
+                
+                            // Seleciona o elemento 'Cadastre-se' e a lista de opções
+const cadastreSe = document.getElementById('cadastre-se');
+const options = document.getElementById('options');
+
+// Função para alternar a exibição das opções
+cadastreSe.addEventListener('click', function() {
+  if (options.style.display === 'block') {
+    options.style.display = 'none';
+  } else {
+    options.style.display = 'block';
+  }
+});
+
+// Fecha o dropdown ao clicar fora dele
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#cadastre-se')) {
+    options.style.display = 'none';
+  }
+});
+                
+                </script>
 </body>
 
 </html>
