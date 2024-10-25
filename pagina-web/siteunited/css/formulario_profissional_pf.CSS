@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 30%;
-    /* padding-top: 20px; */
+    padding-top: 20px;
 }
 
 .form1{
@@ -76,7 +76,7 @@ select {
 }
 
 .link {
-    color: #007BFF;
+    color: #1707f8;
     text-decoration: none;
     cursor: pointer;
 
