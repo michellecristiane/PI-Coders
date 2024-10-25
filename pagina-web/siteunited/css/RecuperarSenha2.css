@@ -1,11 +1,12 @@
 /*Login*/
 body {
-    background-image: url("/imagens/photoCamera02.jpg");
-    background-color: hsl(37, 4%, 42%);
+    /* background-image: url("/imagens/photoCamera02.jpg"); */
+    /* background-color: hsl(37, 4%, 42%); */
+    background: linear-gradient(90deg, #1d2b64, #f8cdda);
     font-family: Arial, sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat;
+    background-position: bottom; */
     margin: 5px;
     padding: 0;
     display: flex;
@@ -65,6 +66,7 @@ button {
 }
 button:hover {
     background-color: rgb(0, 0, 0, 0.4);
+
     color: white;
 }
 
