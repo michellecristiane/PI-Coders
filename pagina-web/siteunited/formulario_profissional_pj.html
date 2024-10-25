@@ -16,15 +16,13 @@
 
                 <div class="row">
                     <div class="razao_social">
-                        <label for="nome">* RAZÃO SOCIAL</label>
+                        <label for="nome">* Razão Social</label>
                         <input class="input_bigger" type="text" name="nome" id="nome" size="20"
                             maxlength="80" required>
                     </div>
-                    <div class="row">
-                        <div class="cnpj">
-                            <label for="cnpj">* CNPJ</label>
-                            <input class="input_smaller" type="text" name="cnpj" id="cnpj" maxlength="14"
-                                size="20" placeholder="Digite seu CNPJ" required>
+                    <div class="cnpj">
+                        <label for="cnpj">* CNPJ</label>
+                        <input class="input_smaller" type="text" name="cnpj" id="cnpj" maxlength="14" size="20" placeholder="Digite seu CNPJ" required>
                     </div>
                 </div>
 
@@ -32,29 +30,29 @@
                 <div class="row">
                     <div class="primary_name">
                         <label for="nome">* Nome Completo</label>
-                        <input class="input_bigger" type="text" name="nome" id="nome" size="20"
-                            maxlength="80" required>
+                        <input class="input_bigger" type="text" name="nome" id="nome" size="20" maxlength="80" required>
                     </div>
-                    
+                    <div class="phone">
+                        <label for="telefone">* Telefone</label>
+                        <input class="input_smaller" type="tel" name="telefone" id="telefone" maxlength="90"
+                            size="20" required>
+                    </div>                    
                 </div>
 
-                <div class="email">
+                <div class="row">
+                    <div class="email">
                         <label for="email">* Email</label>
                         <input class="input_bigger" type="text" name="email" id="email"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="60"
                             required>
                     </div>
-                </div>
-
-                <div class="row">
                     <div class="confirmar_email">
                         <label for="confirmar_email">* Confirmar E-mail</label>
                         <input class="input_bigger" type="text" name="confirmar_email" id="confirmar_email"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             placeholder="Confirme seu Email" size="20" maxlength="60" required>
                     </div>
-                    
-                </div>
+                </div>               
 
                 <div class="row">
                     <div class="cep">
@@ -72,15 +70,15 @@
                             <option value="ap">Amapá</option>
                             <option value="ba">Bahia</option>
                             <option value="ce">Ceará</option>
-                            <option value="df">Distrito</option>
-                            <option value="es">Espirito Santo</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
                             <option value="go">Goiás</option>
                             <option value="ma">Maranhão</option>
                             <option value="mt">Mato Grosso</option>
                             <option value="ms">Mato Grosso do Sul</option>
                             <option value="mg">Minas Gerais</option>
                             <option value="pa">Pará</option>
-                            <option value="pb">paraíba</option>
+                            <option value="pb">Paraíba</option>
                             <option value="pr">Paraná</option>
                             <option value="pe">Pernambuco</option>
                             <option value="pi">Piauí</option>
@@ -100,29 +98,38 @@
                     <div class="cidade">
                         <label>* Cidade</label>
                         <select class="input_cidade" name="cidade">
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
-                            <option value="city">Selecione sua Cidade</option>
+                            <option value="city">Rio Branco</option>
+                            <option value="city">Maceió</option>
+                            <option value="city">Manaus</option>
+                            <option value="city">Macapá</option>
+                            <option value="city">Salvador</option>
+                            <option value="city">Fortaleza</option>
+                            <option value="city">Brasília</option>
+                            <option value="city">Vitória</option>
+                            <option value="city">São Luis</option>
+                            <option value="city">Goiânia</option>
+                            <option value="city">Cuiabá</option>
+                            <option value="city">Campo Grande</option>
+                            <option value="city">Belo Horizonte</option>
+                            <option value="city">Belém</option>
+                            <option value="city">João Pessoa</option>
+                            <option value="city">Curitiba</option>
+                            <option value="city">Recife</option>
+                            <option value="city">Terezina</option>
+                            <option value="city">Rio de Janeiro</option>
+                            <option value="city">Natal</option>
+                            <option value="city">Porto Velho</option>
+                            <option value="city">Porto Alegre</option>
+                            <option value="city">Boa Vista</option>
+                            <option value="city">Florianópolis</option>
+                            <option value="city">Aracajú</option>
+                            <option value="city">São Paulo</option>
+                            <option value="city">Palmas</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="bairro">
-                        <label for="bairro">Bairro</label>
-                        <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40"
-                            size="20" required>
-                    </div>
                     <div class="logradouro">
                         <label for="logradouro">Logradouro</label>
                         <input class="input_logradouro" type="text" name="logradouro" id="logradouro"
@@ -133,18 +140,21 @@
                         <input class="input_numero" type="text" name="numero" id="numero" maxlength="5"
                             size="20" required>
                     </div>
+                    <div class="bairro">
+                        <label for="bairro">Bairro</label>
+                        <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40"
+                            size="20" required>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="senha">
-                        <label for="senha">* Senha</label>
-                        <img id="eye-password" class="eye-svg" src="./olho.png" width="0" height="0">
+                        <label for="senha">* Senha</label>                       
                         <input class="input_bigger" type="password" name="senha"
                             placeholder="Escolha uma senha" maxlength="30" required>
                     </div>
                     <div class="confirmar_senha">
-                        <label for="confirmar_senha">* Confirmar Senha</label>
-                        <img id="eye-password" class="eye-svg" src="./olho.png" width="0" height="0">
+                        <label for="confirmar_senha">* Confirmar Senha</label>                       
                         <input class="input_bigger" type="password" name="confirmar_senha"
                             placeholder="Repita sua senha" maxlength="30" required>
                     </div>
@@ -153,7 +163,7 @@
                 <div class="row">
                     <div class="trabalho_fotografico">
                         <label for="trabalho_fotografico">* Especialidade Fotográfica</label>
-                        <select id="trabalho_fotografico" name="trabalho_fotografico" required>
+                        <select class="input_smaller" id="trabalho_fotografico" name="trabalho_fotografico" required>
                             <option value="">Selecione o Tipo</option>
                             <option value="casamento">Casamento</option>
                             <option value="evento">Evento</option>
@@ -162,19 +172,8 @@
                             <option value="outro">Outro</option>
                         </select>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="comentarios">
-                        <label for="descricao fotografo">* Descrição Fotografo</label>
-                        <textarea placeholder="Deixe seu comentário..."></textarea>
-            
-                </div>
-
-                </div>
-                <div class="row">
                     <div class="raio_atendimento">
-                        <label for="raio_atendimento">* raio_atendimento</label>
+                        <label for="raio_atendimento">* Raio de Atendimento</label>
                         <select id="raio_atendimento" name="raio_atendimento" required>
                             <option value="">Selecione a distância</option>
                             <option value="10km">Até 10km</option>
@@ -185,6 +184,14 @@
                             <option value="km_livre">Atendimento após orçamento</option>
                             <option value="0km">Atendimento online</option>
                         </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="comentarios">
+                        <label for="descricao fotografo">* Descrição do Fotógrafo</label>
+                        <textarea class="input_bigger" placeholder="Faça uma descrição que aparecerá no seu perfil..." size="20"></textarea>
+            
                     </div>
                 </div>
                 <button class="button" type="submit">Enviar</button>
