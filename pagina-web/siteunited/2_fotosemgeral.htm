@@ -82,9 +82,7 @@
 
     <h1 style="font-size: 70px; text-align: center; padding: 30px; color: #66f;">Galeria</h1>
 
-  <h1 class="galeria">GALERIA</h1>
-
-
+    <!-- ////////////////// caroucel carousel////////////// -->
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -108,6 +106,7 @@
         </button>
     </div>
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   <section class="photo-gallery">
 =======
@@ -366,31 +365,126 @@
 
         </div>
     </footer>
+=======
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> Stashed changes
     <script>
-        ////////////////// Jva do caroucel carousel//////////////
-        let slideIndex = 0;
+        const container = document.getElementById('img-container');
+        const images = container.querySelectorAll('img');
+        const totalImages = images.length;
+        let currentIndex = 0;
 
-        function showSlides() {
-            const slides = document.querySelector('.slides');
-            const totalSlides = slides.children.length;
-            if (slideIndex >= totalSlides) slideIndex = 0;
-            if (slideIndex < 0) slideIndex = totalSlides - 1;
-            slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        function moveCarrousel() {
+            currentIndex++;
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+            container.style.transform = `translateX(${-currentIndex * 500}px)`;
         }
 
-        function moveSlide(n) {
-            slideIndex += n;
-            showSlides();
-        }
 
+        setInterval(moveCarrousel, 3000);
     </script>
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
     <script src="pastadojava/index.js"></script>
 =======
 
   <footer>
+=======
+
+
+    <div class="description">
+        <h2>Por que escolher nosso serviço?</h2>
+        <p>Oferecemos um olhar único e criativo para capturar a essência do seu grande dia. Deixe-nos criar memórias
+            inesquecíveis para você!</p>
+    </div>
+
+<section class="photo-section">
+>>>>>>> a6baf93bcb0f5049000fe3667886be9f21ae740c
+    <div class="photo-section">
+        <div class="photo-card">
+            <img src="imagens/belem.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F1.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Camila Gusmão</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/feira da comida2.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F2.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Dayse Santos</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/feira da comida.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F7.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">João Moraes</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/BL0A7308.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F8.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Algusto Fontes</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/praça da republica belem.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F5.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Thaysa Flipes</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/forte do presepio.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F7.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Ronilda Freitas</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/praça do relogio.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F9.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Danilo Santos</span>
+            </a>
+        </div>
+
+        <div class="photo-card">
+            <img src="imagens/Homem só.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F8.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Cássio Silveira</span>
+            </a>
+        </div>
+
+        <div class="photo-card">
+            <img src="imagens/Ver-o-peso-Mangas-Belém-Pará.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F10.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">André Andrade</span>
+            </a>
+        </div>
+        <div class="photo-card">
+            <img src="imagens/acai.jpg" alt="Main Photo" class="main-photo">
+            <a href="link-to-photographer-page.html" class="photographer-card">
+                <img src="imagens/F9.jpg" alt="Photographer" class="photographer-photo">
+                <span class="photographer-name">Diogo Rodrigues</span>
+            </a>
+        </div>
+
+        <!-- Repita o bloco .photo-card para outros cards -->
+    </div>
+
+
+ <footer>
+>>>>>>> Stashed changes
     <div class="footer-container">
       <div class="footer-info">
         <h2>PixelSingular</h2>
@@ -419,6 +513,7 @@
     </div>
   </footer>
 
+<<<<<<< Updated upstream
   <script>
     ////////////////// Jva do caroucel carousel//////////////
     let slideIndex = 0;
@@ -445,6 +540,17 @@
 
 <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
 <script src="pastadojava/index.js"></script>
+>>>>>>> Stashed changes
+=======
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+
+  <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
+  <script src="pastadojava/index.js"></script>
+
 >>>>>>> Stashed changes
 </body>
 
