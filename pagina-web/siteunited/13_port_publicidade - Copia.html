@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Publicidade</title>
-  <link rel="stylesheet" href="css/fotosemgeral.css">
+  <link rel="stylesheet" href="css/moda.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-
+    <!--menu-->
   <div class="container navbar">
 
     <div class="navbar-header">
@@ -62,9 +62,10 @@
   </div>
 
 
-  <h1 class="galeria">Publicidade</h1>
+  <h1 style="font-size: 70px; text-align: center; padding: 30px; color: #66f;">Publicidade</h1>
 
 
+        <!-- ////////////////// caroucel carousel////////////// -->
 
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -88,88 +89,106 @@
     </button>
   </div>
 
-  <section class="photo-gallery">
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/j17.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F1.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Claudia Moraes</span>
-        </a>
-      </div>
-    </div>
+   <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const container = document.getElementById('img-container');
+        const images = container.querySelectorAll('img');
+        const totalImages = images.length;
+        let currentIndex = 0;
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publi_R7.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F2.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Kátia Rodrigues</span>
-        </a>
-      </div>
-    </div>
+        function moveCarrousel() {
+            currentIndex++;
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+            container.style.transform = `translateX(${-currentIndex * 500}px)`;
+        }
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publi_R1.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F3.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Afonso Cintra</span>
-        </a>
-      </div>
-    </div>
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publi_R2.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F4.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Dayse Vasconcelos</span>
-        </a>
-      </div>
-    </div>
+        setInterval(moveCarrousel, 3000);
+    </script>
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publi_R3.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F9.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Fernando Silveira</span>
-        </a>
-      </div>
-    </div>
+          <!-- Cards -->
+  
+<!-- Cards -->
+<div class="photo-section">
+  <div class="photo-card">
+      <img src="imagens/moda2.webp" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/moda6.webp" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="path-to-photographer-photo.jpg" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/moda5.webp" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/moda8.png" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/moda3.png" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/moda6.webp" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/moda3.png" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publicidadeR.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F6.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Karlenne Oliveira</span>
-        </a>
-      </div>
-    </div>
+  <div class="photo-card">
+      <img src="imagens/casamento_R7.jpg" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publi_R4.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F10.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Rodrigo Baltazar</span>
-        </a>
-      </div>
-    </div>
+  <div class="photo-card">
+      <img src="imagens/casamento_R8.jpg" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
+  <div class="photo-card">
+      <img src="imagens/casamento_R9.jpg" alt="Main Photo" class="main-photo">
+      <a href="link-to-photographer-page.html" class="photographer-card">
+          <img src="imagens/avatar.png" alt="Photographer" class="photographer-photo">
+          <span class="photographer-name">Nome do Fotógrafo</span>
+      </a>
+  </div>
 
-    <div class="photo-section">
-      <div class="photo-card">
-        <img src="imagens/publi_R5.jpg" alt="Main Photo" class="main-photo">
-        <a href="link-to-photographer-page.html" class="photographer-card">
-          <img src="imagens/F8.jpg" alt="Photographer" class="photographer-photo">
-          <span class="photographer-name">Danilo Costa</span>
-        </a>
-      </div>
-    </div>
-    <!-- Repita o bloco .photo-section para outras seções -->
-  </section>
+  <!-- Repita o bloco .photo-card para outros cards -->
+</div>
+ 
 
 
 
@@ -178,44 +197,63 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
+        <!-- Footer -->
+        <footer>
+          <div class="footer-container">
+              <div class="footer-info">
+                  <h2>Pixel Singular</h2>
+                  <p>Pixel Singular, o seu espaço para discussões e feedbacks sobre fotografia.</p>
+              </div>
+              <div class="footer-creators">
+                  <h3>Criadores:</h3>
+                  <p>United Coders</p>
+              </div>
+              <div class="footer-social">
+                  <h3>Siga-nos:</h3>
+                  <a href="https://facebook.com" target="_blank" class="social-icon">
+                      <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+                  </a>
+                  <a href="https://twitter.com" target="_blank" class="social-icon">
+                      <i class="fab fa-twitter"></i> <!-- Ícone do Twitter -->
+                  </a>
+                  <a href="https://instagram.com" target="_blank" class="social-icon">
+                      <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i> <!-- Ícone do LinkedIn -->
+                  </a>
+              </div>
+  
+          </div>
+      </footer>
+      <script>
+          ////////////////// Jva do caroucel carousel//////////////
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-info">
-        <h2>Pixel Singular</h2>
-        <p>Pixel Singular, o seu espaço para discussões e feedbacks sobre fotografia.</p>
-      </div>
-      <div class="footer-creators">
-        <h3>Criadores:</h3>
-        <p>United Coders</p>
-      </div>
-      <div class="footer-social">
-        <h3>Siga-nos:</h3>
-        <a href="https://facebook.com" target="_blank" class="social-icon">
-          <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
-        </a>
-        <a href="https://twitter.com" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i> <!-- Ícone do Twitter -->
-        </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon">
-          <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
-        </a>
-        <a href="https://linkedin.com" target="_blank" class="social-icon">
-          <i class="fab fa-linkedin-in"></i> <!-- Ícone do LinkedIn -->
-        </a>
-      </div>
+  
+          let slideIndex = 0;
 
-    </div>
-  </footer>
+function showSlides() {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    if (slideIndex >= totalSlides) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = totalSlides - 1;
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
 
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+function moveSlide(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+showSlides(); // Initialize the carousel
 
 
-  <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
-  <script src="pastadojava/index.js"></script>
+
+
+</script>
+
+<!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
+<script src="pastadojava/index.js"></script>
 </body>
 
 </html>
