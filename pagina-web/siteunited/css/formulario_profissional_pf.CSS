@@ -144,7 +144,7 @@ p, h1{
     width: 30%;
     text-align: center;
     padding: 10px;
-    margin-left: 35%;;
+    margin-left: 35%;
     
 }
 .form button.button:hover{
@@ -155,6 +155,7 @@ p, h1{
     padding: 10px;
     border-radius: 5px;
     width: 85%;
+    
 }
 
 .form h1{
