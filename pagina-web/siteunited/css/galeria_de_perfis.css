@@ -11,15 +11,12 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  /* Define a fonte padrão para "Roboto" */
-  font-size: 0.925rem;
-  /* Define o tamanho da fonte do corpo do texto */
+  font-family: "Roboto", sans-serif; /* Define a fonte padrão para "Roboto" */
+  font-size: 0.925rem; /* Define o tamanho da fonte do corpo do texto */
 }
 
 a {
-  text-decoration: none;
-  /* Remove o sublinhado dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 .container {
@@ -575,8 +572,134 @@ a {
     /* Altera a cor de fundo do botão de busca para cinza claro no modo escuro */
   }
 }
-
 /*//////////////////////////////////////////////////////////////////////////*/
+
+/* CSS DA APRTE DO SOBRE A PAGINA */
+
+/* CSS DA SEÇÃO "SOBRE" */
+
+/* Container principal para a seção escura */
+.wrapperContainer-dark {
+  display: flex; /* Define o layout flexível para centralização */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  background-color: #ffffff; /* Define a cor de fundo como branco */
+  padding: 50px 0; /* Adiciona espaçamento superior e inferior */
+}
+
+/* Container específico para o conteúdo da seção "Sobre" */
+.container_sobre {
+  max-width: 1400px; /* Define a largura máxima do container */
+  width: 100%; /* Define a largura do container como 100% */
+  display: flex; /* Define o layout flexível */
+  flex-direction: row; /* Define a direção dos itens como linha (horizontal) */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  background-color: #000000; /* Define a cor de fundo como preto */
+  border-radius: 10px; /* Arredonda os cantos do container */
+  overflow: hidden; /* Oculta conteúdo que ultrapassa os limites do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do container */
+  color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estilo para imagens dentro do container "Sobre" */
+.container_sobre img {
+  width: 50%; /* Define a largura da imagem como metade do container */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Define o display da imagem como bloco */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível */
+  border-right: 5px solid #444; /* Adiciona uma borda direita para separar a imagem e o texto */
+}
+
+/* Estilo para o conteúdo textual dentro do container "Sobre" */
+.Sobre_content {
+  width: 50%; /* Define a largura do conteúdo como metade do container */
+  padding: 20px; /* Adiciona espaçamento interno */
+  background-color: #fcf6f6; /* Define a cor de fundo do conteúdo textual */
+}
+
+/* Estilo para o título da seção "Sobre" */
+.sobre_title {
+  font-size: 2.5em; /* Define o tamanho da fonte */
+  margin: 0 0 20px; /* Remove margem superior e inferior */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #000000; /* Define a cor do texto como preto */
+}
+
+/* Estilo para a classe "row" usada dentro do container "Sobre" */
+.row {
+  margin: 0; /* Remove a margem */
+  padding: 0 20px; /* Adiciona espaçamento interno horizontal */
+}
+
+/* Estilo para parágrafos dentro da classe "row" */
+.row p {
+  font-size: 1em; /* Define o tamanho da fonte */
+  line-height: 1.6; /* Define o espaçamento entre linhas */
+  color: #000000; /* Define a cor do texto como preto */
+  text-align: justify; /* Justifica o texto */
+}
+
+/* CSS DO resto da navibarIcons */
+
+/* Estilos para o menu de navegação */
+.navbar-menu {
+  display: flex; /* Define o contêiner como flexível para organização em coluna */
+  flex-direction: column; /* Organiza os itens do menu verticalmente */
+}
+
+.navbar-nav {
+  list-style-type: none; /* Remove as bolinhas padrão da lista */
+  padding: 0; /* Remove o preenchimento padrão */
+  margin: 0; /* Remove a margem padrão */
+}
+
+.navbar-nav li {
+  margin: 5px 0; /* Adiciona margem entre os itens da lista */
+}
+
+.navbar-dropdown .dropdown {
+  display: none; /* Esconde o dropdown por padrão */
+  position: absolute; /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
+  background-color: #ffffff; /* Define a cor de fundo do dropdown */
+  padding: 10px; /* Adiciona preenchimento ao redor do dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao dropdown para um efeito de elevação */
+}
+
+.navbar-dropdown:hover .dropdown {
+  display: block; /* Mostra o dropdown quando o mouse passa sobre o item do menu */
+}
+
+.dropdown li {
+  margin-bottom: 10px; /* Adiciona margem inferior aos itens do dropdown */
+}
+
+.dropdown li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Define a cor do texto dos links */
+  display: flex; /* Usa Flexbox para organizar o ícone e o texto em linha */
+  align-items: center; /* Alinha o ícone e o texto verticalmente ao centro */
+}
+
+.dropdown li a i {
+  margin-right: 8px; /* Adiciona espaço entre o ícone e o texto */
+  font-size: 1.2em; /* Ajusta o tamanho do ícone */
+}
+
+.separator {
+  font-weight: bold; /* Faz o texto da separação em negrito */
+  margin-top: 10px; /* Adiciona margem superior para espaçamento */
+  padding-top: 10px; /* Adiciona preenchimento superior para espaçamento */
+  border-top: 1px solid #ccc; /* Adiciona uma linha de separação superior */
+}
+
+/* Efeito hover para os links do dropdown */
+.dropdown li a:hover {
+  color: #007bff; /* Altera a cor do texto ao passar o mouse */
+  background-color: #f1f1f1; /* Adiciona uma cor de fundo ao passar o mouse */
+}
+
+
+/* Estilo do banner */
 
 .carousel-item {
   height: 100vh;
@@ -599,86 +722,51 @@ a {
 .photo-section {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
-  justify-content:right;
   gap: 20px;
-  margin: 0 auto;
-
-
+  justify-content: center;
+  padding: 20px;
 }
-
 
 /* Estilo para cada card de foto */
 .photo-card {
-  transform: translateY(-5px);
   position: relative;
   width: 300px;
-  height: 300px;
+  height: 200px;
   overflow: hidden;
-  border-radius: 60px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-
 }
 
 /* Estilo para a foto principal */
-/* Tornar as fotos principais responsivas */
 .main-photo {
   width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Estilo para o mini card do fotógrafo */
-/* Cartão do fotógrafo */
 .photographer-card {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 30px;
-  padding: 10px 20px;
+  border-radius: 50px;
+  padding: 5px 10px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar mais destaque */
-  position: absolute; /* Pode ser trocado dependendo do layout geral */
-  bottom: 10px;
-  left: 10px;
-}
-
-/* Efeito ao passar o mouse */
-.photographer-card:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro no hover */
-  transform: translateY(-5px); /* Leve elevação para dar efeito 3D */
+  transition: background-color 0.3s ease;
 }
 
 /* Estilo para a foto do fotógrafo */
 .photographer-photo {
-  width: 50px; /* Aumenta o tamanho para mais destaque */
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
-  margin-right: 15px; /* Mais espaço entre a foto e o texto */
+  margin-right: 10px;
 }
-
-/* Adiciona responsividade */
-@media (max-width: 768px) {
-  .photographer-card {
-    padding: 8px 15px;
-    border-radius: 30px;
-    bottom: 5px;
-    left: 5px;
-  }
-
-  .photographer-photo {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 
 /* Estilo para o nome do fotógrafo */
 .photographer-name {
