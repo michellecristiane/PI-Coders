@@ -20,7 +20,13 @@ body {
     justify-content: center;
     align-items: center;
     width: 30%;
-    padding-top: 20px;
+    padding: 20px;
+
+    background-color: rgb(140, 149, 153, 0.3);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.5);
+
+
 }
 
 .form1{
@@ -72,7 +78,7 @@ select {
 }
 .btn:hover{
     background-color: #66f;
-
+  
 }
 
 .link {
@@ -96,7 +102,7 @@ p, h1{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Estilo para os elementos dentro das linhas */
@@ -132,7 +138,12 @@ p, h1{
     
 }
 .form button.button:hover{
-    background-color: #66f;
+    /* background-color: #66f; */
+    background-color:rgba(39, 37, 95, 0.7);
+    color: white;
+    margin-bottom: 10px;
+    
+    
 }
 
 .form h1{    
