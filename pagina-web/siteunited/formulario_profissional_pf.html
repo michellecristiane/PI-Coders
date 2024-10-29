@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login/Cadastro_PF</title>
     <link rel="stylesheet" href="css/formulario_profissional_pf.CSS">
+    <script>
+        function buscarEndereco() {
+            const cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+            if (cep.length === 8) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            document.getElementById('logradouro').value = data.logradouro;
+                            document.getElementById('bairro').value = data.bairro;
+                            document.getElementById('cidade').value = data.localidade;
+                            document.getElementById('estado').value = data.uf;
+                        } else {
+                            alert("CEP não encontrado.");
+                        }
+                    })
+                    .catch(error => {
+                        alert("Erro ao buscar o CEP.");
+                    });
+            } else {
+                alert("CEP inválido.");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('cep').addEventListener('blur', buscarEndereco);
+        });
+    </script>
+
 </head>
 
 <body>
@@ -76,94 +106,31 @@
 
                 <div class="row">
                     <div class="cep">
-                        <label for="cep">*CEP</label>
-                        <input class="input_smaller" type="text" name="cep" id="cep" maxlength="9"
-                            placeholder="CEP" size="20" required>
+                        <label for="cep">* CEP</label>
+                        <input class="input_smaller" type="text" name="cep" id="cep" maxlength="9" size="20" required>
                     </div>
                     <div class="estado">
-                        <label class="estado">* Estado</label>
-                        <select class="input_estado" name="estado">
-                            <option value="estado">Selecione seu Estado</option><br>
-                            <option value="ac">Acre</option>
-                            <option value="al">Alagoas</option>
-                            <option value="am">Amazonas</option>
-                            <option value="ap">Amapá</option>
-                            <option value="ba">Bahia</option>
-                            <option value="ce">Ceará</option>
-                            <option value="df">Distrito Federal</option>
-                            <option value="es">Espírito Santo</option>
-                            <option value="go">Goiás</option>
-                            <option value="ma">Maranhão</option>
-                            <option value="mt">Mato Grosso</option>
-                            <option value="ms">Mato Grosso do Sul</option>
-                            <option value="mg">Minas Gerais</option>
-                            <option value="pa">Pará</option>
-                            <option value="pb">Paraíba</option>
-                            <option value="pr">Paraná</option>
-                            <option value="pe">Pernambuco</option>
-                            <option value="pi">Piauí</option>
-                            <option value="rj">Rio de Janeiro</option>
-                            <option value="rn">Rio Grande do Norte</option>
-                            <option value="ro">Rondônia</option>
-                            <option value="rs">Rio Grande do Sul</option>
-                            <option value="rr">Roraima</option>
-                            <option value="sc">Santa Catarina</option>
-                            <option value="se">Sergipe</option>
-                            <option value="sp">São Paulo</option>
-                            <option value="to">Tocantins</option>
-                        </select>
+                        <label for="estado">* Estado</label>
+                        <input class="input_estado" type="text" name="estado" id="estado" size="20" required>
                     </div>
-                    
-
                     <div class="cidade">
-                        <label>* Cidade</label>
-                        <select class="input_cidade" name="cidade">
-                            <option value="city">Rio Branco</option>
-                            <option value="city">Maceió</option>
-                            <option value="city">Manaus</option>
-                            <option value="city">Macapá</option>
-                            <option value="city">Salvador</option>
-                            <option value="city">Fortaleza</option>
-                            <option value="city">Brasília</option>
-                            <option value="city">Vitória</option>
-                            <option value="city">São Luis</option>
-                            <option value="city">Goiânia</option>
-                            <option value="city">Cuiabá</option>
-                            <option value="city">Campo Grande</option>
-                            <option value="city">Belo Horizonte</option>
-                            <option value="city">Belém</option>
-                            <option value="city">João Pessoa</option>
-                            <option value="city">Curitiba</option>
-                            <option value="city">Recife</option>
-                            <option value="city">Terezina</option>
-                            <option value="city">Rio de Janeiro</option>
-                            <option value="city">Natal</option>
-                            <option value="city">Porto Velho</option>
-                            <option value="city">Porto Alegre</option>
-                            <option value="city">Boa Vista</option>
-                            <option value="city">Florianópolis</option>
-                            <option value="city">Aracajú</option>
-                            <option value="city">São Paulo</option>
-                            <option value="city">Palmas</option>
-                        </select>
+                        <label for="cidade">* Cidade</label>
+                        <input class="input_cidade" type="text" name="cidade" id="cidade" size="20" required>
                     </div>
                 </div>
-
-                <div class="row">                    
+    
+                <div class="row">
                     <div class="logradouro">
-                        <label for="logradouro">Logradouro</label>
-                        <input class="input_logradouro" type="text" name="logradouro" id="logradouro"
-                            maxlength="80" placeholder="Rua, Travessa, Passagem..." size="20" required>
-                    </div>
-                    <div class="numero">
-                        <label for="numero">N°</label>
-                        <input class="input_numero" type="text" name="numero" id="numero" maxlength="5"
-                            size="20" required>
+                        <label for="logradouro">* Logradouro</label>
+                        <input class="input_logradouro" type="text" name="logradouro" id="logradouro" maxlength="80" required>
                     </div>
                     <div class="bairro">
-                        <label for="bairro">Bairro</label>
-                        <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40"
-                            size="20" required>
+                        <label for="bairro">* Bairro</label>
+                        <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40" required>
+                    </div>
+                    <div class="numero">
+                        <label for="numero">* N°</label>
+                        <input class="input_numero" type="text" name="numero" id="numero" maxlength="5" size="20" required>
                     </div>
                 </div>
 
