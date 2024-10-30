@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login/Cadastro_PF</title>
+    <link rel="stylesheet" href="css/cadastro_cliente.css.CSS">
+    <script>
+        function buscarEndereco() {
+            const cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+            if (cep.length === 8) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            document.getElementById('logradouro').value = data.logradouro;
+                            document.getElementById('bairro').value = data.bairro;
+                            document.getElementById('cidade').value = data.localidade;
+                            document.getElementById('estado').value = data.uf;
+                        } else {
+                            alert("CEP não encontrado.");
+                        }
+                    })
+                    .catch(error => {
+                        alert("Erro ao buscar o CEP.");
+                    });
+            } else {
+                alert("CEP inválido.");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('cep').addEventListener('blur', buscarEndereco);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" id="register-form">
+            <form class="form" id="form-send">
+                <h1>Cadastre-se</h1>
+
+                <div class="row">
+                    <div class="primary_name">
+                        <label for="nome">* Nome Completo</label>
+                        <input class="input_bigger" type="text" name="nome" id="nome" size="20"
+                            maxlength="80" required>
+                    </div>
+                    <div class="data_nascimento">
+                        <label for="date">* Data de Nascimento</label>
+                        <input class="input_smaller" type="date" name="data_nascimento" id="data_nascimento"
+                            placeholder="Dia/Mês/Ano" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="cpf">
+                        <label for="cpf">* CPF</label>
+                        <input class="input_smaller" type="text" name="cpf" id="cpf" maxlength="14"
+                            size="20" placeholder="Digite seu CPF ou CNPJ" required>
+                    </div>
+                    <div class="genero">
+                        <label for="genero">* Gênero:</label>
+                        <select id="genero" required>
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                    <div class="phone">
+                        <label for="telefone">* Telefone</label>
+                        <input class="input_smaller" type="tel" name="telefone" id="telefone" maxlength="90"
+                            size="20" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="email">
+                        <label for="email">* Email</label>
+                        <input class="input_bigger" type="text" name="email" id="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="60"
+                            required>
+                    </div>
+                    <div class="confirmar_email">
+                        <label for="confirmar_email">* Confirmar E-mail</label>
+                        <input class="input_bigger" type="text" name="confirmar_email" id="confirmar_email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            placeholder="Confirme seu Email" size="20" maxlength="60" required>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="cep">
+                        <label for="cep">* CEP</label>
+                        <input class="input_smaller" type="text" name="cep" id="cep" maxlength="9" size="20" required>
+                    </div>
+                    <div class="estado">
+                        <label for="estado">* Estado</label>
+                        <input class="input_estado" type="text" name="estado" id="estado" size="20" required>
+                    </div>
+                    <div class="cidade">
+                        <label for="cidade">* Cidade</label>
+                        <input class="input_cidade" type="text" name="cidade" id="cidade" size="20" required>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="logradouro">
+                        <label for="logradouro">* Logradouro</label>
+                        <input class="input_logradouro" type="text" name="logradouro" id="logradouro" maxlength="80" required>
+                    </div>
+                    <div class="bairro">
+                        <label for="bairro">* Bairro</label>
+                        <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40" required>
+                    </div>
+                    <div class="numero">
+                        <label for="numero">* N°</label>
+                        <input class="input_numero" type="text" name="numero" id="numero" maxlength="5" size="20" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="senha">
+                        <label for="senha">* Senha</label>
+                        <input class="input_bigger" type="password" name="senha"
+                            placeholder="Escolha uma senha" maxlength="30" required>
+                    </div>
+                    <div class="confirmar_senha">
+                        <label for="confirmar_senha">* Confirmar Senha</label>
+                        <input class="input_bigger" type="password" name="confirmar_senha"
+                            placeholder="Repita sua senha" maxlength="30" required>
+                    </div>
+                </div>
+       
+                <button class="button" type="submit">Enviar</button>
+            </form>
+            <p><a href="login_profissional.html" class="link" id="flip-to-login">Login</a></p>
+        </form>                                    
+    </div>
+</body>
+
+</html>
