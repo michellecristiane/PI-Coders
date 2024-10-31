@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Relatórios - Site de Fotografia</title>
+    <link rel="stylesheet" href="desh-relatorio.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Lib de gráficos -->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="PixelSingular">
+        </div>
+        <h1>Dashboard de Relatórios</h1>
+        <div class="header-right">
+            <span id="current-date"></span>
+            <button onclick="showFilter()">Filtrar</button>
+            <div class="icons">
+                <span class="notification">🔔</span>
+                <span class="user-profile">👤</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="metrics">
+        <div class="card">
+            <h3>Total de Visualizações de Fotos</h3>
+            <p>15,000</p>
+        </div>
+        <div class="card">
+            <h3>Fotos Favoritadas</h3>
+            <p>3,500</p>
+        </div>
+        <div class="card">
+            <h3>Total de Downloads</h3>
+            <p>7,200</p>
+        </div>
+        <div class="card">
+            <h3>Novos Fotógrafos Cadastrados</h3>
+            <p>50</p>
+        </div>
+        <div class="card">
+            <h3>Total de Vendas</h3>
+            <p>R$ 10,500</p>
+        </div>
+    </section>
+
+    <section class="charts">
+        <h2>Gráficos e Tendências</h2>
+        <canvas id="lineChart"></canvas>
+        <canvas id="barChart"></canvas>
+        <canvas id="pieChart"></canvas>
+        <canvas id="scatterChart"></canvas>
+    </section>
+
+    <section class="photographers">
+        <h2>Relatório de Fotógrafos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Fotógrafo</th>
+                    <th>Número de Fotos</th>
+                    <th>Downloads</th>
+                    <th>Avaliação Média</th>
+                    <th>Último Upload</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>150</td>
+                    <td>1,200</td>
+                    <td>4.8</td>
+                    <td>10/10/2024</td>
+                </tr>
+                <!-- Mais linhas -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="popular-photos">
+        <h2>Relatório de Fotos Populares</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome da Foto</th>
+                    <th>Categoria</th>
+                    <th>Visualizações</th>
+                    <th>Favoritadas</th>
+                    <th>Data de Publicação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nascer do Sol</td>
+                    <td>Paisagem</td>
+                    <td>5,000</td>
+                    <td>200</td>
+                    <td>05/05/2024</td>
+                </tr>
+                <!-- Mais linhas -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="heatmap">
+        <h2>Mapa de Calor Geográfico</h2>
+        <div id="map">Mapa será inserido aqui</div>
+    </section>
+
+    <section class="feedback">
+        <h2>Feedback de Usuários</h2>
+        <p>Gráfico de sentimento ou lista de comentários aqui</p>
+    </section>
+
+    <footer>
+        <button onclick="exportReport()">Exportar Relatórios</button>
+    </footer>
+
+    <script>
+        // Exibe a data atual no cabeçalho
+        document.getElementById('current-date').innerHTML = new Date().toLocaleDateString();
+
+        // Função para exibir filtros
+        function showFilter() {
+            alert("Filtros ainda não implementados");
+        }
+
+        // Função para exportar relatório
+        function exportReport() {
+            alert("Função de exportação em desenvolvimento");
+        }
+
+        // Gráfico de Linhas (Visualizações ao longo do tempo)
+        const lineChart = new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
+                datasets: [{
+                    label: 'Visualizações de Fotos',
+                    data: [1200, 1900, 3000, 5000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2
+                }]
+            }
+        });
+
+        // Gráfico de Barras (Fotos carregadas vs baixadas)
+        const barChart = new Chart(document.getElementById('barChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
+                datasets: [{
+                    label: 'Fotos Carregadas',
+                    data: [200, 400, 300, 500],
+                    backgroundColor: 'rgba(153, 102, 255, 0.6)'
+                }, {
+                    label: 'Fotos Baixadas',
+                    data: [150, 250, 400, 450],
+                    backgroundColor: 'rgba(255, 159, 64, 0.6)'
+                }]
+            }
+        });
+
+        // Gráfico de Pizza (Categorias de Fotos mais populares)
+        const pieChart = new Chart(document.getElementById('pieChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Paisagem', 'Retrato', 'Eventos'],
+                datasets: [{
+                    data: [55, 25, 20],
+                    backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
+                }]
+            }
+        });
+
+        // Gráfico de Dispersão (Relação entre visualizações e downloads)
+        const scatterChart = new Chart(document.getElementById('scatterChart'), {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Fotos',
+                    data: [
+                        { x: 1500, y: 300 },
+                        { x: 2000, y: 400 },
+                        { x: 1000, y: 200 }
+                    ],
+                    backgroundColor: 'rgba(255, 99, 132, 1)'
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>

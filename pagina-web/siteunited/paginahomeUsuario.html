@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Fotografia</title>
+    <link rel="stylesheet" href="css/paginahomeUsuario.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PixelSingular</div>
+        <div class="login-icon">
+            <p>Jose Roberto</p>
+            <img src="imagens/avatar.png" alt="Jose" onclick="toggleDropdown()">
+            
+            <div class="dropdown" id="dropdown">
+                <a href="minhas-informacoes.html">Minhas Informações</a>
+                <a href="logout.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Minhas Informações</h1>
+        <section class="historico-atividades">
+            <h2>Histórico de Atividades</h2>
+            <ul>
+              
+            </ul>
+        </section>
+        <button onclick="window.location.href='editar-cadastro.html'">Editar Cadastro</button>
+    </main>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

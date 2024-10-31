@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #66f;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    /* Coloca o menu no topo da página */
+    left: 0;
+    /* Alinha o menu à esquerda */
+    width: 100%;
+    /* Largura total */
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.logo h3 {
+    cursor: pointer;
+}
+
+.logo h3:hover {
+    opacity: 0.7;
+}
+
+.icons-header {
+    display: flex;
+    align-items: center;
+}
+
+.icons-header i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+}
+
+.icons-header i:hover {
+    opacity: 0.7;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+main {
+    margin-top: 20px;
+    /* Espaço para o header */
+    margin-right: 30px;
+    /* Espaço para a sidebar */
+    margin-left: 100px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+
+    display: flex;
+    /* Ativa o flexbox */
+    flex-direction: column;
+    /* Coloca os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.sidebar a:hover {
+    opacity: 0.7;
+}
+
+h1{
+    color: white;
+}
+
+.sidebar .sidebar-active {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo do conteúdo principal */
+.main-content {
+    display: flex; /* Permite que as seções fiquem lado a lado */
+    flex: 1; /* Faz com que o main cresça para ocupar o espaço restante */
+}
+
+/* Estilos para cada painel */
+.painel {
+    flex: 1; /* Cada painel ocupa uma parte igual do espaço disponível */
+    margin: 10px; /* Espaçamento entre os painéis */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
+}
+
+/* Cores diferentes para cada painel */
+#gerenciar-perfis {
+    background-color: #147bd5; /* Azul claro */
+}
+
+#gerenciar-fotografias {
+    background-color: #f0ba0a; /* Amarelo claro */
+}
+
+#gerenciar-agendamentos {
+    background-color: #06e519; /* Verde claro */
+}
+
+#gerenciar-servicos {
+    background-color: #e90d0d; /* Laranja claro */
+}
+
+/* Estilos do footer */
+
+
+/* Adicionando um estilo de tela cheia responsivo */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Altera o layout para coluna em telas menores */
+    }
+}
+
+
+footer {
+    margin-top: 100%;
+    background-color: #333; /* Cor de fundo do footer */
+    color: white; /* Cor do texto do footer */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+    position: static; /* Faz com que o footer seja estático */
+    width: 100%; /* O footer ocupa toda a largura */
+}

@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #66f;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.logo h3 {
+    cursor: pointer;
+}
+
+.logo h3:hover {
+    opacity: 0.7;
+}
+
+.icons-header {
+    display: flex;
+    align-items: center;
+}
+
+.icons-header i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+}
+
+.icons-header i:hover {
+    opacity: 0.7;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.sidebar a:hover {
+    opacity: 0.7;
+}
+
+.sidebar .sidebar-active {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+hr {
+    border: 1px solid #444;
+    width: 100%;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-secao h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    font-size: 14px;
+    color: #666;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 5px 0;
+}
+
+.box-info {
+    margin-top: 30px;
+}
+
+.overview, .atalhos, .estatisticas {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.cards, .atalhos-container, .stats {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card, .atalho, .stat {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3, .atalho h3, .stat h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p, .atalho p, .stat p {
+    font-size: 16px;
+}
+
+.atalho {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.atalho:hover {
+    transform: scale(1.05);
+}
+
+.stats .stat {
+    flex: 1;
+    padding: 15px;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .cards, .atalhos-container, .stats {
+        flex-direction: column;
+    }
+
+    .card, .atalho, .stat {
+        margin-bottom: 15px;
+    }
+}

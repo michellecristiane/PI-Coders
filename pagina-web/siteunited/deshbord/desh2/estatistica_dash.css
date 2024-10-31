@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #66f;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    /* Coloca o menu no topo da página */
+    left: 0;
+    /* Alinha o menu à esquerda */
+    width: 100%;
+    /* Largura total */
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.logo h3 {
+    cursor: pointer;
+}
+
+.logo h3:hover {
+    opacity: 0.7;
+}
+
+.icons-header {
+    display: flex;
+    align-items: center;
+}
+
+.icons-header i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+}
+
+.icons-header i:hover {
+    opacity: 0.7;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+main {
+    margin-top: 20px;
+    /* Espaço para o header */
+    margin-right: 30px;
+    /* Espaço para a sidebar */
+    margin-left: 100px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+
+    display: flex;
+    /* Ativa o flexbox */
+    flex-direction: column;
+    /* Coloca os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.sidebar a:hover {
+    opacity: 0.7;
+}
+
+.sidebar .sidebar-active {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dashboard-section {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
+}
+
+.dashboard-section tr {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+main {
+    padding: 0;
+    
+    margin: 0;
+    margin-left: 220px;
+    /* Deixa espaço para o menu na esquerda */
+    display: flex;
+    /* Define o container como flex */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a linh*/
+    margin-top: 60px;
+}
+
+section {
+    flex: 1;
+    /* Faz com que cada card ocupe espaço igual */
+    margin: 10px;
+    /* Espaço entre os cards */
+    min-width: 250px;
+    /* Largura mínima para os cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra para os cards */
+    padding: 15px;
+    /* Espaçamento interno dos cards */
+    background-color: #fff;
+    /* Cor de fundo dos cards */
+
+
+}
+
+#clientes {
+    color: #fff;
+}
+
+.cliente-metrica {
+    color: black;
+}
+
+/* .dashboard-section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.747);
+}
+
+.dashboard-section h2 {
+    margin-bottom: 20px;
+} */
+
+canvas {
+    max-width: 100%;
+}
+
+.clientes-metricas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cliente-metrica {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 20px;
+}
+
+.cliente-metrica:last-child {
+    margin-right: 0;
+}
+
+
+/* resto de codigo */
+
+.content {
+   
+    padding: 20px;
+    
+}
+
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-secao h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.content {
+  
+    padding: 20px;
+    margin-top: 80px;
+    width: calc(100% - 130px);
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #413e3e;
+}
+
+.card {
+    background-color: rgb(49, 48, 48);
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f50505;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.card {
+    flex: 1 1 calc(20% - 20px);
+    background: #ecf0f1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.popular-photos, .photographers {
+    margin: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.445);
+    
+}
+
+.heatmap {
+    margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Ajuste conforme necessário */
+}
+
+.feedback {
+    margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}

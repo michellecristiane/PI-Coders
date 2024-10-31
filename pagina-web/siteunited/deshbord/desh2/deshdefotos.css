@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #66f;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    /* Coloca o menu no topo da página */
+    left: 0;
+    /* Alinha o menu à esquerda */
+    width: 100%;
+    /* Largura total */
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.logo h3 {
+    cursor: pointer;
+}
+
+.logo h3:hover {
+    opacity: 0.7;
+}
+
+.icons-header {
+    display: flex;
+    align-items: center;
+}
+
+.icons-header i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+}
+
+.icons-header i:hover {
+    opacity: 0.7;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.sidebar a:hover {
+    opacity: 0.7;
+}
+
+.sidebar .sidebar-active {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main {
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.dashboard-section tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#servicos {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+
+}
+
+.servicos-existentes {
+
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    gap: 5px;
+
+}
+
+.dashboard-section h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    justify-content: space-around;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+#agendamentos {
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 30px;
+}
+
+
+button {
+    padding: 15px 25px;
+    background-color: #f10e0e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.fotos-existentes {
+    margin-top: 20px;
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.foto img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+/* Layout principal ajustado */
+main {
+    margin-top: 100px;
+    /* Espaço para o header */
+    margin-left: 20px;
+    /* Espaço para a sidebar */
+    padding: 20px;
+    /* flex-grow: 1; */
+    background-color: #f4f4f4;
+    justify-content: space-between;
+    display: flex;
+    /* Ativa o flexbox */
+    flex-direction: column;
+    /* Coloca os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+/* Seções */
+.dashboard-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
+    width: 60%; /* Defina uma largura para centralizar */
+
+}
+
+.linha {
+    border: 1px solid rgb(253, 249, 249);
+    /* apenas para visualização */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+
+}
+
+.tabela {
+    width: 100%;
+}
+
+.botao{
+
+    padding: 5px;
+    margin: 5px;
+}
+
+/* O resto do CSs */
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    /* Empurra o footer para o final */
+}
