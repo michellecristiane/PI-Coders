@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login/Cadastro</title>
-    <link rel="stylesheet" href="css/login_profissional.CSS">
+    <link rel="stylesheet" href="css/login_profissional.css"> <!-- Corrigido o caminho do CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
 </head>
 
 <body>
@@ -18,13 +17,13 @@
                 <div class="card-front">
                     <div class="form1">
                         <h1>Login</h1>
-                        <div class="form-group">
-                            <label for="email-login">Email:</label>
-                            <input type="email" id="email-login" required>
+                        <div class="space-y-2 relative">
+                            <label class="text-sm leading-[24px] font-medium text-[#798AA3]" for="email">Email</label>
+                            <input class="flex bg-white h-10 text-base file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-300 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:placeholder:text-slate-400 dark:focus-visible:ring-slate-300 px-3 py-2 w-full border border-[#DDE7F0] rounded-md text-default" maxlength="256" placeholder="Seu melhor email" autocapitalize="off" id="email" type="text" name="email">
                         </div>
-                        <div class="form-group">
-                            <label for="senha-login">Senha:</label>
-                            <input type="password" id="senha-login" required>
+                        <div class="space-y-2 relative">
+                            <label class="text-sm leading-[24px] font-medium text-[#798AA3]" for="senha">Senha</label>
+                            <input class="flex bg-white h-10 text-base file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-300 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:placeholder:text-slate-400 dark:focus-visible:ring-slate-300 px-3 py-2 w-full border border-[#DDE7F0] rounded-md text-default" maxlength="256" placeholder="******" autocapitalize="off" id="senha" type="password" name="senha">
                         </div>
                         <button class="btn" id="btn-login">Entrar</button>
                         <div class="dropdown">
@@ -32,7 +31,9 @@
                         </div>
                     </div>
                 </div>
-               
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
