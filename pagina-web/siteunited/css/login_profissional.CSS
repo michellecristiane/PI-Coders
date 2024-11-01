@@ -27,6 +27,22 @@ body {
     color: rgb(13, 69, 250);
   }
 
+  #esqueci_minha_senha {
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+  }
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
   .dropdown-options {
     display: none;
