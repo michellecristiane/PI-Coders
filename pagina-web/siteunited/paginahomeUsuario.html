@@ -11,7 +11,7 @@
     <header>
         <div class="logo">PixelSingular</div>
         <div class="login-icon">
-            <p>Jose Roberto</p>
+            <p>Joao Silva</p>
             <img src="imagens/avatar.png" alt="Jose" onclick="toggleDropdown()">
             
             <div class="dropdown" id="dropdown">
@@ -23,14 +23,97 @@
 
     <main>
         <h1>Minhas Informações</h1>
-        <section class="historico-atividades">
-            <h2>Histórico de Atividades</h2>
-            <ul>
-              
-            </ul>
+        <section class="metrics">
+            <div class="card">
+               <h1>85</h1>
+                <p>Total de Fotos Baixadas</p>
+            </div>
+           
         </section>
-        <button onclick="window.location.href='editar-cadastro.html'">Editar Cadastro</button>
+
+
+
+
     </main>
+
+    <section class="Formulario">
+
+        <form>
+            
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" value="João da Silva" readonly>
+            </div>
+    
+            <div class="form-group">
+                <label for="data_nascimento">Nascimento:</label>
+                <input type="data" id="Nascimento" value="14/04/200" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input class="cpf" id="cpf" value="199.000.200-00" maxlength="14"
+                    size="20" placeholder="Digite seu CPF ou CNPJ" required>
+            </div>
+
+            <div class="form-group">
+                
+                <label for="genero">Gênero:</label>
+                <input type="genero" id="genero" value="Masculino" readonly>
+            </div>
+
+    
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" value="(11) 98765-4321" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email"  id="email" value="Joao Silva@html" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="cep">Cep</label>
+                <input class="cep"  id="email" value="5843-576" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input  id="estado"  value="Pará" size="20" readonly>
+            </div>
+            <div class="cidade">
+                <label for="cidade">Cidade</label>
+                <input class="cidade" type="text" value="cidade" id="cidade" size="20" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="logradouro">Logradouro</label>
+                <input class="input_logradouro" type="text" name="logradouro" id="logradouro" value="Apartamento" maxlength="80" readonly>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input class="input_bairro" type="text" name="bairro" id="bairro" value="Marambaia" maxlength="40"readonly>
+            </div>
+            <div class="form-group">
+                <label for="numero">N°</label>
+                <input class="input_numero" type="text" name="numero" id="numero" value="104" maxlength="5" size="20" readonly>
+            </div>
+
+
+
+            
+    
+           
+        </form>
+
+
+        <button onclick="window.location.href='editar-cadastro.html'"  class="botao">Editar Cadastro</button>
+
+
+
+    </section>
+   
 
     <script>
         function toggleDropdown() {

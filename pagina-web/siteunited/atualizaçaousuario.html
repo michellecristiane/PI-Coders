@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Fotografia</title>
+    <link rel="stylesheet" href="css/paginahomeUsuario.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">PixelSingular</div>
+        <div class="login-icon">
+            <p>Joao Silva</p>
+            <img src="imagens/avatar.png" alt="Jose" onclick="toggleDropdown()">
+
+            <div class="dropdown" id="dropdown">
+                <a href="minhas-informacoes.html">Minhas Informações</a>
+                <a href="logout.html">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Minhas Informações</h1>
+        <section class="metrics">
+            <div class="card">
+                <h1>85</h1>
+                <p>Total de Fotos Baixadas</p>
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <section class="Formulario">
+
+
+
+
+
+
+
+
+        <div class="container">
+            <form class="form" id="register-form">
+                <form class="form" id="form-send">
+                    <h1>Atualização de cadastro</h1>
+    
+                    <div class="row">
+                        <div class="primary_name">
+                            <label for="nome"> Nome Completo</label>
+                            <input class="input_bigger" type="text" name="nome" id="nome" size="20"
+                                maxlength="80" required>
+                        </div>
+                        <div class="data_nascimento">
+                            <label for="date"> Data de Nascimento</label>
+                            <input class="input_smaller" type="date" name="data_nascimento" id="data_nascimento"
+                                placeholder="Dia/Mês/Ano" required>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="cpf">
+                            <label for="cpf"> CPF</label>
+                            <input class="input_smaller" type="text" name="cpf" id="cpf" maxlength="14"
+                                size="20" placeholder="Digite seu CPF ou CNPJ" required>
+                        </div>
+                        <div class="genero">
+                            <label for="genero"> Gênero</label>
+                            <select id="genero" required>
+                                <option value="">Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        
+                        <div class="phone">
+                            <label for="telefone"> Telefone</label>
+                            <input class="input_smaller" type="tel" name="telefone" id="telefone" maxlength="90"
+                                size="20" required>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="email">
+                            <label for="email"> Email</label>
+                            <input class="input_bigger" type="text" name="email" id="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="20" maxlength="60"
+                                required>
+                        </div>
+                        <div class="confirmar_email">
+                            <label for="confirmar_email"> Confirmar E-mail</label>
+                            <input class="input_bigger" type="text" name="confirmar_email" id="confirmar_email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                placeholder="Confirme seu Email" size="20" maxlength="60" required>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="row">
+                        <div class="cep">
+                            <label for="cep"> CEP</label>
+                            <input class="input_smaller" type="text" name="cep" id="cep" maxlength="9" size="20" required>
+                        </div>
+                        <div class="estado">
+                            <label for="estado"> Estado</label>
+                            <input class="input_estado" type="text" name="estado" id="estado" size="20" required>
+                        </div>
+                        <div class="cidade">
+                            <label for="cidade"> Cidade</label>
+                            <input class="input_cidade" type="text" name="cidade" id="cidade" size="20" required>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="logradouro">
+                            <label for="logradouro"> Logradouro</label>
+                            <input class="input_logradouro" type="text" name="logradouro" id="logradouro" maxlength="80" required>
+                        </div>
+                        <div class="bairro">
+                            <label for="bairro"> Bairro</label>
+                            <input class="input_bairro" type="text" name="bairro" id="bairro" maxlength="40" required>
+                        </div>
+                        <div class="numero">
+                            <label for="numero"> N°</label>
+                            <input class="input_numero" type="text" name="numero" id="numero" maxlength="5" size="20" required>
+                        </div>
+                    </div>
+    
+                
+           
+                   
+                </form>
+             
+            </form>    
+
+        <button type="button" onclick="salvarInformacoes()">Salvar</button>
+      
+
+        <script>
+            function salvarInformacoes() {
+                const info = document.getElementById('info').value;
+                if (info) {
+                    // Aqui você pode salvar as informações em um banco de dados ou local storage
+                    console.log('Informações salvas:', info);
+                    alert('Informações salvas com sucesso!');
+                } else {
+                    alert('Por favor, preencha as informações antes de salvar.');
+                }
+            }
+        </script>
+
+
+
+    </section>
+
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>

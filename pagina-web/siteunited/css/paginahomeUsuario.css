@@ -52,8 +52,42 @@ header {
 }
 
 main {
+    margin-top: 20px;
+    /* Espaço para o header */
+    margin-right: 30px;
+    /* Espaço para a sidebar */
+    margin-left: 100px;
     padding: 20px;
-    border: #007BFF;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+
+    display: flex;
+    /* Ativa o flexbox */
+    flex-direction: column;
+    /* Coloca os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #66f;
+}
+
+.card {
+    background-color: rgb(140, 240, 140);
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+h1{
+    font-size: 40px;
 }
 
 p{
@@ -69,14 +103,113 @@ img{
     margin-bottom: 20px;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.Formulario {
+    padding-top: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="data"],
+input[class*="cpf"],
+input[class*="cep"],
+input[id="estado"],
+input[id="cidade"],
+input[id="logradouro"],
+input[id="bairro"],
+input[id="numero"],
+input[id="genero"]  {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #666;
+    transition: border-color 0.3s;
+}
+
+input[type="text"][readonly],
+input[type="tel"][readonly],
+input[type="email"][readonly],
+input[type="data"][readonly],
+input[class*="cpf"][readonly],
+input[class*="cep"][readonly],
+input[id="estado"][readonly],
+input[id="cidade"][readonly],
+input[id="logradouro"][readonly],
+input[id="bairro"][readonly],
+input[id="numero"][readonly] {
+    background-color: #e9ecef;
+    color: #999;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="data"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input:disabled {
+    background-color: #e9ecef;
+}
+
+@media (max-width: 600px) {
+    .Formulario {
+        padding: 15px;
+        width: 100%;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
+
+
+.Formulario button{
+    text-align: center;
+}
+
 button {
     padding: 10px 15px;
-    background-color: #007BFF;
+    background-color: #66f;
     color: white;
     border: none;
     cursor: pointer;
+    text-align: center;
+    justify-content: center;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(122, 122, 250);
 }
