@@ -1,8 +1,11 @@
-html, body {
-    height: 100%;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
+    min-height: 100vh;
     background: linear-gradient(90deg, #1d2b64, #f8cdda);
     background-size: cover;
   
@@ -24,6 +27,21 @@ body {
     color: rgb(13, 69, 250);
   }
 
+  #esqueci_minha_senha {
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+  }
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
   .dropdown-options {
     display: none;
