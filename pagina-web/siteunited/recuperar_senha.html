@@ -10,19 +10,25 @@
 </head>
 
 <body>
-    <form action="salvar dados.php" method="post">
+    <form action="salvar_dados.php" method="post" id="recuperarForm">
         <h2>Esqueceu sua Senha?</h2>
 
         <label for="E-mail">Qual seu e-mail de cadastro?</label>
-        </br>
+        <br>
         <input type="text" id="E-mail" name="E-mail" placeholder="Digite seu e-mail cadastrado">
-        </br>
-        <button type submit="Enviar">Enviar</button>
+        <br>
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
         
     </form>
 
-
-
+    <script>
+        function enviarFormulario() {
+            // Envia o formulário
+            document.getElementById("recuperarForm").submit();
+            // Redireciona para a página de confirmação
+            window.location.href = 'confirmar_recuperar_senha.html';
+        }
+    </script>
 </body>
 
 </html>
