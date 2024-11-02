@@ -1,24 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/RecuperarSenha2.css">
+    <link rel="stylesheet" href="css/criar_nova_senha.css">
     <title>Criar Nova Senha</title>
 </head>
 <body>
-    <form action="salvar dados.php" method="post">
-        <h2>Criar uma nova senha?</h2>
-        <label for="Nova Senha">Senha:</label> <br />
-        <input class="campo_senha" type="password" id="senha" name="Senha" placeholder="Digite uma nova senha"><br />
-    
-        <label for="Confirmar Senha">Confirmar Senha:</label> <br/>
-        <input class="campo_senha" type="password" id="Confirmar Senha" name="Confirmar Senha" placeholder="Confirme a nova senha"><br />
+    <form id="senhaForm" action="salvar_dados.php" method="post" onsubmit="return validarSenhas()">
+        <h2>Criar uma nova senha</h2>
+        
+        <label for="senha">Senha:</label> <br />
+        <input class="campo_senha" type="password" id="senha" name="Senha" placeholder="Digite uma nova senha" required>
+        <input type="checkbox" onclick="toggleSenha('senha')"> Mostrar senha <br />
 
-        <!-- <p class="check"><input type="checkbox" id="Mensagem" Mensagem="checkbox" >
-        <label for="checkbox">É necessário que todos os dispositivos acessem sua conta com a nova senha?</p>  -->
+        <label for="confirmarSenha">Confirmar Senha:</label> <br />
+        <input class="campo_senha" type="password" id="confirmarSenha" name="ConfirmarSenha" placeholder="Confirme a nova senha" required>
+        <input type="checkbox" onclick="toggleSenha('confirmarSenha')"> Mostrar senha <br />
+        
+        <button type="submit">Redefinir Senha</button>
+    </form>
 
-    <button type submit="Redefinir Senha">Redefinir Senha</button>
+    <script>
+        // Função para alternar a visibilidade da senha
+        function toggleSenha(campoId) {
+            const campo = document.getElementById(campoId);
+            campo.type = campo.type === "password" ? "text" : "password";
+        }
+
+        // Função para validar as senhas e redirecionar após sucesso
+        function validarSenhas() {
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+            if (!senha || !confirmarSenha) {
+                alert('Por favor, preencha ambos os campos de senha.');
+                return false;
+            }
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem. Tente novamente.');
+                return false;
+            }
+            
+            // Redireciona para a página de login após redefinir a senha
+            alert('Senha redefinida com sucesso!');
+            window.location.href = 'login_profissional.html';
+            return false;
+        }
+    </script>
 </body>
 </html>

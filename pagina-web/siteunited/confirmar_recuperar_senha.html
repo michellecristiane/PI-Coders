@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +9,43 @@
 </head>
 
 <body>
-    <form action="salvar_dados.php" method="post">
+    <form onsubmit="return validateDigits()">
         <h2>Acabamos de enviar um código para seu e-mail</h2>
         <p>Insira no campo abaixo o código de verificação de 5 dígitos enviado para seu e-mail.</p>
-        <p><input type="text"> <input type="text"> <input type="text"> <input type="text"> <input type="text"></p>      
+        <p>
+            <input type="text" maxlength="1" id="digit1" oninput="moveFocus(1)">
+            <input type="text" maxlength="1" id="digit2" oninput="moveFocus(2)">
+            <input type="text" maxlength="1" id="digit3" oninput="moveFocus(3)">
+            <input type="text" maxlength="1" id="digit4" oninput="moveFocus(4)">
+            <input type="text" maxlength="1" id="digit5" oninput="moveFocus(5)">
+        </p>      
         <label for="button">Reenviar código</label>
         <br>
-        <button type="button" onclick="window.location.href='CriarNovaSenha.html'">Enviar</button>
+        <button type="submit">Enviar</button>
     </form>
-    
 
+    <script>
+        function moveFocus(current) {
+            const currentInput = document.getElementById(`digit${current}`);
+            if (currentInput.value.length === 1 && current < 5) {
+                document.getElementById(`digit${current + 1}`).focus();
+            } else if (currentInput.value.length === 0 && current > 1) {
+                document.getElementById(`digit${current - 1}`).focus();
+            }
+        }
 
-
+        function validateDigits() {
+            for (let i = 1; i <= 5; i++) {
+                const digit = document.getElementById(`digit${i}`);
+                if (!digit.value) {
+                    alert("Por favor, insira todos os 5 dígitos do código.");
+                    digit.focus();
+                    return false;
+                }
+            }
+            window.location.href = 'CriarNovaSenha.html';
+            return false; // Retorna falso para evitar o envio padrão
+        }
+    </script>
 </body>
-
 </html>

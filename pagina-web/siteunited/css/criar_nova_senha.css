@@ -1,0 +1,96 @@
+/* RecuperarSenha2.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#senhaForm {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#senhaForm h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+label {
+    font-weight: bold;
+    color: #333333;
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.campo_senha {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+.campo_senha:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+input[type="checkbox"] {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    #senhaForm {
+        padding: 15px;
+    }
+    
+    #senhaForm h2 {
+        font-size: 20px;
+    }
+
+    .campo_senha {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

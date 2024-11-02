@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,9 @@
     <form action="salvar_dados.php" method="post" id="recuperarForm">
         <h2>Esqueceu sua Senha?</h2>
 
-        <label for="E-mail">Qual seu e-mail de cadastro?</label>
+        <label for="email">Qual seu e-mail de cadastro?</label>
         <br>
-        <input type="text" id="E-mail" name="E-mail" placeholder="Digite seu e-mail cadastrado">
+        <input type="text" id="email" name="email" placeholder="Digite seu e-mail cadastrado">
         <br>
         <button type="button" onclick="enviarFormulario()">Enviar</button>
         
@@ -23,9 +23,14 @@
 
     <script>
         function enviarFormulario() {
-            // Envia o formulário
+            // Verifica se o campo de e-mail está vazio
+            var email = document.getElementById("email").value;
+            if (email === "") {
+                alert("Por favor, insira o seu e-mail.");
+                return;
+            }
+            // Se o e-mail foi inserido, envia o formulário e redireciona
             document.getElementById("recuperarForm").submit();
-            // Redireciona para a página de confirmação
             window.location.href = 'confirmar_recuperar_senha.html';
         }
     </script>
