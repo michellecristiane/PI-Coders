@@ -231,9 +231,9 @@ a {
 }
 
 .carousel-inner {
-  height: 500px;  /* Altura do carrossel */
-  width: 300px;   /* Largura do carrossel */
-  overflow: hidden; /* Esconde qualquer parte da imagem que exceda o contêiner */
+  height: 500px;     /* Altura do carrossel */
+  width: 300px;     /* Largura do carrossel */
+  overflow: hidden;   /* Esconde qualquer parte da imagem que exceda o contêiner */
 }
 
 .carousel-inner img {
@@ -321,6 +321,44 @@ footer {
     flex: 0 1 30%; /* Ajuste a largura das fotos para ocupar 30% do contêiner */
     max-width: 300px; /* Largura máxima para manter a consistência */
   }
+
+  .img-hover-zoom{
+    height: auto;
+    overflow: hidden;
+    border: 5px solid #ffff;
+    /* filter: grayscale(1) brightness(0.5); */
+}
+
+
+.imagem:hover p{
+  transform: translateY(0); 
+  opacity: .8;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 100px 100px 100px;
+}
+.column{
+  flex: 25%;
+  max-width: 25%;
+}
+.img-hover-zoom img{
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition:  transform 1s ease;
+    transform: scale(1.5);   
+    filter: grayscale(0) brightness(1);
+}
+.img-hover-zoom:hover img{
+    transform: scale(1);
+    filter: grayscale(0) brightness(1);
+}
+
+  
   
   .photo-card {
     border: 2px solid #ccc;
@@ -329,13 +367,15 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
   }
+
+  
   
   .photo-card:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
   }
   
   .main-photo {
-    width: 100%; /* Faz a imagem ocupar toda a largura do cartão */
+    width: 20%; /* Faz a imagem ocupar toda a largura do cartão */
     height: auto; /* Mantém a proporção da imagem */
   }
   
