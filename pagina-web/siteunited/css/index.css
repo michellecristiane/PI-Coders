@@ -556,6 +556,66 @@ body {
 
 /*//////////////////////////////////////////////////////////*/
 
+/* Estilos gerais para o carrossel */
+#carouselExample {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;  /* Limita o tamanho máximo */
+  margin: auto; /* Centraliza o carrossel */
+  overflow: hidden; /* Garante que as imagens que saem do carrossel sejam ocultadas */
+}
+
+/* Estilos para as imagens dentro do carrossel */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Assegura que as imagens cubram toda a área sem distorcer */
+}
+
+/* Estilos para os botões de navegação (anterior e próximo) */
+.carousel-control-prev, 
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  z-index: 5;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* Estilos para os ícones das setas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white;
+}
+
+/* Estilos adicionais para garantir boa visualização nos dispositivos móveis */
+@media (max-width: 768px) {
+  #carouselExample {
+      max-width: 100%;
+  }
+
+  .carousel-control-prev, 
+  .carousel-control-next {
+      padding: 8px;
+  }
+}
 
 /* CSS DAS CATEGORIAS */
 
