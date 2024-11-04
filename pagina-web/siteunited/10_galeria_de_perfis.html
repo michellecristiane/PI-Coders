@@ -16,7 +16,8 @@
 
     <!-- Menu -->
 
-    <div class="container navbar">
+
+    <div class="container navbar" id="navbar-header">
 
         <div class="navbar-header">
             <button class="navbar-toggler" data-toggle="open-navbar1">
@@ -24,14 +25,14 @@
                 <span></span>
                 <span></span>
             </button>
-            <a href="1_index.html">
+            <a href="#">
                 <h4>Pixel<span>Singular</span></h4>
             </a>
         </div>
 
         <div class="navbar-menu" id="open-navbar1">
             <ul class="navbar-nav">
-                <li class="active"><a href="1_index.html">Home</a></li>
+                <li class="active"><a href="#navbar-header">Home</a></li>
                 <li class="navbar-dropdown">
                     <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
                         Categorias <i class="fa fa-angle-down"></i>
@@ -47,32 +48,33 @@
                         <li><a href="11_Gastronomia.html"><i class="bi bi-bullhorn"></i> Gastronomia</a></li>
                         <li><a href="_12_Publicidade.html"><i class="bi bi-bullhorn"></i> Publicidade</a></li>
                         <li><a href="5_port_batizado.html"><i class="bi bi-water"></i> Batizado</a></li>
-
                     </ul>
                 </li>
-                <li><a href="2_fotosemgeral.htm">Galeria</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="#footer-social">Contato</a></li>
+
+                <li><a href="10_galeria_de_perfis.html">Galeria</a></li>
+                <li><a href="#Sobre">Sobre</a></li>
+                <li><a href="#Contato">Contato</a></li>
                 <li>
-                    <a href="formulario_profissional_pf.html"><i class="bi bi-camera"></i> Fotógrafo</a>
-                    <a href="FORMULARIOCLIENTE.HTML"><i class="bi bi-person"></i> Cliente</a>
+                    <a href="login_profissional.html"><i class="bi bi-camera"></i> Fotógrafo</a>
+                    <a href="login_cliente.html"><i class="bi bi-person"></i> Cliente</a>
                 </li>
             </ul>
         </div>
-        <div class="bar">
-            <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
-            <button class="search-btn" type="submit">
-                <span>Search</span>
-            </button>
+        <div class="search-box">
+            <input class="search-txt" id="search-txt" type="text" placeholder="Buscar...">
+            <div class="search-btn">
+                🔍 <!-- ícone de busca, pode ser substituído por um ícone SVG -->
+            </div>
         </div>
     </div>
+
 
 
 
     <h1 style="font-size: 70px; text-align: center; padding: 30px; color: #66f;">Galeria de perfis</h1>
 
 
-    
+
 
 
     <!-- Bootstrap JS -->
@@ -94,7 +96,7 @@
 
         setInterval(moveCarrousel, 3000);
     </script>
-    
+
 
     <!-- Photo Grid -->
     <div class="row">
@@ -155,9 +157,9 @@
 
     </div>
 
-    
+
     <!--Cards -->
-    
+
     <!-- <div class="photo-section">
         <div class="photo-card">
             <img src="imagens/fotografo3.jpg" alt="Main Photo" class="main-photo">
@@ -287,29 +289,29 @@
 
         </div>
 
-    <script>
-        ////////////////// Jva do caroucel carousel//////////////
-        let slideIndex = 0;
+        <script>
+            ////////////////// Jva do caroucel carousel//////////////
+            let slideIndex = 0;
 
-        function showSlides() {
-            const slides = document.querySelector('.slides');
-            const totalSlides = slides.children.length;
-            if (slideIndex >= totalSlides) slideIndex = 0;
-            if (slideIndex < 0) slideIndex = totalSlides - 1;
-            slides.style.transform = `translateX(${-slideIndex * 100}%)`;
-        }
+            function showSlides() {
+                const slides = document.querySelector('.slides');
+                const totalSlides = slides.children.length;
+                if (slideIndex >= totalSlides) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = totalSlides - 1;
+                slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+            }
 
-        function moveSlide(n) {
-            slideIndex += n;
-            showSlides();
-        }
+            function moveSlide(n) {
+                slideIndex += n;
+                showSlides();
+            }
 
-        showSlides(); // Initialize the carousel
+            showSlides(); // Initialize the carousel
 
-    </script>
+        </script>
 
-    <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
-    <script src="pastadojava/index.js"></script>
+        <!-- ////////////////////////NavbarJS//////////////////////////////////////////  -->
+        <script src="pastadojava/index.js"></script>
 </body>
 
 </html>

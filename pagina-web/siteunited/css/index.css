@@ -28,7 +28,7 @@ body {
   padding: 1rem 1.15rem;
   /* Adiciona padding ao redor da navbar */
   border-bottom: 1px solid #eceef3;
-  
+
 }
 
 @media (min-width: 576px) {
@@ -81,7 +81,7 @@ body {
   }
 }
 
-    /* faz parte da responssividade */
+/* faz parte da responssividade */
 .navbar .navbar-header .navbar-toggler {
   cursor: pointer;
   /* Define o cursor como pointer (mãozinha) para indicar que é clicável */
@@ -111,7 +111,7 @@ body {
   /* Exibe como um bloco */
 }
 
- 
+
 
 .navbar .navbar-header>a {
   font-weight: 500;
@@ -124,7 +124,7 @@ body {
 .navbar .navbar-menu {
   display: flex;
   /* Define um layout flexível */
-  align-items:end;
+  align-items: end;
   /* Alinha os itens verticalmente ao centro */
   flex-basis: auto;
   /* Define a base flexível automaticamente */
@@ -306,175 +306,235 @@ body {
 
 /* Container principal para a seção escura */
 .wrapperContainer-dark {
-  display: flex; /* Define o layout flexível para centralização */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  background-color: #ffffff; /* Define a cor de fundo como branco */
-  padding: 50px 0; /* Adiciona espaçamento superior e inferior */
+  display: flex;
+  /* Define o layout flexível para centralização */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
+  background-color: #ffffff;
+  /* Define a cor de fundo como branco */
+  padding: 50px 0;
+  /* Adiciona espaçamento superior e inferior */
 }
 
 /* Container específico para o conteúdo da seção "Sobre" */
 .container_sobre {
-  max-width: 1400px; /* Define a largura máxima do container */
-  width: 100%; /* Define a largura do container como 100% */
-  display: flex; /* Define o layout flexível */
-  flex-direction: row; /* Define a direção dos itens como linha (horizontal) */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  background-color: #000000; /* Define a cor de fundo como preto */
-  border-radius: 10px; /* Arredonda os cantos do container */
-  overflow: hidden; /* Oculta conteúdo que ultrapassa os limites do container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do container */
-  color: #fff; /* Define a cor do texto como branco */
+  max-width: 1400px;
+  /* Define a largura máxima do container */
+  width: 100%;
+  /* Define a largura do container como 100% */
+  display: flex;
+  /* Define o layout flexível */
+  flex-direction: row;
+  /* Define a direção dos itens como linha (horizontal) */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
+  background-color: #000000;
+  /* Define a cor de fundo como preto */
+  border-radius: 10px;
+  /* Arredonda os cantos do container */
+  overflow: hidden;
+  /* Oculta conteúdo que ultrapassa os limites do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adiciona uma sombra ao redor do container */
+  color: #fff;
+  /* Define a cor do texto como branco */
 }
 
 /* Estilo para imagens dentro do container "Sobre" */
 .container_sobre img {
-  width: 50%; /* Define a largura da imagem como metade do container */
-  height: auto; /* Mantém a proporção da imagem */
-  display: block; /* Define o display da imagem como bloco */
-  object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível */
-  border-right: 5px solid #444; /* Adiciona uma borda direita para separar a imagem e o texto */
+  width: 50%;
+  /* Define a largura da imagem como metade do container */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  display: block;
+  /* Define o display da imagem como bloco */
+  object-fit: cover;
+  /* Ajusta a imagem para cobrir o espaço disponível */
+  border-right: 5px solid #444;
+  /* Adiciona uma borda direita para separar a imagem e o texto */
 }
 
 /* Estilo para o conteúdo textual dentro do container "Sobre" */
 .Sobre_content {
-  width: 50%; /* Define a largura do conteúdo como metade do container */
-  padding: 20px; /* Adiciona espaçamento interno */
-  background-color: #fcf6f6; /* Define a cor de fundo do conteúdo textual */
+  width: 50%;
+  /* Define a largura do conteúdo como metade do container */
+  padding: 20px;
+  /* Adiciona espaçamento interno */
+  background-color: #fcf6f6;
+  /* Define a cor de fundo do conteúdo textual */
 }
 
 /* Estilo para o título da seção "Sobre" */
 .sobre_title {
-  font-size: 2.5em; /* Define o tamanho da fonte */
-  margin: 0 0 20px; /* Remove margem superior e inferior */
-  text-align: center; /* Alinha o texto à esquerda */
-  color: #000000; /* Define a cor do texto como preto */
- 
+  font-size: 2.5em;
+  /* Define o tamanho da fonte */
+  margin: 0 0 20px;
+  /* Remove margem superior e inferior */
+  text-align: center;
+  /* Alinha o texto à esquerda */
+  color: #000000;
+  /* Define a cor do texto como preto */
+
 }
 
 /* Estilo para a classe "row" usada dentro do container "Sobre" */
 .row {
-  margin: 0; /* Remove a margem */
-  padding: 0 20px; /* Adiciona espaçamento interno horizontal */
+  margin: 0;
+  /* Remove a margem */
+  padding: 0 20px;
+  /* Adiciona espaçamento interno horizontal */
 }
 
 /* Estilo para parágrafos dentro da classe "row" */
 .row p {
-  font-size: 1em; /* Define o tamanho da fonte */
-  line-height: 1.6; /* Define o espaçamento entre linhas */
-  color: #000000; /* Define a cor do texto como preto */
-  text-align: justify; /* Justifica o texto */
+  font-size: 1em;
+  /* Define o tamanho da fonte */
+  line-height: 1.6;
+  /* Define o espaçamento entre linhas */
+  color: #000000;
+  /* Define a cor do texto como preto */
+  text-align: justify;
+  /* Justifica o texto */
 }
 
 /* CSS DO resto da navibarIcons */
 
 /* Estilos para o menu de navegação */
 .navbar-menu {
-  display: flex; /* Define o contêiner como flexível para organização em coluna */
-  flex-direction: column; /* Organiza os itens do menu verticalmente */
+  display: flex;
+  /* Define o contêiner como flexível para organização em coluna */
+  flex-direction: column;
+  /* Organiza os itens do menu verticalmente */
 }
 
 .navbar-nav {
-  list-style-type: none; /* Remove as bolinhas padrão da lista */
-  padding: 0; /* Remove o preenchimento padrão */
-  margin: 0; /* Remove a margem padrão */
+  list-style-type: none;
+  /* Remove as bolinhas padrão da lista */
+  padding: 0;
+  /* Remove o preenchimento padrão */
+  margin: 0;
+  /* Remove a margem padrão */
 }
 
 .navbar-nav li {
-  margin: 5px 0; /* Adiciona margem entre os itens da lista */
+  margin: 5px 0;
+  /* Adiciona margem entre os itens da lista */
 }
 
 .navbar-dropdown .dropdown {
-  display: none; /* Esconde o dropdown por padrão */
-  position: absolute; /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
-  background-color: #ffffff; /* Define a cor de fundo do dropdown */
-  padding: 10px; /* Adiciona preenchimento ao redor do dropdown */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao dropdown para um efeito de elevação */
+  display: none;
+  /* Esconde o dropdown por padrão */
+  position: absolute;
+  /* Posiciona o dropdown de forma absoluta em relação ao seu contêiner pai */
+  background-color: #ffffff;
+  /* Define a cor de fundo do dropdown */
+  padding: 10px;
+  /* Adiciona preenchimento ao redor do dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  /* Adiciona uma sombra ao dropdown para um efeito de elevação */
 }
 
 .navbar-dropdown:hover .dropdown {
-  display: block; /* Mostra o dropdown quando o mouse passa sobre o item do menu */
+  display: block;
+  /* Mostra o dropdown quando o mouse passa sobre o item do menu */
 }
 
 .dropdown li {
-  margin-bottom: 10px; /* Adiciona margem inferior aos itens do dropdown */
+  margin-bottom: 10px;
+  /* Adiciona margem inferior aos itens do dropdown */
 }
 
 .dropdown li a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: #333; /* Define a cor do texto dos links */
-  display: flex; /* Usa Flexbox para organizar o ícone e o texto em linha */
-  align-items: center; /* Alinha o ícone e o texto verticalmente ao centro */
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+  color: #333;
+  /* Define a cor do texto dos links */
+  display: flex;
+  /* Usa Flexbox para organizar o ícone e o texto em linha */
+  align-items: center;
+  /* Alinha o ícone e o texto verticalmente ao centro */
 }
 
 .dropdown li a i {
-  margin-right: 8px; /* Adiciona espaço entre o ícone e o texto */
-  font-size: 1.2em; /* Ajusta o tamanho do ícone */
+  margin-right: 8px;
+  /* Adiciona espaço entre o ícone e o texto */
+  font-size: 1.2em;
+  /* Ajusta o tamanho do ícone */
 }
 
 .separator {
-  font-weight: bold; /* Faz o texto da separação em negrito */
-  margin-top: 10px; /* Adiciona margem superior para espaçamento */
-  padding-top: 10px; /* Adiciona preenchimento superior para espaçamento */
-  border-top: 1px solid #ccc; /* Adiciona uma linha de separação superior */
+  font-weight: bold;
+  /* Faz o texto da separação em negrito */
+  margin-top: 10px;
+  /* Adiciona margem superior para espaçamento */
+  padding-top: 10px;
+  /* Adiciona preenchimento superior para espaçamento */
+  border-top: 1px solid #ccc;
+  /* Adiciona uma linha de separação superior */
 }
 
 /* Efeito hover para os links do dropdown */
 .dropdown li a:hover {
-  color: #007bff; /* Altera a cor do texto ao passar o mouse */
-  background-color: #f1f1f1; /* Adiciona uma cor de fundo ao passar o mouse */
+  color: #007bff;
+  /* Altera a cor do texto ao passar o mouse */
+  background-color: #f1f1f1;
+  /* Adiciona uma cor de fundo ao passar o mouse */
 }
 
 /*////////////////////////////////////////////////////////////*/
-                 /* PESQUISAR */
+/* PESQUISAR */
 
 
-.search-box {    /* .search-box: Estiliza o contêiner da barra de busca */
-  position: relative;  /* position: relative; facilita o posicionamento dos elementos internos e futuros posicionamentos relativos a esse contêiner. */
-  background: rgb(248, 248, 250);  /* background: #66f; define uma cor de fundo azul. */
-  height: 40px;  /*height: 40px; define a altura do contêiner.  */
-  padding: 10px;  /* padding: 10px; adiciona um espaço interno ao redor dos elementos. */
-  border-radius: 40px;  /* border-radius: 40px; deixa as bordas arredondadas, dando um aspecto de pílula. */
-  display: flex;  /* display: flex; align-items: center; organiza os elementos no centro e em linha (horizontal). */
-  align-items: center;  /* Deixa os itens centralizados no conteiner */
+.search-box {
+  position: relative;
+  background: #ffffff;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+ 
 }
 
-.search-txt {  /* .search-txt: Estiliza o campo de texto da busca */
-  border: none;  /* border: none; remove a borda padrão. */
-  background: none;  /* background: none; remove a cor de fundo padrão. */
-  padding: 0;  /* padding: 0; elimina o preenchimento interno. */
-  font-size: 16px;  /* font-size: 16px; define o tamanho do texto. */
-  color: #0a0a0a;  /* color: #f0f5fb; define a cor do texto em um tom claro de azul. */
-  line-height: 40px;  /* line-height: 40px; ajusta o texto ao centro vertical do contêiner. */
-  /* width: 0;  mantém a largura inicial em zero */
-  position: absolute;  /* adicione esta linha para posicionar o campo */
-  right: 0;  /* mude para right ou left, dependendo da sua necessidade */
-  transition: width 0.5s;
-  width: 0;  /* width: 0; define a largura inicial do campo como zero, tornando-o invisível. */
-  transition: width 0.5s;  /* transition: width 0.5s; cria uma animação suave para a largura, com duração de 0,5 segundos, que será usada para expandir o campo ao passar o mouse. */
+.search-txt {
+  border-radius: 80px;
+  outline: #66f;
+  background: none;
+  padding: 0;
+  font-size: 16px;
+  color: #000000;
+  line-height: 30px;
+  width: 300px;
+  
 }
 
-.search-btn {  /* .search-btn: Estiliza o botão de busca */
-  width: 40px;  /* width e height de 40px tornam o botão quadrado. */
-  height: 40px;  /* border-radius: 50%; o transforma em um círculo. */
-  border-radius: 50%;  /* background-color: #66f; usa o mesmo tom azul do contêiner. */
-  background-color: #66f;  /* display: flex; justify-content: center; align-items: center; centraliza o ícone dentro do círculo.  */
-  display: flex;  /* transition: background 0.5s; adiciona uma transição suave para o fundo do botão, permitindo mudança de cor ao passar o mouse. */
-  justify-content: center;  /*  */
-  align-items: center;  /*  */
-  transition: background 0.5s;  /* transition: background 0.5s; adiciona uma transição suave para o fundo do botão, permitindo mudança de cor ao passar o mouse. */
-  cursor: pointer;  /* cursor: pointer; mostra o cursor de "mão" ao passar sobre o botão, indicando que ele é clicável. */
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.search-box:hover .search-txt {  /* .search-box:hover .search-txt: Define o efeito de "hover" (passar o mouse) sobre o contêiner da barra de busca. */
-  width: 240px;  /* width: 240px; expande o campo de texto até 240px, tornando-o visível. */
-  padding: 0 6px;  /* padding: 0 6px; adiciona um pequeno preenchimento horizontal ao campo expandido. */
+
+.search-box:hover .search-btn {
+  background: #f0f5fb;
 }
 
-.search-box:hover .search-btn {  /* .search-box:hover .search-btn: Estiliza o botão de busca durante o "hover" */
-  background: #f0f5fb;  /* background: #f0f5fb; altera a cor de fundo do botão para um tom claro de azul, dando destaque ao botão.
-  */
+#search-txt{
+   padding-left: 10px;
+   
+
 }
+
+#search-txt:focus{
+  background-color: aliceblue;
+}
+
 
 
 
@@ -501,67 +561,101 @@ body {
 
 /* Estilo para o título das categorias */
 h1 {
-  padding: 50px; /* Adiciona espaçamento ao redor do título */
-  text-align: center; /* Centraliza o texto do título */
+  padding: 50px;
+  /* Adiciona espaçamento ao redor do título */
+  text-align: center;
+  /* Centraliza o texto do título */
 }
 
 /* Container para as categorias */
 .categories-container {
-  display: flex; /* Define o layout flexível para as categorias */
-  flex-wrap: wrap; /* Permite que as categorias quebrem para a próxima linha */
-  justify-content: center; /* Centraliza as categorias */
-  gap: 20px; /* Define o espaçamento entre as categorias */
-  padding: 20px; /* Adiciona espaçamento interno ao container */
+  display: flex;
+  /* Define o layout flexível para as categorias */
+  flex-wrap: wrap;
+  /* Permite que as categorias quebrem para a próxima linha */
+  justify-content: center;
+  /* Centraliza as categorias */
+  gap: 20px;
+  /* Define o espaçamento entre as categorias */
+  padding: 20px;
+  /* Adiciona espaçamento interno ao container */
   filter: drop-shadow(1PX 1PX 5PX rgb(150, 92, 243));
 }
 
 /* Estilo para cada categoria */
 .category {
-  display: flex; /* Define o layout flexível para cada categoria */
-  flex-direction: column; /* Alinha o conteúdo em uma coluna */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  background-color: #fff; /* Define a cor de fundo como branco */
-  border-radius: 50%; /* Define as bordas das categorias como circulares */
-  width: 150px; /* Define a largura das categorias */
-  height: 150px; /* Define a altura das categorias */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao redor das categorias */
-  transition: transform 0.3s, box-shadow 0.3s; /* Define animações de transição para transformação e sombra */
-  overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites das categorias */
-  text-align: center; /* Centraliza o texto dentro das categorias */
-  cursor: pointer; /* Muda o cursor para um ponteiro quando sobre a categoria */
+  display: flex;
+  /* Define o layout flexível para cada categoria */
+  flex-direction: column;
+  /* Alinha o conteúdo em uma coluna */
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  background-color: #fff;
+  /* Define a cor de fundo como branco */
+  border-radius: 50%;
+  /* Define as bordas das categorias como circulares */
+  width: 150px;
+  /* Define a largura das categorias */
+  height: 150px;
+  /* Define a altura das categorias */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  /* Adiciona uma sombra ao redor das categorias */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Define animações de transição para transformação e sombra */
+  overflow: hidden;
+  /* Oculta o conteúdo que ultrapassa os limites das categorias */
+  text-align: center;
+  /* Centraliza o texto dentro das categorias */
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando sobre a categoria */
   box-shadow: 1px 1px 1px #000000;
 
 }
 
 /* Efeito hover para as categorias */
 .category:hover {
-  transform: scale(1.05); /* Aumenta ligeiramente o tamanho da categoria ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+  transform: scale(1.05);
+  /* Aumenta ligeiramente o tamanho da categoria ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Estilo para o ícone da categoria */
 .category-icon {
-  width: 80px; /* Define a largura do ícone */
-  height: 80px; /* Define a altura do ícone */
-  display: flex; /* Define o layout flexível para o ícone */
-  justify-content: center; /* Centraliza o ícone horizontalmente */
-  align-items: center; /* Centraliza o ícone verticalmente */
-  background-color: #f0f0f0; /* Define a cor de fundo do ícone */
-  border-radius: 50%; /* Define o ícone como circular */
-  margin-top: 20px; /* Adiciona margem superior ao ícone */
+  width: 80px;
+  /* Define a largura do ícone */
+  height: 80px;
+  /* Define a altura do ícone */
+  display: flex;
+  /* Define o layout flexível para o ícone */
+  justify-content: center;
+  /* Centraliza o ícone horizontalmente */
+  align-items: center;
+  /* Centraliza o ícone verticalmente */
+  background-color: #f0f0f0;
+  /* Define a cor de fundo do ícone */
+  border-radius: 50%;
+  /* Define o ícone como circular */
+  margin-top: 20px;
+  /* Adiciona margem superior ao ícone */
 }
 
 /* Estilo para a imagem dentro do ícone da categoria */
 .category-icon img {
-  max-width: 60%; /* Define a largura máxima da imagem como 60% do ícone */
-  max-height: 60%; /* Define a altura máxima da imagem como 60% do ícone */
+  max-width: 60%;
+  /* Define a largura máxima da imagem como 60% do ícone */
+  max-height: 60%;
+  /* Define a altura máxima da imagem como 60% do ícone */
 }
 
 /* Estilo para o título da categoria */
 .category-title {
-  font-size: 1em; /* Define o tamanho da fonte */
-  margin: 10px 0; /* Adiciona margem superior e inferior ao título */
-  color: #333; /* Define a cor do texto do título */
+  font-size: 1em;
+  /* Define o tamanho da fonte */
+  margin: 10px 0;
+  /* Adiciona margem superior e inferior ao título */
+  color: #333;
+  /* Define a cor do texto do título */
 }
 
 /*//////////////////////////////////////////////////////////*/
@@ -573,104 +667,160 @@ h1 {
 
 
 .comments-container {
-  max-width: 1400px; /* Define a largura máxima do container para telas grandes */
-  margin: 20px auto; /* Centraliza o container horizontalmente e adiciona margem superior e inferior */
-  padding: 20px; /* Adiciona espaçamento interno ao container */
-  background-color: #fff; /* Define a cor de fundo como branco */
-  border-radius: 8px; /* Arredonda as bordas do container */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao redor do container */
-  display: flex; /* Define o layout flexível para os comentários */
-  flex-wrap: wrap; /* Permite que os comentários quebrem para a próxima linha */
-  gap: 20px; /* Define o espaçamento entre os comentários */
+  max-width: 1400px;
+  /* Define a largura máxima do container para telas grandes */
+  margin: 20px auto;
+  /* Centraliza o container horizontalmente e adiciona margem superior e inferior */
+  padding: 20px;
+  /* Adiciona espaçamento interno ao container */
+  background-color: #fff;
+  /* Define a cor de fundo como branco */
+  border-radius: 8px;
+  /* Arredonda as bordas do container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  /* Adiciona uma sombra ao redor do container */
+  display: flex;
+  /* Define o layout flexível para os comentários */
+  flex-wrap: wrap;
+  /* Permite que os comentários quebrem para a próxima linha */
+  gap: 20px;
+  /* Define o espaçamento entre os comentários */
 }
 
 /* Estilo para os cards de comentários e o formulário */
 .comment-card,
-form { 
-  flex: 1 1 calc(33.333% - 20px); /* Ajusta o tamanho dos cards e do formulário para três por linha */
-  background-color: #fcf6f6; /* Define a cor de fundo dos cards */
-  border: 1px solid #f5d9d9; /* Define a borda dos cards */
-  border-radius: 8px; /* Arredonda as bordas dos cards */
-  padding: 15px; /* Adiciona espaçamento interno aos cards */
-  box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
-  display: flex; /* Define o layout flexível para o conteúdo dos cards */
-  flex-direction: column; /* Alinha o conteúdo em uma coluna */
-  max-width: 100%; /* Garante que o card e o formulário não excedam a largura do container */
+form {
+  flex: 1 1 calc(33.333% - 20px);
+  /* Ajusta o tamanho dos cards e do formulário para três por linha */
+  background-color: #fcf6f6;
+  /* Define a cor de fundo dos cards */
+  border: 1px solid #f5d9d9;
+  /* Define a borda dos cards */
+  border-radius: 8px;
+  /* Arredonda as bordas dos cards */
+  padding: 15px;
+  /* Adiciona espaçamento interno aos cards */
+  box-sizing: border-box;
+  /* Inclui o padding e a borda no tamanho total */
+  display: flex;
+  /* Define o layout flexível para o conteúdo dos cards */
+  flex-direction: column;
+  /* Alinha o conteúdo em uma coluna */
+  max-width: 100%;
+  /* Garante que o card e o formulário não excedam a largura do container */
 }
 
 /* Estilo para o cabeçalho do comentário */
 .comment-header {
-  display: flex; /* Define o layout flexível para o cabeçalho */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
+  display: flex;
+  /* Define o layout flexível para o cabeçalho */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
 }
 
 /* Estilo para o avatar do usuário */
 .avatar {
-  width: 50px; /* Define a largura do avatar */
-  height: 50px; /* Define a altura do avatar */
-  border-radius: 50%; /* Define o avatar como circular */
-  margin-right: 10px; /* Adiciona margem à direita do avatar */
+  width: 50px;
+  /* Define a largura do avatar */
+  height: 50px;
+  /* Define a altura do avatar */
+  border-radius: 50%;
+  /* Define o avatar como circular */
+  margin-right: 10px;
+  /* Adiciona margem à direita do avatar */
 }
 
 /* Estilo para o nome de usuário */
 .username {
-  margin: 0; /* Remove a margem */
-  font-size: 1.2em; /* Define o tamanho da fonte */
+  margin: 0;
+  /* Remove a margem */
+  font-size: 1.2em;
+  /* Define o tamanho da fonte */
 }
 
 /* Estilo para o texto do comentário */
-#commentForm{
-  max-width: 1400px; /* Define a largura máxima do container para telas grandes */
-  margin: 20px auto; /* Centraliza o container horizontalmente e adiciona margem superior e inferior */
-  padding: 20px; /* Adiciona espaçamento interno ao container */
-  background-color: #fff; /* Define a cor de fundo como branco */
-  border-radius: 8px; /* Arredonda as bordas do container */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao redor do container */
-  display: flex; /* Define o layout flexível para os comentários */
-  flex-wrap: wrap; /* Permite que os comentários quebrem para a próxima linha */
-  gap: 20px; /* Define o espaçamento entre os comentários */
+#commentForm {
+  max-width: 1400px;
+  /* Define a largura máxima do container para telas grandes */
+  margin: 20px auto;
+  /* Centraliza o container horizontalmente e adiciona margem superior e inferior */
+  padding: 20px;
+  /* Adiciona espaçamento interno ao container */
+  background-color: #fff;
+  /* Define a cor de fundo como branco */
+  border-radius: 8px;
+  /* Arredonda as bordas do container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  /* Adiciona uma sombra ao redor do container */
+  display: flex;
+  /* Define o layout flexível para os comentários */
+  flex-wrap: wrap;
+  /* Permite que os comentários quebrem para a próxima linha */
+  gap: 20px;
+  /* Define o espaçamento entre os comentários */
 }
+
 .comment-text {
-  margin: 10px 0; /* Adiciona margem superior e inferior ao texto */
-  font-size: 1em; /* Define o tamanho da fonte */
-  line-height: 1.4; /* Define o espaçamento entre linhas */
+  margin: 10px 0;
+  /* Adiciona margem superior e inferior ao texto */
+  font-size: 1em;
+  /* Define o tamanho da fonte */
+  line-height: 1.4;
+  /* Define o espaçamento entre linhas */
 }
 
 form label {
-  display: block; /* Define o display do label como bloco */
-  margin-bottom: 8px; /* Adiciona margem inferior */
-  
+  display: block;
+  /* Define o display do label como bloco */
+  margin-bottom: 8px;
+  /* Adiciona margem inferior */
+
 }
-#commentForm button{
- padding: 10px;
-  margin: 50px;   
+
+#commentForm button {
+  padding: 10px;
+  margin: 50px;
   width: 100px;
   text-align: center;
   justify-content: center;
 }
-form input, form textarea {
-  width: 100%; /* Define a largura dos inputs e textareas como 100% */
-  margin-bottom: 12px; /* Adiciona margem inferior */
-  padding: 8px; /* Adiciona espaçamento interno */
-  border: 1px solid #ddd; /* Define a borda */
-  border-radius: 4px; /* Arredonda as bordas */
+
+form input,
+form textarea {
+  width: 100%;
+  /* Define a largura dos inputs e textareas como 100% */
+  margin-bottom: 12px;
+  /* Adiciona margem inferior */
+  padding: 8px;
+  /* Adiciona espaçamento interno */
+  border: 1px solid #ddd;
+  /* Define a borda */
+  border-radius: 4px;
+  /* Arredonda as bordas */
 
 }
 
 /* Estilo para o botão do formulário */
 form button {
-  background-color: #66f; /* Define a cor de fundo do botão */
-  color: #fff; /* Define a cor do texto do botão */
-  border: none; /* Remove a borda */
-  padding: 10px 10px; /* Define o espaçamento interno */
-  border-radius: 4px; /* Arredonda as bordas */
-  cursor: pointer; /* Muda o cursor para um ponteiro quando sobre o botão */
- 
+  background-color: #66f;
+  /* Define a cor de fundo do botão */
+  color: #fff;
+  /* Define a cor do texto do botão */
+  border: none;
+  /* Remove a borda */
+  padding: 10px 10px;
+  /* Define o espaçamento interno */
+  border-radius: 4px;
+  /* Arredonda as bordas */
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando sobre o botão */
+
 }
 
 form button:hover {
-  background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
- 
+  background-color: #0056b3;
+  /* Muda a cor de fundo ao passar o mouse */
+
 
 }
 
@@ -680,80 +830,116 @@ form button:hover {
 
 /* Estilo geral do rodapé */
 footer {
-  background-color: #333; /* Define a cor de fundo do rodapé como cinza escuro */
-  color: #fff; /* Define a cor do texto do rodapé como branco */
-  padding: 20px 0; /* Adiciona espaçamento superior e inferior */
-  text-align: center; /* Centraliza o texto */
+  background-color: #333;
+  /* Define a cor de fundo do rodapé como cinza escuro */
+  color: #fff;
+  /* Define a cor do texto do rodapé como branco */
+  padding: 20px 0;
+  /* Adiciona espaçamento superior e inferior */
+  text-align: center;
+  /* Centraliza o texto */
 }
 
 /* Container para o conteúdo do rodapé */
 .footer-container {
-  max-width: 1000px; /* Define a largura máxima do container do rodapé */
-  margin: 0 auto; /* Centraliza o container horizontalmente */
-  padding: 0 20px; /* Adiciona espaçamento interno horizontal */
-  display: flex; /* Define o layout flexível para o rodapé */
-  flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha */
-  justify-content: space-between; /* Espaça o conteúdo igualmente */
+  max-width: 1000px;
+  /* Define a largura máxima do container do rodapé */
+  margin: 0 auto;
+  /* Centraliza o container horizontalmente */
+  padding: 0 20px;
+  /* Adiciona espaçamento interno horizontal */
+  display: flex;
+  /* Define o layout flexível para o rodapé */
+  flex-wrap: wrap;
+  /* Permite que o conteúdo quebre para a próxima linha */
+  justify-content: space-between;
+  /* Espaça o conteúdo igualmente */
 }
 
 /* Estilo para as diferentes seções do rodapé */
-.footer-info, .footer-creators, .footer-social {
-  flex: 1 1 100%; /* Define a largura flexível para cada seção do rodapé */
-  margin-bottom: 20px; /* Adiciona margem inferior */
+.footer-info,
+.footer-creators,
+.footer-social {
+  flex: 1 1 100%;
+  /* Define a largura flexível para cada seção do rodapé */
+  margin-bottom: 20px;
+  /* Adiciona margem inferior */
 }
 
 /* Estilo para o título da seção "info" do rodapé */
 .footer-info h2 {
-  margin: 0; /* Remove a margem */
-  font-size: 1.5em; /* Define o tamanho da fonte */
+  margin: 0;
+  /* Remove a margem */
+  font-size: 1.5em;
+  /* Define o tamanho da fonte */
 }
 
 /* Estilo para o texto da seção "info" do rodapé */
 .footer-info p {
-  font-size: 1em; /* Define o tamanho da fonte */
-  line-height: 1.4; /* Define o espaçamento entre linhas */
+  font-size: 1em;
+  /* Define o tamanho da fonte */
+  line-height: 1.4;
+  /* Define o espaçamento entre linhas */
 }
 
 /* Estilo para o título da seção "creators" do rodapé */
 .footer-creators h3 {
-  margin: 0 0 10px; /* Remove a margem superior e define a margem inferior */
-  font-size: 1.2em; /* Define o tamanho da fonte */
+  margin: 0 0 10px;
+  /* Remove a margem superior e define a margem inferior */
+  font-size: 1.2em;
+  /* Define o tamanho da fonte */
 }
 
 /* Estilo para o título da seção "social" do rodapé */
 .footer-social h3 {
-  margin: 0 0 10px; /* Remove a margem superior e define a margem inferior */
-  font-size: 1.2em; /* Define o tamanho da fonte */
+  margin: 0 0 10px;
+  /* Remove a margem superior e define a margem inferior */
+  font-size: 1.2em;
+  /* Define o tamanho da fonte */
 }
 
 /* Estilo para os ícones sociais do rodapé */
 .footer-social .social-icon {
-  display: inline-block; /* Define o display dos ícones como inline-block */
-  margin: 0 30px; /* Adiciona margem horizontal aos ícones */
-  font-size: 1.5em; /* Define o tamanho da fonte para os ícones */
-  color: #fff; /* Define a cor dos ícones como branco */
-  text-decoration: none; /* Remove a decoração do texto (sublinhado) */
+  display: inline-block;
+  /* Define o display dos ícones como inline-block */
+  margin: 0 30px;
+  /* Adiciona margem horizontal aos ícones */
+  font-size: 1.5em;
+  /* Define o tamanho da fonte para os ícones */
+  color: #fff;
+  /* Define a cor dos ícones como branco */
+  text-decoration: none;
+  /* Remove a decoração do texto (sublinhado) */
 }
 
 /* Efeito hover para os ícones sociais do rodapé */
 .footer-social .social-icon:hover {
-  color: #007bff; /* Muda a cor dos ícones ao passar o mouse */
+  color: #007bff;
+  /* Muda a cor dos ícones ao passar o mouse */
 }
+
 /* Estilo para o rodapé do comentário */
 .comment-footer {
-  font-size: 0.9em; /* Define o tamanho da fonte */
-  color: #888; /* Define a cor do texto como cinza */
+  font-size: 0.9em;
+  /* Define o tamanho da fonte */
+  color: #888;
+  /* Define a cor do texto como cinza */
 }
 
 /* Responsividade para o rodapé em telas menores */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column; /* Altera a direção do flex para coluna em telas menores */
-    text-align: center; /* Centraliza o texto em telas menores */
+    flex-direction: column;
+    /* Altera a direção do flex para coluna em telas menores */
+    text-align: center;
+    /* Centraliza o texto em telas menores */
   }
 
-  .footer-info, .footer-creators, .footer-social {
-    margin-bottom: 20px; /* Adiciona margem inferior às seções em telas menores */
+  .footer-info,
+  .footer-creators,
+  .footer-social {
+    margin-bottom: 20px;
+    /* Adiciona margem inferior às seções em telas menores */
   }
 }
 
@@ -762,17 +948,21 @@ footer {
 /* Media query para dispositivos com largura máxima de 768px */
 @media (max-width: 768px) {
   .container_sobre {
-    flex-direction: column; /* Altera a direção do flex para coluna (vertical) */
+    flex-direction: column;
+    /* Altera a direção do flex para coluna (vertical) */
   }
 
   .container_sobre img,
   .Sobre_content {
-    width: 100%; /* Define a largura da imagem e do conteúdo como 100% */
+    width: 100%;
+    /* Define a largura da imagem e do conteúdo como 100% */
   }
 
   .container_sobre img {
-    border-right: none; /* Remove a borda direita da imagem */
-    border-bottom: 5px solid #444; /* Adiciona uma borda inferior à imagem */
+    border-right: none;
+    /* Remove a borda direita da imagem */
+    border-bottom: 5px solid #444;
+    /* Adiciona uma borda inferior à imagem */
   }
 }
 
@@ -783,7 +973,8 @@ footer {
 /* Responsividade para o carrossel em telas menores */
 @media (max-width: 768px) {
   .carousel-button {
-    padding: 0.25rem; /* Reduz o espaçamento interno dos botões em telas menores */
+    padding: 0.25rem;
+    /* Reduz o espaçamento interno dos botões em telas menores */
   }
 }
 
@@ -792,29 +983,37 @@ footer {
 /* Responsividade para as categorias em telas menores */
 @media (max-width: 768px) {
   .category {
-    width: 120px; /* Reduz a largura das categorias em telas menores */
-    height: 120px; /* Reduz a altura das categorias em telas menores */
+    width: 120px;
+    /* Reduz a largura das categorias em telas menores */
+    height: 120px;
+    /* Reduz a altura das categorias em telas menores */
   }
 
   .category-icon {
-    width: 60px; /* Reduz a largura do ícone em telas menores */
-    height: 60px; /* Reduz a altura do ícone em telas menores */
+    width: 60px;
+    /* Reduz a largura do ícone em telas menores */
+    height: 60px;
+    /* Reduz a altura do ícone em telas menores */
   }
 }
 
 
 /* Responsividade para os comentários em telas menores */
 @media (max-width: 768px) {
+
   .comment-card,
-  form { 
-    flex: 1 1 calc(50% - 20px); /* Ajusta os cards e o formulário para dois por linha em telas médias */
+  form {
+    flex: 1 1 calc(50% - 20px);
+    /* Ajusta os cards e o formulário para dois por linha em telas médias */
   }
 }
 
 @media (max-width: 480px) {
+
   .comment-card,
-  form { 
-    flex: 1 1 100%; /* Ajusta os cards e o formulário para um por linha em telas pequenas */
+  form {
+    flex: 1 1 100%;
+    /* Ajusta os cards e o formulário para um por linha em telas pequenas */
   }
 }
 
@@ -882,6 +1081,6 @@ ul.dropdown2 li a i {
 /* Ajustes de layout para dispositivos móveis */
 @media (max-width: 768px) {
   ul.dropdown2 li {
-      width: 100%;
+    width: 100%;
   }
 }
